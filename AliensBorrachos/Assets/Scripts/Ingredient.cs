@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class Ingredient : MonoBehaviour
 {
-    private Vector3 initPos;
     public int foodType;
     public GameObject ingredient;
     private GameObject seleccion;
-    void Start()
-    {
-        initPos = transform.position;
-    }
 
     //**
     //Función para arrastrar objetos
