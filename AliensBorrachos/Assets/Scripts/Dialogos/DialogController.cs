@@ -7,14 +7,16 @@ using TMPro;
 public class DialogController : MonoBehaviour
 {
     private Animator anim;
-    private Queue<string> dialogQueue;
+    private Queue<string> dialogQueue = new Queue<string>();
     Texts text;
     [SerializeField] TextMeshProUGUI DialogText;
 
+    
     public void ActivateDialogBox(Texts textObj)
     {
-        anim.SetBool("DialogBox", true);
+        //anim.SetTrigger("OpenDialogBox");
         text = textObj;
+        ActivateText();
     }
 
     public void ActivateText()
@@ -34,12 +36,13 @@ public class DialogController : MonoBehaviour
             return;
         }
         string actualString = dialogQueue.Dequeue();
-        DialogText.text = actualString;
+        //DialogText.text = actualString;
+        DialogText.text = "";
         StartCoroutine(PrintCharacters(actualString));
     }
     public void DeactivateDialogBox()
     {
-        anim.SetBool("DialogBox", false);
+       // anim.SetTrigger("CloseDialogBox");
     }
 
     IEnumerator PrintCharacters(string actualString)
@@ -48,7 +51,7 @@ public class DialogController : MonoBehaviour
         foreach (char character in actualString.ToCharArray())
         {
             DialogText.text += character;
-            yield return new WaitForSeconds(0.02f);
+            yield return new WaitForSeconds(0.05f);
         }
     }
 }
