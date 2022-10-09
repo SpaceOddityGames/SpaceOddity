@@ -787,6 +787,50 @@ MonoBehaviour:
   ingredient: {fileID: 7624725145449482409, guid: 7be17eac8ed53db4c89d2ec81834005a, type: 3}
   drop: 0
   caldero: {fileID: 0}
+--- !u!1 &698406959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 698406960}
+  - component: {fileID: 698406961}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &698406960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698406959}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 574.7492, y: 248.60672, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &698406961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698406959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0012a7512bad6640b4938164c428818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,10 +1306,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed11b52eaaf9e8469365b814f45f178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainButton: {fileID: 950102981}
-  kitchenButton: {fileID: 1951873148}
-  mainCamera: {fileID: 963194227}
-  kitchenCamera: {fileID: 219991024}
+  mainButton: {fileID: 950102979}
+  kitchenButton: {fileID: 1951873146}
+  mainCamera: {fileID: 963194225}
+  kitchenCamera: {fileID: 219991022}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,10 +2290,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e49e0d8019b595d4daf42173d546dec6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainButton: {fileID: 950102981}
-  kitchenButton: {fileID: 1951873148}
-  mainCamera: {fileID: 963194227}
-  kitchenCamera: {fileID: 219991024}
+  mainButton: {fileID: 950102979}
+  kitchenButton: {fileID: 1951873146}
+  mainCamera: {fileID: 963194225}
+  kitchenCamera: {fileID: 219991022}
 --- !u!1 &1970557282
 GameObject:
   m_ObjectHideFlags: 0
