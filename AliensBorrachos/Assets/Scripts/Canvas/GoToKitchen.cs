@@ -22,4 +22,13 @@ public class GoToKitchen : MonoBehaviour
         mainCamera.SetActive(false);
         kitchenCamera.SetActive(true);
     }
+
+    public void goKitchen()
+    {
+        mainButton.SetActive(true);
+        kitchenButton.SetActive(false);
+
+        mainCamera.SetActive(false);
+        kitchenCamera.SetActive(true);
+    }
 }
