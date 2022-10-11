@@ -87,7 +87,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textos:
-    arrayTexts:
-    - hola amigoooo
-    - me quieresss???
-    conditions: 0000000001000000
+    initTexts:
+    - Holaaa amigooooo
+    - soy un npc
+    - preparame un 1,2,3 porfaaaaaaa
+    initConditions: 000000000000000001000000
+    correctResult:
+    - bua q ricoooo
+    - mmmmmm
+    correctResultConditions: 0000000002000000
+    wrongResult:
+    - vaya mierda
+    - poto
+    wrongResultConditions: 0000000002000000
+    recipe: 0100000002000000030000000000000000000000

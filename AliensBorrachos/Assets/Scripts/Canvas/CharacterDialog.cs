@@ -7,6 +7,6 @@ public class CharacterDialog : MonoBehaviour
     public Texts textos;
     private void Start()
     {
-        FindObjectOfType<DialogController>().ActivateDialogBox(textos);
+        FindObjectOfType<DialogController>().ActivateDialogBox(textos, this.gameObject, textos.initConditions);
     }
 }

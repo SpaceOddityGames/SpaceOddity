@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class CookingCondNo : MonoBehaviour, IPointerClickHandler
+public class ScreenClickGoKitchen : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] GameObject DialogHandler;
     public void OnPointerClick(PointerEventData pointerEventData)
     {
+        this.gameObject.SetActive(false);
+        this.gameObject.GetComponentInParent<DialogController>().goKitchen();
     }
 }

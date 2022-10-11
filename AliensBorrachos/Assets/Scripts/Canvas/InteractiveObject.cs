@@ -9,11 +9,11 @@ public class InteractiveObject : MonoBehaviour, IPointerDownHandler
     public Texts textos;
     private void OnMouseDown()
     {
-        FindObjectOfType<DialogController>().ActivateDialogBox(textos);
+        //FindObjectOfType<DialogController>().ActivateDialogBox(textos);
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        FindObjectOfType<DialogController>().ActivateDialogBox(textos);
+        //FindObjectOfType<DialogController>().ActivateDialogBox(textos);
     }
 }

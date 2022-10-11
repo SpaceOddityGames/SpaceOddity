@@ -8,8 +8,6 @@ public class PrepareButton : MonoBehaviour
 
     private void OnMouseDown()
     {
-        bool correct;
-        correct= bowl.GetComponent<FoodPreparation>().prepareFood();
-        Debug.Log("it is correct? " + correct);
+        bowl.GetComponent<FoodPreparation>().preparationResult();
     }
 }

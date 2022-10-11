@@ -9,34 +9,39 @@ public class DialogController : MonoBehaviour
 {
     private Animator anim;
     private Queue<string> dialogQueue = new Queue<string>();
-    private int count = 0; 
+    private int count = 0;
+    private int[] conditions;
     Texts text;
     [SerializeField] TextMeshProUGUI DialogText;
     [SerializeField] GameObject dialogText;
     [SerializeField] GameObject dialogBox;
     [SerializeField] GameObject clickScreen;
+    [SerializeField] GameObject clickScreenKitchen;
+    [SerializeField] GameObject clickScreenRemoveCharacter;
 
-    [SerializeField] GameObject conditionalButtonY;
-    [SerializeField] GameObject conditionalButtonN;
 
     [SerializeField] FoodPreparation foodPreparation;
 
+
     GameObject client;
-    public void ActivateDialogBox(Texts textObj)
+
+    public void ActivateDialogBox(Texts textObj, GameObject c, int[] cond)
     {
         //anim.SetTrigger("OpenDialogBox");
         text = textObj;
         clickScreen.SetActive(true);
         dialogBox.SetActive(true);
         dialogText.SetActive(true);
-        ActivateText();
+        client = c;
+        ActivateText(text.initTexts, cond);
     }
 
-    public void ActivateText()
+    public void ActivateText(string[] texts, int[] cond)
     {
         count = 0;
+        conditions = cond;
         dialogQueue.Clear();
-        foreach (string saveText in text.arrayTexts)
+        foreach (string saveText in texts)
         {
             dialogQueue.Enqueue(saveText);
         }
@@ -47,62 +52,70 @@ public class DialogController : MonoBehaviour
         clickScreen.SetActive(false);
         if (dialogQueue.Count == 0)
         {
-            DeactivateDialogBox();
+            dialogBox.SetActive(false);
+            dialogText.SetActive(false);
             return;
         }
         string actualString = dialogQueue.Dequeue();
-        //DialogText.text = actualString;
         DialogText.text = "";
-        StartCoroutine(PrintCharacters(actualString, count));
+        StartCoroutine(PrintCharacters(actualString, conditions[count]));
         count++;
     }
-    public void DeactivateDialogBox()
-    {
-       // anim.SetTrigger("CloseDialogBox");
-    }
 
-    IEnumerator PrintCharacters(string actualString, int count)
+    IEnumerator PrintCharacters(string actualString, int condition)
     {
         DialogText.text += "";
         foreach (char character in actualString.ToCharArray())
         {
-            DialogText.text += character;
             yield return new WaitForSeconds(0.03f);
+            DialogText.text += character;
         }
-        switch (text.conditions[count])
+        switch (condition)
         {
             case 0:
                 break;
             case 1:
-                enablecookingConditional();
+                clickScreenKitchen.SetActive(true);
+                clickScreen.SetActive(true);
+                break;
+            case 2:
+                clickScreenRemoveCharacter.SetActive(true);
                 break;
             default:
                 break;
         }
         clickScreen.SetActive(true);
     }
-
-    public void enablecookingConditional()
-    {
-        conditionalButtonN.SetActive(true);
-        conditionalButtonY.SetActive(true);
-        clickScreen.SetActive(false);
-    }
-
-    public void disableCookingConditional()
-    {
-        conditionalButtonN.SetActive(false);
-        conditionalButtonY.SetActive(false);
-        clickScreen.SetActive(false);
-    }
-    public void aceptTask()
+    public void goKitchen()
     {
         foodPreparation.SetObjective(text.recipe);
-        this.GetComponent<GoToKitchen>().goKitchen();
-        disableCookingConditional();
+        dialogBox.SetActive(false);
+        dialogText.SetActive(false);
+        client.SetActive(false);
+        this.GetComponent<ChangeRoom>().goKitchen();
     }
-    public void rejectTask()
+    public void goMain()
     {
-        //////////////////////////////////
+        this.GetComponent<ChangeRoom>().goMain();
+    }
+    public void correctResult()
+    {
+        client.SetActive(true);
+        clickScreen.SetActive(true);
+        dialogBox.SetActive(true);
+        dialogText.SetActive(true);
+        ActivateText(text.correctResult, text.correctResultConditions);
+    }
+    public void wrongResult()
+    {
+        client.SetActive(true);
+        clickScreen.SetActive(true);
+        dialogBox.SetActive(true);
+        dialogText.SetActive(true);
+        ActivateText(text.wrongResult, text.wrongResultConditions);
+    }
+    public void nextClient()
+    {
+
     }
 }

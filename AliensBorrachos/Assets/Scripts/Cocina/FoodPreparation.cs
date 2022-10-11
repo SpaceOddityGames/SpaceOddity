@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FoodPreparation : MonoBehaviour
 {
+    [SerializeField] DialogController dialogController;
+
     private const int SIZE = 5;
     public int[] preparing;
     public int[] objective;
@@ -55,6 +57,18 @@ public class FoodPreparation : MonoBehaviour
             correctUnit = false;
         }
         return correct;
+    }
+    public void preparationResult()
+    {
+        dialogController.goMain();
+        if (prepareFood())
+        {
+            dialogController.correctResult();
+        }
+        else 
+        {
+            dialogController.wrongResult();
+        }
     }
     public void SetObjective(int[] task)
     {

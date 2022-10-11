@@ -8,6 +8,5 @@ public class CookingCondYes : MonoBehaviour, IPointerClickHandler
     [SerializeField] GameObject DialogHandler;
     public void OnPointerClick(PointerEventData pointerEventData)
     {
-        DialogHandler.GetComponent<DialogController>().aceptTask();
     }
 }

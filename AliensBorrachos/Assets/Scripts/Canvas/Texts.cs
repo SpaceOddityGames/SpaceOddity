@@ -6,8 +6,12 @@ using UnityEngine;
 public class Texts 
 {
     [TextArea(2, 6)]
-    public string[] arrayTexts;
-    public int[] conditions; // 0 = no conditions / 1 = cooking condition / 2 = other
+    public string[] initTexts;
+    public int[] initConditions; // 0 = no conditions / 1 = cooking condition / 2 = other
+    public string[] correctResult;
+    public int[] correctResultConditions; // 0 = no conditions / 2 = remove character
+    public string[] wrongResult;
+    public int[] wrongResultConditions; // 0 = no conditions / 2 = remove character
     public int[] recipe = new int[5];
     
 }
