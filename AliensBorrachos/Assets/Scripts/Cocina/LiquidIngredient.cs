@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LiquidIngredient : MonoBehaviour
 {
-    public int foodType;
+    public int LiquidType;
 
     private Vector3 mOffset;
     private float mZCoord;
     private Vector3 initPos;
+
+
     void Start()
     {
         initPos = gameObject.transform.position;
@@ -38,8 +41,36 @@ public class LiquidIngredient : MonoBehaviour
         if (drop)
         {
             drop = false;
-            caldero.GetComponent<FoodPreparation>().addIngredient(foodType);
+            dropLiquid();
         }
         this.transform.position = initPos;
+    }
+    private void dropLiquid()
+    {
+        caldero.GetComponent<FoodPreparation>().dropLiquid(LiquidType);
+    }
+
+    private void Update()
+    {
+        if (drop)
+        {
+            dropLiquid();
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Caldero")
+        {
+            caldero = other.gameObject;
+            drop = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Caldero")
+        {
+           drop = false;
+        }
     }
 }

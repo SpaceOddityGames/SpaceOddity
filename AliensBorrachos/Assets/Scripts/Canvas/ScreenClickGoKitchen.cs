@@ -8,6 +8,7 @@ public class ScreenClickGoKitchen : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData pointerEventData)
     {
         this.gameObject.SetActive(false);
-        this.gameObject.GetComponentInParent<DialogController>().goKitchen();
+        this.gameObject.GetComponentInParent<DialogController>().disableClient();
+        this.gameObject.GetComponentInParent<DialogController>().goKitchenTask();
     }
 }

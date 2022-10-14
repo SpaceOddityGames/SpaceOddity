@@ -73,6 +73,7 @@ public class DialogController : MonoBehaviour
         switch (condition)
         {
             case 0:
+                clickScreen.SetActive(true);
                 break;
             case 1:
                 clickScreenKitchen.SetActive(true);
@@ -84,14 +85,17 @@ public class DialogController : MonoBehaviour
             default:
                 break;
         }
-        clickScreen.SetActive(true);
     }
-    public void goKitchen()
+    public void goKitchenTask()
     {
         foodPreparation.SetObjective(text.recipe);
         dialogBox.SetActive(false);
         dialogText.SetActive(false);
         client.SetActive(false);
+        this.GetComponent<ChangeRoom>().goKitchen();
+    }
+    public void goKitchen()
+    {
         this.GetComponent<ChangeRoom>().goKitchen();
     }
     public void goMain()
@@ -113,6 +117,16 @@ public class DialogController : MonoBehaviour
         dialogBox.SetActive(true);
         dialogText.SetActive(true);
         ActivateText(text.wrongResult, text.wrongResultConditions);
+    }
+    public void disableClient()
+    {
+        client.SetActive(false);
+    }
+    public void removeClient()
+    {
+        Destroy(client);
+        dialogBox.SetActive(false);
+        dialogText.SetActive(false);
     }
     public void nextClient()
     {
