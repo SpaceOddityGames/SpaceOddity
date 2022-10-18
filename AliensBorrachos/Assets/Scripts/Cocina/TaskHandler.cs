@@ -23,7 +23,7 @@ public class TaskHandler : MonoBehaviour
     }
     public void createTask(int i)
     {
-        bowl.GetComponent<FoodPreparation>().SetObjective(recetas[i]);
+        //bowl.GetComponent<FoodPreparation>().SetObjective(recetas[i]);
     }
     private void OnMouseDown()
     {

@@ -16,15 +16,24 @@ public class FoodPreparation : MonoBehaviour
     [SerializeField] GameObject sliderBar;
     [SerializeField] GameObject sliderPoint;
     private float max;
-    private const int updateLiquid = 700;
-    private float quantity;
+    private const int updateLiquid = 5; // mas grande = mas lento
+    private float quantity; // porcentaje
     private Vector3 sliderPointInitPos;
     private RectTransform rt;
+    public float[] liquids;
+    public float[] liquidObjective;
+    private const int maxLiquids = 3;
+
+    /// Clock
+    [SerializeField] Clock timer;
 
     void Start()
     {
         preparing = new int[SIZE];
         objective = new int[SIZE];
+
+        liquids = new float[maxLiquids];
+        liquidObjective = new float[maxLiquids];
 
         rt = sliderBar.GetComponent<RectTransform>();
         max = rt.rect.height;
@@ -42,7 +51,7 @@ public class FoodPreparation : MonoBehaviour
         }
     }
     //Comprueba la correcta preparación de la comida
-    public bool prepareFood()
+    public bool comprobateIngredients()
     {
         int[] aux = new int[SIZE];
         for (int m = 0; m < SIZE; m++)
@@ -75,21 +84,44 @@ public class FoodPreparation : MonoBehaviour
     }
     public void preparationResult()
     {
+        timer.stop();
+        sliderBar.SetActive(false);
         dialogController.goMain();
-        if (prepareFood())
+        if (comprobateIngredients() && comprobateLiquids())
         {
-            dialogController.correctResult();
+            if (timer.comprobateTimer())
+            {
+                dialogController.correctResult();
+            }
+            else
+            {
+                dialogController.wrongResultTimer();
+            }
         }
         else
         {
             dialogController.wrongResult();
         }
+        resetFood();
     }
-    public void SetObjective(int[] task)
+    public void cancelTask()
+    {
+        timer.stop();
+        sliderBar.SetActive(false);
+        dialogController.goMain();
+        dialogController.cancelResult();
+    }
+    public void SetObjective(int[] ingredientTask, float[] liquidTask)
     {
         for (int i = 0; i < SIZE; i++) {
-            objective[i] = task[i];
+            objective[i] = ingredientTask[i];
         }
+        for (int i = 0; i < maxLiquids; i++)
+        {
+            liquidObjective[i] = liquidTask[i];
+        }
+        timer.resetTimer();
+        timer.start();
     }
     public void resetFood()
     {
@@ -98,32 +130,47 @@ public class FoodPreparation : MonoBehaviour
             preparing[i] = 0;
         }
         top = 0;
+        resetLiquid();
     }
 
     /////////////////////////////////////////////
-
-    public void enableGame()
+    public void enableGameLiquid()
     {
         sliderBar.SetActive(true);
-        sliderPoint.SetActive(true);
     }
 
-    public void disableGame()
+    public void disableGameLiquid()
     {
         sliderBar.SetActive(false);
-        sliderPoint.SetActive(false);
     }
     public void dropLiquid(int liquidType)
     {
         if (quantity <= 100)
         {
-            sliderPoint.gameObject.transform.position += new Vector3(0, max / updateLiquid);
-            quantity += (max / updateLiquid) * 100 / max;
+            sliderPoint.gameObject.transform.position += new Vector3(0, max / updateLiquid * Time.deltaTime);
+            quantity += (max / updateLiquid) * Time.deltaTime * 100 / max;
+
+            liquids[liquidType] += (max / updateLiquid) * Time.deltaTime * 100 / max;
         }
     }
     public void resetLiquid()
     {
         quantity = 0;
+        for (int i = 0; i < maxLiquids; i++)
+        {
+            liquids[i] = 0;
+        }
         sliderPoint.transform.position = sliderPointInitPos;
+    }
+    private bool comprobateLiquids()
+    {
+        for(int i = 0; i < maxLiquids; i++)
+        {
+            if(!((liquids[i] < (liquidObjective[i] + 5)) && (liquids[i] > (liquidObjective[i] - 5))))
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }

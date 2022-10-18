@@ -7,27 +7,32 @@ using UnityEngine.EventSystems;
 
 public class DialogController : MonoBehaviour
 {
-    private Animator anim;
     private Queue<string> dialogQueue = new Queue<string>();
     private int count = 0;
     private int[] conditions;
-    Texts text;
+    private Texts text;
+    private bool textForMain = false;
+
+    [SerializeField] GameManager gameManager;
     [SerializeField] TextMeshProUGUI DialogText;
     [SerializeField] GameObject dialogText;
     [SerializeField] GameObject dialogBox;
+    [SerializeField] TextMeshProUGUI DialogTextForMain;
+    [SerializeField] GameObject dialogTextForMain;
+    [SerializeField] GameObject dialogBoxForMain;
     [SerializeField] GameObject clickScreen;
     [SerializeField] GameObject clickScreenKitchen;
     [SerializeField] GameObject clickScreenRemoveCharacter;
 
 
     [SerializeField] FoodPreparation foodPreparation;
+    [SerializeField] GameObject sliderBar;
 
 
     GameObject client;
 
     public void ActivateDialogBox(Texts textObj, GameObject c, int[] cond)
     {
-        //anim.SetTrigger("OpenDialogBox");
         text = textObj;
         clickScreen.SetActive(true);
         dialogBox.SetActive(true);
@@ -56,23 +61,46 @@ public class DialogController : MonoBehaviour
             dialogText.SetActive(false);
             return;
         }
+        if (textForMain)
+        {
+            dialogBox.SetActive(false);
+            dialogText.SetActive(false);
+            dialogBoxForMain.SetActive(true);
+            dialogTextForMain.SetActive(true);
+            DialogTextForMain.text = "";
+        }
+        else
+        {
+            dialogBox.SetActive(true);
+            dialogText.SetActive(true);
+            dialogBoxForMain.SetActive(false);
+            dialogTextForMain.SetActive(false);
+            DialogText.text = "";
+        }
         string actualString = dialogQueue.Dequeue();
-        DialogText.text = "";
         StartCoroutine(PrintCharacters(actualString, conditions[count]));
         count++;
     }
-
     IEnumerator PrintCharacters(string actualString, int condition)
     {
         DialogText.text += "";
+        DialogTextForMain.text += "";
         foreach (char character in actualString.ToCharArray())
         {
             yield return new WaitForSeconds(0.03f);
-            DialogText.text += character;
+            if (!textForMain)
+            {
+                DialogText.text += character;
+            }
+            else
+            {
+                DialogTextForMain.text += character;
+            }
         }
         switch (condition)
         {
             case 0:
+                textForMain = false;
                 clickScreen.SetActive(true);
                 break;
             case 1:
@@ -82,16 +110,21 @@ public class DialogController : MonoBehaviour
             case 2:
                 clickScreenRemoveCharacter.SetActive(true);
                 break;
+            case 3:
+                textForMain = true;
+                clickScreen.SetActive(true);
+                break;
             default:
                 break;
         }
     }
     public void goKitchenTask()
     {
-        foodPreparation.SetObjective(text.recipe);
+        foodPreparation.SetObjective(text.recipe.ingredientRecipe, text.recipe.liquidRecipe);
         dialogBox.SetActive(false);
         dialogText.SetActive(false);
         client.SetActive(false);
+        sliderBar.SetActive(true);
         this.GetComponent<ChangeRoom>().goKitchen();
     }
     public void goKitchen()
@@ -100,6 +133,7 @@ public class DialogController : MonoBehaviour
     }
     public void goMain()
     {
+        sliderBar.SetActive(false);
         this.GetComponent<ChangeRoom>().goMain();
     }
     public void correctResult()
@@ -118,6 +152,23 @@ public class DialogController : MonoBehaviour
         dialogText.SetActive(true);
         ActivateText(text.wrongResult, text.wrongResultConditions);
     }
+    public void wrongResultTimer()
+    {
+        client.SetActive(true);
+        clickScreen.SetActive(true);
+        dialogBox.SetActive(true);
+        dialogText.SetActive(true);
+        ActivateText(text.wrongResultTimer, text.wrongResultTimerConditions);
+    }
+
+    public void cancelResult()
+    {
+        client.SetActive(true);
+        clickScreen.SetActive(true);
+        dialogBox.SetActive(true);
+        dialogText.SetActive(true);
+        ActivateText(text.cancelResult, text.cancelResultConditions);
+    }
     public void disableClient()
     {
         client.SetActive(false);
@@ -130,6 +181,11 @@ public class DialogController : MonoBehaviour
     }
     public void nextClient()
     {
-
+        StartCoroutine(waitForClient());
+    }
+    IEnumerator waitForClient()
+    {
+        yield return new WaitForSeconds(1);
+        gameManager.nextClient();
     }
 }

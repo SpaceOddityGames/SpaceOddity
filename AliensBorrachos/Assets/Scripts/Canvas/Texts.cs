@@ -7,11 +7,14 @@ public class Texts
 {
     [TextArea(2, 6)]
     public string[] initTexts;
-    public int[] initConditions; // 0 = no conditions / 1 = cooking condition / 2 = other
+    public int[] initConditions; // 0 = no conditions / 1 = go Kitchen
     public string[] correctResult;
     public int[] correctResultConditions; // 0 = no conditions / 2 = remove character
     public string[] wrongResult;
     public int[] wrongResultConditions; // 0 = no conditions / 2 = remove character
-    public int[] recipe = new int[5];
-    
+    public string[] wrongResultTimer;
+    public int[] wrongResultTimerConditions; // 0 = no conditions / 2 = remove character
+    public string[] cancelResult;
+    public int[] cancelResultConditions; // 0 = no conditions / 2 = remove character
+    public Recipe recipe;
 }

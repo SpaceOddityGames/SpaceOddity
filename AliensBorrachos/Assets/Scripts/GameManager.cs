@@ -5,14 +5,31 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int day;
-    private int[] dayClients;
-    [SerializeField] GameObject person;
-
-
+    [SerializeField] private ArrayLayout clients;
+    private int clientNum;
     void Start()
     {
-        GameObject p = Instantiate(person, new Vector3(-510, 0, 0), Quaternion.identity);
-        p.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform, false);
+        startDay();
+    }
+    public void nextClient()
+    {
+        if (clientNum < clients.Day[day].Client.Length)
+        {
+            GameObject p = Instantiate(clients.Day[day].Client[clientNum], new Vector3(92, 0, 2), Quaternion.Euler(90,180,0));
+            clientNum++;
+        }
+        else
+        {
+            endDay();
+        }
+    }
+    public void startDay()
+    {
+        nextClient();
+    }
+    public void endDay()
+    {
+        day++;
     }
 
 }
