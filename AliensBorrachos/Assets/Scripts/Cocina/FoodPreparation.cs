@@ -15,13 +15,16 @@ public class FoodPreparation : MonoBehaviour
     /// LiquidIngredients
     [SerializeField] GameObject sliderBar;
     [SerializeField] GameObject sliderPoint;
-    private float max;
+    [SerializeField] GameObject sliderPointInit;
+    [SerializeField] GameObject[] sliderFills;
+    private float max; //liquid drop max tamaño
     private const int updateLiquid = 5; // mas grande = mas lento
-    private float quantity; // porcentaje
-    private Vector3 sliderPointInitPos;
+    private float quantityP; // porcentaje
+    private float[] quantities;
     private RectTransform rt;
     public float[] liquids;
     public float[] liquidObjective;
+    public Canvas canvas;
     private const int maxLiquids = 3;
 
     /// Clock
@@ -34,11 +37,11 @@ public class FoodPreparation : MonoBehaviour
 
         liquids = new float[maxLiquids];
         liquidObjective = new float[maxLiquids];
+        quantities= new float[maxLiquids];
 
         rt = sliderBar.GetComponent<RectTransform>();
         max = rt.rect.height;
-        quantity = 0;
-        sliderPointInitPos = sliderPoint.transform.position;
+        quantityP = 0;
     }
 
     //Se llama a la función desde los ingredientes
@@ -145,22 +148,36 @@ public class FoodPreparation : MonoBehaviour
     }
     public void dropLiquid(int liquidType)
     {
-        if (quantity <= 100)
+        if (quantityP < 100)
         {
-            sliderPoint.gameObject.transform.position += new Vector3(0, max / updateLiquid * Time.deltaTime);
-            quantity += (max / updateLiquid) * Time.deltaTime * 100 / max;
-
+            sliderPoint.gameObject.transform.position += new Vector3(0, max / updateLiquid * Time.deltaTime * canvas.scaleFactor);
+            quantityP += (max / updateLiquid) * Time.deltaTime * 100 / max;
             liquids[liquidType] += (max / updateLiquid) * Time.deltaTime * 100 / max;
+            quantities[liquidType] += max / updateLiquid * Time.deltaTime;
+            RectTransform rs = sliderFills[liquidType].GetComponent<RectTransform>();
+            sliderFills[liquidType].transform.position += new Vector3(0, max / updateLiquid * Time.deltaTime / 2 * canvas.scaleFactor);
+            for(int i = liquidType+1; i < sliderFills.Length; i++)
+            {
+                sliderFills[i].transform.position += new Vector3(0, max / updateLiquid * Time.deltaTime / 2 * 2 * canvas.scaleFactor);
+            }
+            rs.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, quantities[liquidType]);
         }
     }
     public void resetLiquid()
     {
-        quantity = 0;
+        quantityP = 0;
         for (int i = 0; i < maxLiquids; i++)
         {
             liquids[i] = 0;
         }
-        sliderPoint.transform.position = sliderPointInitPos;
+        sliderPoint.transform.position = sliderPointInit.transform.position;
+        for(int i = 0; i < sliderFills.Length; i++)
+        {
+            sliderFills[i].transform.position = sliderPointInit.transform.position;
+            quantities[i] = 0;
+            RectTransform rs = sliderFills[i].GetComponent<RectTransform>();
+            rs.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 0);
+        }
     }
     private bool comprobateLiquids()
     {

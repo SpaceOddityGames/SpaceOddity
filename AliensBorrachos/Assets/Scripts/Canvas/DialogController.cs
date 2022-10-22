@@ -12,6 +12,7 @@ public class DialogController : MonoBehaviour
     private int[] conditions;
     private Texts text;
     private bool textForMain = false;
+    private bool skipText = false;
 
     [SerializeField] GameManager gameManager;
     [SerializeField] TextMeshProUGUI DialogText;
@@ -23,6 +24,7 @@ public class DialogController : MonoBehaviour
     [SerializeField] GameObject clickScreen;
     [SerializeField] GameObject clickScreenKitchen;
     [SerializeField] GameObject clickScreenRemoveCharacter;
+    [SerializeField] GameObject clickScreenSkipText;
 
 
     [SerializeField] FoodPreparation foodPreparation;
@@ -83,20 +85,41 @@ public class DialogController : MonoBehaviour
     }
     IEnumerator PrintCharacters(string actualString, int condition)
     {
+        skipText = false;
         DialogText.text += "";
         DialogTextForMain.text += "";
+        clickScreenSkipText.SetActive(true);
         foreach (char character in actualString.ToCharArray())
         {
-            yield return new WaitForSeconds(0.03f);
-            if (!textForMain)
+            if (!skipText)
             {
-                DialogText.text += character;
+                yield return new WaitForSeconds(0.04f);
+                if (!textForMain)
+                {
+                    DialogText.text += character;
+                }
+                else
+                {
+                    DialogTextForMain.text += character;
+                }
             }
             else
             {
-                DialogTextForMain.text += character;
+
             }
         }
+        if (skipText)
+        {
+            if (!textForMain)
+            {
+                DialogText.text = actualString;
+            }
+            else
+            {
+                DialogTextForMain.text = actualString;
+            }
+        }
+        clickScreenSkipText.SetActive(false);
         switch (condition)
         {
             case 0:
@@ -105,7 +128,6 @@ public class DialogController : MonoBehaviour
                 break;
             case 1:
                 clickScreenKitchen.SetActive(true);
-                clickScreen.SetActive(true);
                 break;
             case 2:
                 clickScreenRemoveCharacter.SetActive(true);
@@ -117,6 +139,10 @@ public class DialogController : MonoBehaviour
             default:
                 break;
         }
+    }
+    public void setSkipText(bool value)
+    {
+        skipText = value;
     }
     public void goKitchenTask()
     {
@@ -143,6 +169,7 @@ public class DialogController : MonoBehaviour
         dialogBox.SetActive(true);
         dialogText.SetActive(true);
         ActivateText(text.correctResult, text.correctResultConditions);
+        gameManager.evaluateCorrectReputation(text.aceptTask);
     }
     public void wrongResult()
     {
@@ -151,6 +178,7 @@ public class DialogController : MonoBehaviour
         dialogBox.SetActive(true);
         dialogText.SetActive(true);
         ActivateText(text.wrongResult, text.wrongResultConditions);
+        gameManager.reduceReputation();
     }
     public void wrongResultTimer()
     {
@@ -159,6 +187,7 @@ public class DialogController : MonoBehaviour
         dialogBox.SetActive(true);
         dialogText.SetActive(true);
         ActivateText(text.wrongResultTimer, text.wrongResultTimerConditions);
+        gameManager.reduceReputation();
     }
 
     public void cancelResult()
@@ -168,6 +197,7 @@ public class DialogController : MonoBehaviour
         dialogBox.SetActive(true);
         dialogText.SetActive(true);
         ActivateText(text.cancelResult, text.cancelResultConditions);
+        gameManager.evaluateRejectReputation(text.aceptTask);
     }
     public void disableClient()
     {

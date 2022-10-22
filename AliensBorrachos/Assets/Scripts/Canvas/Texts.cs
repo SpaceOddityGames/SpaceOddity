@@ -17,4 +17,5 @@ public class Texts
     public string[] cancelResult;
     public int[] cancelResultConditions; // 0 = no conditions / 2 = remove character
     public Recipe recipe;
+    public bool aceptTask; // true = has to acept / false = has to reject
 }
