@@ -38,10 +38,18 @@ public class GameManager : MonoBehaviour
         if (evaluateReputation())
         {
             day++;
+            if (reputation > maxReputation)
+            {
+                reputation = maxReputation;
+            }
             endManager.endDay(true);
         }
         else
         {
+            if (reputation < 0)
+            {
+                reputation = 0;
+            }
             endManager.endDay(false);
         }
     }

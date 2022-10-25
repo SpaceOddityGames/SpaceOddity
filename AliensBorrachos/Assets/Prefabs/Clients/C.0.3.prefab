@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - "\xBFMe sirves un -------?"
+    - "\xBFMe sirves un Unlucky?"
     - "A ver si as\xED se me pasa el disgusto, los de la Uni\xF3n han destruido la
       ciudad en la que viv\xED unos a\xF1os de joven \xBFsabes?"
     - "Todo por culpa de los poderosos jugando a la guerra\u2026"
@@ -148,6 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receta: 1
+  receta: 2
   ingredientRecipe: 
   liquidRecipe: []

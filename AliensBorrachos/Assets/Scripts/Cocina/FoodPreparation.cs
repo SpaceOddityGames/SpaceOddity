@@ -7,7 +7,7 @@ public class FoodPreparation : MonoBehaviour
 {
     [SerializeField] DialogController dialogController;
 
-    private const int SIZE = 5;
+    private const int SIZE = 10;
     public int[] preparing;
     public int[] objective;
     private int top = 0;
@@ -185,7 +185,7 @@ public class FoodPreparation : MonoBehaviour
     {
         for(int i = 0; i < maxLiquids; i++)
         {
-            if(!((liquids[i] < (liquidObjective[i] + 5)) && (liquids[i] > (liquidObjective[i] - 5))))
+            if(!((liquids[i] < (liquidObjective[i] + 7)) && (liquids[i] > (liquidObjective[i] - 7))))
             {
                 return false;
             }
