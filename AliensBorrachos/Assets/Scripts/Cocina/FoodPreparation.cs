@@ -13,6 +13,7 @@ public class FoodPreparation : MonoBehaviour
     private int top = 0;
 
     /// LiquidIngredients
+    [SerializeField] GameObject kitchenCanvas;
     [SerializeField] GameObject sliderBar;
     [SerializeField] GameObject sliderPoint;
     [SerializeField] GameObject sliderPointInit;
@@ -88,7 +89,7 @@ public class FoodPreparation : MonoBehaviour
     public void preparationResult()
     {
         timer.stop();
-        sliderBar.SetActive(false);
+        kitchenCanvas.SetActive(false);
         dialogController.goMain();
         if (comprobateIngredients() && comprobateLiquids())
         {
@@ -110,9 +111,10 @@ public class FoodPreparation : MonoBehaviour
     public void cancelTask()
     {
         timer.stop();
-        sliderBar.SetActive(false);
+        kitchenCanvas.SetActive(false);
         dialogController.goMain();
         dialogController.cancelResult();
+        resetFood();
     }
     public void SetObjective(int[] ingredientTask, float[] liquidTask)
     {
@@ -139,12 +141,12 @@ public class FoodPreparation : MonoBehaviour
     /////////////////////////////////////////////
     public void enableGameLiquid()
     {
-        sliderBar.SetActive(true);
+        kitchenCanvas.SetActive(true);
     }
 
     public void disableGameLiquid()
     {
-        sliderBar.SetActive(false);
+        kitchenCanvas.SetActive(false);
     }
     public void dropLiquid(int liquidType)
     {

@@ -5,13 +5,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int reputation;
-    [SerializeField] private const int maxReputation = 20;
+    [SerializeField] public int maxReputation = 20;
     [SerializeField] private const int reputationAument = 1;
     [SerializeField] private const int reputationReduction = 3;
     [SerializeField] private const int minimumReputation = 5;
     public int day;
     [SerializeField] private ArrayLayout clients;
     private int clientNum;
+    [SerializeField] Endings endManager;
     void Start()
     {
         startDay();
@@ -36,12 +37,12 @@ public class GameManager : MonoBehaviour
     {
         if (evaluateReputation())
         {
-            print("day completed");
             day++;
+            endManager.endDay(true);
         }
         else
         {
-            print("eres una mierda");
+            endManager.endDay(false);
         }
     }
     public void setReputation(int value)
@@ -80,7 +81,7 @@ public class GameManager : MonoBehaviour
     }
     public bool evaluateReputation()
     {
-        if (reputation < minimumReputation)
+        if (reputation >= minimumReputation)
         {
             return true;
         }

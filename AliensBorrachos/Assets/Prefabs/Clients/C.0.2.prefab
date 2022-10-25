@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7485873441582505980}
   - component: {fileID: 7485873441582505971}
   m_Layer: 0
-  m_Name: C.0.5
+  m_Name: C.0.2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 329e9d78ad91f7344b7885eb519afb3d, type: 2}
+  - {fileID: 2100000, guid: 61e8962b43757564698c87873d0c2dab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,17 +113,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textos:
-    initTexts: []
-    initConditions: 
-    correctResult: []
-    correctResultConditions: 
-    wrongResult: []
-    wrongResultConditions: 
-    wrongResultTimer: []
-    wrongResultTimerConditions: 
-    cancelResult: []
-    cancelResultConditions: 
+    initTexts:
+    - "Buenas, \xBFservis ----- verdad?"
+    - "S\xED, claro."
+    - "\xA1Perfecto! Pues ponme uno, es mi bebida favorita."
+    - Acabo de llegar desde Plokan, ha sido un viaje largo.
+    initConditions: 03000000000000000000000001000000
+    correctResult:
+    - "\xA1Qu\xE9 sed ten\xEDa!"
+    - Muchas gracias.
+    correctResultConditions: 0000000002000000
+    wrongResult:
+    - "\xA1Puaj!"
+    - "\xA1Est\xE1 asqueroso!"
+    wrongResultConditions: 0000000002000000
+    wrongResultTimer:
+    - "He estado esperando demasiado\u2026"
+    - "\xA1La pr\xF3xima vez me voy!"
+    wrongResultTimerConditions: 0000000002000000
+    cancelResult:
+    - "\xA1Si no puedo pedir mi bebida me voy!"
+    cancelResultConditions: 02000000
     recipe: {fileID: 7485873441582505971}
+    aceptTask: 1
 --- !u!114 &7485873441582505971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receta: 0
+  receta: 1
   ingredientRecipe: 
   liquidRecipe: []

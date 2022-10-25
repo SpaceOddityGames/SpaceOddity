@@ -7,7 +7,7 @@ public class Texts
 {
     [TextArea(2, 6)]
     public string[] initTexts;
-    public int[] initConditions; // 0 = no conditions / 1 = go Kitchen
+    public int[] initConditions; // 0 = no conditions / 1 = go Kitchen / 3 = main character
     public string[] correctResult;
     public int[] correctResultConditions; // 0 = no conditions / 2 = remove character
     public string[] wrongResult;

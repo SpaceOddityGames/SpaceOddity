@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7485873441582505980}
   - component: {fileID: 7485873441582505971}
   m_Layer: 0
-  m_Name: C.0.1
+  m_Name: C.0.3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0de70bb712c278a4f86e860d3f322975, type: 2}
+  - {fileID: 2100000, guid: 18ef8942196f54345acb767bfa262793, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,22 +114,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - "Hola buenas, \xBFMe sirves un Tonight Please por favor?"
-    initConditions: 01000000
+    - "\xBFMe sirves un -------?"
+    - "A ver si as\xED se me pasa el disgusto, los de la Uni\xF3n han destruido la
+      ciudad en la que viv\xED unos a\xF1os de joven \xBFsabes?"
+    - "Todo por culpa de los poderosos jugando a la guerra\u2026"
+    - "En fin, mejor me callo\u2026 no vengo a contar mis penas."
+    initConditions: 00000000000000000000000001000000
     correctResult:
-    - "Muchas gracias, \xA1est\xE1 muy bueno! "
+    - "\xA1Gracias!"
     correctResultConditions: 02000000
     wrongResult:
-    - "\xBFQu\xE9 es esto? Est\xE1 muy malo."
+    - "Mi bebida sabe fatal, \xA1no vuelvo!"
     wrongResultConditions: 02000000
     wrongResultTimer:
-    - "\xA1C\xF3mo ha podido tardar tanto! "
-    wrongResultTimerConditions: 02000000
+    - "\xA1Mi bebida! \xA1Lo que has tardado, por fin! "
+    - "Hay gente que no tiene todo el tiempo del mundo \xBFsabes?"
+    wrongResultTimerConditions: 0000000002000000
     cancelResult:
-    - "\xBFNo me lo puedes servir? \xBFEn serio?"
-    - "\xA1Qu\xE9 asco!"
+    - "\xBFPor qu\xE9 no me preparas la bebida?"
+    - "\xA1Este sitio es una mierda!"
     cancelResultConditions: 0000000002000000
     recipe: {fileID: 7485873441582505971}
+    aceptTask: 1
 --- !u!114 &7485873441582505971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receta: 0
+  receta: 1
   ingredientRecipe: 
   liquidRecipe: []

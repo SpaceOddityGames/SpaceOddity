@@ -10,20 +10,25 @@ public class LiquidIngredient : MonoBehaviour
     private Vector3 mOffset;
     private float mZCoord;
     private Vector3 initPos;
-
-
+    private bool isEnabled = true;
     void Start()
     {
         initPos = gameObject.transform.position;
     }
     private void OnMouseDown()
     {
-        mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
-        mOffset = gameObject.transform.position - GetMouseWorldPos();
+        if (isEnabled)
+        {
+            mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
+            mOffset = gameObject.transform.position - GetMouseWorldPos();
+        }
     }
     void OnMouseDrag()
     {
-        this.transform.position = GetMouseWorldPos() + mOffset;
+        if (isEnabled)
+        {
+            this.transform.position = GetMouseWorldPos() + mOffset;
+        }
     }
     private Vector3 GetMouseWorldPos()
     {
@@ -72,5 +77,13 @@ public class LiquidIngredient : MonoBehaviour
         {
            drop = false;
         }
+    }
+    public void enable()
+    {
+        isEnabled = true;
+    }
+    public void disable()
+    {
+        isEnabled = false;
     }
 }

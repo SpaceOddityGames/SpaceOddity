@@ -7,6 +7,7 @@ public class Ingredient : MonoBehaviour
     public int foodType;
     public GameObject ingredient;
     private GameObject seleccion;
+    private bool isEnabled = true;
 
     //**
     //Función para arrastrar objetos
@@ -15,10 +16,13 @@ public class Ingredient : MonoBehaviour
     
     private void OnMouseDown()
     {
-        mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
-        mOffset = gameObject.transform.position - GetMouseWorldPos();
-        seleccion = Instantiate(ingredient, gameObject.transform.position, Quaternion.identity);
-        seleccion.GetComponent<IngredientUnit>().mainIngredient = this.gameObject;
+        if (isEnabled)
+        {
+            mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
+            mOffset = gameObject.transform.position - GetMouseWorldPos();
+            seleccion = Instantiate(ingredient, gameObject.transform.position, Quaternion.identity);
+            seleccion.GetComponent<IngredientUnit>().mainIngredient = this.gameObject;
+        }
     }
 
     private Vector3 GetMouseWorldPos()
@@ -30,7 +34,10 @@ public class Ingredient : MonoBehaviour
     }
     void OnMouseDrag()
     {
-        seleccion.transform.position = GetMouseWorldPos() + mOffset;
+        if (isEnabled)
+        {
+            seleccion.transform.position = GetMouseWorldPos() + mOffset;
+        }
     }
     //**
 
@@ -46,5 +53,13 @@ public class Ingredient : MonoBehaviour
             caldero.GetComponent<FoodPreparation>().addIngredient(foodType);
         }
         Destroy(seleccion);
+    }
+    public void enable()
+    {
+        isEnabled = true;
+    }
+    public void disable()
+    {
+        isEnabled = false;
     }
 }

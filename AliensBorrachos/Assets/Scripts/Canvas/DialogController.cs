@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.EventSystems;
 
 public class DialogController : MonoBehaviour
 {
@@ -26,10 +25,8 @@ public class DialogController : MonoBehaviour
     [SerializeField] GameObject clickScreenRemoveCharacter;
     [SerializeField] GameObject clickScreenSkipText;
 
-
     [SerializeField] FoodPreparation foodPreparation;
-    [SerializeField] GameObject sliderBar;
-
+    [SerializeField] GameObject kitchen;
 
     GameObject client;
 
@@ -150,7 +147,7 @@ public class DialogController : MonoBehaviour
         dialogBox.SetActive(false);
         dialogText.SetActive(false);
         client.SetActive(false);
-        sliderBar.SetActive(true);
+        kitchen.SetActive(true);
         this.GetComponent<ChangeRoom>().goKitchen();
     }
     public void goKitchen()
@@ -159,7 +156,7 @@ public class DialogController : MonoBehaviour
     }
     public void goMain()
     {
-        sliderBar.SetActive(false);
+        kitchen.SetActive(false);
         this.GetComponent<ChangeRoom>().goMain();
     }
     public void correctResult()
