@@ -1,0 +1,172 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7485873441582505974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7485873441582505970}
+  - component: {fileID: 7485873441582505969}
+  - component: {fileID: 7485873441582505968}
+  - component: {fileID: 7485873441582505975}
+  - component: {fileID: 7485873441582505980}
+  - component: {fileID: 7485873441582505971}
+  m_Layer: 0
+  m_Name: C.2.0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7485873441582505970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: -7.29, y: -1.43, z: 1.5726857}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
+--- !u!33 &7485873441582505969
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &7485873441582505968
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 0de70bb712c278a4f86e860d3f322975, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7485873441582505975
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7485873441582505980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73293d9d6ff8f8e45aa25d0301b1bd4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textos:
+    initTexts:
+    - "\xA1Buenos d\xEDas!"
+    - "Oye te quer\xEDa agradecer por todo lo de ayer, ya he podido hablar hoy con
+      \xE9l."
+    - "Ya me he enterado que te resultar\xEDa bastante molesto lidiar con \xE9l."
+    - "Por eso te quer\xEDa dar las gracias, ver\xE1s, aunque el tipo este sea un
+      subnormal, le necesito."
+    - "Mira, te lo voy a contar mejor, me has demostrado que puedo confiar en t\xED.
+      Estoy haciendo lo que puedo por ayudar a la gente de Plokan, la Uni\xF3n les
+      est\xE1 arrebatando todo."
+    - "La localizaci\xF3n de esta estaci\xF3n espacial es perfecta para el transporte
+      de personas y mercanc\xEDas. Yo tan s\xF3lo intento dar salvoconducto a muchos
+      lacertilios y conseguir suministros, aunque eso suponga hacer tratos con gente
+      como el de ayer."
+    - "Pero bueno, prefiero no entrar en detalles, puede ser peligroso. Como habr\xE1s
+      notado cada vez hay m\xE1s presencia de la USI en la estaci\xF3n."
+    - "De hecho, tengo entendido que algunos altos cargos de la Uni\xF3n est\xE1n
+      interesados en comprar esta estaci\xF3n espacial. Al estar pr\xF3xima a la
+      frontera con su territorio la querr\xE1n por alg\xFAn motivo."
+    - "Por cierto, hay una nueva regulaci\xF3n. Por culpa de la guerra el suministro
+      de pimkiyu desde Plokan ha ca\xEDdo, as\xED que a partir de hoy su consumo
+      est\xE1 limitado. "
+    - "En tu caso, solo podr\xE1s servirlo 2 veces por d\xEDa a los 2 primeros clientes
+      que pidan una bebida que lo contenga."
+    - "Si te piden m\xE1s bebidas que lleven pimkiyu tendr\xE1s que cancelar la comanda."
+    - "\xBFTe ha quedado claro?"
+    - "S\xED jefe."
+    - "Perfecto, pues nada m\xE1s. Te dejo empezar a trabajar."
+    - "\xA1Buena suerte!"
+    initConditions: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000002000000
+    correctResult: []
+    correctResultConditions: 
+    wrongResult: []
+    wrongResultConditions: 
+    wrongResultTimer: []
+    wrongResultTimerConditions: 
+    cancelResult: []
+    cancelResultConditions: 
+    recipe: {fileID: 7485873441582505971}
+    aceptTask: 0
+    twoTasks: 0
+    recipe2: {fileID: 0}
+--- !u!114 &7485873441582505971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  receta: 0
+  ingredientRecipe: 
+  liquidRecipe: []

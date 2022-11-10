@@ -13,7 +13,8 @@ public class Ingredient : MonoBehaviour
     //Función para arrastrar objetos
     private Vector3 mOffset;
     private float mZCoord;
-    
+
+
     private void OnMouseDown()
     {
         if (isEnabled)
@@ -24,6 +25,7 @@ public class Ingredient : MonoBehaviour
             seleccion.GetComponent<IngredientUnit>().mainIngredient = this.gameObject;
         }
     }
+
 
     private Vector3 GetMouseWorldPos()
     {
@@ -51,8 +53,14 @@ public class Ingredient : MonoBehaviour
         {
             drop = false;
             caldero.GetComponent<FoodPreparation>().addIngredient(foodType);
+            seleccion.GetComponent<IngredientUnit>().dropping = true;
+            seleccion.GetComponent<IngredientUnit>().startPos = seleccion.transform.position;
+            seleccion.GetComponent<IngredientUnit>().targetPos = caldero.transform.position;
         }
-        Destroy(seleccion);
+        else
+        {
+            Destroy(seleccion);
+        }
     }
     public void enable()
     {

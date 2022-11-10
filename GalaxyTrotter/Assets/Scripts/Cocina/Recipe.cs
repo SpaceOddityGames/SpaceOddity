@@ -11,7 +11,7 @@ public class Recipe : MonoBehaviour
 
     public int[] ingredientRecipe;
     public float[] liquidRecipe;
-    enum recipeName { TonightPlease, CloudBomb, Unlucky, AxxHole}
+    enum recipeName { TonightPlease, SpecialUSI, AXXHole, CloudBomb, Unlucky, TheVisitor, H2O, StrawberryMoon, Kaua}
 
     void Start()
     {
@@ -39,7 +39,7 @@ public class Recipe : MonoBehaviour
                 ingredientRecipe[6] = 3;
                 ingredientRecipe[7] = 3;
                 break;
-            case recipeName.AxxHole:
+            case recipeName.AXXHole:
                 liquidRecipe[0] = 50;
                 ingredientRecipe[0] = 4;
                 ingredientRecipe[1] = 2;

@@ -13,9 +13,22 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ArrayLayout clients;
     private int clientNum;
     [SerializeField] Endings endManager;
+    [SerializeField] KitchenController kitchenController;
+
+    // Evolución de la partida
+    [HideInInspector] public bool h01 = false;
+    [HideInInspector] public bool h02 = false;
+    [HideInInspector] public bool h03 = false;
+    [HideInInspector] public bool h04 = false;
+    [HideInInspector] public bool h05 = false;
+    [HideInInspector] public bool h06 = false;
+    [HideInInspector] public bool h07 = false;
+    [HideInInspector] public bool h08 = false;
+
     void Start()
     {
         startDay();
+        kitchenController.updateKitchenElements(day);
     }
     public void nextClient()
     {
@@ -57,11 +70,14 @@ public class GameManager : MonoBehaviour
     {
         reputation = value;
     }
-    public void evaluateCorrectReputation(bool value)
+    public void evaluateCorrectReputation(bool value, bool reseted)
     {
         if (value)
         {
-            aumentReputation();
+            if (!reseted)
+            {
+                aumentReputation();
+            }
         }
         else
         {

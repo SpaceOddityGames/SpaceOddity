@@ -46,20 +46,27 @@ public class LiquidIngredient : MonoBehaviour
         if (drop)
         {
             drop = false;
-            dropLiquid();
         }
         this.transform.position = initPos;
+        if(caldero != null)
+        {
+            caldero.GetComponent<FoodPreparation>().alfaDown = true;
+        }
+        caldero = null;
     }
     private void dropLiquid()
     {
         caldero.GetComponent<FoodPreparation>().dropLiquid(LiquidType);
     }
-
     private void Update()
     {
         if (drop)
         {
+            caldero.GetComponent<FoodPreparation>().alfaUp = true;
             dropLiquid();
+        } else if(caldero != null)
+        {
+            caldero.GetComponent<FoodPreparation>().alfaDown = true;
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -78,6 +85,7 @@ public class LiquidIngredient : MonoBehaviour
            drop = false;
         }
     }
+
     public void enable()
     {
         isEnabled = true;
@@ -86,4 +94,6 @@ public class LiquidIngredient : MonoBehaviour
     {
         isEnabled = false;
     }
+
+    
 }

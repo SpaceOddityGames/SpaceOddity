@@ -24,9 +24,17 @@ public class DialogController : MonoBehaviour
     [SerializeField] GameObject clickScreenKitchen;
     [SerializeField] GameObject clickScreenRemoveCharacter;
     [SerializeField] GameObject clickScreenSkipText;
+    [SerializeField] GameObject clickScreenTutorial;
+    [SerializeField] GameObject buttonCB1;
+    [SerializeField] GameObject buttonCB2;
+    [SerializeField] GameObject buttonLerman1;
+    [SerializeField] GameObject buttonLerman2;
+    [SerializeField] GameObject hologramLerman;
 
     [SerializeField] FoodPreparation foodPreparation;
+    [SerializeField] FoodPreparation foodPreparation2;
     [SerializeField] GameObject kitchen;
+    [SerializeField] TutorialManager tutorial;
 
     GameObject client;
 
@@ -133,6 +141,23 @@ public class DialogController : MonoBehaviour
                 textForMain = true;
                 clickScreen.SetActive(true);
                 break;
+            case 4:
+                clickScreenTutorial.SetActive(true);
+                break;
+            case 5:
+                activateOptionsCB();
+                break;
+            case 6:
+                hologramLerman.SetActive(true);
+                clickScreen.SetActive(true);
+                break;
+            case 7:
+                activateOptionsLerman();
+                break;
+            case 8:
+                gameManager.h01 = false;
+                clickScreen.SetActive(true);
+                break;
             default:
                 break;
         }
@@ -144,6 +169,16 @@ public class DialogController : MonoBehaviour
     public void goKitchenTask()
     {
         foodPreparation.SetObjective(text.recipe.ingredientRecipe, text.recipe.liquidRecipe);
+        foodPreparation.SetTwoTasks(text.twoTasks);
+        if (text.twoTasks)
+        {
+            foodPreparation2.gameObject.SetActive(true);
+            foodPreparation2.SetObjective(text.recipe2.ingredientRecipe, text.recipe2.liquidRecipe);
+        }
+        else
+        {
+            foodPreparation2.gameObject.SetActive(false);
+        }
         dialogBox.SetActive(false);
         dialogText.SetActive(false);
         client.SetActive(false);
@@ -152,6 +187,10 @@ public class DialogController : MonoBehaviour
     }
     public void goKitchen()
     {
+        dialogBox.SetActive(false);
+        dialogText.SetActive(false);
+        client.SetActive(false);
+        kitchen.SetActive(true);
         this.GetComponent<ChangeRoom>().goKitchen();
     }
     public void goMain()
@@ -159,14 +198,23 @@ public class DialogController : MonoBehaviour
         kitchen.SetActive(false);
         this.GetComponent<ChangeRoom>().goMain();
     }
-    public void correctResult()
+    public void goTutorial()
+    {
+        dialogBox.SetActive(false);
+        dialogText.SetActive(false);
+        client.SetActive(false);
+        kitchen.SetActive(true);
+        tutorial.gameObject.SetActive(true);
+        this.GetComponent<ChangeRoom>().goKitchen();
+    }
+    public void correctResult(bool reseted)
     {
         client.SetActive(true);
         clickScreen.SetActive(true);
         dialogBox.SetActive(true);
         dialogText.SetActive(true);
         ActivateText(text.correctResult, text.correctResultConditions);
-        gameManager.evaluateCorrectReputation(text.aceptTask);
+        gameManager.evaluateCorrectReputation(text.aceptTask, reseted);
     }
     public void wrongResult()
     {
@@ -214,5 +262,26 @@ public class DialogController : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         gameManager.nextClient();
+    }
+    public void activateOptionsCB()
+    {
+        buttonCB1.SetActive(true);
+        buttonCB2.SetActive(true);
+    }
+    public void deactivateOptionsCB()
+    {
+        buttonCB1.SetActive(false);
+        buttonCB2.SetActive(false);
+    }
+    public void activateOptionsLerman()
+    {
+        buttonCB1.SetActive(true);
+        buttonCB2.SetActive(true);
+    }
+    public void deactivateOptionsLerman()
+    {
+        buttonCB1.SetActive(false);
+        buttonCB2.SetActive(false);
+        hologramLerman.SetActive(false);
     }
 }

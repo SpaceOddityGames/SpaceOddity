@@ -5,19 +5,22 @@ using UnityEngine.UI;
 
 public class FoodPreparation : MonoBehaviour
 {
+    [SerializeField] GameManager gameManager;
     [SerializeField] DialogController dialogController;
+    [SerializeField] TutorialManager tutorialManager;
 
     private const int SIZE = 10;
     public int[] preparing;
     public int[] objective;
     private int top = 0;
-
+    [SerializeField] FoodPreparation foodPreparator2;
     /// LiquidIngredients
     [SerializeField] GameObject kitchenCanvas;
     [SerializeField] GameObject sliderBar;
     [SerializeField] GameObject sliderPoint;
     [SerializeField] GameObject sliderPointInit;
     [SerializeField] GameObject[] sliderFills;
+    
     private float max; //liquid drop max tamaño
     private const int updateLiquid = 5; // mas grande = mas lento
     private float quantityP; // porcentaje
@@ -25,11 +28,24 @@ public class FoodPreparation : MonoBehaviour
     private RectTransform rt;
     public float[] liquids;
     public float[] liquidObjective;
-    public Canvas canvas;
+    [SerializeField] Canvas canvas;
     private const int maxLiquids = 3;
+    //Alfas
+    private float t1 = 0;
+    private float t2 = 0;
+    private float t3 = 0;
+    [HideInInspector] public bool alfaUp = false;
+    [HideInInspector] public bool alfaDown = false;
 
     /// Clock
     [SerializeField] Clock timer;
+    //two tasks
+    private bool twoTask = false; // true = two preparations
+    //tutorial
+    [HideInInspector] public bool tutorial = false;
+    [HideInInspector] public bool tutorialIngredient = false;
+    //
+    [HideInInspector] public bool reseted = false;
 
     void Start()
     {
@@ -52,6 +68,10 @@ public class FoodPreparation : MonoBehaviour
         {
             preparing[top] = foodType;
             top++;
+        }
+        if (tutorialIngredient)
+        {
+            tutorialManager.nextText();
         }
     }
     //Comprueba la correcta preparación de la comida
@@ -91,11 +111,32 @@ public class FoodPreparation : MonoBehaviour
         timer.stop();
         kitchenCanvas.SetActive(false);
         dialogController.goMain();
+        if (tutorial)
+        {
+            tutorial = false;
+            dialogController.correctResult(true);
+            resetFood();
+            return;
+        }
         if (comprobateIngredients() && comprobateLiquids())
         {
             if (timer.comprobateTimer())
             {
-                dialogController.correctResult();
+                if (twoTask)
+                {
+                    if(foodPreparator2.comprobateIngredients() && foodPreparator2.comprobateLiquids())
+                    {
+                        dialogController.correctResult(reseted);
+                    }
+                    else
+                    {
+                        dialogController.wrongResult();
+                    }
+                }
+                else
+                {
+                    dialogController.correctResult(reseted);
+                }
             }
             else
             {
@@ -118,6 +159,7 @@ public class FoodPreparation : MonoBehaviour
     }
     public void SetObjective(int[] ingredientTask, float[] liquidTask)
     {
+        reseted = false;
         for (int i = 0; i < SIZE; i++) {
             objective[i] = ingredientTask[i];
         }
@@ -136,6 +178,10 @@ public class FoodPreparation : MonoBehaviour
         }
         top = 0;
         resetLiquid();
+        if (twoTask)
+        {
+            foodPreparator2.resetFood();
+        }
     }
 
     /////////////////////////////////////////////
@@ -181,7 +227,7 @@ public class FoodPreparation : MonoBehaviour
             rs.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 0);
         }
     }
-    private bool comprobateLiquids()
+    public bool comprobateLiquids()
     {
         for(int i = 0; i < maxLiquids; i++)
         {
@@ -191,5 +237,87 @@ public class FoodPreparation : MonoBehaviour
             }
         }
         return true;
+    }
+    
+    public void liquidChangeAlfaUp()
+    {
+        t1 += Time.deltaTime / 0.5f;
+        float startAlfa = sliderBar.GetComponent<Image>().color.a;
+        float targetAlfa = 1;
+        float newAlfa = Mathf.Lerp(startAlfa, targetAlfa, t1);
+        Color newColor;
+        //sliderBar
+        newColor = sliderBar.GetComponent<Image>().color;
+        newColor.a = newAlfa;
+        sliderBar.GetComponent<Image>().color = newColor;
+        //sliderPoint
+        newColor = sliderPoint.GetComponent<Image>().color;
+        newColor.a = newAlfa;
+        sliderPoint.GetComponent<Image>().color = newColor;
+        //sliderFills
+        for (int i = 0; i < sliderFills.Length; i++){
+
+            newColor = sliderFills[i].GetComponent<Image>().color;
+            newColor.a = newAlfa;
+            sliderFills[i].GetComponent<Image>().color = newColor;
+        }
+        if (t1 > 1)
+        {
+            alfaUp = false;
+        }
+    }
+    public void liquidChangeAlfaDown()
+    {
+        if (alfaDown)
+        {
+            t2 += Time.deltaTime / 2f;
+            if (t2 > 1f)
+            {
+                t3 += Time.deltaTime / 4f;
+                float startAlfa = sliderBar.GetComponent<Image>().color.a;
+                float targetAlfa = 0;
+                float newAlfa = Mathf.Lerp(startAlfa, targetAlfa, t3);
+                Color newColor;
+                //sliderBar
+                newColor = sliderBar.GetComponent<Image>().color;
+                newColor.a = newAlfa;
+                sliderBar.GetComponent<Image>().color = newColor;
+                //sliderPoint
+                newColor = sliderPoint.GetComponent<Image>().color;
+                newColor.a = newAlfa;
+                sliderPoint.GetComponent<Image>().color = newColor;
+                //sliderFills
+                for (int i = 0; i < sliderFills.Length; i++)
+                {
+
+                    newColor = sliderFills[i].GetComponent<Image>().color;
+                    newColor.a = newAlfa;
+                    sliderFills[i].GetComponent<Image>().color = newColor;
+                }
+            }
+            if (t3 > 1f)
+            {
+                alfaDown = false;
+                t2 = 0;
+                t3 = 0;
+            }
+        }
+    }
+    private void Update()
+    {
+        if (alfaUp)
+        {
+            liquidChangeAlfaUp();
+            t2 = 0;
+            t3 = 0;
+        }
+        else
+        {
+            liquidChangeAlfaDown();
+        }
+    }
+    public void SetTwoTasks(bool value)
+    {
+        twoTask = value;
     }
 }

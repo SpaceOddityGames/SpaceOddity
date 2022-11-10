@@ -8,5 +8,6 @@ public class ResetButton : MonoBehaviour
     private void OnMouseDown()
     {
         bowl.GetComponent<FoodPreparation>().resetFood();
+        bowl.GetComponent<FoodPreparation>().reseted = true;
     }
 }

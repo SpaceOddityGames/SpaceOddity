@@ -1,0 +1,195 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7485873441582505974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7485873441582505970}
+  - component: {fileID: 7485873441582505969}
+  - component: {fileID: 7485873441582505968}
+  - component: {fileID: 7485873441582505975}
+  - component: {fileID: 7485873441582505980}
+  - component: {fileID: 7485873441582505971}
+  m_Layer: 0
+  m_Name: C.4.2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7485873441582505970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: -7.29, y: -1.43, z: 1.5726857}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
+--- !u!33 &7485873441582505969
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &7485873441582505968
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 0de70bb712c278a4f86e860d3f322975, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7485873441582505975
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7485873441582505980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73293d9d6ff8f8e45aa25d0301b1bd4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textos:
+    initTexts:
+    - "Hola de nuevo, \xBFte acuerdas de m\xED? Estuve aqu\xED hace un par d\xEDas."
+    - "Me he enterado de lo que le ha ocurrido a tu anterior jefe. Y estoy convencida
+      de que no ha sido un accidente. Lo han matado agentes de la Uni\xF3n."
+    - "De alguna forma han averiguado que colaboraba con gente de Plokan, y habr\xE1n
+      decidido que no quieren ning\xFAn tipo de interferencias en su guerra."
+    - "Te estar\xE1s preguntando c\xF3mo s\xE9 todo esto, pues ver\xE1s, hu\xED de
+      Plokan usando un salvoconducto que me facilit\xF3 tu anterior jefe. Ha estado
+      ayudando a much\xEDsimas personas inocentes, no se merec\xEDa acabar as\xED."
+    - "Incluso despu\xE9s de haberme ayudado, se volvi\xF3 a arriesgar para salvar
+      a mis hermanos. Ten\xEDa una deuda enorme con \xE9l y me compromet\xED a ayudarle
+      vigilando a los agentes de la USI que pasan por la estaci\xF3n, pero ahora
+      est\xE1 muerto\u2026"
+    - "No estoy dispuesta a que esto quede as\xED, voy a descubrir qu\xE9 ha pasado
+      realmente en ese \u201Caccidente\u201D y necesito venganza."
+    - "Mira\u2026 S\xE9 que es mucho pedirte y que apenas me conoces de nada. Pero
+      t\xFA m\xE1s que nadie puedes ayudarme ahora mismo."
+    - "S\xE9 que hace poco estuvo aqu\xED un oficial de la Uni\xF3n preguntando por
+      un contrabandista que ten\xEDa un trato con tu anterior jefe. He averiguado
+      que no s\xF3lo estaba detr\xE1s de ese tipo, tambi\xE9n investigaba una posible
+      red de suministros para Plokan con origen aqu\xED, en Naber."
+    - "Ahora imagino que acab\xF3 descubriendo que tu jefe era uno de los responsables
+      de esa red y por lo tanto estar\xE1 implicado en su asesinato."
+    - "Te cuento todo esto porque es bastante probable que, ahora que esta estaci\xF3n
+      pertenece a altos cargos de la Uni\xF3n, vuelva a aparecer por aqu\xED."
+    - "Bien\u2026 Si es as\xED, tan s\xF3lo quiero que hagas una cosa\u2026"
+    - "Esto de aqu\xED es [], y los Ichthys son letalmente al\xE9rgicos a \xE9l.
+      Solo tendr\xEDas que echarlo en la bebida que te pida\u2026"
+    - "\xBF\xA1QUIERES QUE MATE A ALGUIEN!?"
+    - "Shhhh\u2026 \xA1No grites!"
+    - "La reacci\xF3n qu\xEDmica que produce en su cuerpo al digerirlo no deja ning\xFAn
+      tipo de rastro. No podr\xE1n saber que ha sido envenenado."
+    - "Adem\xE1s, la digesti\xF3n de los Ichthys ocurre varias horas despu\xE9s de
+      haber consumido algo. No hay ninguna forma que se descubra que has sido t\xFA."
+    - "\u2026"
+    - "Lo s\xE9, lo s\xE9\u2026 Es demasiado todo esto. Pero por favor, no dejes
+      que esos sucios imperialistas asesinos se salgan con la suya, necesitamos gente
+      que les plante cara."
+    - "T\xFA guarda bien el [] y te lo piensas, no quiero obligarte a nada."
+    - "Bueno, ponme un [], no quiero levantar m\xE1s sospechas."
+    initConditions: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    correctResult:
+    - "Gracias por la bebida, me la tomar\xE9 en un rato."
+    - "Me voy de aqu\xED, que no quiero estar ni un minuto m\xE1s. Ya no me fio de
+      nadie, gracias por todo de verdad."
+    correctResultConditions: 0000000002000000
+    wrongResult:
+    - "Gracias por la bebida, me la tomar\xE9 en un rato."
+    - "Me voy de aqu\xED, que no quiero estar ni un minuto m\xE1s. Ya no me fio de
+      nadie, gracias por todo de verdad."
+    wrongResultConditions: 0000000002000000
+    wrongResultTimer:
+    - "Gracias por la bebida, me la tomar\xE9 en un rato."
+    - "Me voy de aqu\xED, que no quiero estar ni un minuto m\xE1s. Ya no me fio de
+      nadie, gracias por todo de verdad."
+    wrongResultTimerConditions: 0000000002000000
+    cancelResult:
+    - "Realmente tampoco me apetec\xEDa beber nada."
+    - "Me voy de aqu\xED, que no quiero estar ni un minuto m\xE1s. Ya no me fio de
+      nadie, gracias por todo de verdad."
+    cancelResultConditions: 0000000002000000
+    recipe: {fileID: 7485873441582505971}
+    aceptTask: 1
+    twoTasks: 0
+    recipe2: {fileID: 0}
+--- !u!114 &7485873441582505971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  receta: 0
+  ingredientRecipe: 
+  liquidRecipe: []
