@@ -113,17 +113,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textos:
-    initTexts: []
-    initConditions: 
-    correctResult: []
-    correctResultConditions: 
-    wrongResult: []
-    wrongResultConditions: 
-    wrongResultTimer: []
-    wrongResultTimerConditions: 
-    cancelResult: []
-    cancelResultConditions: 
+    initTexts:
+    - "Hola, s\xEDrveme un Strawberry moon."
+    initConditions: 01000000
+    correctResult:
+    - "Gracias, est\xE1 muy bueno."
+    correctResultConditions: 02000000
+    wrongResult:
+    - "Esto est\xE1 muy malo."
+    wrongResultConditions: 02000000
+    wrongResultTimer:
+    - "\xA1Mi bebida! \xA1Lo que has tardado, por fin!"
+    - "Hay gente que no tiene todo el tiempo del mundo \xBFsabes?"
+    wrongResultTimerConditions: 0000000002000000
+    cancelResult:
+    - "\xBFNo me lo puedes servir? \xBFEn serio?"
+    - "\xA1Qu\xE9 asco!"
+    cancelResultConditions: 0000000002000000
     recipe: {fileID: 7485873441582505971}
+    aceptTask: 0
+    twoTasks: 0
+    recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receta: 0
+  receta: 7
   ingredientRecipe: 
   liquidRecipe: []

@@ -113,17 +113,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textos:
-    initTexts: []
-    initConditions: 
-    correctResult: []
-    correctResultConditions: 
-    wrongResult: []
-    wrongResultConditions: 
-    wrongResultTimer: []
-    wrongResultTimerConditions: 
-    cancelResult: []
-    cancelResultConditions: 
+    initTexts:
+    - "\xBFMe sirves un H2O?"
+    initConditions: 01000000
+    correctResult:
+    - "Esta buen\xEDsimo."
+    - Muchas gracias.
+    correctResultConditions: 0000000002000000
+    wrongResult:
+    - "No s\xE9 que me acabas de dar, pero no me gusta nada."
+    wrongResultConditions: 02000000
+    wrongResultTimer:
+    - "La pr\xF3xima vez date prisa."
+    wrongResultTimerConditions: 02000000
+    cancelResult:
+    - "\xBFC\xF3mo? \xBFEn serio te vas a negar a servirmelo?"
+    - "El universo cada vez est\xE1 peor."
+    cancelResultConditions: 0000000002000000
     recipe: {fileID: 7485873441582505971}
+    aceptTask: 0
+    twoTasks: 0
+    recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receta: 0
+  receta: 6
   ingredientRecipe: 
   liquidRecipe: []

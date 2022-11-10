@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7485873441582505980}
   - component: {fileID: 7485873441582505971}
   m_Layer: 0
-  m_Name: C.4.6
+  m_Name: C.5.5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,23 +114,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - Ponme un Kaua por favor.
+    - "Buenas, uhmm\u2026 \xBFme pones un CloudBomb?"
     initConditions: 01000000
     correctResult:
-    - No me esperaba que lo pudieses preparar tan bien.
+    - "Muchas gracias, \xA1est\xE1 muy bueno!"
     correctResultConditions: 02000000
     wrongResult:
-    - Se nota que no eres un Ichthy.
-    - No eres capaz de preparar bien una simple bebida.
+    - "\u2026"
+    - "\xBFQu\xE9 es esto? Est\xE1 muy malo."
     wrongResultConditions: 0000000002000000
     wrongResultTimer:
-    - Se nota que no eres un Ichthy.
-    - No eres capaz de entregar a tiempo una simple bebida.
+    - "He estado esperando demasiado\u2026"
+    - "\xA1La pr\xF3xima vez me voy!"
     wrongResultTimerConditions: 0000000002000000
     cancelResult:
-    - "\xBFC\xF3mo te atreves a rechazar mi pedido?"
-    - "Te arrepentir\xE1s..."
-    cancelResultConditions: 0000000002000000
+    - "\xA1Si no puedo pedir mi bebida me voy!"
+    cancelResultConditions: 02000000
     recipe: {fileID: 7485873441582505971}
     aceptTask: 1
     twoTasks: 0
@@ -147,6 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receta: 8
+  receta: 3
   ingredientRecipe: 
   liquidRecipe: []

@@ -139,8 +139,8 @@ MonoBehaviour:
     - "Te cuento todo esto porque es bastante probable que, ahora que esta estaci\xF3n
       pertenece a altos cargos de la Uni\xF3n, vuelva a aparecer por aqu\xED."
     - "Bien\u2026 Si es as\xED, tan s\xF3lo quiero que hagas una cosa\u2026"
-    - "Esto de aqu\xED es [], y los Ichthys son letalmente al\xE9rgicos a \xE9l.
-      Solo tendr\xEDas que echarlo en la bebida que te pida\u2026"
+    - "Esto de aqu\xED es moonso, y los Ichthys son letalmente al\xE9rgicos a \xE9l.
+      Solo tendr\xEDas que echarlo en la bebida que te pida el..."
     - "\xBF\xA1QUIERES QUE MATE A ALGUIEN!?"
     - "Shhhh\u2026 \xA1No grites!"
     - "La reacci\xF3n qu\xEDmica que produce en su cuerpo al digerirlo no deja ning\xFAn
@@ -151,8 +151,8 @@ MonoBehaviour:
     - "Lo s\xE9, lo s\xE9\u2026 Es demasiado todo esto. Pero por favor, no dejes
       que esos sucios imperialistas asesinos se salgan con la suya, necesitamos gente
       que les plante cara."
-    - "T\xFA guarda bien el [] y te lo piensas, no quiero obligarte a nada."
-    - "Bueno, ponme un [], no quiero levantar m\xE1s sospechas."
+    - "T\xFA gu\xE1rdate bien el moonso y te lo piensas, no quiero obligarte a nada."
+    - "Bueno, ponme un The Visitor, no quiero levantar m\xE1s sospechas."
     initConditions: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     correctResult:
     - "Gracias por la bebida, me la tomar\xE9 en un rato."
@@ -190,6 +190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receta: 0
+  receta: 5
   ingredientRecipe: 
   liquidRecipe: []
