@@ -75,6 +75,7 @@ public class LiquidIngredient : MonoBehaviour
         {
             caldero = other.gameObject;
             drop = true;
+            FindObjectOfType<AudioManager>().Play("liquido");
         }
     }
 
@@ -82,7 +83,8 @@ public class LiquidIngredient : MonoBehaviour
     {
         if (other.gameObject.tag == "Caldero")
         {
-           drop = false;
+            drop = false;
+            FindObjectOfType<AudioManager>().Pause("liquido");
         }
     }
 
