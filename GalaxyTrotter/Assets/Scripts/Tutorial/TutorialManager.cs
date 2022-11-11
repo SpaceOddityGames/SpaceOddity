@@ -15,6 +15,7 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] Ingredient[] ingredients;
     [SerializeField] LiquidIngredient[] liquids;
     [SerializeField] GameObject tabletButton;
+    [SerializeField] GameObject tablet;
 
     [SerializeField] GameObject prepareButton;
     [SerializeField] GameObject resetButton;
@@ -62,7 +63,7 @@ public class TutorialManager : MonoBehaviour
                 textI = 1;
                 textBoxes[textI].SetActive(true);
                 flechas[textI].SetActive(true);
-                
+                tablet.GetComponent<TabletManager>().tuto1 = true;
                 condit = 1;
                 textToPrint = "En este caso te he pedido un Tonight Please, así que entra en el Recetario y busca la pestaña del Tonight Please.";
                 break;
@@ -73,88 +74,104 @@ public class TutorialManager : MonoBehaviour
                 textBoxes[textI].SetActive(true);
                 flechas[textI].SetActive(true);
                 textToPrint = "Aquí podrás comprobar qué ingredientes componen al Tonight Please. Te recomiendo ir aprendiendo las recetas disponibles te será útil para ser más rápido.";
-                condit = 0;
+                condit = -1;
                 break;
             case 5:
+                textBoxes[textI].SetActive(false);
+                flechas[textI].SetActive(false);
+                condit = -1;
+                textI = 3;
+                textBoxes[textI].SetActive(true);
+                flechas[textI].SetActive(true);
                 textToPrint = "Sal ahora del recetario para ver el resto de apartados que tiene la tablet.";
-                //condit = ????
+                condit = 0;
                 break;
             case 6:
                 textBoxes[textI].SetActive(false);
                 flechas[textI].SetActive(false);
+                condit = -1;
+
+                break;
+            case 7:
                 textI = 1;
                 textBoxes[textI].SetActive(true);
                 textToPrint = "Como puedes ver aquí también podrás ver otras cosas como las reglas del bar, un mapa de la zona y datos de las distintas especies que vienen al bar. Además de esta barra que marca tu reputación profesional.";
                 condit = 0;
                 break;
-            case 7:
+            case 8:
                 textToPrint = "La reputación aumenta o disminuye según tu rendimiento. Si fallas en la realización de las bebidas o incumples alguna regla se te penalizará. Procura que no baje más de 5 puntos o me veré obligado a despedirte.";
                 break;
-            case 8:
-                textToPrint = "En las reglas podrás mirar las normas del local y las regulaciones del gobierno de Azius. Y en el botón de especies podrás comprobar los ingredientes que no puede consumir cada especie. Recuerda revisarlo de vez en cuando, la tablet se actualiza cuando haya nuevas reglas o un nuevo cliente de otra especie venga al bar.";
-                break;
             case 9:
-                textToPrint = "Bueno, eso es todo en cuanto a la tablet.";
-                //condit = ?????????????
+                textToPrint = "En las reglas podrás mirar las normas del local y las regulaciones del gobierno de Azius. Y en el botón de especies podrás comprobar los ingredientes que no puede consumir cada especie.";
                 break;
             case 10:
+                textToPrint = "Recuerda revisarlo de vez en cuando, la tablet se actualiza cuando haya nuevas reglas o un nuevo cliente de otra especie venga al bar.";
+                break;
+            case 11:
+                textToPrint = "Bueno, eso es todo en cuanto a la tablet.";
+                condit = 0;
+                break;
+            case 12:
+                textBoxes[textI].SetActive(false);
+                break;
+            case 13:
                 textBoxes[textI].SetActive(false);
                 textI = 0;
                 textBoxes[textI].SetActive(true);
                 textToPrint = "Pasemos ahora a preparar la bebida, antes de nada, observa que existen dos tipos de ingredientes, los que tienes aquí arriba son líquidos, mientras que el resto son sólidos.";
                 condit = 0;
                 break;
-            case 11:
+            case 14:
                 flechas[3].SetActive(true);
                 textToPrint = "Por otro lado, ten en cuenta que el tiempo que tardes en realizar una bebida es muy importante. En este reloj podrás mirar el tiempo con el que cuentas para terminar un pedido, si tardás más de lo indicado seguramente el cliente se canse y esto perjudique en tu reputación.";
                 break;
-            case 12:
+            case 15:
                 flechas[3].SetActive(false);
                 textToPrint = "Tranquilo que como esto es una prueba no tendré en cuenta el tiempo.";
                 break;
-            case 13:
+            case 16:
                 flechas[4].SetActive(true);
                 textToPrint = "Vale, una vez dicho esto, pasemos a lo importante. Como has visto, un Tonight Please lleva un 70% de Sul, el Sul es este ingrediente líquido, cógelo.";
                 break;
-            case 14:
+            case 17:
                 flechas[4].SetActive(false);
                 flechas[5].SetActive(true);
                 textToPrint = "Para echarlo en la bebida tan solo tienes que arrastrarlo hasta el recipiente principal del medio.";
                 break;
-            case 15:
+            case 18:
                 textToPrint = "Al mantener el líquido encima del recipiente este se irá llenando. Puedes comprobar la cantidad que has echado en el nivel que aparece al lado, recuerda que en este caso debe tener un 70% de Sul.";
                 break;
-            case 16:
+            case 19:
                 flechas[5].SetActive(false);
                 textToPrint = "Tranquilo que si no eres exacto del todo no hay ningún problema, apenas se nota cambio en el sabor. Pero siempre intenta acercarte a la cifra indicada todo lo que puedas";
                 condit = 2;
                 break;
-            case 17:
+            case 20:
                 flechas[6].SetActive(true);
                 textToPrint = "Bien, ten en cuenta que si cometes algún error echando un ingrediente que no debías o te pasas en la cantidad de algún líquido, puedes tirar esta bebida y empezar de nuevo pulsando el botón que tienes a tu izquierda. Pero bueno, ahora no necesitas utilizarlo.";
                 resetButton.SetActive(true);
                 condit = 0; 
                 break;
-            case 18:
+            case 21:
                 resetButton.SetActive(false);
                 flechas[6].SetActive(false);
                 textToPrint = "Pero ten en cuenta dos cosas, la primera que el tiempo corre, así que trata de no equivocarte y así no tendrás que empezar otra vez.";
                 break;
-            case 19:
+            case 22:
                 textToPrint = "Y la segunda que al haber malgastado algún ingrediente no ganarás reputación en esa bebida, procura aún así hacerla bien para no perder.";
                 break;
-            case 20:
+            case 23:
                 flechas[7].SetActive(true);
                 textToPrint = "El siguiente ingrediente del Tonight Please son 2 hongustars, para echarlo a la bebida cógelos y arrástralos hasta el recipiente.";
                 ingredients[1].enable();
                 condit = 3;
                 break;
-            case 21:
+            case 24:
                 flechas[7].SetActive(false);
                 textToPrint = "Uno más y ya habrás terminado.";
                 condit = 3;
                 break;
-            case 22:
+            case 25:
                 flechas[8].SetActive(true);
                 ingredients[1].disable();
                 foodPreparator.tutorialIngredient = false;

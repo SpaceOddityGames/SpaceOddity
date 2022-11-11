@@ -20,7 +20,7 @@ public class TabletButton: MonoBehaviour, IPointerClickHandler
             this.gameObject.SetActive(false);
             paNoVerElFondo.SetActive(true);
             recipes.SetActive(true);
-            closeButton.SetActive(true);
+            //closeButton.SetActive(true);
             for (int i = 0; i < ingredients.Length; i++)
             {
                 ingredients[i].disable();

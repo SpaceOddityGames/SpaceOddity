@@ -113,17 +113,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textos:
-    initTexts: []
-    initConditions: 
-    correctResult: []
-    correctResultConditions: 
-    wrongResult: []
-    wrongResultConditions: 
-    wrongResultTimer: []
-    wrongResultTimerConditions: 
-    cancelResult: []
-    cancelResultConditions: 
+    initTexts:
+    - "\xBFMe pones un Tonight Please?"
+    initConditions: 01000000
+    correctResult:
+    - "Est\xE1 muy bueno, muchas gracias."
+    correctResultConditions: 02000000
+    wrongResult:
+    - Esto no es lo que yo he pedido.
+    wrongResultConditions: 02000000
+    wrongResultTimer:
+    - Has tardado demasiado.
+    - "Date prisa la pr\xF3xima vez."
+    wrongResultTimerConditions: 0000000002000000
+    cancelResult:
+    - "No entiendo porqu\xE9 no me quieres servir."
+    cancelResultConditions: 02000000
     recipe: {fileID: 7485873441582505971}
+    aceptTask: 1
+    twoTasks: 0
+    recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -113,17 +113,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textos:
-    initTexts: []
-    initConditions: 
-    correctResult: []
-    correctResultConditions: 
-    wrongResult: []
-    wrongResultConditions: 
-    wrongResultTimer: []
-    wrongResultTimerConditions: 
-    cancelResult: []
-    cancelResultConditions: 
+    initTexts:
+    - "S\xEDrveme un AXXhole, guapo."
+    initConditions: 01000000
+    correctResult:
+    - "Est\xE1 tan bueno como tu."
+    - "Espero que alg\xFAn d\xEDa me ense\xF1es tu secreto para ser tan bueno en
+      lo que haces."
+    correctResultConditions: 0000000002000000
+    wrongResult:
+    - No me esperaba algo tan malo.
+    - Creo que te habia sobrevalorado.
+    wrongResultConditions: 0000000002000000
+    wrongResultTimer:
+    - "Has tardado demasiado, ya me est\xE1s cansando."
+    wrongResultTimerConditions: 02000000
+    cancelResult:
+    - "\xBFMe rechazas? En fin..."
+    cancelResultConditions: 02000000
     recipe: {fileID: 7485873441582505971}
+    aceptTask: 1
+    twoTasks: 0
+    recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receta: 0
+  receta: 2
   ingredientRecipe: 
   liquidRecipe: []

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public int reputation;
@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     private int clientNum;
     [SerializeField] Endings endManager;
     [SerializeField] KitchenController kitchenController;
+    [SerializeField] FoodPreparation foodPreparator;
+    [SerializeField] Slider reputationSlider;
 
     // Evolución de la partida
     [HideInInspector] public bool h01 = false;
@@ -29,6 +31,8 @@ public class GameManager : MonoBehaviour
     {
         startDay();
         kitchenController.updateKitchenElements(day);
+        reputationSlider.maxValue = maxReputation;
+        updateSliderBar();
     }
     public void nextClient()
     {
@@ -74,6 +78,11 @@ public class GameManager : MonoBehaviour
     {
         if (value)
         {
+            if (foodPreparator.reject || foodPreparator.foodPreparator2.reject)
+            {
+                reduceReputation();
+                return;
+            }
             if (!reseted)
             {
                 aumentReputation();
@@ -98,10 +107,12 @@ public class GameManager : MonoBehaviour
     public void aumentReputation()
     {
         reputation += reputationAument;
+        updateSliderBar();
     }
     public void reduceReputation()
     {
         reputation -= reputationReduction;
+        updateSliderBar();
     }
     public bool evaluateReputation()
     {
@@ -113,5 +124,9 @@ public class GameManager : MonoBehaviour
         {
             return false; //end game
         }
+    }
+    public void updateSliderBar()
+    {
+        reputationSlider.value = reputation;
     }
 }

@@ -13,7 +13,7 @@ public class FoodPreparation : MonoBehaviour
     public int[] preparing;
     public int[] objective;
     private int top = 0;
-    [SerializeField] FoodPreparation foodPreparator2;
+    [SerializeField] public FoodPreparation foodPreparator2;
     /// LiquidIngredients
     [SerializeField] GameObject kitchenCanvas;
     [SerializeField] GameObject sliderBar;
@@ -46,6 +46,10 @@ public class FoodPreparation : MonoBehaviour
     [HideInInspector] public bool tutorialIngredient = false;
     //
     [HideInInspector] public bool reseted = false;
+    //Comprobaciones varias
+    [HideInInspector] public bool comprobatePimkyu = false;
+    [HideInInspector] public bool reject = false;
+    [HideInInspector] public int servedPimkyu = 0;
 
     void Start()
     {
@@ -64,6 +68,7 @@ public class FoodPreparation : MonoBehaviour
     //Se llama a la función desde los ingredientes
     public void addIngredient(int foodType)
     {
+
         if (top < SIZE)
         {
             preparing[top] = foodType;
@@ -103,6 +108,29 @@ public class FoodPreparation : MonoBehaviour
             i++;
             j = 0;
             correctUnit = false;
+        }
+        if (comprobatePimkyu)
+        {
+            bool hasPimkyu = false;
+            for(int k = 0; k < SIZE; k++)
+            {
+                if(preparing[k] == 3)
+                {
+                    hasPimkyu = true;
+                }
+            }
+            if (hasPimkyu)
+            {
+                servedPimkyu++;
+                if (foodPreparator2 != null)
+                {
+                    foodPreparator2.servedPimkyu++;
+                }
+            }
+            if (servedPimkyu >= 2)
+            {
+                reject = true;
+            }
         }
         return correct;
     }
@@ -159,6 +187,7 @@ public class FoodPreparation : MonoBehaviour
     }
     public void SetObjective(int[] ingredientTask, float[] liquidTask)
     {
+        reject = false;
         reseted = false;
         for (int i = 0; i < SIZE; i++) {
             objective[i] = ingredientTask[i];
