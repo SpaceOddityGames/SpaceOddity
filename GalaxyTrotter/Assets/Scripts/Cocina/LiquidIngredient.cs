@@ -75,7 +75,10 @@ public class LiquidIngredient : MonoBehaviour
         {
             caldero = other.gameObject;
             drop = true;
-            FindObjectOfType<AudioManager>().Play("liquido");
+            if(caldero.GetComponent<FoodPreparation>().quantityP < 100)
+            {
+                FindObjectOfType<AudioManager>().Play("liquido");
+            }
         }
     }
 

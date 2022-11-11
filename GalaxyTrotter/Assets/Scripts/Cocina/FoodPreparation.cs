@@ -23,7 +23,7 @@ public class FoodPreparation : MonoBehaviour
     
     private float max; //liquid drop max tamaño
     private const int updateLiquid = 5; // mas grande = mas lento
-    private float quantityP; // porcentaje
+    public float quantityP; // porcentaje
     private float[] quantities;
     private RectTransform rt;
     public float[] liquids;
