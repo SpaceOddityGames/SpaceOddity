@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7485873441582505980}
   - component: {fileID: 7485873441582505971}
   m_Layer: 0
-  m_Name: C.6.0
+  m_Name: C.6.0.0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,8 +113,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textos:
-    initTexts: []
-    initConditions: 
+    initTexts:
+    - "\xA1Empleado n\xFAmero 13! Justo contigo quer\xEDa hablar, he recibido fuertes
+      quejas sobre tu servicio por un cliente."
+    - "Tu deber como empleado es contentar al cliente, \xBFtan dif\xEDcil es?"
+    - "Encima has cabreado a un oficial de la Uni\xF3n, no podemos tolerar este tipo
+      de impertinencias."
+    - "\xA1Recoge tus cosas y abandona tu puesto de trabajo inmediatamente!"
+    initConditions: 0000000000000000000000000e000000
     correctResult: []
     correctResultConditions: 
     wrongResult: []
@@ -124,6 +130,9 @@ MonoBehaviour:
     cancelResult: []
     cancelResultConditions: 
     recipe: {fileID: 7485873441582505971}
+    aceptTask: 0
+    twoTasks: 0
+    recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971
 MonoBehaviour:
   m_ObjectHideFlags: 0

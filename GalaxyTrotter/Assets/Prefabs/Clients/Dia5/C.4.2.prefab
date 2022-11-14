@@ -153,7 +153,7 @@ MonoBehaviour:
       que les plante cara."
     - "T\xFA gu\xE1rdate bien el moonso y te lo piensas, no quiero obligarte a nada."
     - "Bueno, ponme un The Visitor, no quiero levantar m\xE1s sospechas."
-    initConditions: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    initConditions: 0000000000000000000000000000000000000000000000000000000000000000000000000000000009000000030000000000000000000000000000000300000000000000000000000a00000001000000
     correctResult:
     - "Gracias por la bebida, me la tomar\xE9 en un rato."
     - "Me voy de aqu\xED, que no quiero estar ni un minuto m\xE1s. Ya no me fio de

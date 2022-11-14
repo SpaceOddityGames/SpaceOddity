@@ -5,7 +5,6 @@ using UnityEngine;
 public class PrepareButton : MonoBehaviour
 {
     public GameObject bowl;
-
     private void OnMouseDown()
     {
         bowl.GetComponent<FoodPreparation>().preparationResult();

@@ -82,6 +82,7 @@ public class TabletManager : MonoBehaviour
             tuto3 = false;
             tutorial.nextText();
         }
+        infoRecetas[aux].SetActive(false);
         pantallaRazas.SetActive(false);
         pantallaMapa.SetActive(false);
         pantallaNotas.SetActive(false);

@@ -113,8 +113,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textos:
-    initTexts: []
-    initConditions: 
+    initTexts:
+    - Hey, hola.
+    - "Ya s\xE9 que no tengo permitido pedir nada, solo dame un momento para hablar
+      contigo y me voy."
+    - "Est\xE1 bien."
+    - 
+    initConditions: 0000000003000000000000000f000000
     correctResult: []
     correctResultConditions: 
     wrongResult: []
@@ -124,6 +129,9 @@ MonoBehaviour:
     cancelResult: []
     cancelResultConditions: 
     recipe: {fileID: 7485873441582505971}
+    aceptTask: 0
+    twoTasks: 0
+    recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971
 MonoBehaviour:
   m_ObjectHideFlags: 0

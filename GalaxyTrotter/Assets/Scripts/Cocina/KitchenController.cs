@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KitchenController : MonoBehaviour
 {
+    [SerializeField] FoodPreparation foodpreparator;
     [SerializeField] GameObject[] ingredients;
     [SerializeField] GameObject[] liquidIngredients;
     [SerializeField] GameObject[] buttons;
@@ -32,6 +33,7 @@ public class KitchenController : MonoBehaviour
     }
     public void updateKitchenElements(int day)
     {
+        foodpreparator.servedPimkyu = 0;
         switch (day)
         {
             case 0:
@@ -44,6 +46,8 @@ public class KitchenController : MonoBehaviour
                 ingredients[5].SetActive(false);
                 ingredients[6].SetActive(false);
                 ingredients[7].SetActive(false);
+                ingredients[8].SetActive(false);
+                ingredients[9].SetActive(false);
                 //ingredientesLiquidos
                 liquidIngredients[0].SetActive(true);
                 liquidIngredients[1].SetActive(true);
@@ -73,6 +77,8 @@ public class KitchenController : MonoBehaviour
                 ingredients[5].SetActive(false);
                 ingredients[6].SetActive(false);
                 ingredients[7].SetActive(false);
+                ingredients[8].SetActive(false);
+                ingredients[9].SetActive(false);
                 //ingredientesLiquidos
                 liquidIngredients[0].SetActive(true);
                 liquidIngredients[1].SetActive(true);
@@ -102,6 +108,8 @@ public class KitchenController : MonoBehaviour
                 ingredients[5].SetActive(true);
                 ingredients[6].SetActive(true);
                 ingredients[7].SetActive(false);
+                ingredients[8].SetActive(false);
+                ingredients[9].SetActive(false);
                 //ingredientesLiquidos
                 liquidIngredients[0].SetActive(true);
                 liquidIngredients[1].SetActive(true);
@@ -131,6 +139,8 @@ public class KitchenController : MonoBehaviour
                 ingredients[5].SetActive(true);
                 ingredients[6].SetActive(true);
                 ingredients[7].SetActive(true);
+                ingredients[8].SetActive(false);
+                ingredients[9].SetActive(false);
                 //ingredientesLiquidos
                 liquidIngredients[0].SetActive(true);
                 liquidIngredients[1].SetActive(true);
@@ -160,6 +170,8 @@ public class KitchenController : MonoBehaviour
                 ingredients[5].SetActive(true);
                 ingredients[6].SetActive(true);
                 ingredients[7].SetActive(true);
+                ingredients[8].SetActive(false);
+                ingredients[9].SetActive(false);
                 //ingredientesLiquidos
                 liquidIngredients[0].SetActive(true);
                 liquidIngredients[1].SetActive(true);
@@ -189,6 +201,8 @@ public class KitchenController : MonoBehaviour
                 ingredients[5].SetActive(true);
                 ingredients[6].SetActive(true);
                 ingredients[7].SetActive(true);
+                ingredients[8].SetActive(true);
+                ingredients[9].SetActive(false);
                 //ingredientesLiquidos
                 liquidIngredients[0].SetActive(true);
                 liquidIngredients[1].SetActive(true);
@@ -218,6 +232,8 @@ public class KitchenController : MonoBehaviour
                 ingredients[5].SetActive(true);
                 ingredients[6].SetActive(true);
                 ingredients[7].SetActive(true);
+                ingredients[8].SetActive(false);
+                ingredients[9].SetActive(false);
                 //ingredientesLiquidos
                 liquidIngredients[0].SetActive(true);
                 liquidIngredients[1].SetActive(true);
@@ -247,6 +263,8 @@ public class KitchenController : MonoBehaviour
                 ingredients[5].SetActive(true);
                 ingredients[6].SetActive(true);
                 ingredients[7].SetActive(true);
+                ingredients[8].SetActive(false);
+                ingredients[9].SetActive(true);
                 //ingredientesLiquidos
                 liquidIngredients[0].SetActive(true);
                 liquidIngredients[1].SetActive(true);

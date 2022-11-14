@@ -125,9 +125,12 @@ MonoBehaviour:
     - "S\xED, por supuesto."
     - "As\xED me gusta, sin tanto Lacertilio asqueroso el bar tendr\xE1 mucho mejor
       ambiente."
+    - "Y otra cosa, los clientes ahora pueden pedirte varias bebidas a la vez. Por
+      si vienen con alg\xFAn acompa\xF1ante y o algo as\xED. Tendr\xE1s que hacer
+      ambas bebidas a la vez, as\xED que no me decepciones."
     - "Pues nada m\xE1s, ponte a trabajar ya que ibas tarde, te voy a tener que descontar
       del sueldo estos minutos."
-    initConditions: 00000000000000000000000003000000000000000000000002000000
+    initConditions: 0000000000000000000000000300000000000000000000000000000002000000
     correctResult: []
     correctResultConditions: 
     wrongResult: []

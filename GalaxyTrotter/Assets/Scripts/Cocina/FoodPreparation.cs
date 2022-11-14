@@ -50,6 +50,10 @@ public class FoodPreparation : MonoBehaviour
     [HideInInspector] public bool comprobatePimkyu = false;
     [HideInInspector] public bool reject = false;
     [HideInInspector] public int servedPimkyu = 0;
+    [HideInInspector] public bool analizeLerman = false;
+    [HideInInspector] public bool lermanEnvenenado = false;
+    [HideInInspector] public bool lermanDouble = false;
+    [HideInInspector] public bool comprobateChip = false;
 
     void Start()
     {
@@ -82,6 +86,54 @@ public class FoodPreparation : MonoBehaviour
     //Comprueba la correcta preparación de la comida
     public bool comprobateIngredients()
     {
+        if (analizeLerman)
+        {
+            bool hasMoonso = false;
+            for (int k = 0; k < SIZE; k++)
+            {
+                if (preparing[k] == 9)
+                {
+                    hasMoonso = true;
+                    preparing[k] = 0;
+                }
+                if (hasMoonso)
+                {
+                    lermanEnvenenado = true;
+                    if (gameManager.h01)
+                    {
+                        gameManager.h06 = true;
+                    }
+                    else
+                    {
+                        gameManager.h05 = true;
+                    }
+                }
+                else
+                {
+                    gameManager.h06 = false;
+                }
+            }
+            int odziaQuantity = 0;
+            for (int k = 0; k < SIZE; k++)
+            {
+                if (preparing[k] == 3)
+                {
+                    odziaQuantity++;
+                    if (odziaQuantity == 2)
+                    {
+                        preparing[k] = 0;
+                    }
+                }
+            }
+            if(odziaQuantity == 2)
+            {
+                lermanDouble = true;
+            }
+            if(odziaQuantity != 3 && !hasMoonso)
+            {
+                gameManager.h08 = true;
+            }
+        }
         int[] aux = new int[SIZE];
         for (int m = 0; m < SIZE; m++)
         {
@@ -134,6 +186,7 @@ public class FoodPreparation : MonoBehaviour
         }
         return correct;
     }
+        
     public void preparationResult()
     {
         timer.stop();
@@ -142,9 +195,38 @@ public class FoodPreparation : MonoBehaviour
         if (tutorial)
         {
             tutorial = false;
+            tutorialManager.endTutorial();
             dialogController.correctResult(true);
             resetFood();
             return;
+        }
+        if (comprobateChip)
+        {
+            bool hasChip = false;
+            for (int k = 0; k < SIZE; k++)
+            {
+                if (preparing[k] == 3)
+                {
+                    hasChip = true;
+                }
+            }
+            if (hasChip)
+            {
+                if (!gameManager.h06)
+                {
+                    gameManager.h05 = true;
+                    dialogController.resultChip();
+                    return;
+                }
+                if(gameManager.h06)
+                {
+                    gameManager.h02 = true;
+                }
+            }
+            if (!hasChip)
+            {
+                gameManager.h03 = true;
+            }
         }
         if (comprobateIngredients() && comprobateLiquids())
         {

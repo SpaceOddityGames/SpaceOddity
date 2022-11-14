@@ -14,9 +14,8 @@ GameObject:
   - component: {fileID: 7485873441582505975}
   - component: {fileID: 7485873441582505980}
   - component: {fileID: 7485873441582505971}
-  - component: {fileID: 5102455592732009780}
   m_Layer: 0
-  m_Name: C.7.1
+  m_Name: C.6.0.3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,27 +114,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - "Hola, s\xEDrveme dos bebidas Kaua por favor."
-    initConditions: 01000000
-    correctResult:
-    - Muchas gracias, no me esperaba menos.
-    correctResultConditions: 02000000
-    wrongResult:
-    - Esto esta muy malo.
-    - "Vaya decepci\xF3n."
-    wrongResultConditions: 0000000002000000
-    wrongResultTimer:
-    - Has tardado demasiado.
-    - "Vaya decepci\xF3n."
-    wrongResultTimerConditions: 0000000002000000
-    cancelResult:
-    - "\xBFNo me quieres servir?"
-    - "Vaya decepci\xF3n."
-    cancelResultConditions: 0000000002000000
+    - "Bienvenido una jornada m\xE1s empleado n\xFAmero 13, tengo noticias importantes
+      para t\xED."
+    - "Ma\xF1ana se celebrar\xE1 una inauguraci\xF3n por la compra de la estaci\xF3n
+      espacial, vendr\xE1n los due\xF1os y gente importante de la esfera alta de
+      la Uni\xF3n de Sistemas Interplanetarios."
+    - "Despu\xE9s de las formalidades, la celebraci\xF3n acabar\xE1 en este bar,
+      por lo que todo tiene que salir perfecto \xBFqueda claro?"
+    - "No quiero ning\xFAn tipo de error ni malentendido, y s\xE9 muy puntual. Hay
+      que causar buena impresi\xF3n espero que no me decepciones."
+    - "Nada m\xE1s por ahora, \xA1a trabajar!"
+    initConditions: 0000000000000000000000000000000002000000
+    correctResult: []
+    correctResultConditions: 
+    wrongResult: []
+    wrongResultConditions: 
+    wrongResultTimer: []
+    wrongResultTimerConditions: 
+    cancelResult: []
+    cancelResultConditions: 
     recipe: {fileID: 7485873441582505971}
-    aceptTask: 1
-    twoTasks: 1
-    recipe2: {fileID: 5102455592732009780}
+    aceptTask: 0
+    twoTasks: 0
+    recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,21 +149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receta: 8
-  ingredientRecipe: 
-  liquidRecipe: []
---- !u!114 &5102455592732009780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7485873441582505974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  receta: 8
+  receta: 0
   ingredientRecipe: 
   liquidRecipe: []

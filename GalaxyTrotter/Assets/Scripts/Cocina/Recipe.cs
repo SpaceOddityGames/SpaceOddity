@@ -45,6 +45,9 @@ public class Recipe : MonoBehaviour
                 ingredientRecipe[1] = 2;
                 ingredientRecipe[2] = 2;
                 break;
+            case recipeName.Kaua:
+                ingredientRecipe[0] = 3;
+                break;
             default:
                 break;
         }

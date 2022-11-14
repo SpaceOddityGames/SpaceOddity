@@ -9,7 +9,7 @@ public class LiquidIngredient : MonoBehaviour
 
     private Vector3 mOffset;
     private float mZCoord;
-    private Vector3 initPos;
+    [HideInInspector] public Vector3 initPos;
     private bool isEnabled = true;
     void Start()
     {
@@ -77,7 +77,7 @@ public class LiquidIngredient : MonoBehaviour
             drop = true;
             if(caldero.GetComponent<FoodPreparation>().quantityP < 100)
             {
-                FindObjectOfType<AudioManager>().Play("liquido");
+                //FindObjectOfType<AudioManager>().Play("liquido");
             }
         }
     }
@@ -87,7 +87,7 @@ public class LiquidIngredient : MonoBehaviour
         if (other.gameObject.tag == "Caldero")
         {
             drop = false;
-            FindObjectOfType<AudioManager>().Pause("liquido");
+            //FindObjectOfType<AudioManager>().Pause("liquido");
         }
     }
 

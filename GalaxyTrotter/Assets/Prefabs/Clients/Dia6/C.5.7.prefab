@@ -113,8 +113,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textos:
-    initTexts: []
-    initConditions: 
+    initTexts:
+    - "Hola, soy polic\xEDa de Azius, \xBFeres el camarero de este bar verdad?"
+    - "S\xED, as\xED es."
+    - "Bien, vengo en relaci\xF3n con el reciente fallecimiento del jefe de este
+      local. Al parecer fue un accidente pero tenemos razones como para pensar que
+      en realidad fue provocado."
+    - "Simplemente dime si sabes algo, si viste algo sospechoso los d\xEDas anteriores
+      a lo ocurrido, cualquier cosa puede sernos \xFAtil."
+    - "Trabajando usted aqu\xED con \xE9l puede que sepa algo, \xBFes as\xED?"
+    initConditions: 030000000000000000000000000000000d000000
     correctResult: []
     correctResultConditions: 
     wrongResult: []
@@ -124,6 +132,9 @@ MonoBehaviour:
     cancelResult: []
     cancelResultConditions: 
     recipe: {fileID: 7485873441582505971}
+    aceptTask: 0
+    twoTasks: 0
+    recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971
 MonoBehaviour:
   m_ObjectHideFlags: 0

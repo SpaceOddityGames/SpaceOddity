@@ -7,7 +7,10 @@ public class Texts
 {
     [TextArea(2, 6)]
     public string[] initTexts;
-    public int[] initConditions; // 0 = no conditions / 1 = go Kitchen to work / 2 = remove character / 3 = main character / 4 = start Tutorial / 5 = opciones contrabandista C.1.6 / 6 = Lerman C.2.6 holograma / 7 = Lerman C.2.6 opciones / 8 = h01 toFalse C.1.6
+    public int[] initConditions; // 0 = no conditions / 1 = go Kitchen to work / 2 = remove character / 3 = main character / 4 = start Tutorial / 5 = opciones contrabandista C.1.6 
+    // 6 = Lerman C.2.6 holograma / 7 = Lerman C.2.6 opciones / 8 = h01 toFalse C.1.6 / 9 = c.4.2 moonso sobre la mesa / 10 = c.4.2 desaparece moonso 
+    // 11 = Lerman C.5.3 condicionales // 12 = c.5.3 analizeLerman // 13 = c.5.7 policia opciones // 14 = end day // 15 = c.6.3 diverse textes
+    // 16 = c.6.3 chip // 17 = c.7.4 mirar chip
     public string[] correctResult;
     public int[] correctResultConditions; // 0 = no conditions / 2 = remove character
     public string[] wrongResult;

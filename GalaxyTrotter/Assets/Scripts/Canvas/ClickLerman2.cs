@@ -20,5 +20,6 @@ public class ClickLerman2 : MonoBehaviour, IPointerClickHandler
         {
             gameManager.h01 = false;
         }
+        gameManager.h09 = false;
     }
 }

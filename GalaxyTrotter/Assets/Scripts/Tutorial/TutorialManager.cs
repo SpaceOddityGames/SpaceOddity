@@ -113,66 +113,67 @@ public class TutorialManager : MonoBehaviour
                 break;
             case 12:
                 textBoxes[textI].SetActive(false);
+                tablet.GetComponent<TabletManager>().tuto3 = true;
+                condit = -1;
                 break;
             case 13:
-                textBoxes[textI].SetActive(false);
                 textI = 0;
                 textBoxes[textI].SetActive(true);
                 textToPrint = "Pasemos ahora a preparar la bebida, antes de nada, observa que existen dos tipos de ingredientes, los que tienes aquí arriba son líquidos, mientras que el resto son sólidos.";
                 condit = 0;
                 break;
             case 14:
-                flechas[3].SetActive(true);
+                flechas[4].SetActive(true);
                 textToPrint = "Por otro lado, ten en cuenta que el tiempo que tardes en realizar una bebida es muy importante. En este reloj podrás mirar el tiempo con el que cuentas para terminar un pedido, si tardás más de lo indicado seguramente el cliente se canse y esto perjudique en tu reputación.";
                 break;
             case 15:
-                flechas[3].SetActive(false);
+                flechas[4].SetActive(false);
                 textToPrint = "Tranquilo que como esto es una prueba no tendré en cuenta el tiempo.";
                 break;
             case 16:
-                flechas[4].SetActive(true);
+                flechas[5].SetActive(true);
                 textToPrint = "Vale, una vez dicho esto, pasemos a lo importante. Como has visto, un Tonight Please lleva un 70% de Sul, el Sul es este ingrediente líquido, cógelo.";
                 break;
             case 17:
-                flechas[4].SetActive(false);
-                flechas[5].SetActive(true);
+                flechas[5].SetActive(false);
+                flechas[6].SetActive(true);
                 textToPrint = "Para echarlo en la bebida tan solo tienes que arrastrarlo hasta el recipiente principal del medio.";
                 break;
             case 18:
                 textToPrint = "Al mantener el líquido encima del recipiente este se irá llenando. Puedes comprobar la cantidad que has echado en el nivel que aparece al lado, recuerda que en este caso debe tener un 70% de Sul.";
                 break;
             case 19:
-                flechas[5].SetActive(false);
+                flechas[6].SetActive(false);
                 textToPrint = "Tranquilo que si no eres exacto del todo no hay ningún problema, apenas se nota cambio en el sabor. Pero siempre intenta acercarte a la cifra indicada todo lo que puedas";
                 condit = 2;
                 break;
             case 20:
-                flechas[6].SetActive(true);
+                flechas[7].SetActive(true);
                 textToPrint = "Bien, ten en cuenta que si cometes algún error echando un ingrediente que no debías o te pasas en la cantidad de algún líquido, puedes tirar esta bebida y empezar de nuevo pulsando el botón que tienes a tu izquierda. Pero bueno, ahora no necesitas utilizarlo.";
                 resetButton.SetActive(true);
                 condit = 0; 
                 break;
             case 21:
                 resetButton.SetActive(false);
-                flechas[6].SetActive(false);
+                flechas[7].SetActive(false);
                 textToPrint = "Pero ten en cuenta dos cosas, la primera que el tiempo corre, así que trata de no equivocarte y así no tendrás que empezar otra vez.";
                 break;
             case 22:
                 textToPrint = "Y la segunda que al haber malgastado algún ingrediente no ganarás reputación en esa bebida, procura aún así hacerla bien para no perder.";
                 break;
             case 23:
-                flechas[7].SetActive(true);
+                flechas[8].SetActive(true);
                 textToPrint = "El siguiente ingrediente del Tonight Please son 2 hongustars, para echarlo a la bebida cógelos y arrástralos hasta el recipiente.";
                 ingredients[1].enable();
                 condit = 3;
                 break;
             case 24:
-                flechas[7].SetActive(false);
+                flechas[8].SetActive(false);
                 textToPrint = "Uno más y ya habrás terminado.";
                 condit = 3;
                 break;
             case 25:
-                flechas[8].SetActive(true);
+                flechas[9].SetActive(true);
                 ingredients[1].disable();
                 foodPreparator.tutorialIngredient = false;
                 textToPrint = "Perfecto, ya has preparado un Tonight Please, ahora sólo te queda entregarlo.";
@@ -274,12 +275,15 @@ public class TutorialManager : MonoBehaviour
             {
                 analizeLiquid = false;
                 liquids[1].disable();
+                liquids[1].transform.position = liquids[1].initPos;
                 nextText();
             }
         }
     }
     public void endTutorial()
     {
+        flechas[9].SetActive(false);
+        textBoxes[0].SetActive(false);
         enableKitchen();
         this.gameObject.SetActive(false);
     }

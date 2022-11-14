@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7485873441582505975}
   - component: {fileID: 7485873441582505980}
   - component: {fileID: 7485873441582505971}
+  - component: {fileID: 8648829233506550210}
   m_Layer: 0
   m_Name: C.5.5
   m_TagString: Untagged
@@ -114,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - "Buenas, uhmm\u2026 \xBFme pones un CloudBomb?"
+    - "Buenas, uhmm\u2026 \xBFme pones un CloudBomb y un AXXHole?"
     initConditions: 01000000
     correctResult:
     - "Muchas gracias, \xA1est\xE1 muy bueno!"
@@ -132,8 +133,8 @@ MonoBehaviour:
     cancelResultConditions: 02000000
     recipe: {fileID: 7485873441582505971}
     aceptTask: 1
-    twoTasks: 0
-    recipe2: {fileID: 0}
+    twoTasks: 1
+    recipe2: {fileID: 8648829233506550210}
 --- !u!114 &7485873441582505971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,5 +148,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   receta: 3
+  ingredientRecipe: 
+  liquidRecipe: []
+--- !u!114 &8648829233506550210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  receta: 2
   ingredientRecipe: 
   liquidRecipe: []

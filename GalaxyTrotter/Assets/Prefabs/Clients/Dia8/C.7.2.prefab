@@ -115,15 +115,20 @@ MonoBehaviour:
   textos:
     initTexts:
     - Ponme un H2O por favor.
-    initConditions: 
-    correctResult: []
-    correctResultConditions: 
-    wrongResult: []
-    wrongResultConditions: 
-    wrongResultTimer: []
-    wrongResultTimerConditions: 
-    cancelResult: []
-    cancelResultConditions: 
+    initConditions: 01000000
+    correctResult:
+    - Muy buen servicio, muchas gracias.
+    correctResultConditions: 02000000
+    wrongResult:
+    - No es lo que te he pedido.
+    wrongResultConditions: 02000000
+    wrongResultTimer:
+    - "\xBFCrees que mi vida se basa en esperarte?"
+    - Me voy.
+    wrongResultTimerConditions: 0000000002000000
+    cancelResult:
+    - Si no me quieres servir me voy yo.
+    cancelResultConditions: 02000000
     recipe: {fileID: 7485873441582505971}
     aceptTask: 0
     twoTasks: 0

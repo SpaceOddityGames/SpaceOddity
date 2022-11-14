@@ -113,17 +113,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textos:
-    initTexts: []
-    initConditions: 
-    correctResult: []
-    correctResultConditions: 
-    wrongResult: []
-    wrongResultConditions: 
-    wrongResultTimer: []
-    wrongResultTimerConditions: 
-    cancelResult: []
-    cancelResultConditions: 
+    initTexts:
+    - Hola buenas, me gustan los cambios que se han hecho al bar eh.
+    - 
+    - "En fin, \xBFme pones un Kaua?\r"
+    - Ah y ponle un extra de odzia anda.
+    - "Lo siento, no puedo hacer eso. El odzia est\xE1 regulado en Azius y no est\xE1
+      permitido a\xF1adir m\xE1s que una unidad por bebida."
+    - "\xBFDe verdad? \xBF\xA1Pero qu\xE9 estupidez es esa!?\r"
+    - "Vamos a ver, este bar pertenece ya pr\xE1cticamente a la Uni\xF3n de Sistemas
+      Interplanetarios. S\xEDrveme lo que te digo y punto."
+    - "Puedo conseguir que te despidan te lo garantizo, \xBFcrees que no tengo contacto
+      con los nuevos due\xF1os de la estaci\xF3n?"
+    - Hazlo, echame 2 odzias.
+    initConditions: 000000000b0000000000000003000000000000000000000000000000000000000c000000
+    correctResult:
+    - "\xA1No se lo has echado! \xBFPero t\xFA qui\xE9n te crees que eres como para
+      no hacerme caso?"
+    - "Te arrepentir\xE1s de esto, Shuka ten\xEDas que ser."
+    correctResultConditions: 0000000002000000
+    wrongResult:
+    - Creo que te has confundido porque esto no es lo que yo te he pedido.
+    - "Shuka ten\xEDas que ser."
+    wrongResultConditions: 0000000002000000
+    wrongResultTimer:
+    - "C\xF3mo has podido tardar tanto..."
+    - "Shuka ten\xEDas que ser."
+    wrongResultTimerConditions: 0000000002000000
+    cancelResult:
+    - "\xA1\xBFMe est\xE1s diciendo que no me vas a servir nada?!"
+    - "Te arrepentiras de esto, Shuka ten\xEDas que ser."
+    cancelResultConditions: 0000000002000000
     recipe: {fileID: 7485873441582505971}
+    aceptTask: 1
+    twoTasks: 0
+    recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receta: 0
+  receta: 8
   ingredientRecipe: 
   liquidRecipe: []

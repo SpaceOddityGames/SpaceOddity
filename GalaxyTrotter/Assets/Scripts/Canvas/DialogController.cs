@@ -12,6 +12,8 @@ public class DialogController : MonoBehaviour
     private Texts text;
     private bool textForMain = false;
     private bool skipText = false;
+    private bool analizeLerman = false;
+    [SerializeField] public GameObject finalLerman;
 
     [SerializeField] GameManager gameManager;
     [SerializeField] TextMeshProUGUI DialogText;
@@ -29,7 +31,12 @@ public class DialogController : MonoBehaviour
     [SerializeField] GameObject buttonCB2;
     [SerializeField] GameObject buttonLerman1;
     [SerializeField] GameObject buttonLerman2;
+    [SerializeField] GameObject buttonPoli1;
+    [SerializeField] GameObject buttonPoli2;
     [SerializeField] GameObject hologramLerman;
+    [SerializeField] GameObject moonso;
+    [SerializeField] GameObject chip;
+
 
     [SerializeField] FoodPreparation foodPreparation;
     [SerializeField] FoodPreparation foodPreparation2;
@@ -108,10 +115,6 @@ public class DialogController : MonoBehaviour
                     DialogTextForMain.text += character;
                 }
             }
-            else
-            {
-
-            }
         }
         if (skipText)
         {
@@ -132,9 +135,11 @@ public class DialogController : MonoBehaviour
                 clickScreen.SetActive(true);
                 break;
             case 1:
+                textForMain = false;
                 clickScreenKitchen.SetActive(true);
                 break;
             case 2:
+                textForMain = false;
                 clickScreenRemoveCharacter.SetActive(true);
                 break;
             case 3:
@@ -157,6 +162,60 @@ public class DialogController : MonoBehaviour
             case 8:
                 gameManager.h01 = false;
                 clickScreen.SetActive(true);
+                break;
+            case 9:
+                moonso.SetActive(true);
+                textForMain = false;
+                clickScreen.SetActive(true);
+                break;
+            case 10:
+                moonso.SetActive(false);
+                textForMain = false;
+                clickScreen.SetActive(true);
+                break;
+            case 11:
+                textForMain = false;
+                if (gameManager.h09)
+                {
+                    StartCoroutine(PrintCharacters("Tranquilo que no vengo a preguntarte nada, el criminal por el que te pregunté ha sido capturado y será juzgado en la Unión. Gracias una vez más por tu colaboración, no podemos permitir que los delincuentes hagan lo que quieran por la galaxia.", 0));
+                }
+                else
+                {
+                    StartCoroutine(PrintCharacters("Tranquilo que esta vez no vengo a preguntarte nada, aún estamos en búsqueda de aquel criminal. Pero te garantizo que acabará bajo la justicia.", 0));
+                }
+                break;
+            case 12:
+                foodPreparation.analizeLerman = true;
+                analizeLerman = true;
+                clickScreenKitchen.SetActive(true);
+                break;
+            case 13:
+                activateOptionsPoli();
+                break;
+            case 14:
+                textForMain = false;
+                clickScreenRemoveCharacter.SetActive(true);
+                gameManager.clientNum = 20;
+                break;
+            case 15:
+                textForMain = false;
+                if (gameManager.h06)
+                {
+                    guilatext1();
+                }
+                else
+                {
+                    guilatext2();
+                }
+                break;
+            case 16:
+                clickScreen.SetActive(true);
+                chip.SetActive(true);
+                break;
+            case 17:
+                textForMain = false;
+                clickScreenKitchen.SetActive(true);
+                foodPreparation.comprobateChip = true;
                 break;
             default:
                 break;
@@ -213,6 +272,32 @@ public class DialogController : MonoBehaviour
         clickScreen.SetActive(true);
         dialogBox.SetActive(true);
         dialogText.SetActive(true);
+        if (analizeLerman)
+        {
+            if (foodPreparation.lermanEnvenenado)
+            {
+                foodPreparation.lermanEnvenenado = false;
+                foodPreparation.lermanDouble = false;
+                int[] a = new int[1];
+                a[0] = 2;
+                string[] txt = new string[1];
+                txt[0] = "No sé qué me has dado. Pero sabe un poco raro.";
+                ActivateText(txt, a);
+                gameManager.evaluateCorrectReputation(text.aceptTask, reseted);
+                return;
+            }
+            if (foodPreparation.lermanDouble)
+            {
+                foodPreparation.lermanDouble = false;
+                int[] a = new int[1];
+                a[0] = 2;
+                string[] txt = new string[2];
+                txt[0] = "Ohh, así me gusta. Está mucho más bueno.";
+                gameManager.reduceReputation();
+                ActivateText(txt, a);
+                return;
+            }
+        }
         ActivateText(text.correctResult, text.correctResultConditions);
         gameManager.evaluateCorrectReputation(text.aceptTask, reseted);
     }
@@ -222,6 +307,21 @@ public class DialogController : MonoBehaviour
         clickScreen.SetActive(true);
         dialogBox.SetActive(true);
         dialogText.SetActive(true);
+        if (analizeLerman)
+        {
+            if (foodPreparation.lermanEnvenenado)
+            {
+                foodPreparation.lermanEnvenenado = false;
+                foodPreparation.lermanDouble = false;
+                int[] a = new int[1];
+                a[0] = 2;
+                string[] txt = new string[1];
+                txt[0] = "No sé qué me has dado. Pero sabe un poco raro.";
+                ActivateText(txt, a);
+                gameManager.reduceReputation();
+                return;
+            }
+        }
         ActivateText(text.wrongResult, text.wrongResultConditions);
         gameManager.reduceReputation();
     }
@@ -231,12 +331,31 @@ public class DialogController : MonoBehaviour
         clickScreen.SetActive(true);
         dialogBox.SetActive(true);
         dialogText.SetActive(true);
+        if (analizeLerman)
+        {
+            if (foodPreparation.lermanEnvenenado)
+            {
+                foodPreparation.lermanEnvenenado = false;
+                foodPreparation.lermanDouble = false;
+                int[] a = new int[1];
+                a[0] = 0;
+                string[] txt = new string[1];
+                txt[0] = "No sé qué me has dado. Pero sabe un poco raro.";
+                ActivateText(txt, a);
+                gameManager.reduceReputation();
+                return;
+            }
+        }
         ActivateText(text.wrongResultTimer, text.wrongResultTimerConditions);
         gameManager.reduceReputation();
     }
 
     public void cancelResult()
     {
+        if (analizeLerman)
+        {
+            gameManager.h08 = true;
+        }
         client.SetActive(true);
         clickScreen.SetActive(true);
         dialogBox.SetActive(true);
@@ -256,12 +375,96 @@ public class DialogController : MonoBehaviour
     }
     public void nextClient()
     {
-        StartCoroutine(waitForClient());
-    }
-    IEnumerator waitForClient()
-    {
-        yield return new WaitForSeconds(1);
         gameManager.nextClient();
+    }
+    private void guilatext1()
+    {
+        int[] a = new int[17];
+        a[0] = 0;
+        a[1] = 0;
+        a[2] = 0;
+        a[3] = 0;
+        a[4] = 0;
+        a[5] = 16;
+        a[6] = 0; 
+        a[7] = 0;
+        a[8] = 0;
+        a[9] = 0;
+        a[10] = 0;
+        a[11] = 0;
+        a[12] = 3;
+        a[13] = 0;
+        a[14] = 3;
+        a[15] = 3;
+        a[16] = 2;
+        string[] txt = new string[17];
+        txt[0] = "El plan de ayer ha sido todo un éxito, el oficial ha muerto y no hay ningún rastro ni ninguna sospecha que lleve a nosotros. Muchísimas gracias por haber decidido plantar cara a esos malnacidos.";
+        txt[1] = "Quiero hacerte otra propuesta.";
+        txt[2] = "Tranquilo que esta vez no será necesario acabar con nadie.";
+        txt[3] = "Me he vinculado a un grupo revolucionario que quieren el fin de la Unión tanto como yo. Cada vez son más y están consiguiendo poderosos aliados.";
+        txt[4] = "También me he enterado que mañana se celebra una inauguración aquí ¿verdad?";
+        txt[5] = "Vendrán altos cargos de la USI, pues bien…";
+        txt[6] = "Necesito que eches este chip en la bebida de alguno de ellos. Aseguráte que se lo echas a un alto cargo";
+        txt[7] = "Con este chip podremos espiar sus conversaciones privadas y registrar sus movimientos.";
+        txt[8] = "Estoy segura que con ello podremos conseguir pruebas que demuestren que son culpables del accidente de tu antiguo jefe o de otros crímenes.";
+        txt[9] = "Si es así y lo conseguimos, las autoridades de Azius tendrán que actuar, y la opinión pública a favor de la Unión se desplomará, estoy convencida.";
+        txt[10] = "Piensa en todo en lo que puede acabar influyendo, la propaganda de la USI a lo largo de la galaxia será cada vez más inutil. Y la mayoría de sistemas independientes podrían por fin establecer una postura en contra de las políticas expansionistas de la Unión.";
+        txt[11] = "Puede ser un golpe importante, te dejo el chip por aquí.";
+        txt[12] = "Ahora échame de aquí gritándome e insultándome, así no levantaremos sospechas.";
+        txt[13] = "¿Co… cómo?";
+        txt[14] = "¡Hazme caso! Hazlo.";
+        txt[15] = "Eh… eh. ¡He dicho que fuera de aquí! ¡Está prohibido servir a sucios lacertilios como tú!";
+        txt[16] = "¡FUERA! ¡No vuelvas!";
+        ActivateText(txt, a);
+    }
+    private void guilatext2()
+    {
+
+        int[] a = new int[21];
+        a[0] = 3;
+        a[1] = 0;
+        a[2] = 0;
+        a[3] = 0;
+        a[4] = 0;
+        a[5] = 0;
+        a[6] = 0;
+        a[7] = 0;
+        a[8] = 0;
+        a[9] = 16;
+        a[10] = 0;
+        a[11] = 0;
+        a[12] = 0;
+        a[13] = 0;
+        a[14] = 0;
+        a[15] = 0;
+        a[16] = 3;
+        a[17] = 0;
+        a[18] = 3;
+        a[19] = 3;
+        a[20] = 2;
+        string[] txt = new string[21];
+        txt[0] = "Quiero hacerte otra propuesta.";
+        txt[1] = "Tranquilo que esta vez no será necesario acabar con nadie.";
+        txt[2] = "Me he vinculado a un grupo revolucionario que quieren el fin de la Unión tanto como yo. Cada vez son más y están consiguiendo poderosos aliados.";
+        txt[3] = "También me he enterado que mañana se celebra una inauguración aquí ¿verdad?";
+        txt[4] = "Vendrán altos cargos de la USI, pues bien…";
+        txt[5] = "Quiero hacerte otra propuesta.";
+        txt[6] = "Tranquilo que esta vez no será necesario acabar con nadie.";
+        txt[7] = "Me he vinculado a un grupo revolucionario que quieren el fin de la Unión tanto como yo. Cada vez son más y están consiguiendo poderosos aliados.";
+        txt[8] = "También me he enterado que mañana se celebra una inauguración aquí ¿verdad?";
+        txt[9] = "Vendrán altos cargos de la USI, pues bien…";
+        txt[10] = "Necesito que eches este chip en la bebida de alguno de ellos. Aseguráte que se lo echas a un alto cargo";
+        txt[11] = "Con este chip podremos espiar sus conversaciones privadas y registrar sus movimientos.";
+        txt[12] = "Estoy segura que con ello podremos conseguir pruebas que demuestren que son culpables del accidente de tu antiguo jefe o de otros crímenes.";
+        txt[13] = "Si es así y lo conseguimos, las autoridades de Azius tendrán que actuar, y la opinión pública a favor de la Unión se desplomará, estoy convencida.";
+        txt[14] = "Piensa en todo en lo que puede acabar influyendo, la propaganda de la USI a lo largo de la galaxia será cada vez más inutil. Y la mayoría de sistemas independientes podrían por fin establecer una postura en contra de las políticas expansionistas de la Unión.";
+        txt[15] = "Puede ser un golpe importante, te dejo el chip por aquí.";
+        txt[16] = "Ahora échame de aquí gritándome e insultándome, así no levantaremos sospechas.";
+        txt[17] = "¿Co… cómo?";
+        txt[18] = "¡Hazme caso! Hazlo.";
+        txt[19] = "Eh… eh. ¡He dicho que fuera de aquí! ¡Está prohibido servir a sucios lacertilios como tú!";
+        txt[20] = "¡FUERA! ¡No vuelvas!";
+        ActivateText(txt, a);
     }
     public void activateOptionsCB()
     {
@@ -275,13 +478,28 @@ public class DialogController : MonoBehaviour
     }
     public void activateOptionsLerman()
     {
-        buttonCB1.SetActive(true);
-        buttonCB2.SetActive(true);
+        buttonLerman1.SetActive(true);
+        buttonLerman2. SetActive(true);
     }
     public void deactivateOptionsLerman()
     {
-        buttonCB1.SetActive(false);
-        buttonCB2.SetActive(false);
+        buttonLerman1.SetActive(false);
+        buttonLerman2.SetActive(false);
         hologramLerman.SetActive(false);
+    }
+    public void activateOptionsPoli()
+    {
+        buttonPoli1.SetActive(true);
+        buttonPoli2.SetActive(true);
+    }
+    public void deactivateOptionsPoli()
+    {
+        buttonPoli1.SetActive(false);
+        buttonPoli2.SetActive(false);
+    }
+    public void resultChip()
+    {
+        client = Instantiate(finalLerman, new Vector3(92, 0, 2), Quaternion.Euler(90, 180, 0));
+        gameManager.clientNum = 20;
     }
 }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7485873441582505980}
   - component: {fileID: 7485873441582505971}
   m_Layer: 0
-  m_Name: C.7.4
+  m_Name: C.7.4.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,8 +113,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textos:
-    initTexts: []
-    initConditions: 
+    initTexts:
+    - "\xA1Un momento! \xA1No se tome esa bebida!"
+    - "\xA1Lo he visto claramente! \xA1El camarero ha echado algo extra\xF1o a su
+      bebida se\xF1or!"
+    - "\xBF\xA1Qu\xE9 pretendes!? \xA1Est\xE1s intentado atentar contra una autoridad!"
+    - "\xA1Arrestadlo!"
+    initConditions: 0000000000000000000000000e000000
     correctResult: []
     correctResultConditions: 
     wrongResult: []
@@ -124,6 +129,9 @@ MonoBehaviour:
     cancelResult: []
     cancelResultConditions: 
     recipe: {fileID: 7485873441582505971}
+    aceptTask: 0
+    twoTasks: 0
+    recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -113,17 +113,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textos:
-    initTexts: []
-    initConditions: 
-    correctResult: []
-    correctResultConditions: 
-    wrongResult: []
-    wrongResultConditions: 
-    wrongResultTimer: []
-    wrongResultTimerConditions: 
-    cancelResult: []
-    cancelResultConditions: 
+    initTexts:
+    - Ponme un Unlucky por favor.
+    initConditions: 01000000
+    correctResult:
+    - Todo correcto. Muchas gracias.
+    correctResultConditions: 02000000
+    wrongResult:
+    - Esta asqueroso quiero potar.
+    wrongResultConditions: 02000000
+    wrongResultTimer:
+    - Me has hecho esperar demasiado.
+    - Eres un vago y eres muy lento.
+    wrongResultTimerConditions: 0000000002000000
+    cancelResult:
+    - "Pues me voy de aqu\xED."
+    cancelResultConditions: 02000000
     recipe: {fileID: 7485873441582505971}
+    aceptTask: 1
+    twoTasks: 0
+    recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receta: 0
+  receta: 4
   ingredientRecipe: 
   liquidRecipe: []

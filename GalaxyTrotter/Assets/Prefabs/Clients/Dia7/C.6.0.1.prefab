@@ -14,9 +14,8 @@ GameObject:
   - component: {fileID: 7485873441582505975}
   - component: {fileID: 7485873441582505980}
   - component: {fileID: 7485873441582505971}
-  - component: {fileID: 5102455592732009780}
   m_Layer: 0
-  m_Name: C.7.1
+  m_Name: C.6.0.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,27 +114,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - "Hola, s\xEDrveme dos bebidas Kaua por favor."
-    initConditions: 01000000
-    correctResult:
-    - Muchas gracias, no me esperaba menos.
-    correctResultConditions: 02000000
-    wrongResult:
-    - Esto esta muy malo.
-    - "Vaya decepci\xF3n."
-    wrongResultConditions: 0000000002000000
-    wrongResultTimer:
-    - Has tardado demasiado.
-    - "Vaya decepci\xF3n."
-    wrongResultTimerConditions: 0000000002000000
-    cancelResult:
-    - "\xBFNo me quieres servir?"
-    - "Vaya decepci\xF3n."
-    cancelResultConditions: 0000000002000000
+    - "\xA1Empleado n\xFAmero 13! Justo contigo quer\xEDa hablar, los due\xF1os de
+      la estaci\xF3n se han enterado que ayer uno de sus propios trabajadores estuvo
+      hablando con la polic\xEDa."
+    - "No habr\xEDa ning\xFAn problema si fuese solo eso, pero c\xF3mo osas declarar
+      acusaciones totalmente infundadas y falsas sobre los honorables oficiales de
+      la Uni\xF3n de Sistemas Independientes."
+    - "\xBFQu\xE9 esperabas que fuese a suceder? Los due\xF1os son altos cargos con
+      mucho poder, obviamente se van a enterar de si sus empleados hacen algo as\xED."
+    - "En esta estaci\xF3n no se toleran mentiras y calumnias de este calibre."
+    - "\xA1Recoge tus cosas y abandona tu puesto de trabajo inmediatamente!"
+    initConditions: 000000000000000000000000000000000e000000
+    correctResult: []
+    correctResultConditions: 
+    wrongResult: []
+    wrongResultConditions: 
+    wrongResultTimer: []
+    wrongResultTimerConditions: 
+    cancelResult: []
+    cancelResultConditions: 
     recipe: {fileID: 7485873441582505971}
-    aceptTask: 1
-    twoTasks: 1
-    recipe2: {fileID: 5102455592732009780}
+    aceptTask: 0
+    twoTasks: 0
+    recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,21 +149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receta: 8
-  ingredientRecipe: 
-  liquidRecipe: []
---- !u!114 &5102455592732009780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7485873441582505974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  receta: 8
+  receta: 0
   ingredientRecipe: 
   liquidRecipe: []
