@@ -2408,7 +2408,7 @@ MonoBehaviour:
   m_Content: {fileID: 835999839}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -3184,7 +3184,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -6.8999023, y: -11.000038}
   m_SizeDelta: {x: -30, y: -29}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3376,8 +3376,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -120.00067}
-  m_SizeDelta: {x: 750, y: 700}
+  m_AnchoredPosition: {x: 0, y: -0.000043094482}
+  m_SizeDelta: {x: 750, y: 460}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &441945627
 MonoBehaviour:
@@ -3432,7 +3432,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &446371160
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4172,9 +4172,9 @@ RectTransform:
   m_Father: {fileID: 659372826}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 215, y: -796.5}
   m_SizeDelta: {x: 493, y: 123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &492125081
@@ -4223,7 +4223,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1275651028}
         m_TargetAssemblyTypeName: TabletManager, Assembly-CSharp
-        m_MethodName: activateReceta
+        m_MethodName: activateRaza
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5534,8 +5534,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -124.00005}
-  m_SizeDelta: {x: 440, y: 0}
+  m_AnchoredPosition: {x: 0, y: -124.00101}
+  m_SizeDelta: {x: 440, y: 878}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &659372827
 MonoBehaviour:
@@ -5849,8 +5849,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -120.00067}
-  m_SizeDelta: {x: 750, y: 700}
+  m_AnchoredPosition: {x: 0, y: -107.18942}
+  m_SizeDelta: {x: 750, y: 674.3774}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &681241672
 MonoBehaviour:
@@ -6566,8 +6566,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -120.00067}
-  m_SizeDelta: {x: 750, y: 700}
+  m_AnchoredPosition: {x: 0, y: -0.00036621}
+  m_SizeDelta: {x: 750, y: 460}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &713944799
 MonoBehaviour:
@@ -7504,7 +7504,7 @@ MonoBehaviour:
   m_Content: {fileID: 1639249724}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -7577,9 +7577,9 @@ RectTransform:
   m_Father: {fileID: 659372826}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 215, y: -367.5}
   m_SizeDelta: {x: 493, y: 123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &794424031
@@ -7628,7 +7628,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1275651028}
         m_TargetAssemblyTypeName: TabletManager, Assembly-CSharp
-        m_MethodName: activateReceta
+        m_MethodName: activateRaza
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7788,8 +7788,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -120.00067}
-  m_SizeDelta: {x: 750, y: 700}
+  m_AnchoredPosition: {x: 0, y: -65.090836}
+  m_SizeDelta: {x: 750, y: 590.1816}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &835999840
 MonoBehaviour:
@@ -9911,7 +9911,7 @@ GameObject:
   - component: {fileID: 1105237947}
   - component: {fileID: 1105237946}
   m_Layer: 5
-  m_Name: ScrollArea
+  m_Name: BotonesScroll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10781,8 +10781,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -120.00067}
-  m_SizeDelta: {x: 750, y: 700}
+  m_AnchoredPosition: {x: 0, y: -89.333466}
+  m_SizeDelta: {x: 750, y: 638.6655}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1207174263
 MonoBehaviour:
@@ -11131,9 +11131,9 @@ RectTransform:
   m_Father: {fileID: 659372826}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 215, y: -653.5}
   m_SizeDelta: {x: 493, y: 123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1249128979
@@ -11182,7 +11182,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1275651028}
         m_TargetAssemblyTypeName: TabletManager, Assembly-CSharp
-        m_MethodName: activateReceta
+        m_MethodName: activateRaza
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11406,18 +11406,23 @@ MonoBehaviour:
   pantallaMapa: {fileID: 1466918426}
   pantallaNotas: {fileID: 2079551150}
   pantallaRecetas: {fileID: 1046074830}
-  botonesRecetas:
-  - {fileID: 2101808221}
-  - {fileID: 130851804}
-  - {fileID: 416840834}
-  - {fileID: 1565960365}
-  - {fileID: 1934272703}
-  - {fileID: 1024252401}
-  - {fileID: 1432018706}
-  - {fileID: 1748119526}
-  - {fileID: 975663920}
   infoRecetas:
   - {fileID: 1519553873}
+  - {fileID: 1519553873}
+  - {fileID: 1519553873}
+  - {fileID: 1519553873}
+  - {fileID: 1519553873}
+  - {fileID: 1519553873}
+  - {fileID: 1519553873}
+  - {fileID: 1519553873}
+  - {fileID: 1519553873}
+  infoRazas:
+  - {fileID: 413688864}
+  - {fileID: 691866986}
+  - {fileID: 1755258473}
+  - {fileID: 1039197862}
+  - {fileID: 1233326308}
+  - {fileID: 1166876486}
   tuto1: 0
   tuto2: 0
   tuto3: 0
@@ -11574,7 +11579,7 @@ MonoBehaviour:
   m_Content: {fileID: 681241671}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -11624,9 +11629,9 @@ RectTransform:
   m_Father: {fileID: 659372826}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 215, y: -510.5}
   m_SizeDelta: {x: 493, y: 123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1313941848
@@ -11675,7 +11680,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1275651028}
         m_TargetAssemblyTypeName: TabletManager, Assembly-CSharp
-        m_MethodName: activateReceta
+        m_MethodName: activateRaza
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13549,7 +13554,7 @@ MonoBehaviour:
   m_Content: {fileID: 1207174262}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -14786,7 +14791,7 @@ MonoBehaviour:
   m_Content: {fileID: 713944798}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -14891,8 +14896,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -120.00067}
-  m_SizeDelta: {x: 750, y: 700}
+  m_AnchoredPosition: {x: 0, y: 0.0009601189}
+  m_SizeDelta: {x: 750, y: 460}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1639249726
 CanvasRenderer:
@@ -15101,9 +15106,9 @@ RectTransform:
   m_Father: {fileID: 659372826}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 215, y: -81.5}
   m_SizeDelta: {x: 493, y: 123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1648219622
@@ -15152,7 +15157,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1275651028}
         m_TargetAssemblyTypeName: TabletManager, Assembly-CSharp
-        m_MethodName: activateReceta
+        m_MethodName: activateRaza
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17989,9 +17994,9 @@ RectTransform:
   m_Father: {fileID: 659372826}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 215, y: -224.5}
   m_SizeDelta: {x: 493, y: 123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938991933
@@ -18040,7 +18045,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1275651028}
         m_TargetAssemblyTypeName: TabletManager, Assembly-CSharp
-        m_MethodName: activateReceta
+        m_MethodName: activateRaza
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18930,7 +18935,7 @@ MonoBehaviour:
   m_Content: {fileID: 441945626}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -19537,7 +19542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2125578414
 RectTransform:
   m_ObjectHideFlags: 0

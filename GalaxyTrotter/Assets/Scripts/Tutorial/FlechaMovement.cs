@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FlechaMovement : MonoBehaviour
 {
-    private bool yas = false;
+    //private bool yas = false;
     void Update()
     {
         print(transform.localPosition);
