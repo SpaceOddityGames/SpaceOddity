@@ -9,6 +9,7 @@ public class KitchenController : MonoBehaviour
     [SerializeField] GameObject[] liquidIngredients;
     [SerializeField] GameObject[] buttons;
     [SerializeField] GameObject[] recipes;
+    [SerializeField] GameObject[] normas;
     public void disableAll()
     {
         foreach (GameObject ingredient in ingredients)
@@ -66,6 +67,11 @@ public class KitchenController : MonoBehaviour
                 recipes[6].SetActive(false);
                 recipes[7].SetActive(false);
                 recipes[8].SetActive(false);
+                //normas
+                normas[0].SetActive(true);
+                normas[1].SetActive(false);
+                normas[2].SetActive(false);
+                normas[3].SetActive(false);
                 break;
             case 1:
                 //ingredientes
@@ -97,6 +103,11 @@ public class KitchenController : MonoBehaviour
                 recipes[6].SetActive(false);
                 recipes[7].SetActive(false);
                 recipes[8].SetActive(false);
+                //normas
+                normas[0].SetActive(true);
+                normas[1].SetActive(false);
+                normas[2].SetActive(false);
+                normas[3].SetActive(false);
                 break;
             case 2:
                 //ingredientes
@@ -128,6 +139,11 @@ public class KitchenController : MonoBehaviour
                 recipes[6].SetActive(false);
                 recipes[7].SetActive(false);
                 recipes[8].SetActive(false);
+                //normas
+                normas[0].SetActive(true);
+                normas[1].SetActive(true);
+                normas[2].SetActive(false);
+                normas[3].SetActive(false);
                 break;
             case 3:
                 //ingredientes
@@ -159,6 +175,11 @@ public class KitchenController : MonoBehaviour
                 recipes[6].SetActive(true);
                 recipes[7].SetActive(false);
                 recipes[8].SetActive(false);
+                //normas
+                normas[0].SetActive(true);
+                normas[1].SetActive(true);
+                normas[2].SetActive(true);
+                normas[3].SetActive(false);
                 break;
             case 4:
                 //ingredientes
@@ -190,6 +211,11 @@ public class KitchenController : MonoBehaviour
                 recipes[6].SetActive(true);
                 recipes[7].SetActive(true);
                 recipes[8].SetActive(true);
+                //normas
+                normas[0].SetActive(true);
+                normas[1].SetActive(true);
+                normas[2].SetActive(false);
+                normas[3].SetActive(false);
                 break;
             case 5:
                 //ingredientes
@@ -221,6 +247,11 @@ public class KitchenController : MonoBehaviour
                 recipes[6].SetActive(true);
                 recipes[7].SetActive(true);
                 recipes[8].SetActive(true);
+                //normas
+                normas[0].SetActive(true);
+                normas[1].SetActive(true);
+                normas[2].SetActive(false);
+                normas[3].SetActive(true);
                 break;
             case 6:
                 //ingredientes
@@ -252,6 +283,11 @@ public class KitchenController : MonoBehaviour
                 recipes[6].SetActive(true);
                 recipes[7].SetActive(true);
                 recipes[8].SetActive(true);
+                //normas
+                normas[0].SetActive(true);
+                normas[1].SetActive(true);
+                normas[2].SetActive(false);
+                normas[3].SetActive(true);
                 break;
             case 7:
                 //ingredientes
@@ -283,6 +319,11 @@ public class KitchenController : MonoBehaviour
                 recipes[6].SetActive(true);
                 recipes[7].SetActive(true);
                 recipes[8].SetActive(true);
+                //normas
+                normas[0].SetActive(true);
+                normas[1].SetActive(true);
+                normas[2].SetActive(false);
+                normas[3].SetActive(true);
                 break;
         }
 
