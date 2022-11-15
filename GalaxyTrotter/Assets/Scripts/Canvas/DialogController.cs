@@ -269,6 +269,11 @@ public class DialogController : MonoBehaviour
     public void correctResult(bool reseted)
     {
         client.SetActive(true);
+        StartCoroutine(waitCorrect(reseted));
+    }
+    IEnumerator waitCorrect(bool reseted)
+    {
+        yield return new WaitForSeconds(0.5f);
         clickScreen.SetActive(true);
         dialogBox.SetActive(true);
         dialogText.SetActive(true);
@@ -284,7 +289,7 @@ public class DialogController : MonoBehaviour
                 txt[0] = "No sé qué me has dado. Pero sabe un poco raro.";
                 ActivateText(txt, a);
                 gameManager.evaluateCorrectReputation(text.aceptTask, reseted);
-                return;
+                yield break;
             }
             if (foodPreparation.lermanDouble)
             {
@@ -295,7 +300,7 @@ public class DialogController : MonoBehaviour
                 txt[0] = "Ohh, así me gusta. Está mucho más bueno.";
                 gameManager.reduceReputation();
                 ActivateText(txt, a);
-                return;
+                yield break;
             }
         }
         ActivateText(text.correctResult, text.correctResultConditions);
@@ -304,6 +309,12 @@ public class DialogController : MonoBehaviour
     public void wrongResult()
     {
         client.SetActive(true);
+        gameManager.reduceReputation();
+        StartCoroutine(waitWrong());
+    }
+    IEnumerator waitWrong()
+    {
+        yield return new WaitForSeconds(0.5f);
         clickScreen.SetActive(true);
         dialogBox.SetActive(true);
         dialogText.SetActive(true);
@@ -319,15 +330,20 @@ public class DialogController : MonoBehaviour
                 txt[0] = "No sé qué me has dado. Pero sabe un poco raro.";
                 ActivateText(txt, a);
                 gameManager.reduceReputation();
-                return;
+                yield break;
             }
         }
         ActivateText(text.wrongResult, text.wrongResultConditions);
-        gameManager.reduceReputation();
     }
     public void wrongResultTimer()
     {
         client.SetActive(true);
+        gameManager.reduceReputation();
+        StartCoroutine(waitWrongTimer());
+    }
+    IEnumerator waitWrongTimer()
+    {
+        yield return new WaitForSeconds(0.5f);
         clickScreen.SetActive(true);
         dialogBox.SetActive(true);
         dialogText.SetActive(true);
@@ -343,11 +359,10 @@ public class DialogController : MonoBehaviour
                 txt[0] = "No sé qué me has dado. Pero sabe un poco raro.";
                 ActivateText(txt, a);
                 gameManager.reduceReputation();
-                return;
+                yield break;
             }
         }
         ActivateText(text.wrongResultTimer, text.wrongResultTimerConditions);
-        gameManager.reduceReputation();
     }
 
     public void cancelResult()
@@ -357,11 +372,16 @@ public class DialogController : MonoBehaviour
             gameManager.h08 = true;
         }
         client.SetActive(true);
+        gameManager.evaluateRejectReputation(text.aceptTask);
+        StartCoroutine(waitCancel());
+    }
+    IEnumerator waitCancel()
+    {
+        yield return new WaitForSeconds(0.5f);
         clickScreen.SetActive(true);
         dialogBox.SetActive(true);
         dialogText.SetActive(true);
         ActivateText(text.cancelResult, text.cancelResultConditions);
-        gameManager.evaluateRejectReputation(text.aceptTask);
     }
     public void disableClient()
     {
