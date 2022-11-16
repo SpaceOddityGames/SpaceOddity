@@ -13,11 +13,13 @@ public class TabletManager : MonoBehaviour
     [SerializeField] GameObject pantallaRecetas;
     [SerializeField] GameObject[] infoRecetas;
     [SerializeField] GameObject[] infoRazas;
+    [SerializeField] GameObject[] infoMapas;
     [HideInInspector] public bool tuto1 = false;
     [HideInInspector] public bool tuto2 = false;
     [HideInInspector] public bool tuto3 = false;
     private int aux = 0;
     private int aux2 = 0;
+    private int aux3 = 0;
 
     public void activatePantallaRazas()
     {
@@ -86,6 +88,7 @@ public class TabletManager : MonoBehaviour
         }
         infoRecetas[aux].SetActive(false);
         infoRazas[aux2].SetActive(false);
+        infoMapas[aux3].SetActive(false);
         pantallaRazas.SetActive(false);
         pantallaMapa.SetActive(false);
         pantallaNotas.SetActive(false);
@@ -116,4 +119,11 @@ public class TabletManager : MonoBehaviour
         infoRazas[num].SetActive(true);
         aux2 = num;
     }
+    public void activateMapa(int num)
+    {
+        infoMapas[aux3].SetActive(false);
+        infoMapas[num].SetActive(true);
+        aux3 = num;
+    }
 }
+
