@@ -41,9 +41,9 @@ public class Recipe : MonoBehaviour
                 break;
             case recipeName.AXXHole:
                 liquidRecipe[0] = 50;
-                ingredientRecipe[0] = 4;
-                ingredientRecipe[1] = 2;
-                ingredientRecipe[2] = 2;
+                ingredientRecipe[0] = 1;
+                ingredientRecipe[1] = 4;
+                ingredientRecipe[2] = 4;
                 break;
             case recipeName.Kaua:
                 ingredientRecipe[0] = 3;

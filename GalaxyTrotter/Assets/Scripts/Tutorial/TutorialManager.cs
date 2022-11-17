@@ -95,7 +95,7 @@ public class TutorialManager : MonoBehaviour
             case 7:
                 textI = 1;
                 textBoxes[textI].SetActive(true);
-                textToPrint = "Como puedes ver aquí también podrás ver otras cosas como las reglas del bar, un mapa de la zona y datos de las distintas especies que vienen al bar. Además de esta barra que marca tu reputación profesional.";
+                textToPrint = "Como puedes ver aquí también podrás ver otras cosas como las reglas del bar, un mapa galáctico y datos de las distintas especies que vienen al bar. Además de esta barra que marca tu reputación profesional.";
                 condit = 0;
                 break;
             case 8:
@@ -187,6 +187,7 @@ public class TutorialManager : MonoBehaviour
     }
     IEnumerator PrintCharacters(string actualString, int i, int cond)
     {
+        FindObjectOfType<AudioManager>().Play("texto");
         skipText = false;
         texts[i].text = "";
         clickScreenSkipText.SetActive(true);
@@ -227,6 +228,7 @@ public class TutorialManager : MonoBehaviour
             default:
                 break;
         }
+        FindObjectOfType<AudioManager>().Pause("texto");
     }
 
     public void setSkipText(bool value)

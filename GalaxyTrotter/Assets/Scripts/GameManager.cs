@@ -14,23 +14,32 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ArrayLayout clients;
     [HideInInspector] public int clientNum;
     [SerializeField] Endings endManager;
+    [SerializeField] Introduction introManager;
     [SerializeField] KitchenController kitchenController;
     [SerializeField] FoodPreparation foodPreparator;
     [SerializeField] Slider reputationSlider;
 
     // Evolución de la partida
-    [HideInInspector] public bool h01 = false;
-    [HideInInspector] public bool h02 = false;
-    [HideInInspector] public bool h03 = false;
-    [HideInInspector] public bool h04 = false;
-    [HideInInspector] public bool h05 = false;
-    [HideInInspector] public bool h06 = false;
-    [HideInInspector] public bool h07 = false;
-    [HideInInspector] public bool h08 = false;
-    [HideInInspector] public bool h09 = false; //Lerman
+    public bool h01 = false;
+    public bool h02 = false;
+    public bool h03 = false;
+    public bool h04 = false;
+    public bool h05 = false;
+    public bool h06 = false;
+    public bool h07 = false;
+    public bool h08 = false;
+    public bool h09 = false; //Lerman
 
     void Start()
     {
+        if (FindObjectOfType<PasarInfo>().continuar)
+        {
+            loadGame();
+        }
+        else
+        {
+            newGame();
+        }
         startDay();
         kitchenController.updateKitchenElements(day);
         reputationSlider.maxValue = maxReputation;
@@ -54,6 +63,11 @@ public class GameManager : MonoBehaviour
     }
     public void startDay()
     {
+        if(day == 0)
+        {
+            introManager.gameObject.SetActive(true);
+            return;
+        }
         if(day == 6 && clientNum == 0)
         {
             if (!h01 && h05)
@@ -65,12 +79,14 @@ public class GameManager : MonoBehaviour
             if (!h06 && !h08)
             {
                 clientNum = 0;
+                h04 = true;
                 nextClient();
                 return;
             }
             if (h07)
             {
                 clientNum = 1;
+                h04 = true;
                 nextClient();
                 return;
             }            
@@ -90,6 +106,7 @@ public class GameManager : MonoBehaviour
             {
                 reputation = maxReputation;
             }
+            saveGame();
             endManager.endDay(true);
         }
         else
@@ -138,11 +155,13 @@ public class GameManager : MonoBehaviour
     public void aumentReputation()
     {
         reputation += reputationAument;
+        FindObjectOfType<AudioManager>().Play("reputacionUp");
         updateSliderBar();
     }
     public void reduceReputation()
     {
         reputation -= reputationReduction;
+        FindObjectOfType<AudioManager>().Play("reputacionDown");
         updateSliderBar();
     }
     public bool evaluateReputation()
@@ -182,6 +201,8 @@ public class GameManager : MonoBehaviour
     }
     public void saveGame()
     {
+        PlayerPrefs.SetInt("existGame", Convert.ToInt32(true));
+        
         PlayerPrefs.SetInt("h01", Convert.ToInt32(h01));
         PlayerPrefs.SetInt("h02", Convert.ToInt32(h02));
         PlayerPrefs.SetInt("h03", Convert.ToInt32(h03));

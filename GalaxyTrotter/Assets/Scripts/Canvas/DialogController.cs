@@ -97,6 +97,7 @@ public class DialogController : MonoBehaviour
     }
     IEnumerator PrintCharacters(string actualString, int condition)
     {
+        FindObjectOfType<AudioManager>().Play("texto");
         skipText = false;
         DialogText.text += "";
         DialogTextForMain.text += "";
@@ -220,6 +221,7 @@ public class DialogController : MonoBehaviour
             default:
                 break;
         }
+        FindObjectOfType<AudioManager>().Pause("texto");
     }
     public void setSkipText(bool value)
     {

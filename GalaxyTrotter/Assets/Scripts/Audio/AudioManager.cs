@@ -1,6 +1,7 @@
 using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using System.Collections;
 
 public class AudioManager : MonoBehaviour
 {
@@ -51,5 +52,39 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Pause();
+    }
+
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found");
+            return;
+        }
+        s.source.Stop();
+    }
+
+    public void UpdateVolume(float v)
+    {
+        foreach(Sound s in sounds)
+        {
+            if (!s.music) {
+                s.volume = v;
+            }
+        }
+        PlayerPrefs.SetFloat("volume", v);
+    }
+
+    public void UpdateMusic(float v)
+    {
+        foreach (Sound s in sounds)
+        {
+            if (s.music)
+            {
+                s.volume = v;
+            }
+        }
+        PlayerPrefs.SetFloat("music", v);
     }
 }

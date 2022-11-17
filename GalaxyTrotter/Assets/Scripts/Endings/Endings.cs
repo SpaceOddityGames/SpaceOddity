@@ -33,4 +33,9 @@ public class Endings : MonoBehaviour
         yield return new WaitForSeconds(1);
         endDialog.activateEndText();
     }
+
+    public void deactivateEnd()
+    {
+        endImage.gameObject.SetActive(false);
+    }
 }

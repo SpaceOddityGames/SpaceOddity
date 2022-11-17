@@ -17,18 +17,18 @@ public class TabletButton: MonoBehaviour, IPointerClickHandler
     {
         if (!paused)
         {
-            this.gameObject.SetActive(false);
+            FindObjectOfType<AudioManager>().Play("abrirTablet");
             paNoVerElFondo.SetActive(true);
             recipes.SetActive(true);
             //closeButton.SetActive(true);
-            for (int i = 0; i < ingredients.Length; i++)
+            /*for (int i = 0; i < ingredients.Length; i++)
             {
                 ingredients[i].disable();
             }
             for (int i = 0; i < liquids.Length; i++)
             {
                 liquids[i].disable();
-            }
+            }*/
         }
         if (tutorialActive)
         {

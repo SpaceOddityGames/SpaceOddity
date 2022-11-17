@@ -23,6 +23,37 @@ public class Ingredient : MonoBehaviour
             mOffset = gameObject.transform.position - GetMouseWorldPos();
             seleccion = Instantiate(ingredient, gameObject.transform.position, Quaternion.identity);
             seleccion.GetComponent<IngredientUnit>().mainIngredient = this.gameObject;
+            switch (foodType)
+            {
+                case 1:
+                    FindObjectOfType<AudioManager>().Play("hongustar");
+                    break;
+                case 2:
+                    FindObjectOfType<AudioManager>().Play("pimkiyu");
+                    break;
+                case 3:
+                    FindObjectOfType<AudioManager>().Play("odzia");
+                    break;
+                case 4:
+                    FindObjectOfType<AudioManager>().Play("scorw");
+                    break;
+                case 5:
+                    FindObjectOfType<AudioManager>().Play("molpo");
+                    break;
+                case 6:
+                    FindObjectOfType<AudioManager>().Play("do");
+                    break;
+                case 7:
+                    FindObjectOfType<AudioManager>().Play("dees");
+                    break;
+                case 8:
+                    FindObjectOfType<AudioManager>().Play("cristal");
+                    break;
+                case 9:
+                    FindObjectOfType<AudioManager>().Play("moonso");
+                    break;
+            }
+            
         }
     }
 
@@ -53,6 +84,7 @@ public class Ingredient : MonoBehaviour
         {
             drop = false;
             caldero.GetComponent<FoodPreparation>().addIngredient(foodType);
+            FindObjectOfType<AudioManager>().Play("echarIngrediente");
             seleccion.GetComponent<IngredientUnit>().dropping = true;
             seleccion.GetComponent<IngredientUnit>().startPos = seleccion.transform.position;
             seleccion.GetComponent<IngredientUnit>().targetPos = caldero.transform.position;
