@@ -41,7 +41,7 @@ public class IngredientUnit : MonoBehaviour
         if (dropping)
         {
             targetScale = new Vector3(0, 0, 0);
-            t += Time.deltaTime / 1f;
+            t += Time.deltaTime / 0.6f;
             Vector3 newScale = Vector3.Lerp(startScale, targetScale, t);
             Vector3 newPos = Vector3.Lerp(startPos, targetPos, t);
             this.transform.localScale = newScale;

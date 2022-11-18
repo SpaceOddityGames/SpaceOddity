@@ -8,6 +8,7 @@ public class MenuPrincipal : MonoBehaviour
 {
     [SerializeField] Button buttonPlay;
     [SerializeField] Button buttonContact;
+    [SerializeField] GameObject imagenCarga;
 
     public void Start()
     {
@@ -16,11 +17,22 @@ public class MenuPrincipal : MonoBehaviour
     }
     private void StartGame()
     {
-        SceneManager.LoadScene("Game");
+        //SceneManager.LoadScene(1);
+        imagenCarga.SetActive(true);
+        StartCoroutine(carga());
     }
     private void OpenContact()
     {
 
+    }
+    private IEnumerator carga()
+    {
+        AsyncOperation operacionCarga = SceneManager.LoadSceneAsync(1);
+        while (!operacionCarga.isDone)
+        {
+            yield return null;
+        }
+        
     }
 
 }

@@ -282,6 +282,7 @@ public class TutorialManager : MonoBehaviour
     }
     public void endTutorial()
     {
+        tablet.gameObject.GetComponent<TabletManager>().tuto4 = false;
         flechas[9].SetActive(false);
         textBoxes[0].SetActive(false);
         enableKitchen();

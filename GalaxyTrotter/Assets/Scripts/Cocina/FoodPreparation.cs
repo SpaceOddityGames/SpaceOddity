@@ -270,6 +270,17 @@ public class FoodPreparation : MonoBehaviour
     }
     public void SetObjective(int[] ingredientTask, float[] liquidTask)
     {
+        if(foodPreparator2 != null)
+        {
+            if (twoTask)
+            {
+                timer.setMaxTime(60);
+            }
+            else
+            {
+                timer.setMaxTime(40);
+            }
+        }
         reject = false;
         reseted = false;
         for (int i = 0; i < SIZE; i++) {
@@ -352,7 +363,7 @@ public class FoodPreparation : MonoBehaviour
     public void liquidChangeAlfaUp()
     {
         t1 += Time.deltaTime / 0.5f;
-        float startAlfa = sliderBar.GetComponent<Image>().color.a;
+        float startAlfa = 0;
         float targetAlfa = 1;
         float targetAlfaBars = 0.6f;
         float targetAlfaRelleno = 0.2f;
