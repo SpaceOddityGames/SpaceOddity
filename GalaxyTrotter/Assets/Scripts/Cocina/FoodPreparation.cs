@@ -352,7 +352,7 @@ public class FoodPreparation : MonoBehaviour
     {
         for(int i = 0; i < maxLiquids; i++)
         {
-            if(!((liquids[i] < (liquidObjective[i] + 7)) && (liquids[i] > (liquidObjective[i] - 7))))
+            if(!((liquids[i] < (liquidObjective[i] + 5)) && (liquids[i] > (liquidObjective[i] - 5))))
             {
                 return false;
             }
