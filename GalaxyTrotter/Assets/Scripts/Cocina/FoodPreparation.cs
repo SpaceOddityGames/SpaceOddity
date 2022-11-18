@@ -81,6 +81,7 @@ public class FoodPreparation : MonoBehaviour
         }
         if (tutorialIngredient)
         {
+            tutorialIngredient = false;
             tutorialManager.nextText();
         }
     }

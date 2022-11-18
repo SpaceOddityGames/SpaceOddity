@@ -49,8 +49,7 @@ public class IngredientUnit : MonoBehaviour
             if (t > 1)
             {
                 dropping = false;
-                Destroy(this);
-                t = 0;
+                Destroy(this.gameObject);
             }
         }
     }
