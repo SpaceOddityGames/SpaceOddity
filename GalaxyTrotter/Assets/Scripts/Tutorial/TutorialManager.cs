@@ -33,7 +33,6 @@ public class TutorialManager : MonoBehaviour
 
     private void Start()
     {
-        disableKitchen();
         nextText();
     }
     public void nextText()
@@ -43,6 +42,7 @@ public class TutorialManager : MonoBehaviour
         switch (numText)
         {
             case 0:
+                tabletButton.GetComponent<TabletButton>().paused = true;
                 textBoxes[0].SetActive(true);
                 textToPrint = "Esta es la zona de preparación de las bebidas, como puedes observar tienes varios ingredientes a tu alrededor.";
                 textI = 0;
@@ -117,6 +117,7 @@ public class TutorialManager : MonoBehaviour
                 condit = -1;
                 break;
             case 13:
+                tabletButton.GetComponent<TabletButton>().paused = true;
                 textI = 0;
                 textBoxes[textI].SetActive(true);
                 textToPrint = "Pasemos ahora a preparar la bebida, antes de nada, observa que existen dos tipos de ingredientes, los que tienes aquí arriba son líquidos, mientras que el resto son sólidos.";
@@ -132,7 +133,7 @@ public class TutorialManager : MonoBehaviour
                 break;
             case 16:
                 flechas[5].SetActive(true);
-                textToPrint = "Vale, una vez dicho esto, pasemos a lo importante. Como has visto, un Tonight Please lleva un 70% de Sul, el Sul es este ingrediente líquido, cógelo.";
+                textToPrint = "Vale, una vez dicho esto, pasemos a lo importante. Como has visto, un Tonight Please lleva un setenta por ciento de Sul, el Sul es este ingrediente líquido, cógelo.";
                 break;
             case 17:
                 flechas[5].SetActive(false);
@@ -148,6 +149,7 @@ public class TutorialManager : MonoBehaviour
                 condit = 2;
                 break;
             case 20:
+                tabletButton.GetComponent<TabletButton>().paused = true;
                 flechas[7].SetActive(true);
                 textToPrint = "Bien, ten en cuenta que si cometes algún error echando un ingrediente que no debías o te pasas en la cantidad de algún líquido, puedes tirar esta bebida y empezar de nuevo pulsando el botón que tienes a tu izquierda. Pero bueno, ahora no necesitas utilizarlo.";
                 resetButton.SetActive(true);
@@ -163,16 +165,18 @@ public class TutorialManager : MonoBehaviour
                 break;
             case 23:
                 flechas[8].SetActive(true);
-                textToPrint = "El siguiente ingrediente del Tonight Please son 2 hongustars, para echarlo a la bebida cógelos y arrástralos hasta el recipiente.";
+                textToPrint = "El siguiente ingrediente del Tonight Please son dos hongustars, para echarlo a la bebida cógelos y arrástralos hasta el recipiente.";
                 ingredients[1].enable();
                 condit = 3;
                 break;
             case 24:
+                tabletButton.GetComponent<TabletButton>().paused = true;
                 flechas[8].SetActive(false);
                 textToPrint = "Uno más y ya habrás terminado.";
                 condit = 3;
                 break;
             case 25:
+                tabletButton.GetComponent<TabletButton>().paused = true;
                 flechas[9].SetActive(true);
                 ingredients[1].disable();
                 foodPreparator.tutorialIngredient = false;
@@ -214,6 +218,7 @@ public class TutorialManager : MonoBehaviour
                 clickScreen.SetActive(true);
                 break;
             case 1:
+                tabletButton.GetComponentInChildren<TabletButton>().paused = false;
                 tabletButton.GetComponentInChildren<TabletButton>().tutorialActive = true;
                 break;
             case 2:
@@ -224,6 +229,7 @@ public class TutorialManager : MonoBehaviour
                 foodPreparator.tutorialIngredient = true;
                 break;
             case 4:
+                tabletButton.GetComponent<TabletButton>().paused = false;
                 break;
             default:
                 break;
@@ -252,7 +258,7 @@ public class TutorialManager : MonoBehaviour
         prepareButton.SetActive(false);
         resetButton.SetActive(false);
         rejectButton.SetActive(false);
-        tabletButton.gameObject.SetActive(false);
+        tabletButton.SetActive(false);
     }
     private void enableKitchen()
     {
@@ -284,6 +290,7 @@ public class TutorialManager : MonoBehaviour
     }
     public void endTutorial()
     {
+        tablet.gameObject.GetComponent<TabletManager>().tuto4 = false;
         flechas[9].SetActive(false);
         textBoxes[0].SetActive(false);
         enableKitchen();

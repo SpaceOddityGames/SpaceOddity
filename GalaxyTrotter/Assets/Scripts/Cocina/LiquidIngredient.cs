@@ -11,6 +11,11 @@ public class LiquidIngredient : MonoBehaviour
     private float mZCoord;
     [HideInInspector] public Vector3 initPos;
     private bool isEnabled = true;
+    //
+    private Vector3 screenPosition;
+    private Vector3 worldPosition;
+
+    private Plane plane = new Plane(new Vector3(0,0,1), -11.3f);
     void Start()
     {
         initPos = gameObject.transform.position;
@@ -19,15 +24,26 @@ public class LiquidIngredient : MonoBehaviour
     {
         if (isEnabled)
         {
+            /*
             mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
             mOffset = gameObject.transform.position - GetMouseWorldPos();
+            */
+            screenPosition = Input.mousePosition;
         }
     }
     void OnMouseDrag()
     {
         if (isEnabled)
         {
-            this.transform.position = GetMouseWorldPos() + mOffset;
+            //this.transform.position = GetMouseWorldPos() + mOffset;
+            screenPosition = Input.mousePosition;
+            Ray ray = Camera.main.ScreenPointToRay(screenPosition);
+            if (plane.Raycast(ray, out float distance))
+            {
+                worldPosition = ray.GetPoint(distance);
+            }
+            transform.position = worldPosition;
+            transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
         }
     }
     private Vector3 GetMouseWorldPos()
@@ -43,6 +59,7 @@ public class LiquidIngredient : MonoBehaviour
     public GameObject caldero;
     private void OnMouseUp()
     {
+        transform.localScale = new Vector3(1f, 1f, 1f);
         if (drop)
         {
             drop = false;
