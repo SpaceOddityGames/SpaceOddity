@@ -8,6 +8,7 @@ public class Endings : MonoBehaviour
     [SerializeField] Fade blackImage;
     [SerializeField] Fade endImage;
     EndingDialog endDialog;
+    [SerializeField] GameObject pausa;
     private void Start()
     {
         endDialog = this.gameObject.GetComponent<EndingDialog>();
@@ -25,6 +26,7 @@ public class Endings : MonoBehaviour
     IEnumerator activateBlack(bool correct)
     {
         blackImage.gameObject.SetActive(true);
+        pausa.SetActive(false);
         yield return new WaitForSeconds(2f);
         endDialog.activateBlackText(correct);
     }
@@ -36,6 +38,7 @@ public class Endings : MonoBehaviour
 
     public void deactivateEnd()
     {
+        pausa.SetActive(true);
         endImage.gameObject.SetActive(false);
     }
 }

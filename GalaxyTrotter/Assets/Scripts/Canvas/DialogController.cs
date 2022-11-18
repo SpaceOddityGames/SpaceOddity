@@ -13,6 +13,7 @@ public class DialogController : MonoBehaviour
     private bool textForMain = false;
     private bool skipText = false;
     private bool analizeLerman = false;
+    public bool soundPlaying;
     [SerializeField] public GameObject finalLerman;
 
     [SerializeField] GameManager gameManager;
@@ -97,13 +98,19 @@ public class DialogController : MonoBehaviour
     }
     IEnumerator PrintCharacters(string actualString, int condition)
     {
-        FindObjectOfType<AudioManager>().Play("texto");
+        soundPlaying = false;
         skipText = false;
         DialogText.text += "";
         DialogTextForMain.text += "";
         clickScreenSkipText.SetActive(true);
         foreach (char character in actualString.ToCharArray())
         {
+            if (!soundPlaying)
+            {
+                FindObjectOfType<AudioManager>().Play("texto");
+                soundPlaying = true;
+            }
+            
             if (!skipText)
             {
                 yield return new WaitForSeconds(0.04f);
@@ -222,6 +229,7 @@ public class DialogController : MonoBehaviour
                 break;
         }
         FindObjectOfType<AudioManager>().Pause("texto");
+        soundPlaying = false;
     }
     public void setSkipText(bool value)
     {
