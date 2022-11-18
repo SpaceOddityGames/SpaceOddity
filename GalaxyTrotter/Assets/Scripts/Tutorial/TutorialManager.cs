@@ -43,6 +43,7 @@ public class TutorialManager : MonoBehaviour
         switch (numText)
         {
             case 0:
+                tabletButton.GetComponent<TabletButton>().paused = true;
                 textBoxes[0].SetActive(true);
                 textToPrint = "Esta es la zona de preparación de las bebidas, como puedes observar tienes varios ingredientes a tu alrededor.";
                 textI = 0;
@@ -117,6 +118,7 @@ public class TutorialManager : MonoBehaviour
                 condit = -1;
                 break;
             case 13:
+                tabletButton.GetComponent<TabletButton>().paused = true;
                 textI = 0;
                 textBoxes[textI].SetActive(true);
                 textToPrint = "Pasemos ahora a preparar la bebida, antes de nada, observa que existen dos tipos de ingredientes, los que tienes aquí arriba son líquidos, mientras que el resto son sólidos.";
@@ -148,6 +150,7 @@ public class TutorialManager : MonoBehaviour
                 condit = 2;
                 break;
             case 20:
+                tabletButton.GetComponent<TabletButton>().paused = true;
                 flechas[7].SetActive(true);
                 textToPrint = "Bien, ten en cuenta que si cometes algún error echando un ingrediente que no debías o te pasas en la cantidad de algún líquido, puedes tirar esta bebida y empezar de nuevo pulsando el botón que tienes a tu izquierda. Pero bueno, ahora no necesitas utilizarlo.";
                 resetButton.SetActive(true);
@@ -168,11 +171,13 @@ public class TutorialManager : MonoBehaviour
                 condit = 3;
                 break;
             case 24:
+                tabletButton.GetComponent<TabletButton>().paused = true;
                 flechas[8].SetActive(false);
                 textToPrint = "Uno más y ya habrás terminado.";
                 condit = 3;
                 break;
             case 25:
+                tabletButton.GetComponent<TabletButton>().paused = true;
                 flechas[9].SetActive(true);
                 ingredients[1].disable();
                 foodPreparator.tutorialIngredient = false;
@@ -213,6 +218,7 @@ public class TutorialManager : MonoBehaviour
                 clickScreen.SetActive(true);
                 break;
             case 1:
+                tabletButton.GetComponent<TabletButton>().paused = false;
                 tabletButton.GetComponentInChildren<TabletButton>().tutorialActive = true;
                 break;
             case 2:
@@ -220,6 +226,7 @@ public class TutorialManager : MonoBehaviour
                 liquids[1].enable();
                 break;
             case 3:
+                tabletButton.GetComponent<TabletButton>().paused = false;
                 foodPreparator.tutorialIngredient = true;
                 break;
             case 4:

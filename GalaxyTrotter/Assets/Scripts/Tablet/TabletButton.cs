@@ -28,6 +28,7 @@ public class TabletButton : MonoBehaviour
         if (tutorialActive)
         {
             tutorial.nextText();
+            tutorialActive = false;
         }
 
     }
