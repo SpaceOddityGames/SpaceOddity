@@ -12,7 +12,6 @@ public class Introduction : MonoBehaviour
     [SerializeField] GameObject tabletUI;
     [SerializeField] public TextMeshProUGUI introText;
     [SerializeField] GameObject clickScreenBlack;
-    [SerializeField] GameObject pausa;
 
     public void Start()
     {
@@ -24,11 +23,9 @@ public class Introduction : MonoBehaviour
         tableta.GetComponent<Fade>().fadeOut();
         boton.GetComponent<Fade>().fadeOut();
         tabletUI.GetComponent<Fade>().fadeOut();
-        pausa.SetActive(true);
     }
     IEnumerator activateTableta()
     {
-        pausa.SetActive(false);
         yield return new WaitForSeconds(0.5f);
         tableta.gameObject.SetActive(true);
         boton.gameObject.SetActive(true);
@@ -39,13 +36,11 @@ public class Introduction : MonoBehaviour
 
     IEnumerator printCharactersBlack(string actualString)
     {
-        FindObjectOfType<AudioManager>().Play("texto");
         foreach (char character in actualString.ToCharArray())
         {
             yield return new WaitForSeconds(0.05f);
             introText.text += character;
         }
-        FindObjectOfType<AudioManager>().Stop("texto");
         clickScreenBlack.SetActive(true);
     }
 }

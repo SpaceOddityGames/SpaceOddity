@@ -71,7 +71,6 @@ public class AudioManager : MonoBehaviour
         {
             if (!s.music) {
                 s.volume = v;
-                s.source.volume = s.volume;
             }
         }
         PlayerPrefs.SetFloat("volume", v);
@@ -84,7 +83,6 @@ public class AudioManager : MonoBehaviour
             if (s.music)
             {
                 s.volume = v;
-                s.source.volume = s.volume;
             }
         }
         PlayerPrefs.SetFloat("music", v);

@@ -1483,7 +1483,7 @@ RectTransform:
   m_Children:
   - {fileID: 302905144}
   m_Father: {fileID: 1997320699}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1629,7 +1629,7 @@ RectTransform:
   - {fileID: 222420894}
   - {fileID: 1501697780}
   m_Father: {fileID: 1997320699}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11122,7 +11122,7 @@ RectTransform:
   - {fileID: 1831909563}
   - {fileID: 1745793857}
   m_Father: {fileID: 1997320699}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13609,7 +13609,7 @@ RectTransform:
   m_Children:
   - {fileID: 234541329}
   m_Father: {fileID: 1997320699}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14833,7 +14833,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c3ef49086883a643b425925876246df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundPlaying: 0
   finalLerman: {fileID: 7485873441582505974, guid: ba16ceeb4d1ae0a4f9424122e57528ac, type: 3}
   gameManager: {fileID: 698406961}
   DialogText: {fileID: 752754017}
@@ -19171,7 +19170,6 @@ MonoBehaviour:
   tabletUI: {fileID: 778274947}
   introText: {fileID: 1329365769}
   clickScreenBlack: {fileID: 588277756}
-  pausa: {fileID: 807270466}
 --- !u!1 &1726720289
 GameObject:
   m_ObjectHideFlags: 0
@@ -21008,7 +21006,6 @@ MonoBehaviour:
   gameManager: {fileID: 698406961}
   blackImage: {fileID: 1314498067}
   endImage: {fileID: 1739718881}
-  pausa: {fileID: 807270466}
 --- !u!1 &1854730879
 GameObject:
   m_ObjectHideFlags: 0
@@ -21908,82 +21905,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960743014}
   m_CullTransparentMesh: 1
---- !u!1 &1961257964
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1961257965}
-  - component: {fileID: 1961257967}
-  - component: {fileID: 1961257966}
-  m_Layer: 5
-  m_Name: TransparenciaNoClick
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1961257965
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1961257964}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1997320699}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1961257966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1961257964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1961257967
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1961257964}
-  m_CullTransparentMesh: 1
 --- !u!1 &1970557282
 GameObject:
   m_ObjectHideFlags: 0
@@ -22422,7 +22343,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 85716381}
-  - {fileID: 1961257965}
   - {fileID: 138530331}
   - {fileID: 1232762258}
   - {fileID: 159881161}

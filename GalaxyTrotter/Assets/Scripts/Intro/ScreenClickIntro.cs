@@ -23,7 +23,6 @@ public class ScreenClickIntro : MonoBehaviour, IPointerClickHandler
 
     IEnumerator Wait()
     {
-        FindObjectOfType<AudioManager>().Play("gameTheme");
         yield return new WaitForSeconds(1.0f);
         FindObjectOfType<GameManager>().nextClient();
         comprobate = false;

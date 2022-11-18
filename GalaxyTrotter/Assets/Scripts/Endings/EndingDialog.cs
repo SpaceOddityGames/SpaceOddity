@@ -65,7 +65,6 @@ public class EndingDialog : MonoBehaviour
         deactivateBlackText();
         foreach (char character in actualString.ToCharArray())
         {
-            FindObjectOfType<AudioManager>().Play("unidadTextoGrave");
             yield return new WaitForSeconds(0.1f);
             blackText.text += character;
         }
@@ -74,13 +73,11 @@ public class EndingDialog : MonoBehaviour
     IEnumerator printCharactersEnd(string actualString)
     {
         deactivateEndText();
-        FindObjectOfType<AudioManager>().Play("texto");
         foreach (char character in actualString.ToCharArray())
         {
             yield return new WaitForSeconds(0.05f);
             endText.text += character;
         }
         clickScreenEnd.SetActive(true);
-        FindObjectOfType<AudioManager>().Stop("texto");
     }
 }

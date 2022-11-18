@@ -63,10 +63,8 @@ public class GameManager : MonoBehaviour
     }
     public void startDay()
     {
-        FindObjectOfType<AudioManager>().Play("gameTheme");
-        if (day == 0)
+        if(day == 0)
         {
-            FindObjectOfType<AudioManager>().Stop("gameTheme");
             introManager.gameObject.SetActive(true);
             return;
         }
@@ -100,7 +98,6 @@ public class GameManager : MonoBehaviour
     }
     public void endDay()
     {
-        FindObjectOfType<AudioManager>().Stop("gameTheme");
         clientNum = 0;
         if (evaluateReputation())
         {

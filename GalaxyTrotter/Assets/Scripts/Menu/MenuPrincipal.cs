@@ -22,7 +22,6 @@ public class MenuPrincipal : MonoBehaviour
             PlayerPrefs.SetFloat("volume", 0.5f);
             PlayerPrefs.SetFloat("music", 0.5f);
         }
-        FindObjectOfType<AudioManager>().Stop("gameTheme");
         FindObjectOfType<AudioManager>().Play("menuTheme");
     }
 
