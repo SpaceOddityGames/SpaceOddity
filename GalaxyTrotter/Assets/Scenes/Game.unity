@@ -7687,7 +7687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reputation: 10
   maxReputation: 20
-  day: 0
+  day: 1
   clients:
     Day:
     - Client:
