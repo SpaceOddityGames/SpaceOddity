@@ -1,0 +1,186 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7485873441582505974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7485873441582505970}
+  - component: {fileID: 7485873441582505969}
+  - component: {fileID: 7485873441582505968}
+  - component: {fileID: 7485873441582505975}
+  - component: {fileID: 7485873441582505980}
+  - component: {fileID: 7485873441582505971}
+  m_Layer: 0
+  m_Name: C.1.6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7485873441582505970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: -7.29, y: -1.43, z: 1.5726857}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
+--- !u!33 &7485873441582505969
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &7485873441582505968
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b9e29ff253be040448f28652bccea1df, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7485873441582505975
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7485873441582505980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73293d9d6ff8f8e45aa25d0301b1bd4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textos:
+    initTexts:
+    - "Oye, t\xFA."
+    - "\xBFSabes d\xF3nde est\xE1 tu jefe?"
+    - "Lo siento, hoy ten\xEDa un asunto importante que atender, no est\xE1 aqu\xED."
+    - "\xBFC\xF3mo que un asunto importante? \xA1Importante es el trato que tiene
+      conmigo!"
+    - "Me dijo antes de irse que vuelva ma\xF1ana y le podr\xE1 atender."
+    - "\xBF\xA1Ma\xF1ana!? Maldito viejo\u2026"
+    - "\xBFDe verdad se cree que tengo tiempo para estas cosas?"
+    - "Mira, dile que si tan poco le importa nuestro acuerdo, ning\xFAn suministro
+      llegar\xE1 a Plokan."
+    - "\xA1Eso que lo tenga claro!"
+    - "Ya sab\xEDa yo que no me pod\xEDa fiar, me voy de aqu\xED, qu\xE9 p\xE9rdida
+      de tiempo."
+    - "\xA1Un momento, un momento!"
+    - "\xBFQu\xE9 co\xF1o quieres?"
+    - "Me dijo tambi\xE9n que te pagar\xE1 m\xE1s por las molestias."
+    - "\xBFAh s\xED? \xBFCu\xE1nto m\xE1s?"
+    - 500.
+    - "Ah bueno\u2026"
+    - Haberlo dicho antes hombre.
+    - "Est\xE1 bien entonces, el trato sigue en pie."
+    - "\xA1Pero que no se le ocurra volver a hacerme esto eh!"
+    - "Y ponme un CloudBomb anda, \xBFinvita la casa verdad? No me hagas el feo."
+    initConditions: 0000000003000000000000000300000000000000000000000000000000000000000000000300000000000000030000000000000003000000000000000000000000000000000000000000000005000000
+    correctResult:
+    - "\xA1Qu\xE9 bueno!"
+    - "Ya veo por qu\xE9 viene tanta gente a este sitio."
+    - "En fin, pues ma\xF1ana vuelvo entonces. Aunque no puedo quedarme muchos m\xE1s
+      d\xEDas por aqu\xED."
+    correctResultConditions: 000000000000000002000000
+    wrongResult:
+    - Uf...
+    - "Pero si esto est\xE1 mal\xEDsimo, \xBFc\xF3mo tiene clientela este bar?"
+    - Por lo menos me ha salido gratis.
+    - "En fin, pues ma\xF1ana vuelvo entonces. Aunque no puedo quedarme muchos m\xE1s
+      d\xEDas por aqu\xED."
+    wrongResultConditions: 00000000000000000000000002000000
+    wrongResultTimer:
+    - "\xA1Qu\xE9 bueno!"
+    - "Ya veo por qu\xE9 viene tanta gente a este sitio."
+    - "Aunque has tardado m\xE1s de lo debido..."
+    - "En fin, pues ma\xF1ana vuelvo entonces. Aunque no puedo quedarme muchos m\xE1s
+      d\xEDas por aqu\xED."
+    wrongResultTimerConditions: 00000000000000000000000002000000
+    cancelResult:
+    - "\xBF\xA1No me vas a invitar!? \xBFEn serio?"
+    - "Lo siento, est\xE1 prohibido servir bebidas gratuitas"
+    - "\xA1Vaya ratas!"
+    - "En fin, pues ma\xF1ana vuelvo entonces. Aunque no puedo quedarme muchos m\xE1s
+      d\xEDas por aqu\xED."
+    cancelResultConditions: 03000000000000000800000002000000
+    recipe: {fileID: 7485873441582505971}
+    aceptTask: 0
+    twoTasks: 0
+    recipe2: {fileID: 0}
+--- !u!114 &7485873441582505971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485873441582505974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  receta: 0
+  ingredientRecipe: 
+  liquidRecipe: []

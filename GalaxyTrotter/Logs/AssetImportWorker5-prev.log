@@ -15,7 +15,7 @@ D:/000Uni/Cuarto/Web y social/github/GalaxyTrotter
 -logFile
 Logs/AssetImportWorker5.log
 -srvPort
-63691
+57232
 Successfully changed project path to: D:/000Uni/Cuarto/Web y social/github/GalaxyTrotter
 D:/000Uni/Cuarto/Web y social/github/GalaxyTrotter
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ D:/000Uni/Cuarto/Web y social/github/GalaxyTrotter
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 173.51 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 235.74 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.10f1 (1c7d0df0160b)
 [Subsystems] Discovering subsystems at path D:/Unity/2021.3.10f1/Editor/Data/Resources/UnitySubsystems
@@ -63,92 +63,92 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2021.3.10f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2021.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Unity/2021.3.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56816
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56148
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2021.3.10f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/Unity/2021.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005616 seconds.
+Registered in 0.007119 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 185.08 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 160.05 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.177 seconds
+- Completed reload, in  1.116 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1178ms)
-		BeginReloadAssembly (141ms)
+	ReloadAssembly (1117ms)
+		BeginReloadAssembly (153ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (879ms)
-			LoadAssemblies (142ms)
+		EndReloadAssembly (786ms)
+			LoadAssemblies (154ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (246ms)
+			SetupTypeCache (172ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (50ms)
-			SetupLoadedEditorAssemblies (507ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (494ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (19ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (185ms)
+				RefreshPlugins (160ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (228ms)
-				ProcessInitializeOnLoadMethodAttributes (72ms)
+				ProcessInitializeOnLoadAttributes (234ms)
+				ProcessInitializeOnLoadMethodAttributes (87ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.022744 seconds.
+Registered in 0.028446 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\000Uni\Cuarto\Web y social\github\GalaxyTrotter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\000Uni\Cuarto\Web y social\github\GalaxyTrotter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 171.28 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 159.76 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  5.663 seconds
+- Completed reload, in  2.383 seconds
 Domain Reload Profiling:
-	ReloadAssembly (5664ms)
-		BeginReloadAssembly (187ms)
+	ReloadAssembly (2384ms)
+		BeginReloadAssembly (197ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
+			DisableScriptedObjects (11ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (27ms)
-		EndReloadAssembly (5154ms)
-			LoadAssemblies (3227ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (2020ms)
+			LoadAssemblies (198ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (513ms)
+			SetupTypeCache (754ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (112ms)
-			SetupLoadedEditorAssemblies (1043ms)
+			RebuildScriptCaches (106ms)
+			SetupLoadedEditorAssemblies (923ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (171ms)
-				BeforeProcessingInitializeOnLoad (219ms)
-				ProcessInitializeOnLoadAttributes (482ms)
-				ProcessInitializeOnLoadMethodAttributes (159ms)
-				AfterProcessingInitializeOnLoad (4ms)
+				RefreshPlugins (160ms)
+				BeforeProcessingInitializeOnLoad (151ms)
+				ProcessInitializeOnLoadAttributes (537ms)
+				ProcessInitializeOnLoadMethodAttributes (63ms)
+				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 1.36 seconds
-Refreshing native plugins compatible for Editor in 0.91 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.49 seconds
+Refreshing native plugins compatible for Editor in 0.88 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4250 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 39 unused Assets / (56.8 KB). Loaded Objects now: 4709.
 Memory consumption went from 160.8 MB to 160.7 MB.
-Total: 5.928900 ms (FindLiveObjects: 0.364300 ms CreateObjectMapping: 0.281800 ms MarkObjects: 5.058300 ms  DeleteObjects: 0.223100 ms)
+Total: 4.880000 ms (FindLiveObjects: 0.366900 ms CreateObjectMapping: 0.375000 ms MarkObjects: 3.984100 ms  DeleteObjects: 0.152400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,40 +163,222 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 312881.269903 seconds.
-  path: Assets/Sprites/Clients/Shukas/arya.png
-  artifactKey: Guid(31244e1185f4318429aaa46a3917ef30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Clients/Shukas/arya.png using Guid(31244e1185f4318429aaa46a3917ef30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd12fd79fa21a1473f2b678da9087f9aa') in 0.567066 seconds 
+  Time since last request: 361259.812757 seconds.
+  path: Assets/Sprites/Tablet/razas (bestiario)/icono lacertilios.png
+  artifactKey: Guid(8f22e7fc93f72ef4994298ec70a28026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tablet/razas (bestiario)/icono lacertilios.png using Guid(8f22e7fc93f72ef4994298ec70a28026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d89d325a4b0555f9d0f49689e31c084') in 0.410983 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.871904 seconds.
+  path: Assets/Sprites/Tablet/razas (bestiario)/icono lacertilios.png
+  artifactKey: Guid(8f22e7fc93f72ef4994298ec70a28026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tablet/razas (bestiario)/icono lacertilios.png using Guid(8f22e7fc93f72ef4994298ec70a28026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16ae11c7cc1ca784743d2215f1dd4fb5') in 0.087206 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Sprites/Tablet/razas (bestiario)/pantalla razas basica.png
+  artifactKey: Guid(d5c18a2a6df92c84d923a906991f8b4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tablet/razas (bestiario)/pantalla razas basica.png using Guid(d5c18a2a6df92c84d923a906991f8b4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a344f5db97c3fec4b7fa713dfe05e2fc') in 0.204974 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.129975 seconds.
+  path: Assets/Sprites/Tablet/razas (bestiario)/icono lacertilios.png
+  artifactKey: Guid(8f22e7fc93f72ef4994298ec70a28026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tablet/razas (bestiario)/icono lacertilios.png using Guid(8f22e7fc93f72ef4994298ec70a28026) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97bb231dc607f258476c18a41610c28f') in 0.151747 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Sprites/Tablet/razas (bestiario)/pantalla razas basica.png
+  artifactKey: Guid(d5c18a2a6df92c84d923a906991f8b4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tablet/razas (bestiario)/pantalla razas basica.png using Guid(d5c18a2a6df92c84d923a906991f8b4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10688ca0671bd8433287639a9bcec96f') in 0.178498 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 59.435973 seconds.
+  path: Assets/Sprites/Tablet/mapa/sistema1A.png
+  artifactKey: Guid(8461e1fadad38d845bbafa13ad0aec8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tablet/mapa/sistema1A.png using Guid(8461e1fadad38d845bbafa13ad0aec8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a4a6037eb09d57d35d919a166a3e3db') in 0.086614 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Sprites/Tablet/mapa/sistema3A.png
+  artifactKey: Guid(19f6447ee606f694b843436d0aebf930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tablet/mapa/sistema3A.png using Guid(19f6447ee606f694b843436d0aebf930) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0506515c26ab2b32bf780aa501b177b1') in 0.047457 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000041 seconds.
-  path: Assets/Sprites/Clients/Shukas/chiki.png
-  artifactKey: Guid(af5136f5cc4dd8749985d9abd397e8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Clients/Shukas/chiki.png using Guid(af5136f5cc4dd8749985d9abd397e8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd20d45b7cf38ffde8907cb0a6f34ddee') in 0.078766 seconds 
+  path: Assets/Sprites/Tablet/mapa/sistema2A.png
+  artifactKey: Guid(6ade3b88c052d3f41b0bafc82de14f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tablet/mapa/sistema2A.png using Guid(6ade3b88c052d3f41b0bafc82de14f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01577b82493338962ce06bd1dca158e6') in 0.044940 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.021298 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\000Uni\Cuarto\Web y social\github\GalaxyTrotter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\000Uni\Cuarto\Web y social\github\GalaxyTrotter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.776 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2777ms)
+		BeginReloadAssembly (556ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (13ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (229ms)
+		EndReloadAssembly (1938ms)
+			LoadAssemblies (437ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (755ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (102ms)
+			SetupLoadedEditorAssemblies (693ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (28ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (147ms)
+				ProcessInitializeOnLoadAttributes (438ms)
+				ProcessInitializeOnLoadMethodAttributes (69ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (23ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.36 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4225 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (24.7 KB). Loaded Objects now: 4727.
+Memory consumption went from 163.0 MB to 163.0 MB.
+Total: 6.337600 ms (FindLiveObjects: 0.385300 ms CreateObjectMapping: 0.302200 ms MarkObjects: 5.583700 ms  DeleteObjects: 0.064700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000158 seconds.
-  path: Assets/Sprites/Clients/Shukas/Paul.png
-  artifactKey: Guid(22db1c115d87cee439afe2a51cedfe2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Clients/Shukas/Paul.png using Guid(22db1c115d87cee439afe2a51cedfe2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4874d6f0c52553f2f8cca927e040cdaa') in 0.025317 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 400.427119 seconds.
-  path: Assets/Sprites/Materials/Ichthys/altoCargoCaspian.mat
-  artifactKey: Guid(86c28382cd1215240af780dab721623f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Materials/Ichthys/altoCargoCaspian.mat using Guid(86c28382cd1215240af780dab721623f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdee00015e1a296217c8a90ae0606269') in 0.213291 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Sprites/Materials/Ichthys/rich.mat
-  artifactKey: Guid(f4321d0136443fa4180f47cd1faa502c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Materials/Ichthys/rich.mat using Guid(f4321d0136443fa4180f47cd1faa502c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd92918823244c3099e7939bde669d01') in 0.038746 seconds 
+  Time since last request: 64.327089 seconds.
+  path: Assets/Sprites/Cocina/flecha neon verde.png
+  artifactKey: Guid(3c1f8eef0dea8ac4687b91476a4c8226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cocina/flecha neon verde.png using Guid(3c1f8eef0dea8ac4687b91476a4c8226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e68324a1450b512877fb3659aefec9f4') in 0.156389 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000046 seconds.
-  path: Assets/Sprites/Materials/Ichthys/nina.mat
-  artifactKey: Guid(22892511d67f14e4d84501cdc2c75a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Materials/Ichthys/nina.mat using Guid(22892511d67f14e4d84501cdc2c75a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdd74db82c7bdc155522a8e305bb766f') in 0.040711 seconds 
+  path: Assets/Sprites/Cocina/flecha neon rojo.png
+  artifactKey: Guid(9107fd4ffd7ec53459a5752824fa4191) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cocina/flecha neon rojo.png using Guid(9107fd4ffd7ec53459a5752824fa4191) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d612923a35a75ae858664f8b8bd6752') in 0.066625 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Sprites/Cocina/botonRepetir.png
+  artifactKey: Guid(c59a6eb83ebca8043951cdd324009a2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cocina/botonRepetir.png using Guid(c59a6eb83ebca8043951cdd324009a2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '493d5bee65dbe243238e0d6da2c4affc') in 0.158840 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/Cocina/barraBebidas.png
+  artifactKey: Guid(7cfb2223bbf0b6742a8c0704997d0dc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cocina/barraBebidas.png using Guid(7cfb2223bbf0b6742a8c0704997d0dc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '508f1644fa81e30ba8028d1952a2d79d') in 0.166743 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.699865 seconds.
+  path: Assets/Sprites/Clients/Shukas/chiki.png
+  artifactKey: Guid(af5136f5cc4dd8749985d9abd397e8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Clients/Shukas/chiki.png using Guid(af5136f5cc4dd8749985d9abd397e8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd50e45dfa05981180ca2f108702d79c') in 0.080232 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Sprites/Clients/Shukas/Paul.png
+  artifactKey: Guid(22db1c115d87cee439afe2a51cedfe2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Clients/Shukas/Paul.png using Guid(22db1c115d87cee439afe2a51cedfe2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dec07f4a829950c810900c232a91b06') in 0.069123 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.723499 seconds.
+  path: Assets/Sprites/Clients/Lacertilio/mikai.png
+  artifactKey: Guid(29d05ad7811e5c340a3f84d12bea267d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Clients/Lacertilio/mikai.png using Guid(29d05ad7811e5c340a3f84d12bea267d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37c30371e21e94f37ff6be58480eb546') in 0.046164 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.542298 seconds.
+  path: Assets/Sprites/Clients/Ichthys/miguill.png
+  artifactKey: Guid(966c3cf6660a4834f9e32071ce633604) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Clients/Ichthys/miguill.png using Guid(966c3cf6660a4834f9e32071ce633604) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5347bfc73c0a66cd5ceb12557298a3b8') in 0.112135 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Sprites/Clients/Ichthys/nina.png
+  artifactKey: Guid(96cd93a178bb6e24fb6232edcbb9a053) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Clients/Ichthys/nina.png using Guid(96cd93a178bb6e24fb6232edcbb9a053) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0824f4ea1366445159dcd9aa4bbb8852') in 0.036283 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.022787 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\000Uni\Cuarto\Web y social\github\GalaxyTrotter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\000Uni\Cuarto\Web y social\github\GalaxyTrotter\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.11 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.955 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2956ms)
+		BeginReloadAssembly (435ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (17ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (93ms)
+		EndReloadAssembly (2290ms)
+			LoadAssemblies (401ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (850ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (123ms)
+			SetupLoadedEditorAssemblies (918ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (32ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (199ms)
+				ProcessInitializeOnLoadAttributes (585ms)
+				ProcessInitializeOnLoadMethodAttributes (94ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (17ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.78 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4225 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (24.6 KB). Loaded Objects now: 4739.
+Memory consumption went from 163.1 MB to 163.1 MB.
+Total: 6.193500 ms (FindLiveObjects: 0.513600 ms CreateObjectMapping: 0.473000 ms MarkObjects: 5.164200 ms  DeleteObjects: 0.040800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
