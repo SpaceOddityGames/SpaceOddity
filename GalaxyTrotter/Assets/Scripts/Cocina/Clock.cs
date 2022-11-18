@@ -15,7 +15,7 @@ public class Clock : MonoBehaviour
     private float frameRateWithTimeScale = 0f;
     void Start()
     {
-        //palitoPivot.transform.position = this.transform.position;
+        palitoPivot.transform.position = this.transform.position;
         initPos = palitoPivot.transform;
         actualTime = 0;
         timerOn = false;
@@ -27,7 +27,7 @@ public class Clock : MonoBehaviour
             frameRateWithTimeScale = Time.deltaTime * timeScale;
             actualTime += frameRateWithTimeScale;
             timePorcentaje = actualTime * 100 / MAXTIME;
-            palitoPivot.transform.rotation = (Quaternion.Euler(timePorcentaje * 360 / 100, 90, -90));
+            palitoPivot.transform.rotation = (Quaternion.Euler(0, 0, -timePorcentaje * 360 / 100));
         }
     }
     public bool comprobateTimer()

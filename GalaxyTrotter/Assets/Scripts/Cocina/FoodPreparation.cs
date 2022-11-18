@@ -17,9 +17,8 @@ public class FoodPreparation : MonoBehaviour
     /// LiquidIngredients
     [SerializeField] GameObject kitchenCanvas;
     [SerializeField] GameObject sliderBar;
+    [SerializeField] GameObject sliderPoint;
     [SerializeField] GameObject sliderPointInit;
-    [SerializeField] GameObject bordeRelleno;
-    [SerializeField] GameObject relleno;
     [SerializeField] GameObject[] sliderFills;
     
     private float max; //liquid drop max tamaño
@@ -81,7 +80,6 @@ public class FoodPreparation : MonoBehaviour
         }
         if (tutorialIngredient)
         {
-            tutorialIngredient = false;
             tutorialManager.nextText();
         }
     }
@@ -271,17 +269,6 @@ public class FoodPreparation : MonoBehaviour
     }
     public void SetObjective(int[] ingredientTask, float[] liquidTask)
     {
-        if(foodPreparator2 != null)
-        {
-            if (twoTask)
-            {
-                timer.setMaxTime(60);
-            }
-            else
-            {
-                timer.setMaxTime(40);
-            }
-        }
         reject = false;
         reseted = false;
         for (int i = 0; i < SIZE; i++) {
@@ -322,6 +309,7 @@ public class FoodPreparation : MonoBehaviour
     {
         if (quantityP < 100)
         {
+            sliderPoint.gameObject.transform.position += new Vector3(0, max / updateLiquid * Time.deltaTime * canvas.scaleFactor);
             quantityP += (max / updateLiquid) * Time.deltaTime * 100 / max;
             liquids[liquidType] += (max / updateLiquid) * Time.deltaTime * 100 / max;
             quantities[liquidType] += max / updateLiquid * Time.deltaTime;
@@ -341,6 +329,7 @@ public class FoodPreparation : MonoBehaviour
         {
             liquids[i] = 0;
         }
+        sliderPoint.transform.position = sliderPointInit.transform.position;
         for(int i = 0; i < sliderFills.Length; i++)
         {
             sliderFills[i].transform.position = sliderPointInit.transform.position;
@@ -353,7 +342,7 @@ public class FoodPreparation : MonoBehaviour
     {
         for(int i = 0; i < maxLiquids; i++)
         {
-            if(!((liquids[i] < (liquidObjective[i] + 5)) && (liquids[i] > (liquidObjective[i] - 5))))
+            if(!((liquids[i] < (liquidObjective[i] + 7)) && (liquids[i] > (liquidObjective[i] - 7))))
             {
                 return false;
             }
@@ -364,30 +353,23 @@ public class FoodPreparation : MonoBehaviour
     public void liquidChangeAlfaUp()
     {
         t1 += Time.deltaTime / 0.5f;
-        float startAlfa = 0;
+        float startAlfa = sliderBar.GetComponent<Image>().color.a;
         float targetAlfa = 1;
-        float targetAlfaBars = 0.6f;
-        float targetAlfaRelleno = 0.2f;
-        float newAlfaBars = Mathf.Lerp(startAlfa, targetAlfaBars, t1); 
-        float newAlfaRelleno = Mathf.Lerp(startAlfa, targetAlfaRelleno, t1);
         float newAlfa = Mathf.Lerp(startAlfa, targetAlfa, t1);
         Color newColor;
         //sliderBar
         newColor = sliderBar.GetComponent<Image>().color;
         newColor.a = newAlfa;
         sliderBar.GetComponent<Image>().color = newColor;
-        //sliderFills
-        newColor = bordeRelleno.GetComponent<Image>().color;
+        //sliderPoint
+        newColor = sliderPoint.GetComponent<Image>().color;
         newColor.a = newAlfa;
-        bordeRelleno.GetComponent<Image>().color = newColor;
-        //
-        newColor = relleno.GetComponent<Image>().color;
-        newColor.a = newAlfaRelleno;
-        relleno.GetComponent<Image>().color = newColor;
+        sliderPoint.GetComponent<Image>().color = newColor;
+        //sliderFills
         for (int i = 0; i < sliderFills.Length; i++){
 
             newColor = sliderFills[i].GetComponent<Image>().color;
-            newColor.a = newAlfaBars;
+            newColor.a = newAlfa;
             sliderFills[i].GetComponent<Image>().color = newColor;
         }
         if (t1 > 1)
@@ -404,30 +386,23 @@ public class FoodPreparation : MonoBehaviour
             {
                 t3 += Time.deltaTime / 4f;
                 float startAlfa = sliderBar.GetComponent<Image>().color.a;
-                float startAlfaBars = sliderFills[0].GetComponent<Image>().color.a;
-                float startAlfaRelleno = relleno.GetComponent<Image>().color.a;
                 float targetAlfa = 0;
                 float newAlfa = Mathf.Lerp(startAlfa, targetAlfa, t3);
-                float newAlfaBars = Mathf.Lerp(startAlfaBars, targetAlfa, t3);
-                float newAlfaRelleno = Mathf.Lerp(startAlfaRelleno, targetAlfa, t3);
                 Color newColor;
                 //sliderBar
                 newColor = sliderBar.GetComponent<Image>().color;
                 newColor.a = newAlfa;
                 sliderBar.GetComponent<Image>().color = newColor;
-                //sliderFills
-                newColor = bordeRelleno.GetComponent<Image>().color;
+                //sliderPoint
+                newColor = sliderPoint.GetComponent<Image>().color;
                 newColor.a = newAlfa;
-                bordeRelleno.GetComponent<Image>().color = newColor;
-                //
-                newColor = relleno.GetComponent<Image>().color;
-                newColor.a = newAlfaRelleno;
-                relleno.GetComponent<Image>().color = newColor;
+                sliderPoint.GetComponent<Image>().color = newColor;
+                //sliderFills
                 for (int i = 0; i < sliderFills.Length; i++)
                 {
 
                     newColor = sliderFills[i].GetComponent<Image>().color;
-                    newColor.a = newAlfaBars;
+                    newColor.a = newAlfa;
                     sliderFills[i].GetComponent<Image>().color = newColor;
                 }
             }

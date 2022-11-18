@@ -13,15 +13,11 @@ public class TabletManager : MonoBehaviour
     [SerializeField] GameObject pantallaRecetas;
     [SerializeField] GameObject[] infoRecetas;
     [SerializeField] GameObject[] infoRazas;
-    [SerializeField] GameObject[] infoMapas;
-    [SerializeField] TabletButton tabletButton;
     [HideInInspector] public bool tuto1 = false;
     [HideInInspector] public bool tuto2 = false;
     [HideInInspector] public bool tuto3 = false;
-    [HideInInspector] public bool tuto4 = false;
     private int aux = 0;
     private int aux2 = 0;
-    private int aux3 = 0;
 
     public void activatePantallaRazas()
     {
@@ -92,41 +88,16 @@ public class TabletManager : MonoBehaviour
         {
             tuto3 = false;
             tutorial.nextText();
-            infoRecetas[aux].SetActive(false);
-            infoRazas[aux2].SetActive(false);
-            infoMapas[aux3].SetActive(false);
-            pantallaRazas.SetActive(false);
-            pantallaMapa.SetActive(false);
-            pantallaNotas.SetActive(false);
-            pantallaRecetas.SetActive(false);
-            this.gameObject.SetActive(false);
-            tabletButton.gameObject.SetActive(true);
-            return;
-        }
-        if (tuto4)
-        {
-            infoRecetas[aux].SetActive(false);
-            infoRazas[aux2].SetActive(false);
-            infoMapas[aux3].SetActive(false);
-            pantallaRazas.SetActive(false);
-            pantallaMapa.SetActive(false);
-            pantallaNotas.SetActive(false);
-            pantallaRecetas.SetActive(false);
-            this.gameObject.SetActive(false);
-            tabletButton.gameObject.SetActive(true);
-            return;
         }
         FindObjectOfType<AudioManager>().Play("cerrarTablet");
         infoRecetas[aux].SetActive(false);
         infoRazas[aux2].SetActive(false);
-        infoMapas[aux3].SetActive(false);
         pantallaRazas.SetActive(false);
         pantallaMapa.SetActive(false);
         pantallaNotas.SetActive(false);
         pantallaRecetas.SetActive(false);
-        this.gameObject.SetActive(false);
-        tabletButton.gameObject.SetActive(true);
-        tabletButton.enableIngredients();
+        pantallaBase.SetActive(false);
+
     }
 
     /// Seccion Libro de recetas
@@ -154,11 +125,4 @@ public class TabletManager : MonoBehaviour
         infoRazas[num].SetActive(true);
         aux2 = num;
     }
-    public void activateMapa(int num)
-    {
-        infoMapas[aux3].SetActive(false);
-        infoMapas[num].SetActive(true);
-        aux3 = num;
-    }
 }
-

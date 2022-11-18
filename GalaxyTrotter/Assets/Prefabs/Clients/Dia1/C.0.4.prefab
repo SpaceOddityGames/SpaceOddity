@@ -146,6 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receta: 2
+  receta: 1
   ingredientRecipe: 
   liquidRecipe: []

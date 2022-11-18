@@ -18,8 +18,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] KitchenController kitchenController;
     [SerializeField] FoodPreparation foodPreparator;
     [SerializeField] Slider reputationSlider;
-    [SerializeField] GameObject flechaVerde;
-    [SerializeField] GameObject flechaRoja;
 
     // Evolución de la partida
     public bool h01 = false;
@@ -161,14 +159,12 @@ public class GameManager : MonoBehaviour
     {
         reputation += reputationAument;
         FindObjectOfType<AudioManager>().Play("reputacionUp");
-        flechaVerde.SetActive(true);
         updateSliderBar();
     }
     public void reduceReputation()
     {
         reputation -= reputationReduction;
         FindObjectOfType<AudioManager>().Play("reputacionDown");
-        flechaRoja.SetActive(true);
         updateSliderBar();
     }
     public bool evaluateReputation()
@@ -209,7 +205,7 @@ public class GameManager : MonoBehaviour
     public void saveGame()
     {
         PlayerPrefs.SetInt("existGame", Convert.ToInt32(true));
-
+        
         PlayerPrefs.SetInt("h01", Convert.ToInt32(h01));
         PlayerPrefs.SetInt("h02", Convert.ToInt32(h02));
         PlayerPrefs.SetInt("h03", Convert.ToInt32(h03));
