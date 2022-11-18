@@ -14,19 +14,13 @@ public class Ingredient : MonoBehaviour
     private Vector3 mOffset;
     private float mZCoord;
 
-    //
-    private Vector3 screenPosition;
-    private Vector3 worldPosition;
 
-    private Plane plane = new Plane(new Vector3(0, 0, 1), -11.3f);
     private void OnMouseDown()
     {
         if (isEnabled)
         {
-            /*
             mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
-            mOffset = gameObject.transform.position - GetMouseWorldPos();*/
-            screenPosition = Input.mousePosition;
+            mOffset = gameObject.transform.position - GetMouseWorldPos();
             seleccion = Instantiate(ingredient, gameObject.transform.position, Quaternion.identity);
             seleccion.GetComponent<IngredientUnit>().mainIngredient = this.gameObject;
             switch (foodType)
@@ -73,22 +67,9 @@ public class Ingredient : MonoBehaviour
     }
     void OnMouseDrag()
     {
-        /*
         if (isEnabled)
         {
             seleccion.transform.position = GetMouseWorldPos() + mOffset;
-
-        }*/
-        if (isEnabled)
-        {
-            //this.transform.position = GetMouseWorldPos() + mOffset;
-            screenPosition = Input.mousePosition;
-            Ray ray = Camera.main.ScreenPointToRay(screenPosition);
-            if (plane.Raycast(ray, out float distance))
-            {
-                worldPosition = ray.GetPoint(distance);
-            }
-            seleccion.transform.position = worldPosition;
         }
     }
     //**

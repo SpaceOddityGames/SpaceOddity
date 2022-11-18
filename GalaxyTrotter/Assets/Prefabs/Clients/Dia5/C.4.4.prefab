@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 08dee5a0b6fd2314e88d262efb4a6349, type: 2}
+  - {fileID: 2100000, guid: 0de70bb712c278a4f86e860d3f322975, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,21 +114,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - "Mmmmmm... Buenos d\xEDas."
-    - Preparanos un H2O.
+    - "Holaaa, aqu\xED abajo otra vez, me apetece un H2O."
     initConditions: 01000000
     correctResult:
-    - Gracias.
+    - "Buaaa muchas gracias, esta buen\xEDsimo."
     correctResultConditions: 02000000
     wrongResult:
-    - "Qu\xE9 asco."
-    wrongResultConditions: 02000000
+    - "\xA1Eh! Esto esta muy malo."
+    - Creo que te has confundido.
+    wrongResultConditions: 0000000002000000
     wrongResultTimer:
-    - "\xBFCrees que tenemos todo el d\xEDa para esperarte?"
+    - "Ya me estaba aburriendo, intenta darte prisa la pr\xF3xima vez."
     wrongResultTimerConditions: 02000000
     cancelResult:
     - "\xA1\xBFC\xF3mo?!"
-    - "No entiendo por qu\xE9 no nos quieres servir."
+    - "No entiendo por qu\xE9 no me quieres servir."
     cancelResultConditions: 0000000002000000
     recipe: {fileID: 7485873441582505971}
     aceptTask: 1

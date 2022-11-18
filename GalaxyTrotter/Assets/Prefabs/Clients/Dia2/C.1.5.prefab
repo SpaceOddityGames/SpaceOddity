@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 08dee5a0b6fd2314e88d262efb4a6349, type: 2}
+  - {fileID: 2100000, guid: 0de70bb712c278a4f86e860d3f322975, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,16 +114,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - Ey, tu.
-    - Preparanos un Special USI que estamos sedientos.
-    initConditions: 0000000001000000
+    - "\xA1Hey!"
+    - "\xA1Aqu\xED abajo!"
+    - "\xA1Este local no est\xE1 adaptado para todas las especies!"
+    - "Siempre me pasa lo mismo\u2026"
+    - Ponme un Special USI porfa.
+    initConditions: 0000000000000000000000000000000001000000
     correctResult:
     - "\xA1Est\xE1 buen\xEDsimo!"
     - Muchas gracias.
     correctResultConditions: 0000000002000000
     wrongResult:
-    - "Esto est\xE1 asqueroso."
-    wrongResultConditions: 02000000
+    - Joe...
+    - "Esto no est\xE1 bueno..."
+    wrongResultConditions: 0000000002000000
     wrongResultTimer:
     - "La pr\xF3xima vez intenta tardar menos."
     wrongResultTimerConditions: 02000000

@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 26e088d4f4c3e3f4abfaebcfd0eef4ff, type: 2}
+  - {fileID: 2100000, guid: 0de70bb712c278a4f86e860d3f322975, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -132,8 +132,8 @@ MonoBehaviour:
     - "\xBFVale?"
     - "S\xED claro jefe."
     - Perfecto. Pues te dejo que empieces.
-    - "Bueno, por si acaso. Si el tipo se cabrea dile que le pagar\xE9 quinientos
-      m\xE1s. As\xED seguro que no se queja."
+    - "Bueno, por si acaso. Si el tipo se cabrea dile que le pagar\xE9 500 m\xE1s.
+      As\xED seguro que no se queja."
     - "Ahora s\xED, me voy, \xA1buena suerte!"
     initConditions: 0000000000000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000002000000
     correctResult: []
