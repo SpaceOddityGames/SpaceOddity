@@ -115,22 +115,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - Ponme un Unlucky y un H2O por favor.
+    - Sirvenos un Unlucky y un H2O.
     initConditions: 01000000
     correctResult:
-    - Muchas gracias por tu servicio.
+    - Te lo agradecemos.
     correctResultConditions: 02000000
     wrongResult:
-    - Creo que voy a potar.
-    - "\xBFQu\xE9 me has dado"
+    - "Qu\xE9 asco."
+    - "Nos vamos de aqu\xED."
     wrongResultConditions: 0000000002000000
     wrongResultTimer:
-    - Me he hartado de esperar.
+    - Nos hemos hartado de esperar.
     - Vaya servicio de mierda.
     wrongResultTimerConditions: 0000000002000000
     cancelResult:
-    - Pues me voy.
-    - "As\xED no pierdo el tiempo en un sitio de mierda como este."
+    - Pues nos vamos.
+    - "As\xED no perdemos el tiempo en un sitio de mierda como este."
     cancelResultConditions: 0000000002000000
     recipe: {fileID: 7485873441582505971}
     aceptTask: 1
