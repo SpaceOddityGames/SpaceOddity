@@ -34,7 +34,7 @@ public class DialogController : MonoBehaviour
     [SerializeField] GameObject buttonLerman2;
     [SerializeField] GameObject buttonPoli1;
     [SerializeField] GameObject buttonPoli2;
-    [SerializeField] GameObject hologramLerman;
+    [SerializeField] public GameObject hologramLerman;
     [SerializeField] GameObject moonso;
     [SerializeField] GameObject chip;
 
@@ -44,7 +44,7 @@ public class DialogController : MonoBehaviour
     [SerializeField] GameObject kitchen;
     [SerializeField] TutorialManager tutorial;
 
-    GameObject client;
+    public GameObject client;
 
     public void ActivateDialogBox(Texts textObj, GameObject c, int[] cond)
     {
@@ -161,6 +161,7 @@ public class DialogController : MonoBehaviour
                 break;
             case 6:
                 hologramLerman.SetActive(true);
+                client.SetActive(false);
                 clickScreen.SetActive(true);
                 break;
             case 7:

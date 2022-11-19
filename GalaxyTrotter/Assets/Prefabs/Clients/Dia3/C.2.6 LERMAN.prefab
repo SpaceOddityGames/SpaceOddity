@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7485873441582505980}
   - component: {fileID: 7485873441582505971}
   m_Layer: 0
-  m_Name: C.1.4
+  m_Name: C.2.6 LERMAN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 344869881341ef8419dd786e2fb8ab8a, type: 2}
+  - {fileID: 2100000, guid: f958cfcfa64087f46848ab6a4cb99993, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -114,21 +114,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - "S\xEDrveme un AXXhole, quiero uno."
-    initConditions: 01000000
-    correctResult:
-    - Gracias.
-    correctResultConditions: 02000000
-    wrongResult:
-    - Esto no es lo que he pedido.
-    wrongResultConditions: 02000000
-    wrongResultTimer:
-    - He esperado demasiado...
-    wrongResultTimerConditions: 02000000
-    cancelResult:
-    - ...
-    - En fin, siempre igual...
-    cancelResultConditions: 0000000002000000
+    - "Buenos d\xEDas."
+    - No vengo a por ninguna bebida, solo quiero hacerte una pregunta.
+    - "\xBFHas visto a este [especie del contrabandista] por aqu\xED?"
+    - "Se trata de un criminal acusado de contrabando y otros delitos en la Uni\xF3n
+      de Sistemas Interplanetarios. Nos ha llegado informaci\xF3n de que actualmente
+      se encuentra huido por aqu\xED en Naber, quiz\xE1s haya pasado por la estaci\xF3n
+      espacial."
+    - "\xBFTe suena de algo?"
+    initConditions: 0000000000000000060000000000000007000000
+    correctResult: []
+    correctResultConditions: 
+    wrongResult: []
+    wrongResultConditions: 
+    wrongResultTimer: []
+    wrongResultTimerConditions: 
+    cancelResult: []
+    cancelResultConditions: 
     recipe: {fileID: 7485873441582505971}
     aceptTask: 0
     twoTasks: 0
@@ -145,6 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receta: 2
+  receta: 0
   ingredientRecipe: 
   liquidRecipe: []

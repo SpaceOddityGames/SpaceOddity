@@ -271,7 +271,9 @@ public class FoodPreparation : MonoBehaviour
     }
     public void SetObjective(int[] ingredientTask, float[] liquidTask)
     {
-        if(foodPreparator2 != null)
+        objective = new int[SIZE];
+        liquidObjective = new float[maxLiquids];
+        if (foodPreparator2 != null)
         {
             if (twoTask)
             {

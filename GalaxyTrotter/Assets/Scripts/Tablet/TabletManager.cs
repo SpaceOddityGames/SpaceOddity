@@ -15,6 +15,7 @@ public class TabletManager : MonoBehaviour
     [SerializeField] GameObject[] infoRazas;
     [SerializeField] GameObject[] infoMapas;
     [SerializeField] TabletButton tabletButton;
+    [SerializeField] TabletButtonBar tabletButtonBar;
     [HideInInspector] public bool tuto1 = false;
     [HideInInspector] public bool tuto2 = false;
     [HideInInspector] public bool tuto3 = false;
@@ -101,6 +102,7 @@ public class TabletManager : MonoBehaviour
             pantallaRecetas.SetActive(false);
             this.gameObject.SetActive(false);
             tabletButton.gameObject.SetActive(true);
+            tabletButtonBar.gameObject.SetActive(true);
             return;
         }
         if (tuto4)

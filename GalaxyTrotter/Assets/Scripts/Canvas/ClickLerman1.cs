@@ -9,6 +9,8 @@ public class ClickLerman1 : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData pointerEventData)
     {
         this.gameObject.GetComponentInParent<DialogController>().deactivateOptionsLerman();
+        this.gameObject.GetComponentInParent<DialogController>().client.SetActive(true);
+        this.gameObject.GetComponentInParent<DialogController>().hologramLerman.SetActive(false);
         int[] cond = new int[2];
         cond[0] = 0;
         cond[1] = 2;
