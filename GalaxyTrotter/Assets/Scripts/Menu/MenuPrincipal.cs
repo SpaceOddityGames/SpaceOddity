@@ -73,7 +73,7 @@ public class MenuPrincipal : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Stop("menuTheme");
         //Application.Quit();
-        Application.ExternalEval("window.open('" + Application.absoluteURL + "','_self')");
+        //Application.ExternalEval("window.open('" + Application.absoluteURL + "','_self')");
     }
 
     public void ButtonSound()
