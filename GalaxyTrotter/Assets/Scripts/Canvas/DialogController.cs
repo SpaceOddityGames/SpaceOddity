@@ -227,7 +227,7 @@ public class DialogController : MonoBehaviour
             default:
                 break;
         }
-        FindObjectOfType<AudioManager>().Pause("texto");
+        FindObjectOfType<AudioManager>().Stop("texto");
         soundPlaying = false;
     }
     public void setSkipText(bool value)

@@ -14,6 +14,7 @@ public class TabletButton : MonoBehaviour
     {
         if (!paused)
         {
+            FindObjectOfType<AudioManager>().Play("abrirTablet");
             tablet.SetActive(true);
             for (int i = 0; i < ingredients.Length; i++)
             {

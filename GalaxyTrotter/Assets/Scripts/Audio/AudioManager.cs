@@ -89,4 +89,26 @@ public class AudioManager : MonoBehaviour
         }
         PlayerPrefs.SetFloat("music", v);
     }
+
+    public void DecreaseMusic()
+    {
+        foreach (Sound s in sounds)
+        {
+            if (s.music)
+            {
+                s.source.volume = s.source.volume * 0.5f;
+            }
+        }
+    }
+
+    public void IncreaseMusic()
+    {
+        foreach (Sound s in sounds)
+        {
+            if (s.music)
+            {
+                s.source.volume = s.source.volume * 2f;
+            }
+        }
+    }
 }

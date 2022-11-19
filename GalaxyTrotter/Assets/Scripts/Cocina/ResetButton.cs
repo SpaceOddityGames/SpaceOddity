@@ -13,6 +13,7 @@ public class ResetButton : MonoBehaviour, IPointerClickHandler
     }*/
     public void OnPointerClick(PointerEventData pointerEventData)
     {
+        FindObjectOfType<AudioManager>().Play("botonMenu");
         bowl.GetComponent<FoodPreparation>().resetFood();
         bowl.GetComponent<FoodPreparation>().reseted = true;
     }

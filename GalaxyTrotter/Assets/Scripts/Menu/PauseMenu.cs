@@ -33,8 +33,9 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         iconoAjustes.SetActive(false);
-        FindObjectOfType<AudioManager>().Pause("texto");
         FindObjectOfType<DialogController>().soundPlaying = false;
+        FindObjectOfType<AudioManager>().Stop("texto");
+        FindObjectOfType<AudioManager>().DecreaseMusic();
         FindObjectOfType<KitchenController>().disableAll();
         Time.timeScale = 0f;
         isPaused = true;
@@ -43,6 +44,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         iconoAjustes.SetActive(true);
+        FindObjectOfType<AudioManager>().IncreaseMusic();
         FindObjectOfType<KitchenController>().enableAll();
         Time.timeScale = 1f;
         isPaused = false;
