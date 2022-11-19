@@ -19,6 +19,18 @@ public class Ingredient : MonoBehaviour
     private Vector3 worldPosition;
 
     private Plane plane = new Plane(new Vector3(0, 0, 1), -11.3f);
+
+    private float floor;
+
+    private void Start()
+    {
+        switch (foodType)
+        {
+            default:
+                floor = -6;
+                break;
+        }
+    }
     private void OnMouseDown()
     {
         if (isEnabled)
@@ -56,6 +68,10 @@ public class Ingredient : MonoBehaviour
             if (plane.Raycast(ray, out float distance))
             {
                 worldPosition = ray.GetPoint(distance);
+            }
+            if (worldPosition.y < floor)
+            {
+                worldPosition.y = floor;
             }
             seleccion.transform.position = worldPosition;
         }
