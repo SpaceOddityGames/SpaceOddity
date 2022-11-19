@@ -29,6 +29,7 @@ public class TutorialManager : MonoBehaviour
     private int textI = 0;
     private int condit = 0;
     private bool analizeLiquid = false;
+    public bool soundPlaying;
 
 
     private void Start()
@@ -196,6 +197,11 @@ public class TutorialManager : MonoBehaviour
         clickScreenSkipText.SetActive(true);
         foreach (char character in actualString.ToCharArray())
         {
+            if (!soundPlaying)
+            {
+                FindObjectOfType<AudioManager>().Play("texto");
+                soundPlaying = true;
+            }
             if (!skipText)
             {
                 yield return new WaitForSeconds(0.04f);
@@ -233,6 +239,8 @@ public class TutorialManager : MonoBehaviour
             default:
                 break;
         }
+        FindObjectOfType<AudioManager>().Stop("texto");
+        soundPlaying = false;
     }
 
     public void setSkipText(bool value)

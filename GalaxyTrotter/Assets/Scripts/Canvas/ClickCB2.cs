@@ -9,6 +9,7 @@ public class ClickCB2 : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData pointerEventData)
     {
         this.gameObject.GetComponentInParent<DialogController>().deactivateOptionsCB();
+        FindObjectOfType<AudioManager>().Play("botonMenu");
         /*
         int[] cond = new int[4];
         cond[0] = 0;

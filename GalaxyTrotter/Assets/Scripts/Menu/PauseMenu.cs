@@ -34,6 +34,10 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         iconoAjustes.SetActive(false);
         FindObjectOfType<DialogController>().soundPlaying = false;
+        if (FindObjectOfType<TutorialManager>() != null)
+        {
+            FindObjectOfType<TutorialManager>().soundPlaying = false;
+        }
         FindObjectOfType<AudioManager>().Stop("texto");
         FindObjectOfType<AudioManager>().DecreaseMusic();
         FindObjectOfType<KitchenController>().disableAll();

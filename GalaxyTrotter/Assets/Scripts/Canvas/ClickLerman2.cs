@@ -9,6 +9,7 @@ public class ClickLerman2 : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData pointerEventData)
     {
         this.gameObject.GetComponentInParent<DialogController>().deactivateOptionsLerman();
+        FindObjectOfType<AudioManager>().Play("botonMenu");
         int[] cond = new int[2];
         cond[0] = 0;
         cond[1] = 2;

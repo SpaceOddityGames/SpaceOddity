@@ -8,6 +8,7 @@ public class ClickPoli2 : MonoBehaviour, IPointerClickHandler
     [SerializeField] GameManager gameManager;
     public void OnPointerClick(PointerEventData pointerEventData)
     {
+        FindObjectOfType<AudioManager>().Play("botonMenu");
         this.gameObject.GetComponentInParent<DialogController>().deactivateOptionsPoli();
         int[] cond = new int[2];
         cond[0] = 0;

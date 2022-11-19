@@ -12,6 +12,14 @@ public class Ajustes : MonoBehaviour
         volume.value = PlayerPrefs.GetFloat("volume");
         music.value = PlayerPrefs.GetFloat("music");
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GoBack();
+        }
+    }
     public void SetVolume()
     {
         FindObjectOfType<AudioManager>().UpdateVolume(volume.value);
