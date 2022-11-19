@@ -8,7 +8,8 @@ public class ScreenClickEnd : MonoBehaviour, IPointerClickHandler
 {
     public void OnPointerClick(PointerEventData pointerEventData)
     {
+        GetComponentInParent<Endings>().deactivateEnd();
         this.gameObject.SetActive(false);
-        SceneManager.LoadScene("MenuPrincipal");
+        FindObjectOfType<GameManager>().startDay();
     }
 }

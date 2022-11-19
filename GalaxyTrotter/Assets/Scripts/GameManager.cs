@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Slider reputationSlider;
     [SerializeField] GameObject flechaVerde;
     [SerializeField] GameObject flechaRoja;
+    [SerializeField] Introduction introManager;
 
     // Evolución de la partida
     [HideInInspector] public bool h01 = false;
@@ -33,6 +34,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        if (FindObjectOfType<PasarInfo>().continuar)
+        {
+            loadGame();
+        }
+        else
+        {
+            newGame();
+        }
         startDay();
         kitchenController.updateKitchenElements(day);
         reputationSlider.maxValue = maxReputation;
@@ -56,7 +65,14 @@ public class GameManager : MonoBehaviour
     }
     public void startDay()
     {
-        if(day == 6 && clientNum == 0)
+        FindObjectOfType<AudioManager>().Play("gameTheme");
+        if (day == 0)
+        {
+            FindObjectOfType<AudioManager>().Stop("gameTheme");
+            introManager.gameObject.SetActive(true);
+            return;
+        }
+        if (day == 6 && clientNum == 0)
         {
             if (!h01 && h05)
             {
@@ -84,6 +100,7 @@ public class GameManager : MonoBehaviour
     }
     public void endDay()
     {
+        FindObjectOfType<AudioManager>().Stop("gameTheme");
         clientNum = 0;
         if (evaluateReputation())
         {
@@ -140,12 +157,14 @@ public class GameManager : MonoBehaviour
     public void aumentReputation()
     {
         reputation += reputationAument;
+        FindObjectOfType<AudioManager>().Play("reputacionUp");
         flechaVerde.SetActive(true);
         updateSliderBar();
     }
     public void reduceReputation()
     {
         reputation -= reputationReduction;
+        FindObjectOfType<AudioManager>().Play("reputacionDown");
         flechaRoja.SetActive(true);
         updateSliderBar();
     }
