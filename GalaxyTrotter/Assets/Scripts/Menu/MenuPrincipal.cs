@@ -15,10 +15,11 @@ public class MenuPrincipal : MonoBehaviour
     {
         if (Convert.ToBoolean(PlayerPrefs.GetInt("existGame")))
         {
-            botonContinuar.SetActive(true);
+            botonContinuar.GetComponent<Button>().interactable = true;
         }
         else
         {
+            botonContinuar.GetComponent<Button>().interactable = false;
             PlayerPrefs.SetFloat("volume", 0.5f);
             PlayerPrefs.SetFloat("music", 0.5f);
         }
