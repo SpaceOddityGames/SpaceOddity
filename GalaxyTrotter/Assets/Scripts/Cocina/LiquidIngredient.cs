@@ -112,7 +112,7 @@ public class LiquidIngredient : MonoBehaviour
             drop = true;
             if(caldero.GetComponent<FoodPreparation>().quantityP < 100)
             {
-                //FindObjectOfType<AudioManager>().Play("liquido");
+                FindObjectOfType<AudioManager>().Play("liquido");
             }
         }
     }
@@ -122,7 +122,7 @@ public class LiquidIngredient : MonoBehaviour
         if (other.gameObject.tag == "Caldero")
         {
             drop = false;
-            //FindObjectOfType<AudioManager>().Pause("liquido");
+            FindObjectOfType<AudioManager>().Pause("liquido");
         }
     }
 

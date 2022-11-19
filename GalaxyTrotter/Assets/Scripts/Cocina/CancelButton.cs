@@ -13,6 +13,7 @@ public class CancelButton : MonoBehaviour, IPointerClickHandler
     }*/
     public void OnPointerClick(PointerEventData pointerEventData)
     {
+        FindObjectOfType<AudioManager>().Play("botonMenu");
         bowl.GetComponent<FoodPreparation>().cancelTask();
     }
 }

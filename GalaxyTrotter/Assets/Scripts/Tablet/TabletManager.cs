@@ -29,6 +29,7 @@ public class TabletManager : MonoBehaviour
         {
             return;
         }
+        FindObjectOfType<AudioManager>().Play("botonTabletIn");
         pantallaRazas.SetActive(true);
     }
     public void activatePantallaMapa()
@@ -37,6 +38,7 @@ public class TabletManager : MonoBehaviour
         {
             return;
         }
+        FindObjectOfType<AudioManager>().Play("botonTabletIn");
         pantallaMapa.SetActive(true);
     }
     public void activatePantallaNotas()
@@ -45,6 +47,7 @@ public class TabletManager : MonoBehaviour
         {
             return;
         }
+        FindObjectOfType<AudioManager>().Play("botonTabletIn");
         pantallaNotas.SetActive(true);
     }
     public void activatePantallaRecetas()
@@ -53,6 +56,7 @@ public class TabletManager : MonoBehaviour
         {
             tutorial.nextText();
         }
+        FindObjectOfType<AudioManager>().Play("botonTabletIn");
         pantallaRecetas.SetActive(true);
     }
     public void activatePantallaInicio()
@@ -66,6 +70,7 @@ public class TabletManager : MonoBehaviour
             tutorial.nextText();
             tuto2 = false;
         }
+        FindObjectOfType<AudioManager>().Play("botonTabletIn");
         infoRecetas[aux].SetActive(false);
         infoRazas[aux2].SetActive(false);
         pantallaRazas.SetActive(false);
@@ -111,6 +116,7 @@ public class TabletManager : MonoBehaviour
             tabletButton.gameObject.SetActive(true);
             return;
         }
+        FindObjectOfType<AudioManager>().Play("cerrarTablet");
         infoRecetas[aux].SetActive(false);
         infoRazas[aux2].SetActive(false);
         infoMapas[aux3].SetActive(false);
@@ -136,18 +142,21 @@ public class TabletManager : MonoBehaviour
             tuto2 = true;
             tutorial.nextText();
         }
+        FindObjectOfType<AudioManager>().Play("botonTabletIn");
         infoRecetas[aux].SetActive(false);
         infoRecetas[num].SetActive(true);
         aux = num;
     }
     public void activateRaza(int num)
     {
+        FindObjectOfType<AudioManager>().Play("botonTabletIn");
         infoRazas[aux2].SetActive(false);
         infoRazas[num].SetActive(true);
         aux2 = num;
     }
     public void activateMapa(int num)
     {
+        FindObjectOfType<AudioManager>().Play("botonTabletIn");
         infoMapas[aux3].SetActive(false);
         infoMapas[num].SetActive(true);
         aux3 = num;
