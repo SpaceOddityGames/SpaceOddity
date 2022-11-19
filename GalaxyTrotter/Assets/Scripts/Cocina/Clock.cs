@@ -11,6 +11,7 @@ public class Clock : MonoBehaviour
     private float timePorcentaje;
     private Transform initPos;
     public bool timerOn;
+    private bool soundPlaying;
 
     private float frameRateWithTimeScale = 0f;
     void Start()
@@ -19,6 +20,7 @@ public class Clock : MonoBehaviour
         initPos = palitoPivot.transform;
         actualTime = 0;
         timerOn = false;
+        soundPlaying = false;
     }
     void Update()
     {
@@ -28,6 +30,11 @@ public class Clock : MonoBehaviour
             actualTime += frameRateWithTimeScale;
             timePorcentaje = actualTime * 100 / MAXTIME;
             palitoPivot.transform.rotation = (Quaternion.Euler(timePorcentaje * 360 / 100, 90, -90));
+            if(MAXTIME-actualTime <= 6 && !soundPlaying) 
+            {
+                soundPlaying = true;
+                FindObjectOfType<AudioManager>().Play("timer");
+            }
         }
     }
     public bool comprobateTimer()
@@ -45,6 +52,7 @@ public class Clock : MonoBehaviour
     {
         actualTime = 0;
         timePorcentaje = 0;
+        soundPlaying = false;
         palitoPivot.transform.position = initPos.position;
         palitoPivot.transform.rotation = initPos.rotation;
     }
