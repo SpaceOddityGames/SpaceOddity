@@ -25,7 +25,7 @@ public class TabletButton : MonoBehaviour
             }
             this.gameObject.SetActive(false);
         }
-        if (tutorialActive)
+        if (tutorialActive && !paused)
         {
             tutorial.nextText();
             tutorialActive = false;

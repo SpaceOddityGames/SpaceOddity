@@ -34,7 +34,7 @@ public class Introduction : MonoBehaviour
         boton.gameObject.SetActive(true);
         tabletUI.gameObject.SetActive(true);
         yield return new WaitForSeconds(0.5f);
-        StartCoroutine(printCharactersBlack("¡Enhorabuena! Ha sido seleccionado para el puesto de camarero del bar The Booze Way. Acuda mañana a la estación espacial de Naber para incorporarse, le recibirá \nel jefe encargado del bar y le dará más indicaciones.\n\n\n-Atte: Gestión de empleados de la estación espacial de Naber."));
+        StartCoroutine(printCharactersBlack("¡Enhorabuena! Ha sido seleccionado para el puesto de \ncamarero del bar The Booze Way. Acuda mañana a la \nestación espacial de Naber para incorporarse, le recibirá \nel jefe encargado del bar y le dará más indicaciones.\n\n\n-Atte: Gestión de empleados de la estación espacial de Naber."));
     }
 
     IEnumerator printCharactersBlack(string actualString)

@@ -16,9 +16,23 @@ public class LiquidIngredient : MonoBehaviour
     private Vector3 worldPosition;
 
     private Plane plane = new Plane(new Vector3(0,0,1), -11.3f);
+
+    private float floor;
     void Start()
     {
         initPos = gameObject.transform.position;
+        switch (floor)
+        {
+            case 0:
+                floor = -5;
+                break;
+            case 1:
+                floor = -6;
+                break;
+            case 2:
+                floor = -6;
+                break;
+        }
     }
     private void OnMouseDown()
     {
@@ -41,6 +55,10 @@ public class LiquidIngredient : MonoBehaviour
             if (plane.Raycast(ray, out float distance))
             {
                 worldPosition = ray.GetPoint(distance);
+            }
+            if (worldPosition.y < floor)
+            {
+                worldPosition.y = floor;
             }
             transform.position = worldPosition;
             transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);

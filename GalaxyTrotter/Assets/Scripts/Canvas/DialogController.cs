@@ -528,7 +528,7 @@ public class DialogController : MonoBehaviour
     }
     public void resultChip()
     {
-        client = Instantiate(finalLerman, new Vector3(92, 0, 2), Quaternion.Euler(90, 180, 0));
+        client = Instantiate(finalLerman, new Vector3(-609.1f, 26.8f, -244.2f), Quaternion.Euler(90, 180, 0));
         gameManager.clientNum = 20;
     }
 }

@@ -33,6 +33,7 @@ public class TutorialManager : MonoBehaviour
 
     private void Start()
     {
+        disableKitchen();
         nextText();
     }
     public void nextText()
@@ -52,7 +53,6 @@ public class TutorialManager : MonoBehaviour
                 textToPrint = "Bien, lo primero de todo que tienes que saber es la receta de la bebida que te pida el cliente.";
                 break;
             case 2:
-                tabletButton.SetActive(true);
                 textToPrint = "Toda la información que necesitas saber la tienes en esta tablet, cógela.";
                 flechas[0].SetActive(true);
                 condit = 1;
@@ -256,7 +256,7 @@ public class TutorialManager : MonoBehaviour
         prepareButton.SetActive(false);
         resetButton.SetActive(false);
         rejectButton.SetActive(false);
-        tabletButton.SetActive(false);
+        //tabletButton.SetActive(false);
     }
     private void enableKitchen()
     {

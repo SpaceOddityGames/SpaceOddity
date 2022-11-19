@@ -71,7 +71,8 @@ public class MenuPrincipal : MonoBehaviour
     public void ExitGame()
     {
         FindObjectOfType<AudioManager>().Stop("menuTheme");
-        Application.Quit();
+        //Application.Quit();
+        Application.ExternalEval("window.open('" + Application.absoluteURL + "','_self')");
     }
 
     public void ButtonSound()

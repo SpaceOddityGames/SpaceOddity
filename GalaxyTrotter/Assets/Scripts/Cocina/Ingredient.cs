@@ -19,6 +19,18 @@ public class Ingredient : MonoBehaviour
     private Vector3 worldPosition;
 
     private Plane plane = new Plane(new Vector3(0, 0, 1), -11.3f);
+
+    private float floor;
+
+    private void Start()
+    {
+        switch (floor)
+        {
+            default:
+                floor = -7;
+                break;
+        }
+    }
     private void OnMouseDown()
     {
         if (isEnabled)
@@ -29,6 +41,10 @@ public class Ingredient : MonoBehaviour
             screenPosition = Input.mousePosition;
             seleccion = Instantiate(ingredient, gameObject.transform.position, Quaternion.identity);
             seleccion.GetComponent<IngredientUnit>().mainIngredient = this.gameObject;
+            if(foodType >= 9)
+            {
+                this.gameObject.SetActive(false);
+            }
         }
     }
 
@@ -57,7 +73,12 @@ public class Ingredient : MonoBehaviour
             {
                 worldPosition = ray.GetPoint(distance);
             }
+            if (worldPosition.y < floor)
+            {
+                worldPosition.y = floor;
+            }
             seleccion.transform.position = worldPosition;
+            
         }
     }
     //**
@@ -79,6 +100,10 @@ public class Ingredient : MonoBehaviour
         else
         {
             Destroy(seleccion);
+            if (foodType >= 9)
+            {
+                this.gameObject.SetActive(true);
+            }
         }
     }
     public void enable()
