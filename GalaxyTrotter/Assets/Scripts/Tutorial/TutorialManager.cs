@@ -290,6 +290,7 @@ public class TutorialManager : MonoBehaviour
                 analizeLiquid = false;
                 liquids[1].disable();
                 liquids[1].transform.position = liquids[1].initPos;
+                liquids[1].transform.rotation = liquids[1].initRot;
                 nextText();
             }
         }
