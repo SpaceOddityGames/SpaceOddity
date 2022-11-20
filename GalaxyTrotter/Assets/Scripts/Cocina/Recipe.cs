@@ -72,8 +72,7 @@ public class Recipe : MonoBehaviour
                 ingredientRecipe[2] = 2;
                 ingredientRecipe[3] = 2;
                 ingredientRecipe[4] = 2;
-                ingredientRecipe[5] = 2;
-                ingredientRecipe[6] = 5;
+                ingredientRecipe[5] = 6;
                 break;
             case recipeName.Kaua:
                 liquidRecipe[1] = 40;

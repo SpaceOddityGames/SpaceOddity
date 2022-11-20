@@ -114,8 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - "Hola, qu\xE9 cambiado est\xE1 esto\u2026 Ponme un The Visitor si me haces
-      el favor."
+    - Hola, ponme un The Visitor si me haces el favor.
     initConditions: 01000000
     correctResult:
     - Agradezco que me lo hayas servido, ten cuidado con esta gente.

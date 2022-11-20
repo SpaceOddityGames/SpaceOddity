@@ -115,22 +115,20 @@ MonoBehaviour:
   textos:
     initTexts:
     - "Llegas varios minutos tarde empleado n\xFAmero 13, que no vuelva a ocurrir."
-    - "C\xF3mo ves los nuevos due\xF1os han hecho unos cuantos cambios al bar. As\xED
-      est\xE1 mucho mejor la verdad."
-    - "Tambi\xE9n hay una nueva normativa, a partir de hoy est\xE1 prohibido servir
-      a los Lacertilios. No queremos conflictos por temas pol\xEDticos en el bar,
-      as\xED que ning\xFAn ciudadano de Plokan podr\xE1 venir a tomar algo aqu\xED."
+    - "Hay una nueva normativa, a partir de hoy est\xE1 prohibido servir a los Lacertilios.
+      No queremos conflictos por temas pol\xEDticos en el bar, as\xED que ning\xFAn
+      ciudadano de Plokan podr\xE1 venir a tomar algo aqu\xED."
     - "Si un Lacertilio viene y te pide una bebida tendr\xE1s que rechazarla y pedirle
       que abandone el local. \xBFQueda claro?"
     - "S\xED, por supuesto."
     - "As\xED me gusta, sin tanto Lacertilio asqueroso el bar tendr\xE1 mucho mejor
       ambiente."
     - "Y otra cosa, los clientes ahora pueden pedirte varias bebidas a la vez. Por
-      si vienen con alg\xFAn acompa\xF1ante y o algo as\xED. Tendr\xE1s que hacer
-      ambas bebidas a la vez, as\xED que no me decepciones."
-    - "Pues nada m\xE1s, ponte a trabajar ya que ibas tarde, te voy a tener que descontar
-      del sueldo estos minutos."
-    initConditions: 0000000000000000000000000300000000000000000000000000000002000000
+      si vienen con alg\xFAn acompa\xF1ante o algo as\xED. Tendr\xE1s que hacer ambas
+      bebidas a la vez, as\xED que no me decepciones."
+    - "Pues nada m\xE1s, ponte a trabajar ya, que ibas tarde, te voy a tener que
+      descontar del sueldo estos minutos."
+    initConditions: 00000000000000000000000003000000000000000000000002000000
     correctResult: []
     correctResultConditions: 
     wrongResult: []

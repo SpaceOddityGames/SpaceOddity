@@ -134,7 +134,7 @@ public class TutorialManager : MonoBehaviour
                 break;
             case 16:
                 flechas[5].SetActive(true);
-                textToPrint = "Vale, una vez dicho esto, pasemos a lo importante. Como has visto, un Tonight Please lleva un setenta por ciento de Sul, el Sul es este ingrediente líquido, cógelo.";
+                textToPrint = "Vale, una vez dicho esto, pasemos a lo importante. Como has visto, un Tonight Please lleva un 70% de Sul, el Sul es este ingrediente líquido, cógelo.";
                 break;
             case 17:
                 flechas[5].SetActive(false);
@@ -142,7 +142,7 @@ public class TutorialManager : MonoBehaviour
                 textToPrint = "Para echarlo en la bebida tan solo tienes que arrastrarlo hasta el recipiente principal del medio.";
                 break;
             case 18:
-                textToPrint = "Al mantener el líquido encima del recipiente este se irá llenando. Puedes comprobar la cantidad que has echado en el nivel que aparece al lado, recuerda que en este caso debe tener un setenta por ciento de Sul.";
+                textToPrint = "Al mantener el líquido encima del recipiente este se irá llenando. Puedes comprobar la cantidad que has echado en el nivel que aparece al lado, recuerda que en este caso debe tener un 70% de Sul.";
                 break;
             case 19:
                 flechas[6].SetActive(false);

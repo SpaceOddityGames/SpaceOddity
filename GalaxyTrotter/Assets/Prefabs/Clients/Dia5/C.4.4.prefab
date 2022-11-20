@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 1290210567845343992}
   - component: {fileID: 682872522747425932}
   - component: {fileID: 3281701190035513635}
-  - component: {fileID: 166548763835858854}
-  - component: {fileID: 1786053324333215242}
   m_Layer: 0
   m_Name: C.1.5
   m_TagString: Untagged
@@ -100,59 +98,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &166548763835858854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6952561024163978452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73293d9d6ff8f8e45aa25d0301b1bd4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textos:
-    initTexts:
-    - "\xA1Hey!"
-    - "\xA1Aqu\xED abajo!"
-    - "\xA1Este local no est\xE1 adaptado para todas las especies!"
-    - "Siempre me pasa lo mismo\u2026"
-    - Ponme un Special USI porfa.
-    initConditions: 0000000000000000000000000000000001000000
-    correctResult:
-    - "\xA1Est\xE1 buen\xEDsimo!"
-    - Muchas gracias.
-    correctResultConditions: 0000000002000000
-    wrongResult:
-    - "Esto est\xE1 muy malo."
-    wrongResultConditions: 02000000
-    wrongResultTimer:
-    - "La pr\xF3xima vez intenta tardar menos."
-    wrongResultTimerConditions: 02000000
-    cancelResult:
-    - "\xBFPor qu\xE9 no me preparas la bebida?"
-    - "Supongo que tendr\xE9 que ir a otro sitio."
-    cancelResultConditions: 0000000002000000
-    recipe: {fileID: 1786053324333215242}
-    aceptTask: 1
-    twoTasks: 0
-    recipe2: {fileID: 0}
---- !u!114 &1786053324333215242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6952561024163978452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  receta: 1
-  ingredientRecipe: 
-  liquidRecipe: []
 --- !u!1 &7485873441582505974
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,9 +107,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7485873441582505970}
-  - component: {fileID: 7485873441582505969}
-  - component: {fileID: 7485873441582505968}
-  - component: {fileID: 7485873441582505975}
   - component: {fileID: 7485873441582505980}
   - component: {fileID: 7485873441582505971}
   m_Layer: 0
@@ -190,70 +132,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
---- !u!33 &7485873441582505969
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7485873441582505974}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7485873441582505968
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7485873441582505974}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: c8b0d1021fe0f044a8b92f46a654bfb0, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7485873441582505975
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7485873441582505974}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &7485873441582505980
 MonoBehaviour:
   m_ObjectHideFlags: 0

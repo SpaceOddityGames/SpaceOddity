@@ -34,7 +34,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        
         if (FindObjectOfType<PasarInfo>().continuar)
         {
             loadGame();
@@ -66,6 +65,10 @@ public class GameManager : MonoBehaviour
     }
     public void startDay()
     {
+        if (Convert.ToBoolean(PlayerPrefs.GetInt("existGame")))
+        {
+            reputation = PlayerPrefs.GetInt("reputation");
+        }
         FindObjectOfType<AudioManager>().Play("gameTheme");
         if (day == 0)
         {
@@ -162,6 +165,10 @@ public class GameManager : MonoBehaviour
         reputation += reputationAument;
         FindObjectOfType<AudioManager>().Play("reputacionUp");
         flechaVerde.SetActive(true);
+        if (reputation >20)
+        {
+            reputation = 20;
+        }
         updateSliderBar();
     }
     public void reduceReputation()
@@ -169,6 +176,10 @@ public class GameManager : MonoBehaviour
         reputation -= reputationReduction;
         FindObjectOfType<AudioManager>().Play("reputacionDown");
         flechaRoja.SetActive(true);
+        if (reputation < 0)
+        {
+            reputation = 0;
+        }
         updateSliderBar();
     }
     public bool evaluateReputation()
