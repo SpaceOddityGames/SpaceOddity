@@ -10,6 +10,7 @@ public class LiquidIngredient : MonoBehaviour
     private Vector3 mOffset;
     private float mZCoord;
     [HideInInspector] public Vector3 initPos;
+    [HideInInspector] public Quaternion initRot;
     private bool isEnabled = true;
     //
     private Vector3 screenPosition;
@@ -21,16 +22,17 @@ public class LiquidIngredient : MonoBehaviour
     void Start()
     {
         initPos = gameObject.transform.position;
-        switch (floor)
+        initRot = gameObject.transform.rotation;
+        switch (LiquidType)
         {
             case 0:
-                floor = -5;
+                floor = -4.5f;
                 break;
             case 1:
-                floor = -6;
+                floor = -2;
                 break;
             case 2:
-                floor = -6;
+                floor = -4.5f;
                 break;
         }
     }
@@ -62,6 +64,19 @@ public class LiquidIngredient : MonoBehaviour
             }
             transform.position = worldPosition;
             transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+
+            switch (LiquidType)
+            {
+                case 0:
+                    transform.rotation = Quaternion.Euler(0, 0, -30);
+                    break;
+                case 1:
+                    transform.rotation = Quaternion.Euler(0, 0, 180);
+                    break;
+                case 2:
+                    transform.rotation = Quaternion.Euler(0, 0, 210);
+                    break;
+            }
         }
     }
     private Vector3 GetMouseWorldPos()
@@ -83,7 +98,8 @@ public class LiquidIngredient : MonoBehaviour
             drop = false;
         }
         this.transform.position = initPos;
-        if(caldero != null)
+        this.transform.rotation = initRot;
+        if (caldero != null)
         {
             caldero.GetComponent<FoodPreparation>().alfaDown = true;
         }

@@ -22,10 +22,44 @@ public class Ingredient : MonoBehaviour
 
     private float floor;
 
+    [SerializeField] GameObject childIngredient;
+
     private void Start()
     {
-        switch (floor)
+        switch (foodType)
         {
+            case 1:
+                floor = -5;
+                break;
+            case 2:
+                floor = -5;
+                break;
+            case 3:
+                floor = -5;
+                break;
+            case 4:
+                floor = -6;
+                break;
+            case 5:
+                floor = -5;
+                break;
+            case 6:
+                floor = -5;
+                break;
+            case 7:
+                floor = -5;
+                break;
+            case 8:
+                floor = -5;
+                break;
+            case 9:
+                this.GetComponent<BoxCollider>().enabled = true;
+                floor = -5;
+                break;
+            case 10:
+                this.GetComponent<BoxCollider>().enabled = true;
+                floor = -6;
+                break;
             default:
                 floor = -7;
                 break;
@@ -43,7 +77,7 @@ public class Ingredient : MonoBehaviour
             seleccion.GetComponent<IngredientUnit>().mainIngredient = this.gameObject;
             if(foodType >= 9)
             {
-                this.gameObject.SetActive(false);
+                childIngredient.SetActive(false);
             }
             switch (foodType)
             {
@@ -122,6 +156,10 @@ public class Ingredient : MonoBehaviour
         if (drop)
         {
             drop = false;
+            if (foodType >= 9)
+            {
+                this.GetComponent<BoxCollider>().enabled = false;
+            }
             caldero.GetComponent<FoodPreparation>().addIngredient(foodType);
             FindObjectOfType<AudioManager>().Play("echarIngrediente");
             seleccion.GetComponent<IngredientUnit>().dropping = true;
@@ -133,7 +171,7 @@ public class Ingredient : MonoBehaviour
             Destroy(seleccion);
             if (foodType >= 9)
             {
-                this.gameObject.SetActive(true);
+                childIngredient.SetActive(true);
             }
         }
     }
