@@ -75,6 +75,7 @@ public class AudioManager : MonoBehaviour
             }
         }
         PlayerPrefs.SetFloat("volume", v);
+        PlayerPrefs.Save();
     }
 
     public void UpdateMusic(float v)
@@ -88,6 +89,7 @@ public class AudioManager : MonoBehaviour
             }
         }
         PlayerPrefs.SetFloat("music", v);
+        PlayerPrefs.Save();
     }
 
     public void DecreaseMusic()

@@ -111,6 +111,7 @@ public class GameManager : MonoBehaviour
                 reputation = maxReputation;
             }
             endManager.endDay(true);
+            saveGame();
         }
         else
         {
@@ -220,6 +221,8 @@ public class GameManager : MonoBehaviour
 
         PlayerPrefs.SetInt("day", day);
         PlayerPrefs.SetInt("reputation", reputation);
+
+        PlayerPrefs.Save();
     }
     public void loadGame()
     {

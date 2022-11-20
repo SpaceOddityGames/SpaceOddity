@@ -10,6 +10,10 @@ public class TabletButton : MonoBehaviour
     [SerializeField] TutorialManager tutorial;
     [HideInInspector] public bool paused = false;
     [HideInInspector] public bool tutorialActive = false;
+    private void Start()
+    {
+        tutorialActive = false;
+    }
     public void OnMouseDown()
     {
         if (!paused)
@@ -28,7 +32,10 @@ public class TabletButton : MonoBehaviour
         }
         if (tutorialActive && !paused)
         {
-            tutorial.nextText();
+            if(FindObjectOfType<TutorialManager>() != null) 
+            {
+                tutorial.nextText();
+            }
             tutorialActive = false;
         }
 

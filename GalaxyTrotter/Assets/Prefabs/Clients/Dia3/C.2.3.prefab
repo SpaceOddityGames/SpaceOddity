@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - Ponme un Unlucky
+    - Ponme un Unlucky.
     initConditions: 01000000
     correctResult:
     - Gracias por la bebida.
