@@ -98,6 +98,7 @@ public class GameManager : MonoBehaviour
             return;
         }
         nextClient();
+        kitchenController.updateKitchenElements(day);
     }
     public void endDay()
     {

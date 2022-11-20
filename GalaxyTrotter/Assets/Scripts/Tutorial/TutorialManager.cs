@@ -278,7 +278,6 @@ public class TutorialManager : MonoBehaviour
         }
         prepareButton.SetActive(true);
         resetButton.SetActive(true);
-        rejectButton.SetActive(true);
         tabletButton.gameObject.SetActive(true);
     }
     private void Update()
