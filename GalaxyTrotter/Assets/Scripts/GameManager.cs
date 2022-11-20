@@ -81,18 +81,21 @@ public class GameManager : MonoBehaviour
         {
             if (!h01 && h05)
             {
+                h05 = true;
                 clientNum = 2;
                 nextClient();
                 return;
             }
-            if (!h06 && !h08)
+            if (!h06 && h08)
             {
+                h04 = true;
                 clientNum = 0;
                 nextClient();
                 return;
             }
             if (h07)
             {
+                h04 = true;
                 clientNum = 1;
                 nextClient();
                 return;
