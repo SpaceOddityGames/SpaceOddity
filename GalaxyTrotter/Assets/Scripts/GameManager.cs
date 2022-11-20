@@ -22,15 +22,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] Introduction introManager;
 
     // Evolución de la partida
-    [HideInInspector] public bool h01 = false;
-    [HideInInspector] public bool h02 = false;
-    [HideInInspector] public bool h03 = false;
-    [HideInInspector] public bool h04 = false;
-    [HideInInspector] public bool h05 = false;
-    [HideInInspector] public bool h06 = false;
-    [HideInInspector] public bool h07 = false;
-    [HideInInspector] public bool h08 = false;
-    [HideInInspector] public bool h09 = false; //Lerman
+    public bool h01 = false;
+    public bool h02 = false;
+    public bool h03 = false;
+    public bool h04 = false;
+    public bool h05 = false;
+    public bool h06 = false;
+    public bool h07 = false;
+    public bool h08 = false;
+    public bool h09 = false; //Lerman
 
     void Start()
     {
@@ -76,6 +76,7 @@ public class GameManager : MonoBehaviour
             introManager.gameObject.SetActive(true);
             return;
         }
+        kitchenController.updateKitchenElements(day);
         if (day == 6 && clientNum == 0)
         {
             if (!h01 && h05)
@@ -101,7 +102,6 @@ public class GameManager : MonoBehaviour
             return;
         }
         nextClient();
-        kitchenController.updateKitchenElements(day);
     }
     public void endDay()
     {
@@ -229,7 +229,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("h06", Convert.ToInt32(h06));
         PlayerPrefs.SetInt("h07", Convert.ToInt32(h07));
         PlayerPrefs.SetInt("h08", Convert.ToInt32(h08));
-        PlayerPrefs.SetInt("h09", Convert.ToInt32(h08));
+        PlayerPrefs.SetInt("h09", Convert.ToInt32(h09));
 
         PlayerPrefs.SetInt("day", day);
         PlayerPrefs.SetInt("reputation", reputation);
@@ -239,14 +239,14 @@ public class GameManager : MonoBehaviour
     public void loadGame()
     {
         h01 = Convert.ToBoolean(PlayerPrefs.GetInt("h01"));
-        h02 = Convert.ToBoolean(PlayerPrefs.GetInt("h01"));
-        h03 = Convert.ToBoolean(PlayerPrefs.GetInt("h01"));
-        h04 = Convert.ToBoolean(PlayerPrefs.GetInt("h01"));
-        h05 = Convert.ToBoolean(PlayerPrefs.GetInt("h01"));
-        h06 = Convert.ToBoolean(PlayerPrefs.GetInt("h01"));
-        h07 = Convert.ToBoolean(PlayerPrefs.GetInt("h01"));
-        h08 = Convert.ToBoolean(PlayerPrefs.GetInt("h01"));
-        h09 = Convert.ToBoolean(PlayerPrefs.GetInt("h01"));
+        h02 = Convert.ToBoolean(PlayerPrefs.GetInt("h02"));
+        h03 = Convert.ToBoolean(PlayerPrefs.GetInt("h03"));
+        h04 = Convert.ToBoolean(PlayerPrefs.GetInt("h04"));
+        h05 = Convert.ToBoolean(PlayerPrefs.GetInt("h05"));
+        h06 = Convert.ToBoolean(PlayerPrefs.GetInt("h06"));
+        h07 = Convert.ToBoolean(PlayerPrefs.GetInt("h07"));
+        h08 = Convert.ToBoolean(PlayerPrefs.GetInt("h08"));
+        h09 = Convert.ToBoolean(PlayerPrefs.GetInt("h09"));
 
         day = PlayerPrefs.GetInt("day");
         reputation = PlayerPrefs.GetInt("reputation");
