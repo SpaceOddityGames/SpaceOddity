@@ -8,7 +8,7 @@ public class EndingDialog : MonoBehaviour
 {
     [SerializeField] GameManager gameManager;
     [SerializeField] TextMeshProUGUI blackText;
-    [SerializeField] TextMeshProUGUI endText;
+    [SerializeField] public TextMeshProUGUI endText;
     [SerializeField] GameObject clickScreenBlack;
     [SerializeField] GameObject clickScreenEnd;
     public void activateBlackText(bool completed)

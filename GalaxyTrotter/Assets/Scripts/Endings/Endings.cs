@@ -38,6 +38,7 @@ public class Endings : MonoBehaviour
 
     public void deactivateEnd()
     {
+        endDialog.endText.text = "";
         pausa.SetActive(true);
         endImage.gameObject.SetActive(false);
     }
