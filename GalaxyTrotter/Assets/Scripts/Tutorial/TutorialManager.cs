@@ -167,7 +167,7 @@ public class TutorialManager : MonoBehaviour
             case 23:
                 flechas[8].SetActive(true);
                 textToPrint = "El siguiente ingrediente del Tonight Please son dos hongustars, para echarlo a la bebida cógelos y arrástralos hasta el recipiente.";
-                ingredients[1].enable();
+                ingredients[0].enable();
                 condit = 3;
                 break;
             case 24:
@@ -179,7 +179,7 @@ public class TutorialManager : MonoBehaviour
             case 25:
                 tabletButton.GetComponent<TabletButton>().paused = true;
                 flechas[9].SetActive(true);
-                ingredients[1].disable();
+                ingredients[0].disable();
                 foodPreparator.tutorialIngredient = false;
                 textToPrint = "Perfecto, ya has preparado un Tonight Please, ahora sólo te queda entregarlo.";
                 foodPreparator.tutorial = true;

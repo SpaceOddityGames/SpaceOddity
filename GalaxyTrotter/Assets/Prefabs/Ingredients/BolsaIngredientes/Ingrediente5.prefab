@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1671831425638733066}
   - component: {fileID: 1671831425638733067}
   m_Layer: 0
-  m_Name: IngredientePrincipal5
+  m_Name: Ingrediente5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10396a9f32d495240b020f9db5d5c74a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodType: 1
-  ingredient: {fileID: 7624725145449482409, guid: 5388c60eb987f05468b5722e1cc80e2c, type: 3}
+  foodType: 5
+  ingredient: {fileID: 7624725145449482409, guid: 211c6482843f4c548932a035dab3741b, type: 3}
   drop: 0
   caldero: {fileID: 0}
 --- !u!65 &1671831425638733067
