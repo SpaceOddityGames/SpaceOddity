@@ -127,6 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodType: 8
   ingredient: {fileID: 7624725145449482409, guid: 2376e5e783c3ebb419c1c8c8f5d1d521, type: 3}
+  childIngredient: {fileID: 0}
   drop: 0
   caldero: {fileID: 0}
 --- !u!65 &1671831425638733067
@@ -236,7 +237,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3768210918918769504, guid: 596dbbbea3091da43a628e1c56523190, type: 3}
+  - {fileID: 2100000, guid: 90f99fbadb6f46549af3a7a59281fee4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -319,7 +320,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3768210918918769504, guid: 596dbbbea3091da43a628e1c56523190, type: 3}
+  - {fileID: 2100000, guid: 90f99fbadb6f46549af3a7a59281fee4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -568,7 +569,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3768210918918769504, guid: 596dbbbea3091da43a628e1c56523190, type: 3}
+  - {fileID: 2100000, guid: 90f99fbadb6f46549af3a7a59281fee4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
