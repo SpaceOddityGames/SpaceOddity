@@ -112,7 +112,7 @@ public class DialogController : MonoBehaviour
             }
             if (!skipText)
             {
-                yield return new WaitForSeconds(0.04f);
+                yield return new WaitForSeconds(0.02f);
                 if (!textForMain)
                 {
                     DialogText.text += character;

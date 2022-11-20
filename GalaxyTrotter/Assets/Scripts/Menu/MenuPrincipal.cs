@@ -27,6 +27,14 @@ public class MenuPrincipal : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("menuTheme");
     }
 
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            CloseCredits();
+        }
+    }
+
     public void StartGame()
     {
         FindObjectOfType<AudioManager>().Stop("menuTheme");

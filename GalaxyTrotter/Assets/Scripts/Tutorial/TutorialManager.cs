@@ -96,11 +96,11 @@ public class TutorialManager : MonoBehaviour
             case 7:
                 textI = 1;
                 textBoxes[textI].SetActive(true);
-                textToPrint = "Como puedes ver aquí también podrás ver otras cosas como las reglas del bar, un mapa de la zona y datos de las distintas especies que vienen al bar. Además de esta barra que marca tu reputación profesional.";
+                textToPrint = "Como puedes ver aquí, también tienes la posibilidad de comprobar otras cosas como las reglas del bar, un mapa de la zona y datos de las distintas especies que vienen al bar. Además de esta barra que marca tu reputación profesional.";
                 condit = 0;
                 break;
             case 8:
-                textToPrint = "La reputación aumenta o disminuye según tu rendimiento. Si fallas en la realización de las bebidas o incumples alguna regla se te penalizará. Procura que no baje más de 5 puntos o me veré obligado a despedirte.";
+                textToPrint = "La reputación aumenta o disminuye según tu rendimiento. Si fallas en la realización de las bebidas o incumples alguna regla se te penalizará. Procura que no baje más de cinco puntos o me veré obligado a despedirte.";
                 break;
             case 9:
                 textToPrint = "En las reglas podrás mirar las normas del local y las regulaciones del gobierno de Azius. Y en el botón de especies podrás comprobar los ingredientes que no puede consumir cada especie.";
@@ -109,7 +109,7 @@ public class TutorialManager : MonoBehaviour
                 textToPrint = "Recuerda revisarlo de vez en cuando, la tablet se actualiza cuando haya nuevas reglas o un nuevo cliente de otra especie venga al bar.";
                 break;
             case 11:
-                textToPrint = "Bueno, eso es todo en cuanto a la tablet.";
+                textToPrint = "Bueno, eso es todo en cuanto a la tablet, pulsa el botón rojo para apagarla.";
                 condit = 0;
                 break;
             case 12:
@@ -204,7 +204,7 @@ public class TutorialManager : MonoBehaviour
             }
             if (!skipText)
             {
-                yield return new WaitForSeconds(0.04f);
+                yield return new WaitForSeconds(0.02f);
                 texts[i].text += character;
             }
             else
