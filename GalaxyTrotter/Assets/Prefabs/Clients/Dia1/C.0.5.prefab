@@ -120,7 +120,7 @@ MonoBehaviour:
     - "Acabo de emigrar a Azius y a\xFAn no conozco la zona."
     - "A ver si aqu\xED puedo vivir con algo de calma, las cosas en Plokan con la
       guerra cada vez van peor\u2026"
-    - Bueno, ponme un Cloud Bomb si me haces el favor.
+    - Bueno, ponme un Tonight Please si me haces el favor.
     initConditions: 030000000000000000000000000000000000000001000000
     correctResult:
     - "Muchas gracias, \xA1est\xE1 muy bueno!"

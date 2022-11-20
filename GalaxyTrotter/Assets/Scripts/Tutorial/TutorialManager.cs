@@ -121,7 +121,7 @@ public class TutorialManager : MonoBehaviour
                 tabletButton.GetComponent<TabletButton>().paused = true;
                 textI = 0;
                 textBoxes[textI].SetActive(true);
-                textToPrint = "Pasemos ahora a preparar la bebida, antes de nada, observa que existen dos tipos de ingredientes, los que tienes aquí arriba son líquidos, mientras que el resto son sólidos.";
+                textToPrint = "Pasemos ahora a preparar la bebida, antes de nada, observa que existen dos tipos de ingredientes, los que tienes aquí en la balda central son líquidos, mientras que el resto son sólidos.";
                 condit = 0;
                 break;
             case 14:
@@ -142,7 +142,7 @@ public class TutorialManager : MonoBehaviour
                 textToPrint = "Para echarlo en la bebida tan solo tienes que arrastrarlo hasta el recipiente principal del medio.";
                 break;
             case 18:
-                textToPrint = "Al mantener el líquido encima del recipiente este se irá llenando. Puedes comprobar la cantidad que has echado en el nivel que aparece al lado, recuerda que en este caso debe tener un 70% de Sul.";
+                textToPrint = "Al mantener el líquido encima del recipiente este se irá llenando. Puedes comprobar la cantidad que has echado en el nivel que aparece al lado, recuerda que en este caso debe tener un setenta por ciento de Sul.";
                 break;
             case 19:
                 flechas[6].SetActive(false);
@@ -152,7 +152,7 @@ public class TutorialManager : MonoBehaviour
             case 20:
                 tabletButton.GetComponent<TabletButton>().paused = true;
                 flechas[7].SetActive(true);
-                textToPrint = "Bien, ten en cuenta que si cometes algún error echando un ingrediente que no debías o te pasas en la cantidad de algún líquido, puedes tirar esta bebida y empezar de nuevo pulsando el botón que tienes a tu izquierda. Pero bueno, ahora no necesitas utilizarlo.";
+                textToPrint = "Bien, ten en cuenta que si cometes algún error echando un ingrediente que no debías o te pasas en la cantidad de algún líquido, puedes tirar esta bebida y empezar de nuevo pulsando el botón que tienes abajo a la derecha. Pero bueno, ahora no necesitas utilizarlo.";
                 resetButton.SetActive(true);
                 condit = 0; 
                 break;

@@ -128,6 +128,7 @@ public class TabletManager : MonoBehaviour
         pantallaRecetas.SetActive(false);
         this.gameObject.SetActive(false);
         tabletButton.gameObject.SetActive(true);
+        tabletButtonBar.gameObject.SetActive(true);
         tabletButton.enableIngredients();
     }
 
