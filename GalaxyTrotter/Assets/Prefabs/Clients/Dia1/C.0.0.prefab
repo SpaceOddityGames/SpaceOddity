@@ -124,7 +124,7 @@ MonoBehaviour:
     - "Trabajar\xE1s desde ah\xED detr\xE1s de la barra atendiendo las comandas de
       cada cliente, trata de memorizar bien las bebidas que te pidan."
     - "Una vez hayas tomado nota tendr\xE1s que prepararla y servirla. "
-    - "Ya ver\xE1s que una vez empieces ser\xE1 sencillo, pero antes que empieces
+    - "Ya ver\xE1s que una vez empieces ser\xE1 sencillo, pero antes de comenzar
       a atender clientes quiero ponerte a prueba. Quiero que me prepares un Tonight
       Please."
     initConditions: 000000000300000000000000000000000000000000000000000000000000000004000000
