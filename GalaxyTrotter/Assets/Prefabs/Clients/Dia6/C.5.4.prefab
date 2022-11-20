@@ -128,7 +128,7 @@ MonoBehaviour:
     cancelResult:
     - "\xBFPor qu\xE9 no me preparas la bebida?"
     - "\xA1Este sitio es una mierda!"
-    cancelResultConditions: 
+    cancelResultConditions: 0000000002000000
     recipe: {fileID: 7485873441582505971}
     aceptTask: 1
     twoTasks: 0
