@@ -25,7 +25,7 @@ public class EndingDialog : MonoBehaviour
             }
             else
             {
-                StartCoroutine(printCharactersBlack("Jornada " + (gameManager.day + 1) + " fallida"));
+                StartCoroutine(printCharactersBlack("Jornada " + (gameManager.day + 1) + " fallida\nReputación final " + gameManager.reputation + "/20"));
             }
         }
     }
@@ -46,10 +46,6 @@ public class EndingDialog : MonoBehaviour
         else if (gameManager.h05)
         {
             StartCoroutine(printCharactersEnd("Final: Ejecutado\n\nLa USI te ha capturado.\nHas sido trasladado a la Unión de Sistemas Interplanetarios donde se te ha juzgado por tus crímenes y se te ha sentenciado a MUERTE."));
-        }
-        else
-        {
-            StartCoroutine(printCharactersEnd("Jornada " + (gameManager.day + 1) + "\n\nReputación actual: " + gameManager.reputation + " / " + gameManager.maxReputation));
         }
     }
     public void deactivateBlackText()

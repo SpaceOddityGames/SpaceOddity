@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject flechaVerde;
     [SerializeField] GameObject flechaRoja;
     [SerializeField] Introduction introManager;
+    [SerializeField] BeginingDialog begining;
+    [SerializeField] GameObject pause;
 
     // Evolución de la partida
     public bool h01 = false;
@@ -34,14 +36,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        if (FindObjectOfType<PasarInfo>().continuar)
+        /*if (FindObjectOfType<PasarInfo>().continuar)
         {
             loadGame();
         }
         else
         {
             newGame();
-        }
+        }*/
         startDay();
         kitchenController.updateKitchenElements(day);
         reputationSlider.maxValue = maxReputation;
@@ -49,6 +51,33 @@ public class GameManager : MonoBehaviour
     }
     public void nextClient()
     {
+        if (day == 6 && clientNum == 0)
+        {
+            if (!h01 && h05)
+            {
+                h05 = true;
+                clientNum = 2;
+                StartCoroutine(waitForClient());
+                return;
+            }
+            if (!h06 && h08)
+            {
+                h04 = true;
+                clientNum = 0;
+                StartCoroutine(waitForClient());
+                return;
+            }
+            if (h07)
+            {
+                h04 = true;
+                clientNum = 1;
+                StartCoroutine(waitForClient());
+                return;
+            }
+            clientNum = 3;
+            StartCoroutine(waitForClient());
+            return;
+        }
         StartCoroutine(waitForClient());
     }
     public void invokeClient()
@@ -73,38 +102,15 @@ public class GameManager : MonoBehaviour
         if (day == 0)
         {
             FindObjectOfType<AudioManager>().Stop("gameTheme");
+            begining.gameObject.SetActive(false);
             introManager.gameObject.SetActive(true);
+            kitchenController.updateKitchenElements(day);
             return;
         }
+        begining.gameObject.SetActive(true);
+        begining.ActivateBegin();
+        pause.SetActive(false);
         kitchenController.updateKitchenElements(day);
-        if (day == 6 && clientNum == 0)
-        {
-            if (!h01 && h05)
-            {
-                h05 = true;
-                clientNum = 2;
-                nextClient();
-                return;
-            }
-            if (!h06 && h08)
-            {
-                h04 = true;
-                clientNum = 0;
-                nextClient();
-                return;
-            }
-            if (h07)
-            {
-                h04 = true;
-                clientNum = 1;
-                nextClient();
-                return;
-            }            
-            clientNum = 3;
-            nextClient();
-            return;
-        }
-        nextClient();
     }
     public void endDay()
     {
