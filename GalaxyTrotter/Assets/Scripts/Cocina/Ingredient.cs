@@ -84,31 +84,40 @@ public class Ingredient : MonoBehaviour
             switch (foodType)
             {
                 case 1:
-                    FindObjectOfType<AudioManager>().Play("hongustar");
+                    //FindObjectOfType<AudioManager>().Play("hongustar");
+                    FindObjectOfType<AudioManager>().PlayRandomPitch("hongustar");
                     break;
                 case 2:
-                    FindObjectOfType<AudioManager>().Play("pimkiyu");
+                    //FindObjectOfType<AudioManager>().Play("pimkiyu");
+                    FindObjectOfType<AudioManager>().PlayRandomPitch("pimkiyu");
                     break;
                 case 3:
-                    FindObjectOfType<AudioManager>().Play("odzia");
+                    //FindObjectOfType<AudioManager>().Play("odzia");
+                    FindObjectOfType<AudioManager>().PlayRandomPitch("odzia");
                     break;
                 case 4:
-                    FindObjectOfType<AudioManager>().Play("scorw");
+                    //FindObjectOfType<AudioManager>().Play("scorw");
+                    FindObjectOfType<AudioManager>().PlayRandomPitch("scorw");
                     break;
                 case 5:
-                    FindObjectOfType<AudioManager>().Play("molpo");
+                    //FindObjectOfType<AudioManager>().Play("molpo");
+                    FindObjectOfType<AudioManager>().PlayRandomPitch("molpo");
                     break;
                 case 6:
-                    FindObjectOfType<AudioManager>().Play("do");
+                    //FindObjectOfType<AudioManager>().Play("do");
+                    FindObjectOfType<AudioManager>().PlayRandomPitch("do");
                     break;
                 case 7:
-                    FindObjectOfType<AudioManager>().Play("dees");
+                    //FindObjectOfType<AudioManager>().Play("dees");
+                    FindObjectOfType<AudioManager>().PlayRandomPitch("dees");
                     break;
                 case 8:
-                    FindObjectOfType<AudioManager>().Play("cristal");
+                    //FindObjectOfType<AudioManager>().Play("cristal");
+                    FindObjectOfType<AudioManager>().PlayRandomPitch("cristal");
                     break;
                 case 9:
-                    FindObjectOfType<AudioManager>().Play("moonso");
+                    //FindObjectOfType<AudioManager>().Play("moonso");
+                    FindObjectOfType<AudioManager>().PlayRandomPitch("moonso");
                     break;
             }
         }
