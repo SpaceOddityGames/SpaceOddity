@@ -27,7 +27,7 @@ public class TabletManager : MonoBehaviour
     private int aux2 = 0;
     private int aux3 = 0;
     private int aux4 = 0;
-
+    [SerializeField] Animator anim;
     public void activatePantallaRazas()
     {
         if (tuto1)
@@ -133,9 +133,9 @@ public class TabletManager : MonoBehaviour
             pantallaRecetas.SetActive(false);
             this.gameObject.SetActive(false);
             tabletButton.gameObject.SetActive(true);
+            tabletButtonBar.gameObject.SetActive(true);
             return;
         }
-        FindObjectOfType<AudioManager>().Play("cerrarTablet");
         infoRecetas[aux].SetActive(false);
         infoRazas[aux2].SetActive(false);
         infoMapas[aux3].SetActive(false);
@@ -149,6 +149,20 @@ public class TabletManager : MonoBehaviour
         tabletButton.gameObject.SetActive(true);
         tabletButtonBar.gameObject.SetActive(true);
         tabletButton.enableIngredients();
+    }
+
+    public void botonApagar()
+    {
+        if (tuto1)
+        {
+            return;
+        }
+        if (tuto2)
+        {
+            return;
+        }
+        FindObjectOfType<AudioManager>().Play("cerrarTablet");
+        anim.Play("tabletOut");
     }
 
     /// Seccion Libro de recetas
