@@ -15,7 +15,6 @@ public class BeginingDialog : MonoBehaviour
     public void ActivateBegin()
     {
         activateBeginText();
-        print("1");
     }
     public void activateBeginText()
     {

@@ -36,14 +36,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        /*if (FindObjectOfType<PasarInfo>().continuar)
+        if (FindObjectOfType<PasarInfo>().continuar)
         {
             loadGame();
         }
         else
         {
             newGame();
-        }*/
+        }
         startDay();
         kitchenController.updateKitchenElements(day);
         reputationSlider.maxValue = maxReputation;
@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
     }
     public void nextClient()
     {
+        FindObjectOfType<AudioManager>().Stop("liquido");
         if (day == 6 && clientNum == 0)
         {
             if (!h01 && h05)
@@ -101,6 +102,7 @@ public class GameManager : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("gameTheme");
         if (day == 0)
         {
+            reputation = 10;
             FindObjectOfType<AudioManager>().Stop("gameTheme");
             begining.gameObject.SetActive(false);
             introManager.gameObject.SetActive(true);
@@ -124,7 +126,10 @@ public class GameManager : MonoBehaviour
                 reputation = maxReputation;
             }
             endManager.endDay(true);
-            saveGame();
+            if(!h02 && !h03 && !h04 && !h05)
+            {
+                saveGame();
+            }
         }
         else
         {
@@ -224,7 +229,6 @@ public class GameManager : MonoBehaviour
         h09 = false;
 
         day = 0;
-        reputation = 10;
     }
     public void saveGame()
     {

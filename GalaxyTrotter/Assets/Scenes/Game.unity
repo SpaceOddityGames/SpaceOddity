@@ -854,8 +854,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4625,7 +4625,7 @@ MonoBehaviour:
   m_text: "Especie nativa del sistema Azius, formados por elementos de la naturaleza
     como plantas y hongos. Se trata de una de las civilizaciones m\xE1s antiguas
     de la galaxia, caracterizada por sus conductas pac\xEDficas. Los shukas s\xF3lo
-    se alzan en armas, en defensa propia y en situaciones extremas.\r\n\r\nLos shukas
+    se alzan en armas en defensa propia y en situaciones extremas.\r\n\r\nLos shukas
     son al\xE9rgicos al Do.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
@@ -4764,7 +4764,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9e7440eda8276f747bbe321927cd6397, type: 2}
-  m_sharedMaterial: {fileID: -5584936197840757626, guid: f3a4e7fbfcf5ca24fbb01e85acf91850, type: 2}
+  m_sharedMaterial: {fileID: 6115500740714961605, guid: 9e7440eda8276f747bbe321927cd6397, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4788,8 +4788,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12531,7 +12531,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1457834009}
   m_Father: {fileID: 1264598591}
@@ -13057,7 +13057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reputation: 10
   maxReputation: 20
-  day: 5
+  day: 0
   clients:
     Day:
     - Client:
@@ -13467,7 +13467,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9e7440eda8276f747bbe321927cd6397, type: 2}
-  m_sharedMaterial: {fileID: -5584936197840757626, guid: f3a4e7fbfcf5ca24fbb01e85acf91850, type: 2}
+  m_sharedMaterial: {fileID: 6115500740714961605, guid: 9e7440eda8276f747bbe321927cd6397, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13491,8 +13491,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13866,8 +13866,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -17128,10 +17128,7 @@ MonoBehaviour:
     Plokan, vecino del sistema Azius. El sistema Plokan estaba completamente deshabitado
     antes de la llegada de los lacertilios, los cuales poblaron los distintos planetas
     habitables del mismo y encontraron en ellos las mayores reservas de soladio de
-    la galaxia. El soladio es un metal con propiedades \xFAnicas indispensable para
-    la construcci\xF3n de naves y estaciones espaciales. Gracias a la exportaci\xF3n
-    del material, el sistema Plokan es ahora uno de los m\xE1s ricos y avanzados
-    de la galaxia."
+    la galaxia."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
   m_sharedMaterial: {fileID: 3462883292486234332, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
@@ -18994,8 +18991,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -23987,8 +23984,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -24201,8 +24198,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -26225,7 +26222,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9e7440eda8276f747bbe321927cd6397, type: 2}
-  m_sharedMaterial: {fileID: -5584936197840757626, guid: f3a4e7fbfcf5ca24fbb01e85acf91850, type: 2}
+  m_sharedMaterial: {fileID: 6115500740714961605, guid: 9e7440eda8276f747bbe321927cd6397, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -26249,8 +26246,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -26285,10 +26282,10 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -0.05718994, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1457834011
@@ -30151,8 +30148,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -33865,7 +33862,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9e7440eda8276f747bbe321927cd6397, type: 2}
-  m_sharedMaterial: {fileID: -5584936197840757626, guid: f3a4e7fbfcf5ca24fbb01e85acf91850, type: 2}
+  m_sharedMaterial: {fileID: 6115500740714961605, guid: 9e7440eda8276f747bbe321927cd6397, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -33889,8 +33886,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -34825,7 +34822,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0.4142961, z: 0, w: 0.9101422}
   m_LocalPosition: {x: 0, y: 0.41, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7119398420851472448}
   m_Father: {fileID: 1633138482}
@@ -36118,7 +36115,7 @@ MonoBehaviour:
     los brazos. Su sistema natal pertenece actualmente a la Uni\xF3n de Sistemas
     Interplanetarios, y desafortunadamente es el m\xE1s primitivo de todos, la pobreza
     y los problemas sociales abundan en su planeta. La USI apenas ha tomado medidas
-    para solucionarlo, lo que ha conllevado un auge de la delincuencia, convirti\xE9ndose
+    para solucionarlo, lo que ha conllevado en un auge de la delincuencia, convirti\xE9ndose
     en uno de los sistemas m\xE1s peligrosos de la galaxia.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
@@ -36327,8 +36324,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -37503,8 +37500,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -66819,8 +66816,8 @@ Transform:
   m_GameObject: {fileID: 6856002203202501213}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5595106093578830974}
   - {fileID: 4270923224246683661}

@@ -120,7 +120,7 @@ MonoBehaviour:
       tiene nuestro sistema ahora mismo."
     - "Quiz\xE1s no es necesario entrar en la Uni\xF3n, pero una alianza evitar\xEDa
       conflictos con ellos."
-    - "Y seguramente algo de protecci\xF3n y seguridad."
+    - "Y seguramente conseguir\xEDamos algo de protecci\xF3n y seguridad."
     - "En fin, \xBFme puedes poner un H2O?"
     initConditions: 0000000000000000000000000000000001000000
     correctResult:
