@@ -37,6 +37,7 @@ public class DialogController : MonoBehaviour
     [SerializeField] public GameObject hologramLerman;
     [SerializeField] GameObject moonso;
     [SerializeField] GameObject chip;
+    
 
 
     [SerializeField] FoodPreparation foodPreparation;
@@ -529,7 +530,7 @@ public class DialogController : MonoBehaviour
     }
     public void resultChip()
     {
-        client = Instantiate(finalLerman, new Vector3(-609.1f, 26.8f, -244.2f), Quaternion.Euler(90, 180, 0));
+        client = Instantiate(finalLerman, new Vector3(-609.1f, 27f, -244.2f), Quaternion.Euler(90, 180, 0));
         gameManager.clientNum = 20;
     }
 }

@@ -10,6 +10,8 @@ public class KitchenController : MonoBehaviour
     [SerializeField] GameObject[] buttons;
     [SerializeField] GameObject[] recipes;
     [SerializeField] GameObject[] normas;
+    [SerializeField] GameObject[] ingredientesTablet;
+    [SerializeField] GameObject[] alertas;
     public void disableAll()
     {
         foreach (GameObject ingredient in ingredients)
@@ -72,6 +74,23 @@ public class KitchenController : MonoBehaviour
                 normas[1].SetActive(false);
                 normas[2].SetActive(false);
                 normas[3].SetActive(false);
+                //IngredientesTablet
+                ingredientesTablet[0].SetActive(true);
+                ingredientesTablet[1].SetActive(true);
+                ingredientesTablet[2].SetActive(true);
+                ingredientesTablet[3].SetActive(true);
+                ingredientesTablet[4].SetActive(true);
+                ingredientesTablet[5].SetActive(false);
+                ingredientesTablet[6].SetActive(false);
+                ingredientesTablet[7].SetActive(false);
+                ingredientesTablet[8].SetActive(false);
+                ingredientesTablet[9].SetActive(true);
+                ingredientesTablet[10].SetActive(true);
+                ingredientesTablet[11].SetActive(false);
+                //Alertas
+                alertas[0].SetActive(false);
+                alertas[1].SetActive(false);
+                alertas[2].SetActive(false);
                 break;
             case 1:
                 //ingredientes
@@ -108,6 +127,23 @@ public class KitchenController : MonoBehaviour
                 normas[1].SetActive(false);
                 normas[2].SetActive(false);
                 normas[3].SetActive(false);
+                //IngredientesTablet
+                ingredientesTablet[0].SetActive(true);
+                ingredientesTablet[1].SetActive(true);
+                ingredientesTablet[2].SetActive(true);
+                ingredientesTablet[3].SetActive(true);
+                ingredientesTablet[4].SetActive(true);
+                ingredientesTablet[5].SetActive(false);
+                ingredientesTablet[6].SetActive(false);
+                ingredientesTablet[7].SetActive(false);
+                ingredientesTablet[8].SetActive(false);
+                ingredientesTablet[9].SetActive(true);
+                ingredientesTablet[10].SetActive(true);
+                ingredientesTablet[11].SetActive(false);
+                //Alertas
+                alertas[0].SetActive(false);
+                alertas[1].SetActive(false);
+                alertas[2].SetActive(true);
                 break;
             case 2:
                 //ingredientes
@@ -144,6 +180,23 @@ public class KitchenController : MonoBehaviour
                 normas[1].SetActive(true);
                 normas[2].SetActive(false);
                 normas[3].SetActive(false);
+                //IngredientesTablet
+                ingredientesTablet[0].SetActive(true);
+                ingredientesTablet[1].SetActive(true);
+                ingredientesTablet[2].SetActive(true);
+                ingredientesTablet[3].SetActive(true);
+                ingredientesTablet[4].SetActive(true);
+                ingredientesTablet[5].SetActive(true);
+                ingredientesTablet[6].SetActive(true);
+                ingredientesTablet[7].SetActive(false);
+                ingredientesTablet[8].SetActive(false);
+                ingredientesTablet[9].SetActive(true);
+                ingredientesTablet[10].SetActive(true);
+                ingredientesTablet[11].SetActive(false);
+                //Alertas
+                alertas[0].SetActive(true);
+                alertas[1].SetActive(true);
+                alertas[2].SetActive(true);
                 break;
             case 3:
                 //ingredientes
@@ -180,6 +233,23 @@ public class KitchenController : MonoBehaviour
                 normas[1].SetActive(true);
                 normas[2].SetActive(true);
                 normas[3].SetActive(false);
+                //IngredientesTablet
+                ingredientesTablet[0].SetActive(true);
+                ingredientesTablet[1].SetActive(true);
+                ingredientesTablet[2].SetActive(true);
+                ingredientesTablet[3].SetActive(true);
+                ingredientesTablet[4].SetActive(true);
+                ingredientesTablet[5].SetActive(true);
+                ingredientesTablet[6].SetActive(true);
+                ingredientesTablet[7].SetActive(true);
+                ingredientesTablet[8].SetActive(false);
+                ingredientesTablet[9].SetActive(true);
+                ingredientesTablet[10].SetActive(true);
+                ingredientesTablet[11].SetActive(false);
+                //Alertas
+                alertas[0].SetActive(true);
+                alertas[1].SetActive(true);
+                alertas[2].SetActive(true);
                 break;
             case 4:
                 //ingredientes
@@ -216,6 +286,23 @@ public class KitchenController : MonoBehaviour
                 normas[1].SetActive(true);
                 normas[2].SetActive(false);
                 normas[3].SetActive(false);
+                //IngredientesTablet
+                ingredientesTablet[0].SetActive(true);
+                ingredientesTablet[1].SetActive(true);
+                ingredientesTablet[2].SetActive(true);
+                ingredientesTablet[3].SetActive(true);
+                ingredientesTablet[4].SetActive(true);
+                ingredientesTablet[5].SetActive(true);
+                ingredientesTablet[6].SetActive(true);
+                ingredientesTablet[7].SetActive(true);
+                ingredientesTablet[8].SetActive(false);
+                ingredientesTablet[9].SetActive(true);
+                ingredientesTablet[10].SetActive(true);
+                ingredientesTablet[11].SetActive(true);
+                //Alertas
+                alertas[0].SetActive(true);
+                alertas[1].SetActive(true);
+                alertas[2].SetActive(true);
                 break;
             case 5:
                 //ingredientes
@@ -252,6 +339,23 @@ public class KitchenController : MonoBehaviour
                 normas[1].SetActive(true);
                 normas[2].SetActive(false);
                 normas[3].SetActive(true);
+                //IngredientesTablet
+                ingredientesTablet[0].SetActive(true);
+                ingredientesTablet[1].SetActive(true);
+                ingredientesTablet[2].SetActive(true);
+                ingredientesTablet[3].SetActive(true);
+                ingredientesTablet[4].SetActive(true);
+                ingredientesTablet[5].SetActive(true);
+                ingredientesTablet[6].SetActive(true);
+                ingredientesTablet[7].SetActive(true);
+                ingredientesTablet[8].SetActive(true);
+                ingredientesTablet[9].SetActive(true);
+                ingredientesTablet[10].SetActive(true);
+                ingredientesTablet[11].SetActive(true);
+                //Alertas
+                alertas[0].SetActive(true);
+                alertas[1].SetActive(true);
+                alertas[2].SetActive(false);
                 break;
             case 6:
                 //ingredientes
@@ -288,6 +392,23 @@ public class KitchenController : MonoBehaviour
                 normas[1].SetActive(true);
                 normas[2].SetActive(false);
                 normas[3].SetActive(true);
+                //IngredientesTablet
+                ingredientesTablet[0].SetActive(true);
+                ingredientesTablet[1].SetActive(true);
+                ingredientesTablet[2].SetActive(true);
+                ingredientesTablet[3].SetActive(true);
+                ingredientesTablet[4].SetActive(true);
+                ingredientesTablet[5].SetActive(true);
+                ingredientesTablet[6].SetActive(true);
+                ingredientesTablet[7].SetActive(true);
+                ingredientesTablet[8].SetActive(true);
+                ingredientesTablet[9].SetActive(true);
+                ingredientesTablet[10].SetActive(true);
+                ingredientesTablet[11].SetActive(true);
+                //Alertas
+                alertas[0].SetActive(false);
+                alertas[1].SetActive(false);
+                alertas[2].SetActive(false);
                 break;
             case 7:
                 //ingredientes
@@ -324,6 +445,23 @@ public class KitchenController : MonoBehaviour
                 normas[1].SetActive(true);
                 normas[2].SetActive(false);
                 normas[3].SetActive(true);
+                //IngredientesTablet
+                ingredientesTablet[0].SetActive(true);
+                ingredientesTablet[1].SetActive(true);
+                ingredientesTablet[2].SetActive(true);
+                ingredientesTablet[3].SetActive(true);
+                ingredientesTablet[4].SetActive(true);
+                ingredientesTablet[5].SetActive(true);
+                ingredientesTablet[6].SetActive(true);
+                ingredientesTablet[7].SetActive(true);
+                ingredientesTablet[8].SetActive(true);
+                ingredientesTablet[9].SetActive(true);
+                ingredientesTablet[10].SetActive(true);
+                ingredientesTablet[11].SetActive(true);
+                //Alertas
+                alertas[0].SetActive(false);
+                alertas[1].SetActive(false);
+                alertas[2].SetActive(false);
                 break;
         }
 

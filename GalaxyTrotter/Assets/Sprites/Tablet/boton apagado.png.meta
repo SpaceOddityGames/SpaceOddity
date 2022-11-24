@@ -67,12 +67,12 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -120,8 +120,8 @@ TextureImporter:
       name: boton apagado_0
       rect:
         serializedVersion: 2
-        x: 928
-        y: 402
+        x: 480
+        y: 374
         width: 50
         height: 329
       alignment: 0

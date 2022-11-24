@@ -67,12 +67,12 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -120,19 +120,19 @@ TextureImporter:
       name: Hongustar_0
       rect:
         serializedVersion: 2
-        x: 343
-        y: 263
-        width: 393
-        height: 443
-      alignment: 9
-      pivot: {x: 0.5552634, y: 0.5000001}
+        x: 316
+        y: 232
+        width: 396
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afd6a5ca3ad70ea4cb0f43c4762efe66
-      internalID: -1784597110
+      spriteID: 4104ec79c86d55f4aaa9280d13819b0b
+      internalID: -297086591
       vertices: []
       indices: 
       edges: []
@@ -148,6 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Hongustar_1: -1651400157
       Hongustar_0: -297086591
   spritePackingTag: 
   pSDRemoveMatte: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f09c5a6ced56f6e4fb828a5227cbacf7
+guid: 0d5e3c4b987b7cb4fa12d61dcd0d5c92
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -67,12 +67,12 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: base de alcohol_0
+      name: MoonsoCaratula_0
       rect:
         serializedVersion: 2
-        x: 884
-        y: 577
-        width: 89
-        height: 97
+        x: 232
+        y: 288
+        width: 482
+        height: 308
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b585f3c5b42d63e44812ebedb7bfb348
-      internalID: 1648459451
+      spriteID: 0db017dbd31f6464b8b215654c5d2eb1
+      internalID: 165532190
       vertices: []
       indices: 
       edges: []
@@ -140,7 +140,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0780e54c6dd17944d99357698cce1dd6
+    spriteID: e6ad46fb97efbef4aa9dbe20fae5fff7
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      base de alcohol_0: 1648459451
+      MoonsoCaratula_0: 165532190
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

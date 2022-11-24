@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
     {
         if (clientNum < clients.Day[day].Client.Length)
         {
-            GameObject p = Instantiate(clients.Day[day].Client[clientNum], new Vector3(-609.1f, 26.8f, -244.2f), Quaternion.Euler(90, 180, 0));
+            GameObject p = Instantiate(clients.Day[day].Client[clientNum], new Vector3(-609.1f, 27f, -244.2f), Quaternion.Euler(90, 180, 0));
             clientNum++;
         }
         else
@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
     }
     public void startDay()
     {
+        /*
         if (Convert.ToBoolean(PlayerPrefs.GetInt("existGame")))
         {
             reputation = PlayerPrefs.GetInt("reputation");
@@ -75,7 +76,7 @@ public class GameManager : MonoBehaviour
             FindObjectOfType<AudioManager>().Stop("gameTheme");
             introManager.gameObject.SetActive(true);
             return;
-        }
+        }*/
         kitchenController.updateKitchenElements(day);
         if (day == 6 && clientNum == 0)
         {

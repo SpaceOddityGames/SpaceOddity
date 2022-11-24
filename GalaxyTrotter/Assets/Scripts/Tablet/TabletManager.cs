@@ -10,10 +10,13 @@ public class TabletManager : MonoBehaviour
     [SerializeField] GameObject pantallaRazas;
     [SerializeField] GameObject pantallaMapa;
     [SerializeField] GameObject pantallaNotas;
+    [SerializeField] GameObject pantallaIngredientes;
     [SerializeField] GameObject pantallaRecetas;
     [SerializeField] GameObject[] infoRecetas;
     [SerializeField] GameObject[] infoRazas;
     [SerializeField] GameObject[] infoMapas;
+    [SerializeField] GameObject[] infoIngredientes;
+    [SerializeField] GameObject[] alerta;
     [SerializeField] TabletButton tabletButton;
     [SerializeField] TabletButtonBar tabletButtonBar;
     [HideInInspector] public bool tuto1 = false;
@@ -23,6 +26,7 @@ public class TabletManager : MonoBehaviour
     private int aux = 0;
     private int aux2 = 0;
     private int aux3 = 0;
+    private int aux4 = 0;
 
     public void activatePantallaRazas()
     {
@@ -42,6 +46,16 @@ public class TabletManager : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("botonTabletIn");
         pantallaMapa.SetActive(true);
     }
+    public void activatePantallaIngredientes()
+    {
+        if (tuto1)
+        {
+            return;
+        }
+        FindObjectOfType<AudioManager>().Play("botonTabletIn");
+        pantallaIngredientes.SetActive(true);
+        alerta[1].SetActive(false);
+    }
     public void activatePantallaNotas()
     {
         if (tuto1)
@@ -50,6 +64,7 @@ public class TabletManager : MonoBehaviour
         }
         FindObjectOfType<AudioManager>().Play("botonTabletIn");
         pantallaNotas.SetActive(true);
+        alerta[0].SetActive(false);
     }
     public void activatePantallaRecetas()
     {
@@ -59,6 +74,7 @@ public class TabletManager : MonoBehaviour
         }
         FindObjectOfType<AudioManager>().Play("botonTabletIn");
         pantallaRecetas.SetActive(true);
+        alerta[2].SetActive(false);
     }
     public void activatePantallaInicio()
     {
@@ -78,6 +94,7 @@ public class TabletManager : MonoBehaviour
         pantallaMapa.SetActive(false);
         pantallaNotas.SetActive(false);
         pantallaRecetas.SetActive(false);
+        pantallaIngredientes.SetActive(false);
     }
     public void deactivateTablet()
     {
@@ -122,9 +139,11 @@ public class TabletManager : MonoBehaviour
         infoRecetas[aux].SetActive(false);
         infoRazas[aux2].SetActive(false);
         infoMapas[aux3].SetActive(false);
+        infoIngredientes[aux4].SetActive(false);
         pantallaRazas.SetActive(false);
         pantallaMapa.SetActive(false);
         pantallaNotas.SetActive(false);
+        pantallaIngredientes.SetActive(false);
         pantallaRecetas.SetActive(false);
         this.gameObject.SetActive(false);
         tabletButton.gameObject.SetActive(true);
@@ -163,6 +182,13 @@ public class TabletManager : MonoBehaviour
         infoMapas[aux3].SetActive(false);
         infoMapas[num].SetActive(true);
         aux3 = num;
+    }
+    public void activateIngrediente(int num)
+    {
+        FindObjectOfType<AudioManager>().Play("botonTabletIn");
+        infoIngredientes[aux4].SetActive(false);
+        infoIngredientes[num].SetActive(true);
+        aux4 = num;
     }
 }
 
