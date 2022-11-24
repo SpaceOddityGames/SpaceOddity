@@ -163,7 +163,8 @@ public class Ingredient : MonoBehaviour
                 this.GetComponent<BoxCollider>().enabled = false;
             }
             caldero.GetComponent<FoodPreparation>().addIngredient(foodType);
-            FindObjectOfType<AudioManager>().Play("echarIngrediente");
+            //FindObjectOfType<AudioManager>().Play("echarIngrediente");
+            FindObjectOfType<AudioManager>().PlayRandomPitch("echarIngrediente");
             seleccion.GetComponent<IngredientUnit>().dropping = true;
             seleccion.GetComponent<IngredientUnit>().startPos = seleccion.transform.position;
             seleccion.GetComponent<IngredientUnit>().targetPos = caldero.transform.position;
