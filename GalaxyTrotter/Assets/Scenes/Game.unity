@@ -815,8 +815,8 @@ RectTransform:
   m_GameObject: {fileID: 18185017}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.4999999, y: 1.4999999, z: 1.4999999}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 969045143}
   m_RootOrder: 1
@@ -6289,7 +6289,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9e7440eda8276f747bbe321927cd6397, type: 2}
-  m_sharedMaterial: {fileID: -5584936197840757626, guid: f3a4e7fbfcf5ca24fbb01e85acf91850, type: 2}
+  m_sharedMaterial: {fileID: 6115500740714961605, guid: 9e7440eda8276f747bbe321927cd6397, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9428,7 +9428,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -468.3, y: 189.7}
+  m_AnchoredPosition: {x: -468.3, y: 191.7}
   m_SizeDelta: {x: 730, y: 730}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &372537390
@@ -16500,6 +16500,7 @@ MonoBehaviour:
   h07: 0
   h08: 0
   h09: 0
+  h10: 0
 --- !u!1 &704405691
 GameObject:
   m_ObjectHideFlags: 0
@@ -17902,7 +17903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -150}
+  m_AnchoredPosition: {x: 50, y: -50}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &758004836
@@ -28227,7 +28228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -530, y: 266}
+  m_AnchoredPosition: {x: -530, y: 268.7}
   m_SizeDelta: {x: 730, y: 730}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1153225750
@@ -30166,7 +30167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.65882355, g: 0.77254903, b: 0.76862746, a: 1}
+  m_Color: {r: 0.654902, g: 0.76470596, b: 0.7607844, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -51817,7 +51818,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 483.3, y: -412}
+  m_AnchoredPosition: {x: 483.3, y: -440}
   m_SizeDelta: {x: 819, y: 529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143310650
