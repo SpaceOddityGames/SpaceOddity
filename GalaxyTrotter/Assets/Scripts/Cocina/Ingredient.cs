@@ -54,10 +54,12 @@ public class Ingredient : MonoBehaviour
                 break;
             case 9:
                 this.GetComponent<BoxCollider>().enabled = true;
+                childIngredient.SetActive(true);
                 floor = -5;
                 break;
             case 10:
                 this.GetComponent<BoxCollider>().enabled = true;
+                childIngredient.SetActive(true);
                 floor = -6;
                 break;
             default:

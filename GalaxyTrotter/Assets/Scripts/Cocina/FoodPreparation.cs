@@ -110,10 +110,6 @@ public class FoodPreparation : MonoBehaviour
                         gameManager.h05 = true;
                     }
                 }
-                else
-                {
-                    gameManager.h06 = false;
-                }
             }
             int odziaQuantity = 0;
             for (int k = 0; k < SIZE; k++)

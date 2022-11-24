@@ -226,6 +226,10 @@ public class DialogController : MonoBehaviour
                 clickScreenKitchen.SetActive(true);
                 foodPreparation.comprobateChip = true;
                 break;
+            case 18:
+                clickScreen.SetActive(true);
+                chip.SetActive(false);
+                break;
             default:
                 break;
         }
@@ -410,24 +414,25 @@ public class DialogController : MonoBehaviour
     }
     private void guilatext1()
     {
-        int[] a = new int[17];
+        int[] a = new int[18];
         a[0] = 0;
         a[1] = 0;
         a[2] = 0;
         a[3] = 0;
         a[4] = 0;
-        a[5] = 16;
-        a[6] = 0; 
+        a[5] = 0;
+        a[6] = 16; 
         a[7] = 0;
         a[8] = 0;
         a[9] = 0;
         a[10] = 0;
         a[11] = 0;
-        a[12] = 3;
-        a[13] = 0;
-        a[14] = 3;
+        a[12] = 18;
+        a[13] = 3;
+        a[14] = 0;
         a[15] = 3;
-        a[16] = 2;
+        a[16] = 3;
+        a[17] = 2;
         string[] txt = new string[17];
         txt[0] = "El plan de ayer ha sido todo un éxito, el oficial ha muerto y no hay ningún rastro ni ninguna sospecha que lleve a nosotros. Muchísimas gracias por haber decidido plantar cara a esos malnacidos.";
         txt[1] = "Quiero hacerte otra propuesta.";
@@ -451,7 +456,7 @@ public class DialogController : MonoBehaviour
     private void guilatext2()
     {
 
-        int[] a = new int[21];
+        int[] a = new int[22];
         a[0] = 3;
         a[1] = 0;
         a[2] = 0;
@@ -461,24 +466,25 @@ public class DialogController : MonoBehaviour
         a[6] = 0;
         a[7] = 0;
         a[8] = 0;
-        a[9] = 16;
-        a[10] = 0;
+        a[9] = 0;
+        a[10] = 16;
         a[11] = 0;
         a[12] = 0;
         a[13] = 0;
         a[14] = 0;
         a[15] = 0;
-        a[16] = 3;
-        a[17] = 0;
-        a[18] = 3;
+        a[16] = 18;
+        a[17] = 3;
+        a[18] = 0;
         a[19] = 3;
-        a[20] = 2;
+        a[20] = 3;
+        a[21] = 2;
         string[] txt = new string[21];
-        txt[0] = "Quiero hacerte otra propuesta.";
-        txt[1] = "Tranquilo que esta vez no será necesario acabar con nadie.";
-        txt[2] = "Me he vinculado a un grupo revolucionario que quieren el fin de la Unión tanto como yo. Cada vez son más y están consiguiendo poderosos aliados.";
-        txt[3] = "También me he enterado que mañana se celebra una inauguración aquí ¿verdad?";
-        txt[4] = "Vendrán altos cargos de la USI, pues bien…";
+        txt[0] = "Ayer observé cómo entró el oficial al bar, pero aún sigue vivo. ¿Le echaste el moonso?";
+        txt[1] = "Al final no pude hacerlo…";
+        txt[2] = "Está bien, no te juzgo. Entiendo que no quieras mancharte las manos de sangre.";
+        txt[3] = "Aunque sí es verdad que siento mucha impotencia al verles a sus anchas, sin que nada les importe…";
+        txt[4] = "Pero bueno.";
         txt[5] = "Quiero hacerte otra propuesta.";
         txt[6] = "Tranquilo que esta vez no será necesario acabar con nadie.";
         txt[7] = "Me he vinculado a un grupo revolucionario que quieren el fin de la Unión tanto como yo. Cada vez son más y están consiguiendo poderosos aliados.";

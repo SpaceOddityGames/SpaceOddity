@@ -128,7 +128,7 @@ MonoBehaviour:
     wrongResultTimerConditions: 02000000
     cancelResult:
     - "\xBFC\xF3mo? \xBFEn serio te vas a negar a servirmelo?"
-    - "El universo cada vez est\xE1 peor."
+    - "La galaxia cada vez est\xE1 peor."
     cancelResultConditions: 0000000002000000
     recipe: {fileID: 7485873441582505971}
     aceptTask: 0

@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject flechaVerde;
     [SerializeField] GameObject flechaRoja;
     [SerializeField] Introduction introManager;
+    [SerializeField] BeginingDialog begining;
+    [SerializeField] GameObject pause;
 
     // Evolución de la partida
     public bool h01 = false;
@@ -49,6 +51,34 @@ public class GameManager : MonoBehaviour
     }
     public void nextClient()
     {
+        FindObjectOfType<AudioManager>().Stop("liquido");
+        if (day == 6 && clientNum == 0)
+        {
+            if (!h01 && h05)
+            {
+                h05 = true;
+                clientNum = 2;
+                StartCoroutine(waitForClient());
+                return;
+            }
+            if (!h06 && h08)
+            {
+                h04 = true;
+                clientNum = 0;
+                StartCoroutine(waitForClient());
+                return;
+            }
+            if (h07)
+            {
+                h04 = true;
+                clientNum = 1;
+                StartCoroutine(waitForClient());
+                return;
+            }
+            clientNum = 3;
+            StartCoroutine(waitForClient());
+            return;
+        }
         StartCoroutine(waitForClient());
     }
     public void invokeClient()
@@ -65,7 +95,6 @@ public class GameManager : MonoBehaviour
     }
     public void startDay()
     {
-        /*
         if (Convert.ToBoolean(PlayerPrefs.GetInt("existGame")))
         {
             reputation = PlayerPrefs.GetInt("reputation");
@@ -73,39 +102,17 @@ public class GameManager : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("gameTheme");
         if (day == 0)
         {
+            reputation = 10;
             FindObjectOfType<AudioManager>().Stop("gameTheme");
+            begining.gameObject.SetActive(false);
             introManager.gameObject.SetActive(true);
-            return;
-        }*/
-        kitchenController.updateKitchenElements(day);
-        if (day == 6 && clientNum == 0)
-        {
-            if (!h01 && h05)
-            {
-                h05 = true;
-                clientNum = 2;
-                nextClient();
-                return;
-            }
-            if (!h06 && h08)
-            {
-                h04 = true;
-                clientNum = 0;
-                nextClient();
-                return;
-            }
-            if (h07)
-            {
-                h04 = true;
-                clientNum = 1;
-                nextClient();
-                return;
-            }            
-            clientNum = 3;
-            nextClient();
+            kitchenController.updateKitchenElements(day);
             return;
         }
-        nextClient();
+        begining.gameObject.SetActive(true);
+        begining.ActivateBegin();
+        pause.SetActive(false);
+        kitchenController.updateKitchenElements(day);
     }
     public void endDay()
     {
@@ -119,7 +126,10 @@ public class GameManager : MonoBehaviour
                 reputation = maxReputation;
             }
             endManager.endDay(true);
-            saveGame();
+            if(!h02 && !h03 && !h04 && !h05)
+            {
+                saveGame();
+            }
         }
         else
         {
@@ -219,7 +229,6 @@ public class GameManager : MonoBehaviour
         h09 = false;
 
         day = 0;
-        reputation = 10;
     }
     public void saveGame()
     {
