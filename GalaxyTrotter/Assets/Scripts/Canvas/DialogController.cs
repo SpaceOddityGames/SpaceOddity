@@ -404,6 +404,10 @@ public class DialogController : MonoBehaviour
     }
     public void removeClient()
     {
+        if (client.transform.childCount != 0)
+        {
+            Destroy(client.transform.GetChild(0).gameObject);
+        }
         Destroy(client);
         dialogBox.SetActive(false);
         dialogText.SetActive(false);
@@ -536,7 +540,7 @@ public class DialogController : MonoBehaviour
     }
     public void resultChip()
     {
-        client = Instantiate(finalLerman, new Vector3(-609.1f, 27f, -244.2f), Quaternion.Euler(90, 180, 0));
+        client = Instantiate(finalLerman, new Vector3(-609.1f, 30f, -244.2f), Quaternion.Euler(90, 180, 0));
         gameManager.clientNum = 20;
     }
 }

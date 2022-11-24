@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
     {
         if (clientNum < clients.Day[day].Client.Length)
         {
-            GameObject p = Instantiate(clients.Day[day].Client[clientNum], new Vector3(-609.1f, 27f, -244.2f), Quaternion.Euler(90, 180, 0));
+            GameObject p = Instantiate(clients.Day[day].Client[clientNum], new Vector3(-609.1f, 30f, -244.2f), Quaternion.Euler(90, 180, 0));
             clientNum++;
         }
         else

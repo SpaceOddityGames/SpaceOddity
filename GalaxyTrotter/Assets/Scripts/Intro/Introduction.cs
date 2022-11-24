@@ -51,7 +51,7 @@ public class Introduction : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("texto");
         foreach (char character in actualString.ToCharArray())
         {
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.005f);
             introText.text += character;
         }
         FindObjectOfType<AudioManager>().Stop("texto");
