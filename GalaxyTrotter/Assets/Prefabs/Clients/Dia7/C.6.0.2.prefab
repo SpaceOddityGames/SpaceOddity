@@ -126,7 +126,7 @@ MonoBehaviour:
       matado alguien."
     - "Pero f\xEDjate que dejaste un cabo suelto\u2026"
     - JA JA JA
-    - "\xBFDe qui\xE9n crees que consigui\xF3 esa Lacertilia un poco de moonso?"
+    - "\xBFDe qui\xE9n crees que consigui\xF3 esa lacertilia un poco de moonso?"
     - "\xBFEh?"
     - "\xA1De m\xED, obviamente!"
     - "He hecho un trato con la Uni\xF3n al haberles ayudado a resolver el crimen,
@@ -138,7 +138,7 @@ MonoBehaviour:
     - "\xA1Pero a m\xED me da igual! \xA1Haberme tratado mejor el d\xEDa que vine
       aqu\xED!"
     - "\xA1Hasta nunca!"
-    initConditions: 00000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d000000
+    initConditions: 00000000030000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e000000
     correctResult: []
     correctResultConditions: 
     wrongResult: []

@@ -107,7 +107,7 @@ public class FoodPreparation : MonoBehaviour
                     }
                     else
                     {
-                        gameManager.h05 = true;
+                        gameManager.h10 = true;
                     }
                 }
             }

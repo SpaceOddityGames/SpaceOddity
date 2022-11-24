@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public bool h07 = false;
     public bool h08 = false;
     public bool h09 = false; //Lerman
+    public bool h10 = false;
 
     void Start()
     {
@@ -54,7 +55,7 @@ public class GameManager : MonoBehaviour
         FindObjectOfType<AudioManager>().Stop("liquido");
         if (day == 6 && clientNum == 0)
         {
-            if (!h01 && h05)
+            if (!h01 && h10)
             {
                 h05 = true;
                 clientNum = 2;
@@ -128,6 +129,18 @@ public class GameManager : MonoBehaviour
             endManager.endDay(true);
             if(!h02 && !h03 && !h04 && !h05)
             {
+                if (!h01 && h10)
+                {
+                    return;
+                }
+                if (!h06 && h08)
+                {
+                    return;
+                }
+                if (h07)
+                {
+                    return;
+                }
                 saveGame();
             }
         }
@@ -227,6 +240,7 @@ public class GameManager : MonoBehaviour
         h07 = false;
         h08 = false;
         h09 = false;
+        h10 = false;
 
         day = 0;
     }
@@ -243,6 +257,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("h07", Convert.ToInt32(h07));
         PlayerPrefs.SetInt("h08", Convert.ToInt32(h08));
         PlayerPrefs.SetInt("h09", Convert.ToInt32(h09));
+        PlayerPrefs.SetInt("h10", Convert.ToInt32(h10));
 
         PlayerPrefs.SetInt("day", day);
         PlayerPrefs.SetInt("reputation", reputation);
@@ -260,6 +275,7 @@ public class GameManager : MonoBehaviour
         h07 = Convert.ToBoolean(PlayerPrefs.GetInt("h07"));
         h08 = Convert.ToBoolean(PlayerPrefs.GetInt("h08"));
         h09 = Convert.ToBoolean(PlayerPrefs.GetInt("h09"));
+        h10 = Convert.ToBoolean(PlayerPrefs.GetInt("h10"));
 
         day = PlayerPrefs.GetInt("day");
         reputation = PlayerPrefs.GetInt("reputation");
