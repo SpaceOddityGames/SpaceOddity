@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2850,7 +2850,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: absorbiendo las propiedades y la conciencia del Pimkiyu hasta brotar.
+  m_text: absorbiendo las propiedades y la conciencia del pimkiyu hasta brotar.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
   m_sharedMaterial: {fileID: 3462883292486234332, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
@@ -8355,7 +8355,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pimkyu
+  m_text: Pimkiyu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
   m_sharedMaterial: {fileID: 3462883292486234332, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
@@ -9867,219 +9867,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 399527811}
   m_CullTransparentMesh: 1
---- !u!1 &400970035
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 400970037}
-  - component: {fileID: 400970036}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &400970036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 400970035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00b13c18ff30b9049b455dcb74d5412f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: liquido
-    clip: {fileID: 8300000, guid: fecd727f4b0f85d42ad1241a99ce2cba, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: abrirTablet
-    clip: {fileID: 8300000, guid: 7f7437ed055fa134db29b004ee256876, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: botonMenu
-    clip: {fileID: 8300000, guid: d53214a2e97713e44a9063c5dca4b511, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: botonTabletIn
-    clip: {fileID: 8300000, guid: d36e71da61fe21541ace7a5c481b3cc3, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: cerrarTablet
-    clip: {fileID: 8300000, guid: e86586f52344dd0419f20989d70dccfc, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: cristal
-    clip: {fileID: 8300000, guid: 9498ad29353d4234c87d805740c9a3ae, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: dees
-    clip: {fileID: 8300000, guid: aacf2eda207ebee48b8be796b7b83cec, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: do
-    clip: {fileID: 8300000, guid: c3bc2e3f955cff94385a8f87913f0995, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: echarIngrediente
-    clip: {fileID: 8300000, guid: 37f860f460649074eb8c736d46576656, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: hongustar
-    clip: {fileID: 8300000, guid: c8a936c0e3f56ab47a99f2eb972c520e, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: molpo
-    clip: {fileID: 8300000, guid: bc71f4de61aa6a14e98dbf16fe9839a7, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: moonso
-    clip: {fileID: 8300000, guid: a6e6192af5eb5a149bea46518f43981a, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: odzia
-    clip: {fileID: 8300000, guid: 6add5c178d7a71944883dd2cbcff6177, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: pimkiyu
-    clip: {fileID: 8300000, guid: ce94da70835ff42488a769ab8a1bc0aa, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: reputacionDown
-    clip: {fileID: 8300000, guid: 34d205666409c984cbd9ac46cfdadccb, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: reputacionUp
-    clip: {fileID: 8300000, guid: 7d73dada4fd6f884494784ab5b7ad0b4, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: scorw
-    clip: {fileID: 8300000, guid: beaaab6d617abfb48bb56b4639be3f88, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: texto
-    clip: {fileID: 8300000, guid: 264ff29f84d4089459d6413f701ffd95, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: menuTheme
-    clip: {fileID: 8300000, guid: a9414e83e8ac36146a3fdbf26ccd1716, type: 3}
-    music: 1
-    volume: 0.5
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: gameTheme
-    clip: {fileID: 8300000, guid: 54435f84d152f22428795b629a044bec, type: 3}
-    music: 1
-    volume: 0.5
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: unidadTexto
-    clip: {fileID: 8300000, guid: fcab2b3542dd3f547b63226995a91142, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: unidadTextoGrave
-    clip: {fileID: 8300000, guid: 535e74546e0b5c24191485d097612cfb, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: textoGrave
-    clip: {fileID: 8300000, guid: e46b582aadc4c524c8d40316a6663e16, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: timer
-    clip: {fileID: 8300000, guid: c0cdf1df50647934e9f1fe1289cdff4d, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
---- !u!4 &400970037
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 400970035}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 819, y: 462, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &401144550
 GameObject:
   m_ObjectHideFlags: 0
@@ -17500,8 +17287,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Ingrediente creado por cient\xEDficos de la USI. Se trata de alimentar
-    a un Pimkiyu a base de Scorw, el Pimkiyu se cierra y se queda en forma de semilla.
-    Tras plantarlo, nace el Scorw que ha ido "
+    a un pimkiyu a base de scorw, el pimkiyu se cierra y se queda en forma de semilla.
+    Tras plantarlo, nace el scorw que ha ido "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
   m_sharedMaterial: {fileID: 3462883292486234332, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
@@ -17927,7 +17714,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Sustancia radiactiva extra\xEDda del planeta m\xE1s cercano a la estrella
     del sistema de Ichthalia. Durante siglos el scorw ha sido pol\xE9mico ya que
-    es una sustancia psicoactiva para los Ichthys, por ello la "
+    es una sustancia psicoactiva para los ichthys, por ello la "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
   m_sharedMaterial: {fileID: 3462883292486234332, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
@@ -20228,51 +20015,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824272150}
   m_CullTransparentMesh: 1
---- !u!1 &832427642
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 832427644}
-  - component: {fileID: 832427643}
-  m_Layer: 0
-  m_Name: PasarInfo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &832427643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 832427642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccf29dc28d1bdea4fbc97f55eddd41fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  continuar: 0
---- !u!4 &832427644
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 832427642}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 815.11285, y: 568.62805, z: -99.914856}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832444742
 GameObject:
   m_ObjectHideFlags: 0
@@ -20334,7 +20076,7 @@ MonoBehaviour:
   m_text: "puedan ser usados para la elaboraci\xF3n de comidas y bebidas. Con el
     paso del tiempo se han creado granjas con las condiciones id\xF3neas para la
     crianza de estos seres y puedan exportarse con mayor facilidad, sin embargo los
-    Shukas son intolerantes a su ingesta."
+    shukas son intolerantes a su ingesta."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
   m_sharedMaterial: {fileID: 3462883292486234332, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
@@ -29584,7 +29326,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "muchas especies al morir soltar\xE1 un polvo, polvo de Pimkiyu, con el
+  m_text: "muchas especies al morir soltar\xE1 un polvo, polvo de pimkiyu, con el
     cual se pueden preparar bebidas y comidas riqu\xEDsimas."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
@@ -31215,9 +30957,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Este ingrediente es t\xEDpico de Plokan y aunque sea delicioso para ellos,
-    es extremadamente t\xF3xico para los Itchthys. Se trata de una rama de Sunso,
-    la cual tras varios meses de sequ\xEDa comienza a "
+  m_text: "Este ex\xF3tico ingrediente proveniente de Plokan es extremadamente t\xF3xico
+    para los itchthys. Se trata de una rama de sunso, la cual tras varios meses de
+    sequ\xEDa comienza a producir su propio"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
   m_sharedMaterial: {fileID: 3462883292486234332, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
@@ -40816,7 +40558,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 165532190, guid: 0d5e3c4b987b7cb4fa12d61dcd0d5c92, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -41675,9 +41417,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "producir su propio alimento para poder seguir creciendo. Este alimento
-    est\xE1 cubierto por una membrana donde se almacena. Es muy usada por los lacertilios
-    en traves\xEDas largas, solo tienen que romper la membrana y beber el alimento."
+  m_text: "alimento para poder seguir creciendo. Este alimento est\xE1 cubierto por
+    una membrana donde se almacena. Es muy usada por los lacertilios en traves\xEDas
+    largas, solo tienen que romper la membrana y beberlo."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
   m_sharedMaterial: {fileID: 3462883292486234332, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
@@ -43449,7 +43191,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Esta planta proveniente de Plokan nace con el \xFAnico prop\xF3sito de
     comerse a otras especies que caigan en la trampa de sus preciosos frutos. Si
-    un Pimkiyu se alimenta a lo largo de su vida con"
+    un pimkiyu se alimenta a lo largo de su vida con"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
   m_sharedMaterial: {fileID: 3462883292486234332, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
