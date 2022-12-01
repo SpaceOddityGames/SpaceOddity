@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7485873441582505974}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: -7.29, y: -1.43, z: 1.5726857}
+  m_LocalPosition: {x: -7.29, y: -1.4, z: 1.5726857}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -120,9 +120,9 @@ MonoBehaviour:
     - "Ya me he enterado que te resultar\xEDa bastante molesto lidiar con \xE9l."
     - "Por eso te quer\xEDa dar las gracias, ver\xE1s, aunque el tipo este sea un
       subnormal, le necesito."
-    - "Mira, te lo voy a contar mejor, me has demostrado que puedo confiar en t\xED.
-      Estoy haciendo lo que puedo por ayudar a la gente de Plokan, la Uni\xF3n les
-      est\xE1 arrebatando todo."
+    - "Mira, te voy a contar lo que pasa, me has demostrado que puedo confiar en
+      t\xED. Estoy haciendo lo que puedo por ayudar a la gente de Plokan, la Uni\xF3n
+      les est\xE1 arrebatando todo."
     - "La localizaci\xF3n de esta estaci\xF3n espacial es perfecta para el transporte
       de personas y mercanc\xEDas. Yo tan s\xF3lo intento dar salvoconducto a muchos
       lacertilios y conseguir suministros, aunque eso suponga hacer tratos con gente
