@@ -139,6 +139,7 @@ MonoBehaviour:
     cancelResultConditions: 
     recipe: {fileID: 7994003326696249780}
     aceptTask: 0
+    AorN: 0
     twoTasks: 0
     recipe2: {fileID: 0}
 --- !u!114 &7994003326696249780
@@ -277,7 +278,6 @@ MonoBehaviour:
       ciudadano de Plokan podr\xE1 venir a tomar algo aqu\xED."
     - "Si un lacertilio viene y te pide una bebida tendr\xE1s que rechazarla y pedirle
       que abandone el local. \xBFQueda claro?"
-    - "S\xED, por supuesto."
     - "As\xED me gusta, sin tanto lacertilio asqueroso el bar tendr\xE1 mucho mejor
       ambiente."
     - "Y otra cosa, los clientes ahora pueden pedirte varias bebidas a la vez. Por
@@ -285,7 +285,7 @@ MonoBehaviour:
       bebidas al mismo tiempo, as\xED que no me decepciones."
     - "Pues nada m\xE1s, ponte a trabajar ya, que ibas tarde, te voy a tener que
       descontar del sueldo estos minutos."
-    initConditions: 00000000000000000300000000000000000000000000000002000000
+    initConditions: 000000000000000016000000000000000000000002000000
     correctResult: []
     correctResultConditions: 
     wrongResult: []
@@ -296,6 +296,7 @@ MonoBehaviour:
     cancelResultConditions: 
     recipe: {fileID: 7485873441582505971}
     aceptTask: 0
+    AorN: 0
     twoTasks: 0
     recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971

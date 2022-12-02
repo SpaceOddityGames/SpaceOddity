@@ -34,6 +34,14 @@ public class DialogController : MonoBehaviour
     [SerializeField] GameObject buttonLerman2;
     [SerializeField] GameObject buttonPoli1;
     [SerializeField] GameObject buttonPoli2;
+    [SerializeField] GameObject buttonOp1_1;
+    [SerializeField] GameObject buttonOp1_2;
+    [SerializeField] GameObject buttonOp2_1;
+    [SerializeField] GameObject buttonOp2_2;
+    [SerializeField] GameObject buttonOp3_1;
+    [SerializeField] GameObject buttonOp3_2;
+    [SerializeField] GameObject buttonOp4_1;
+    [SerializeField] GameObject buttonOp4_2;
     [SerializeField] public GameObject hologramLerman;
     [SerializeField] GameObject moonso;
     [SerializeField] GameObject chip;
@@ -44,6 +52,7 @@ public class DialogController : MonoBehaviour
     [SerializeField] FoodPreparation foodPreparation2;
     [SerializeField] GameObject kitchen;
     [SerializeField] TutorialManager tutorial;
+    [SerializeField] Postit post;
 
     public GameObject client;
 
@@ -230,6 +239,18 @@ public class DialogController : MonoBehaviour
                 clickScreen.SetActive(true);
                 chip.SetActive(false);
                 break;
+            case 19:
+                activateOptionsOp1();
+                break;
+            case 20:
+                activateOptionsOp2();
+                break;
+            case 21:
+                activateOptionsOp3();
+                break;
+            case 22:
+                activateOptionsOp4();
+                break;
             default:
                 break;
         }
@@ -242,10 +263,13 @@ public class DialogController : MonoBehaviour
     }
     public void goKitchenTask()
     {
+        post.eliminateNote();
+        post.addNote(text.recipe.nameRecipe);
         foodPreparation.SetObjective(text.recipe.ingredientRecipe, text.recipe.liquidRecipe);
         foodPreparation.SetTwoTasks(text.twoTasks);
         if (text.twoTasks)
         {
+            post.addNote(text.recipe2.nameRecipe);
             foodPreparation2.gameObject.SetActive(true);
             foodPreparation2.SetObjective(text.recipe2.ingredientRecipe, text.recipe2.liquidRecipe);
         }
@@ -303,7 +327,7 @@ public class DialogController : MonoBehaviour
                 string[] txt = new string[1];
                 txt[0] = "No sé qué me has dado. Pero sabe un poco raro.";
                 ActivateText(txt, a);
-                gameManager.evaluateCorrectReputation(text.aceptTask, reseted);
+                gameManager.evaluateCorrectReputation(text.aceptTask, text.AorN, reseted);
                 yield break;
             }
             if (foodPreparation.lermanDouble)
@@ -319,7 +343,7 @@ public class DialogController : MonoBehaviour
             }
         }
         ActivateText(text.correctResult, text.correctResultConditions);
-        gameManager.evaluateCorrectReputation(text.aceptTask, reseted);
+        gameManager.evaluateCorrectReputation(text.aceptTask, text.AorN, reseted);
     }
     public void wrongResult()
     {
@@ -387,7 +411,7 @@ public class DialogController : MonoBehaviour
             gameManager.h08 = true;
         }
         client.SetActive(true);
-        gameManager.evaluateRejectReputation(text.aceptTask);
+        gameManager.evaluateRejectReputation(text.aceptTask, text.AorN);
         StartCoroutine(waitCancel());
     }
     IEnumerator waitCancel()
@@ -537,6 +561,46 @@ public class DialogController : MonoBehaviour
     {
         buttonPoli1.SetActive(false);
         buttonPoli2.SetActive(false);
+    }
+    public void activateOptionsOp1()
+    {
+        buttonOp1_1.SetActive(true);
+        buttonOp1_2.SetActive(true);
+    }
+    public void deactivateOptionsOp1()
+    {
+        buttonOp1_1.SetActive(false);
+        buttonOp1_2.SetActive(false);
+    }
+    public void activateOptionsOp2()
+    {
+        buttonOp2_1.SetActive(true);
+        buttonOp2_2.SetActive(true);
+    }
+    public void deactivateOptionsOp2()
+    {
+        buttonOp2_1.SetActive(false);
+        buttonOp2_2.SetActive(false);
+    }
+    public void activateOptionsOp3()
+    {
+        buttonOp3_1.SetActive(true);
+        buttonOp3_2.SetActive(true);
+    }
+    public void deactivateOptionsOp3()
+    {
+        buttonOp3_1.SetActive(false);
+        buttonOp3_2.SetActive(false);
+    }
+    public void activateOptionsOp4()
+    {
+        buttonOp4_1.SetActive(true);
+        buttonOp4_2.SetActive(true);
+    }
+    public void deactivateOptionsOp4()
+    {
+        buttonOp4_1.SetActive(false);
+        buttonOp4_2.SetActive(false);
     }
     public void resultChip()
     {

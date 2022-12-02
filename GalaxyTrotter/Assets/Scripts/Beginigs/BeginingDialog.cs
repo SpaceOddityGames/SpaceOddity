@@ -11,7 +11,13 @@ public class BeginingDialog : MonoBehaviour
     [SerializeField] TextMeshProUGUI beginText;
     [SerializeField] GameObject clickScreenBegin;
     [SerializeField] GameObject pausa;
-
+    [SerializeField] TabletButtonBar tabletButtonBar;
+    [SerializeField] TabletManager tablet;
+    private void Start()
+    {
+        tabletButtonBar.inactive = true;
+        tablet.deactivateTablet();
+    }
     public void ActivateBegin()
     {
         activateBeginText();
@@ -41,6 +47,7 @@ public class BeginingDialog : MonoBehaviour
 
     public void deactivateBegin()
     {
+        tabletButtonBar.inactive = false;
         beginText.text = "";
         pausa.SetActive(true);
         beginImage.fadeOut();

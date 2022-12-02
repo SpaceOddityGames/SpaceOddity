@@ -131,6 +131,7 @@ MonoBehaviour:
     cancelResultConditions: 0000000002000000
     recipe: {fileID: 1005215358388036137}
     aceptTask: 0
+    AorN: 0
     twoTasks: 0
     recipe2: {fileID: 0}
 --- !u!114 &1005215358388036137
@@ -279,7 +280,8 @@ MonoBehaviour:
     - "No entiendo por qu\xE9 no me lo quieres servir."
     cancelResultConditions: 0000000002000000
     recipe: {fileID: 7485873441582505971}
-    aceptTask: 0
+    aceptTask: 1
+    AorN: 0
     twoTasks: 0
     recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971

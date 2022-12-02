@@ -12,6 +12,8 @@ public class TabletManager : MonoBehaviour
     [SerializeField] GameObject pantallaNotas;
     [SerializeField] GameObject pantallaIngredientes;
     [SerializeField] GameObject pantallaRecetas;
+    [SerializeField] GameObject pantallaHistorial;
+    [SerializeField] PostitButton postit;
     [SerializeField] GameObject[] infoRecetas;
     [SerializeField] GameObject[] infoRazas;
     [SerializeField] GameObject[] infoMapas;
@@ -76,6 +78,15 @@ public class TabletManager : MonoBehaviour
         pantallaRecetas.SetActive(true);
         alerta[2].SetActive(false);
     }
+    public void activatePantallaHistorial()
+    {
+        if (tuto1)
+        {
+            return;
+        }
+        FindObjectOfType<AudioManager>().Play("botonTabletIn");
+        pantallaHistorial.SetActive(true);
+    }
     public void activatePantallaInicio()
     {
         if (tuto1)
@@ -95,6 +106,7 @@ public class TabletManager : MonoBehaviour
         pantallaNotas.SetActive(false);
         pantallaRecetas.SetActive(false);
         pantallaIngredientes.SetActive(false);
+        pantallaHistorial.SetActive(false);
     }
     public void deactivateTablet()
     {
@@ -117,9 +129,11 @@ public class TabletManager : MonoBehaviour
             pantallaMapa.SetActive(false);
             pantallaNotas.SetActive(false);
             pantallaRecetas.SetActive(false);
+            pantallaHistorial.SetActive(false);
             this.gameObject.SetActive(false);
             tabletButton.gameObject.SetActive(true);
             tabletButtonBar.gameObject.SetActive(true);
+            postit.inactive = false;
             return;
         }
         if (tuto4)
@@ -131,9 +145,11 @@ public class TabletManager : MonoBehaviour
             pantallaMapa.SetActive(false);
             pantallaNotas.SetActive(false);
             pantallaRecetas.SetActive(false);
+            pantallaHistorial.SetActive(false);
             this.gameObject.SetActive(false);
             tabletButton.gameObject.SetActive(true);
             tabletButtonBar.gameObject.SetActive(true);
+            postit.inactive = false;
             return;
         }
         infoRecetas[aux].SetActive(false);
@@ -145,10 +161,12 @@ public class TabletManager : MonoBehaviour
         pantallaNotas.SetActive(false);
         pantallaIngredientes.SetActive(false);
         pantallaRecetas.SetActive(false);
+        pantallaHistorial.SetActive(false);
         this.gameObject.SetActive(false);
         tabletButton.gameObject.SetActive(true);
         tabletButtonBar.gameObject.SetActive(true);
         tabletButton.enableIngredients();
+        postit.inactive = false;
     }
 
     public void botonApagar()

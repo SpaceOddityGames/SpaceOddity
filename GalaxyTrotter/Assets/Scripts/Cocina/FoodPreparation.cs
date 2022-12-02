@@ -90,6 +90,7 @@ public class FoodPreparation : MonoBehaviour
     {
         if (analizeLerman)
         {
+            analizeLerman = false;
             bool hasMoonso = false;
             for (int k = 0; k < SIZE; k++)
             {
@@ -184,7 +185,38 @@ public class FoodPreparation : MonoBehaviour
         }
         return correct;
     }
-        
+    private bool comprobateOnlyIng()
+    {
+        int[] aux = new int[SIZE];
+        for (int m = 0; m < SIZE; m++)
+        {
+            aux[m] = objective[m];
+        }
+        bool correct = true;
+        bool correctUnit = false;
+        int i = 0;
+        int j = 0;
+        while (i < SIZE && correct)
+        {
+            while (j < SIZE && !correctUnit)
+            {
+                if (preparing[i] == aux[j])
+                {
+                    correctUnit = true;
+                    aux[j] = -1;
+                }
+                j++;
+            }
+            if (correctUnit == false)
+            {
+                correct = false;
+            }
+            i++;
+            j = 0;
+            correctUnit = false;
+        }
+        return correct;
+    }
     public void preparationResult()
     {
         timer.stop();
@@ -234,11 +266,28 @@ public class FoodPreparation : MonoBehaviour
                 {
                     if(foodPreparator2.comprobateIngredients() && foodPreparator2.comprobateLiquids())
                     {
-                        dialogController.correctResult(reseted);
+                        bool res = reseted;
+                        if(reseted || foodPreparator2.reseted)
+                        {
+                            res = true;
+                        }
+                        dialogController.correctResult(res);
                     }
                     else
-                    {
+                    { 
                         dialogController.wrongResult();
+                        if (!comprobateOnlyIng() && !comprobateLiquids())
+                        {
+                            FindObjectOfType<Historial>().addHistoryErrorIngAndLiq();
+                        }
+                        else if (!comprobateOnlyIng() && comprobateLiquids())
+                        {
+                            FindObjectOfType<Historial>().addHistoryErrorIng();
+                        }
+                        else if (comprobateOnlyIng() && !comprobateLiquids())
+                        {
+                            FindObjectOfType<Historial>().addHistoryErrorLiq();
+                        }
                     }
                 }
                 else
@@ -248,12 +297,24 @@ public class FoodPreparation : MonoBehaviour
             }
             else
             {
+                FindObjectOfType<Historial>().addHistoryErrorTime();
                 dialogController.wrongResultTimer();
             }
         }
         else
         {
             dialogController.wrongResult();
+            if (!comprobateOnlyIng() && !comprobateLiquids())
+            {
+                FindObjectOfType<Historial>().addHistoryErrorIngAndLiq();
+            }else if(!comprobateOnlyIng() && comprobateLiquids())
+            {
+                FindObjectOfType<Historial>().addHistoryErrorIng();
+            }
+            else if(comprobateOnlyIng() && !comprobateLiquids())
+            {
+                FindObjectOfType<Historial>().addHistoryErrorLiq();
+            }
         }
         resetFood();
     }
@@ -305,6 +366,31 @@ public class FoodPreparation : MonoBehaviour
             foodPreparator2.resetFood();
         }
     }
+    public void resetFoodGame()
+    {
+        bool lleno = false;
+        for (int i = 0; i < top; i++)
+        {
+            if(preparing[i] != 0)
+            {
+                if (!reseted)
+                {
+                    lleno = true;
+                }
+            }
+            preparing[i] = 0;
+        }
+        if (lleno)
+        {
+            reseted = true;
+        }
+        top = 0;
+        resetLiquidGame();
+        if (twoTask)
+        {
+            foodPreparator2.resetFoodGame();
+        }
+    }
 
     /////////////////////////////////////////////
     public void enableGameLiquid()
@@ -338,6 +424,33 @@ public class FoodPreparation : MonoBehaviour
         for (int i = 0; i < maxLiquids; i++)
         {
             liquids[i] = 0;
+        }
+        for (int i = 0; i < sliderFills.Length; i++)
+        {
+            sliderFills[i].transform.position = sliderPointInit.transform.position;
+            quantities[i] = 0;
+            RectTransform rs = sliderFills[i].GetComponent<RectTransform>();
+            rs.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 0);
+        }
+    }
+    public void resetLiquidGame()
+    {
+        bool lleno = false;
+        quantityP = 0;
+        for (int i = 0; i < maxLiquids; i++)
+        {
+            if (liquids[i] != 0)
+            {
+                if (!reseted)
+                {
+                    lleno = true;
+                }
+            }
+            liquids[i] = 0;
+        }
+        if (lleno)
+        {
+            reseted = true;
         }
         for(int i = 0; i < sliderFills.Length; i++)
         {

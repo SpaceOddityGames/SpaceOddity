@@ -44,6 +44,8 @@ public class Endings : MonoBehaviour
         pausa.SetActive(false);
         yield return new WaitForSeconds(2f);
         endDialog.activateBlackText(correct);
+
+        FindObjectOfType<Historial>().eliminateHistory();
     }
     IEnumerator activateEnd()
     {

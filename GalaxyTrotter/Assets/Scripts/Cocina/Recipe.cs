@@ -11,6 +11,7 @@ public class Recipe : MonoBehaviour
 
     public int[] ingredientRecipe;
     public float[] liquidRecipe;
+    public string nameRecipe;
     enum recipeName { TonightPlease, SpecialUSI, AXXHole, CloudBomb, Unlucky, TheVisitor, H2O, StrawberryMoon, Kaua}
 
     void Start()
@@ -20,27 +21,32 @@ public class Recipe : MonoBehaviour
         switch (receta)
         {
             case recipeName.TonightPlease:
+                nameRecipe = "Tonight Please";
                 liquidRecipe[1] = 70;
                 ingredientRecipe[0] = 1;
                 ingredientRecipe[1] = 1;
                 break;
             case recipeName.SpecialUSI:
+                nameRecipe = "Special USI";
                 liquidRecipe[1] = 90;
                 ingredientRecipe[0] = 2;
                 ingredientRecipe[1] = 2;
                 ingredientRecipe[2] = 3;
                 break;
             case recipeName.AXXHole:
+                nameRecipe = "AXX Hole";
                 liquidRecipe[0] = 50;
                 ingredientRecipe[0] = 4;
                 ingredientRecipe[1] = 5;
                 ingredientRecipe[2] = 5;
                 break;
             case recipeName.CloudBomb:
+                nameRecipe = "CloudBomb";
                 liquidRecipe[0] = 70;
                 liquidRecipe[1] = 30;
                 break;
             case recipeName.Unlucky:
+                nameRecipe = "Unlucky";
                 liquidRecipe[0] = 60;
                 ingredientRecipe[0] = 1;
                 ingredientRecipe[1] = 1;
@@ -50,6 +56,7 @@ public class Recipe : MonoBehaviour
                 ingredientRecipe[5] = 5;
                 break;
             case recipeName.TheVisitor:
+                nameRecipe = "The Visitor";
                 liquidRecipe[1] = 70;
                 ingredientRecipe[0] = 2;
                 ingredientRecipe[1] = 2;
@@ -57,6 +64,7 @@ public class Recipe : MonoBehaviour
                 ingredientRecipe[3] = 7;
                 break;
             case recipeName.H2O:
+                nameRecipe = "H2O";
                 liquidRecipe[1] = 60;
                 ingredientRecipe[0] = 4;
                 ingredientRecipe[1] = 4;
@@ -66,6 +74,7 @@ public class Recipe : MonoBehaviour
                 ingredientRecipe[5] = 8;
                 break;
             case recipeName.StrawberryMoon:
+                nameRecipe = "Strawberry Moon";
                 liquidRecipe[2] = 50;
                 ingredientRecipe[0] = 1;
                 ingredientRecipe[1] = 1;
@@ -75,6 +84,7 @@ public class Recipe : MonoBehaviour
                 ingredientRecipe[5] = 6;
                 break;
             case recipeName.Kaua:
+                nameRecipe = "Kaua";
                 liquidRecipe[1] = 40;
                 liquidRecipe[2] = 20;
                 ingredientRecipe[0] = 3;

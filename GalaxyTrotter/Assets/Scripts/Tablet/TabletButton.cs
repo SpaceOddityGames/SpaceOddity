@@ -8,7 +8,9 @@ public class TabletButton : MonoBehaviour
     [SerializeField] Ingredient[] ingredients;
     [SerializeField] LiquidIngredient[] liquids;
     [SerializeField] TutorialManager tutorial;
+    [SerializeField] PostitButton postit;
     [HideInInspector] public bool paused = false;
+    [HideInInspector] public bool inactive = false;
     [HideInInspector] public bool tutorialActive = false;
     private void Start()
     {
@@ -16,8 +18,9 @@ public class TabletButton : MonoBehaviour
     }
     public void OnMouseDown()
     {
-        if (!paused)
+        if (!paused || !inactive)
         {
+            postit.inactive = true;
             FindObjectOfType<AudioManager>().Play("abrirTablet");
             tablet.SetActive(true);
             for (int i = 0; i < ingredients.Length; i++)

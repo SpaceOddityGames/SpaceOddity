@@ -131,12 +131,11 @@ MonoBehaviour:
     - "Es posible que venga un tipo preguntando por m\xED, si es as\xED, dile que
       no estoy, que venga ma\xF1ana."
     - "\xBFVale?"
-    - "S\xED claro jefe."
     - Perfecto. Pues te dejo que empieces.
     - "Bueno, por si acaso. Si el tipo se cabrea dile que le pagar\xE9 cinco mil
       m\xE1s. As\xED seguro que no se queja."
     - "Ahora s\xED, me voy, \xA1buena suerte!"
-    initConditions: 0000000000000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000002000000
+    initConditions: 00000000000000000000000000000000000000000000000000000000000000000000000013000000000000000000000002000000
     correctResult: []
     correctResultConditions: 
     wrongResult: []
@@ -147,6 +146,7 @@ MonoBehaviour:
     cancelResultConditions: 
     recipe: {fileID: 7485873441582505971}
     aceptTask: 0
+    AorN: 0
     twoTasks: 0
     recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971

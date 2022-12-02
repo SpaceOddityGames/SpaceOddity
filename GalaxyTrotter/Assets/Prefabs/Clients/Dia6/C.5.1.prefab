@@ -134,6 +134,7 @@ MonoBehaviour:
     cancelResultConditions: 0000000002000000
     recipe: {fileID: 1741316548203131573}
     aceptTask: 1
+    AorN: 0
     twoTasks: 1
     recipe2: {fileID: 3421447401276627120}
 --- !u!114 &1741316548203131573
@@ -301,6 +302,7 @@ MonoBehaviour:
     cancelResultConditions: 0000000002000000
     recipe: {fileID: 7485873441582505971}
     aceptTask: 1
+    AorN: 0
     twoTasks: 1
     recipe2: {fileID: 1293395350704672268}
 --- !u!114 &7485873441582505971

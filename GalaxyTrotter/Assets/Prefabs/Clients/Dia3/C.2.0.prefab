@@ -139,10 +139,9 @@ MonoBehaviour:
       clientes que pidan una bebida que lo contenga."
     - "Si te piden m\xE1s bebidas que lleven pimkiyu tendr\xE1s que cancelar la comanda."
     - "\xBFTe ha quedado claro?"
-    - "S\xED jefe."
     - "Perfecto, pues nada m\xE1s. Te dejo empezar a trabajar."
     - "\xA1Buena suerte!"
-    initConditions: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000002000000
+    initConditions: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000140000000000000002000000
     correctResult: []
     correctResultConditions: 
     wrongResult: []
@@ -153,6 +152,7 @@ MonoBehaviour:
     cancelResultConditions: 
     recipe: {fileID: 7485873441582505971}
     aceptTask: 0
+    AorN: 0
     twoTasks: 0
     recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971

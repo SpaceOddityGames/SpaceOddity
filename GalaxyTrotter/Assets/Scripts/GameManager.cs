@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        /*
         if (FindObjectOfType<PasarInfo>().continuar)
         {
             loadGame();
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
         else
         {
             newGame();
-        }
+        }*/
         startDay();
         kitchenController.updateKitchenElements(day);
         reputationSlider.maxValue = maxReputation;
@@ -157,34 +158,50 @@ public class GameManager : MonoBehaviour
     {
         reputation = value;
     }
-    public void evaluateCorrectReputation(bool value, bool reseted)
+    public void evaluateCorrectReputation(bool value, bool tipo, bool reseted)
     {
         if (value)
         {
             if (foodPreparator.reject || foodPreparator.foodPreparator2.reject)
             {
+                FindObjectOfType<Historial>().addHistoryErrorNorma();
                 reduceReputation();
                 return;
             }
             if (!reseted)
             {
+                FindObjectOfType<Historial>().addHistoryCorrect();
                 aumentReputation();
+            }
+            else
+            {
+                FindObjectOfType<Historial>().addHistoryCorrectReseted();
             }
         }
         else
         {
             reduceReputation();
+            if (tipo)
+            {
+                FindObjectOfType<Historial>().addHistoryErrorNorma();
+            }
+            else
+            {
+                FindObjectOfType<Historial>().addHistoryErrorAlergia();
+            }
         }
     }
-    public void evaluateRejectReputation(bool value)
+    public void evaluateRejectReputation(bool value, bool tipo)
     {
         if (!value)
         {
+            FindObjectOfType<Historial>().addHistoryCorrectReject();
             aumentReputation();
         }
         else
         {
             reduceReputation();
+            FindObjectOfType<Historial>().addHistoryErrorReject();
         }
     }
     public void aumentReputation()
