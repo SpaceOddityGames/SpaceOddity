@@ -16,6 +16,8 @@ public class Introduction : MonoBehaviour
     [SerializeField] public TextMeshProUGUI introText;
     [SerializeField] GameObject clickScreenBlack;
     [SerializeField] GameObject pausa;
+    [SerializeField] GameObject skip;
+    bool skipText = false;
 
     public void Start()
     {
@@ -30,7 +32,13 @@ public class Introduction : MonoBehaviour
         perfil.GetComponent<Fade>().fadeOut();
         localizacion.GetComponent<Fade>().fadeOut();
         especie.GetComponent<Fade>().fadeOut();
+        skip.GetComponent<Fade>().fadeOut();
         pausa.SetActive(true);
+    }
+
+    public void skipIntro()
+    {
+        skipText = true;
     }
     IEnumerator activateTableta()
     {
@@ -42,6 +50,7 @@ public class Introduction : MonoBehaviour
         perfil.gameObject.SetActive(true);
         localizacion.gameObject.SetActive(true);
         especie.gameObject.SetActive(true);
+        skip.gameObject.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(printCharactersBlack("¡Enhorabuena! Ha sido seleccionado para el puesto de \ncamarero del bar The Booze Way. Acuda mañana a la \nestación espacial de Naber para incorporarse, le recibirá \nel jefe encargado del bar y le dará más indicaciones.\n\n\n-Atte: Gestión de empleados de la estación espacial de Naber."));
     }
@@ -51,8 +60,15 @@ public class Introduction : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("texto");
         foreach (char character in actualString.ToCharArray())
         {
-            yield return new WaitForSeconds(0.04f);
-            introText.text += character;
+            if (!skipText)
+            {
+                yield return new WaitForSeconds(0.04f);
+                introText.text += character;
+            }
+        }
+        if (skipText)
+        {
+            introText.text = actualString;
         }
         FindObjectOfType<AudioManager>().Stop("texto");
         clickScreenBlack.SetActive(true);
