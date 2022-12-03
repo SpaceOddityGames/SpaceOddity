@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d7b430424ffaa34419a8c4f1b868a18a
+guid: 070964c3f7afded489ca960989e56676
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boozewayFondo_0
+      name: 23_0
       rect:
         serializedVersion: 2
         x: 64
@@ -125,14 +125,14 @@ TextureImporter:
         width: 1920
         height: 1080
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b206ca6a5a553c44186a04009636a640
-      internalID: -532843570
+      spriteID: 80f25ca9655fbfb498c98471864765a0
+      internalID: -139718389
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      boozewayFondo_0: -532843570
+      23_0: -139718389
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

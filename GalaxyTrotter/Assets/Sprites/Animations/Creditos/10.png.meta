@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d7b430424ffaa34419a8c4f1b868a18a
+guid: 684ce43f6717f5b4e9bda0c85f8ca8f3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 1
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: boozewayFondo_0
+      name: 10_0
       rect:
         serializedVersion: 2
         x: 64
@@ -131,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b206ca6a5a553c44186a04009636a640
-      internalID: -532843570
+      spriteID: 07701ae44c4c39242bcf27058d7ef5f8
+      internalID: 1019362182
       vertices: []
       indices: 
       edges: []
@@ -140,7 +140,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: f41f2106a012b524386bd05d15f076df
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      boozewayFondo_0: -532843570
+      10_0: 1019362182
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

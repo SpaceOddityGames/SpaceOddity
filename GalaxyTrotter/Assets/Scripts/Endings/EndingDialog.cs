@@ -21,11 +21,11 @@ public class EndingDialog : MonoBehaviour
         {
             if (completed)
             {
-                StartCoroutine(printCharactersBlack("Jornada " + (gameManager.day) + " completada con éxito"));
+                StartCoroutine(printCharactersBlack("JORNADA " + (gameManager.day) + " COMPLETADA CON ÉXITO"));
             }
             else
             {
-                StartCoroutine(printCharactersBlack("Jornada " + (gameManager.day + 1) + " fallida\nReputación final " + gameManager.reputation + "/20"));
+                StartCoroutine(printCharactersBlack("JORNADA " + (gameManager.day + 1) + " FALLIDA\nREPUTACIÓN FINAL " + gameManager.reputation + "/20"));
             }
         }
     }
