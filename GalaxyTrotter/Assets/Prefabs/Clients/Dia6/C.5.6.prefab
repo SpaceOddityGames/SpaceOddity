@@ -151,6 +151,7 @@ MonoBehaviour:
   receta: 5
   ingredientRecipe: 
   liquidRecipe: []
+  nameRecipe: 
 --- !u!1 &7485873441582505974
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,7 +267,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - Hola, ponme un The Visitor si me haces el favor.
+    - "Hola, qu\xE9 cambiado est\xE1 esto... Ponme un The Visitor si me haces el
+      favor."
     initConditions: 01000000
     correctResult:
     - Agradezco que me lo hayas servido, ten cuidado con esta gente.
@@ -303,3 +305,4 @@ MonoBehaviour:
   receta: 5
   ingredientRecipe: 
   liquidRecipe: []
+  nameRecipe: 
