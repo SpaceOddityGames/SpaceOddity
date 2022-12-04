@@ -15,6 +15,7 @@ public class PostitButton : MonoBehaviour
         {
             tablet.inactive = true;
             postit.SetActive(true);
+            FindObjectOfType<AudioManager>().Play("papel");
             FindObjectOfType<KitchenController>().disableAll();
             this.gameObject.SetActive(false);
         }
