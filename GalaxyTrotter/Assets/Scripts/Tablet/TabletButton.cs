@@ -18,7 +18,7 @@ public class TabletButton : MonoBehaviour
     }
     public void OnMouseDown()
     {
-        if (!paused || !inactive)
+        if (!paused && !inactive)
         {
             postit.inactive = true;
             FindObjectOfType<AudioManager>().Play("abrirTablet");

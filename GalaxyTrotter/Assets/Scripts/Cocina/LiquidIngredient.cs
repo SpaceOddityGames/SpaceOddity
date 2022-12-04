@@ -12,6 +12,7 @@ public class LiquidIngredient : MonoBehaviour
     [HideInInspector] public Vector3 initPos;
     [HideInInspector] public Quaternion initRot;
     private bool isEnabled = true;
+    private bool isPaused = false;
     //
     private Vector3 screenPosition;
     private Vector3 worldPosition;
@@ -49,7 +50,7 @@ public class LiquidIngredient : MonoBehaviour
     }
     void OnMouseDrag()
     {
-        if (isEnabled)
+        if (isEnabled && !isPaused)
         {
             //this.transform.position = GetMouseWorldPos() + mOffset;
             screenPosition = Input.mousePosition;
@@ -150,6 +151,12 @@ public class LiquidIngredient : MonoBehaviour
     {
         isEnabled = false;
     }
-
-    
+    public void pause()
+    {
+        isPaused = true;
+    }
+    public void resume()
+    {
+        isPaused = false;
+    }
 }

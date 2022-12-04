@@ -9,6 +9,7 @@ public class Postit : MonoBehaviour
     [SerializeField] GameObject textArea;
     [SerializeField] GameObject newObj;
     [SerializeField] GameObject postit;
+    [SerializeField] TabletButton tabletButton;
     public void addNote(string name)
     {
         GameObject p = Instantiate(newObj, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
@@ -25,6 +26,8 @@ public class Postit : MonoBehaviour
     }
     public void closePostit()
     {
+        FindObjectOfType<KitchenController>().enableAll();
+        tabletButton.inactive = false;
         postit.SetActive(true);
         this.gameObject.SetActive(false);        
     }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ClickPostit : MonoBehaviour, IPointerDownHandler
+public class ClickPostit : MonoBehaviour, IPointerClickHandler
 {
-    public void OnPointerDown(PointerEventData pointerEventData)
+    public void OnPointerClick(PointerEventData pointerEventData)
     {
         GetComponentInParent<Postit>().closePostit();
     }

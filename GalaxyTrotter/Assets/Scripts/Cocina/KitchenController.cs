@@ -12,6 +12,13 @@ public class KitchenController : MonoBehaviour
     [SerializeField] GameObject[] normas;
     [SerializeField] GameObject[] ingredientesTablet;
     [SerializeField] GameObject[] alertas;
+    [SerializeField] PostitButton postit;
+    [SerializeField] TabletButton tablet1;
+    [SerializeField] TabletButtonBar tablet2;
+    [SerializeField] GameObject barNormal;
+    [SerializeField] GameObject barUSI;
+    [SerializeField] GameObject cocinaNormal;
+    [SerializeField] GameObject cocinaUSI;
     public void disableAll()
     {
         foreach (GameObject ingredient in ingredients)
@@ -33,6 +40,34 @@ public class KitchenController : MonoBehaviour
         {
             liquidIngredient.GetComponent<LiquidIngredient>().enable();
         }
+    }
+    public void pauseGame()
+    {
+        foreach (GameObject ingredient in ingredients)
+        {
+            ingredient.GetComponent<Ingredient>().pause();
+        }
+        foreach (GameObject liquidIngredient in liquidIngredients)
+        {
+            liquidIngredient.GetComponent<LiquidIngredient>().pause();
+        }
+        postit.paused = true;
+        tablet1.paused = true;
+        tablet2.paused = true;
+    }
+    public void resumeGame()
+    {
+        foreach (GameObject ingredient in ingredients)
+        {
+            ingredient.GetComponent<Ingredient>().resume();
+        }
+        foreach (GameObject liquidIngredient in liquidIngredients)
+        {
+            liquidIngredient.GetComponent<LiquidIngredient>().resume();
+        }
+        postit.paused = false;
+        tablet1.paused = false;
+        tablet2.paused = false;
     }
     public void updateKitchenElements(int day)
     {
@@ -91,6 +126,11 @@ public class KitchenController : MonoBehaviour
                 alertas[0].SetActive(false);
                 alertas[1].SetActive(false);
                 alertas[2].SetActive(false);
+                //ModeladoBarKitchen
+                barNormal.SetActive(true);
+                barUSI.SetActive(false);
+                cocinaNormal.SetActive(true);
+                cocinaUSI.SetActive(false);
                 break;
             case 1:
                 //ingredientes
@@ -144,6 +184,11 @@ public class KitchenController : MonoBehaviour
                 alertas[0].SetActive(false);
                 alertas[1].SetActive(false);
                 alertas[2].SetActive(true);
+                //ModeladoBarKitchen
+                barNormal.SetActive(true);
+                barUSI.SetActive(false);
+                cocinaNormal.SetActive(true);
+                cocinaUSI.SetActive(false);
                 break;
             case 2:
                 //ingredientes
@@ -197,6 +242,11 @@ public class KitchenController : MonoBehaviour
                 alertas[0].SetActive(true);
                 alertas[1].SetActive(true);
                 alertas[2].SetActive(true);
+                //ModeladoBarKitchen
+                barNormal.SetActive(true);
+                barUSI.SetActive(false);
+                cocinaNormal.SetActive(true);
+                cocinaUSI.SetActive(false);
                 break;
             case 3:
                 //ingredientes
@@ -250,6 +300,11 @@ public class KitchenController : MonoBehaviour
                 alertas[0].SetActive(true);
                 alertas[1].SetActive(true);
                 alertas[2].SetActive(true);
+                //ModeladoBarKitchen
+                barNormal.SetActive(true);
+                barUSI.SetActive(false);
+                cocinaNormal.SetActive(true);
+                cocinaUSI.SetActive(false);
                 break;
             case 4:
                 //ingredientes
@@ -303,6 +358,11 @@ public class KitchenController : MonoBehaviour
                 alertas[0].SetActive(true);
                 alertas[1].SetActive(true);
                 alertas[2].SetActive(true);
+                //ModeladoBarKitchen
+                barNormal.SetActive(true);
+                barUSI.SetActive(false);
+                cocinaNormal.SetActive(true);
+                cocinaUSI.SetActive(false);
                 break;
             case 5:
                 //ingredientes
@@ -356,6 +416,11 @@ public class KitchenController : MonoBehaviour
                 alertas[0].SetActive(true);
                 alertas[1].SetActive(true);
                 alertas[2].SetActive(false);
+                //ModeladoBarKitchen
+                barNormal.SetActive(false);
+                barUSI.SetActive(true);
+                cocinaNormal.SetActive(false);
+                cocinaUSI.SetActive(true);
                 break;
             case 6:
                 //ingredientes
@@ -409,6 +474,11 @@ public class KitchenController : MonoBehaviour
                 alertas[0].SetActive(false);
                 alertas[1].SetActive(false);
                 alertas[2].SetActive(false);
+                //ModeladoBarKitchen
+                barNormal.SetActive(false);
+                barUSI.SetActive(true);
+                cocinaNormal.SetActive(false);
+                cocinaUSI.SetActive(true);
                 break;
             case 7:
                 //ingredientes
@@ -462,6 +532,11 @@ public class KitchenController : MonoBehaviour
                 alertas[0].SetActive(false);
                 alertas[1].SetActive(false);
                 alertas[2].SetActive(false);
+                //ModeladoBarKitchen
+                barNormal.SetActive(false);
+                barUSI.SetActive(true);
+                cocinaNormal.SetActive(false);
+                cocinaUSI.SetActive(true);
                 break;
         }
 

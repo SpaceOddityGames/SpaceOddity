@@ -10,7 +10,7 @@ public class TabletButtonBar : MonoBehaviour
     [HideInInspector] public bool inactive = false;
     public void OnMouseDown()
     {
-        if (!paused || !inactive)
+        if (!paused && !inactive)
         {
             FindObjectOfType<AudioManager>().Play("abrirTablet");
             tablet.SetActive(true);

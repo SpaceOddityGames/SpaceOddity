@@ -40,7 +40,7 @@ public class PauseMenu : MonoBehaviour
         }
         FindObjectOfType<AudioManager>().Stop("texto");
         FindObjectOfType<AudioManager>().DecreaseMusic();
-        FindObjectOfType<KitchenController>().disableAll();
+        FindObjectOfType<KitchenController>().pauseGame();
         Time.timeScale = 0f;
         isPaused = true;
     }
@@ -49,7 +49,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         iconoAjustes.SetActive(true);
         FindObjectOfType<AudioManager>().IncreaseMusic();
-        FindObjectOfType<KitchenController>().enableAll();
+        FindObjectOfType<KitchenController>().resumeGame();
         Time.timeScale = 1f;
         isPaused = false;
     }

@@ -124,6 +124,7 @@ public class TutorialManager : MonoBehaviour
             case 14:
                 tabletButton.GetComponent<TabletButton>().inactive = true;
                 textI = 0;
+                postit.inactive = true;
                 textBoxes[textI].SetActive(true);
                 textToPrint = "Pasemos ahora a preparar la bebida, antes de nada, observa que existen dos tipos de ingredientes, los que tienes aquí en la balda central son líquidos, mientras que el resto son sólidos.";
                 condit = 0;
@@ -148,6 +149,9 @@ public class TutorialManager : MonoBehaviour
             case 19:
                 flechas[5].SetActive(false);
                 flechas[6].SetActive(true);
+                textBoxes[textI].SetActive(false);
+                textBoxes[4].SetActive(true);
+                textI = 4;
                 textToPrint = "Para echarlo en la bebida tan solo tienes que arrastrarlo hasta el recipiente principal del medio.";
                 break;
             case 20:
@@ -161,11 +165,14 @@ public class TutorialManager : MonoBehaviour
             case 22:
                 tabletButton.GetComponent<TabletButton>().inactive = true;
                 flechas[7].SetActive(true);
-                textToPrint = "Bien, ten en cuenta que si cometes algún error echando un ingrediente que no debías o te pasas en la cantidad de algún líquido, puedes tirar esta bebida y empezar de nuevo pulsando el botón que tienes abajo a la derecha. Pero bueno, ahora no necesitas utilizarlo.";
+                textToPrint = "Bien, ten en cuenta que si cometes algún error echando un ingrediente que no debías o te pasas en la cantidad de algún líquido, puedes tirar esta bebida y empezar de nuevo pulsando el botón que tienes abajo a la derecha.";
                 resetButton.SetActive(true);
                 condit = 0; 
                 break;
             case 23:
+                textBoxes[textI].SetActive(false);
+                textBoxes[0].SetActive(true);
+                textI = 0;
                 resetButton.SetActive(false);
                 flechas[7].SetActive(false);
                 textToPrint = "Pero ten en cuenta dos cosas, la primera que el tiempo corre, así que trata de no equivocarte y así no tendrás que empezar otra vez.";
@@ -295,7 +302,7 @@ public class TutorialManager : MonoBehaviour
     {
         if (analizeLiquid)
         {
-            if(foodPreparator.liquids[1] > 69)
+            if(foodPreparator.liquids[1] > 69.9)
             {
                 analizeLiquid = false;
                 liquids[1].disable();

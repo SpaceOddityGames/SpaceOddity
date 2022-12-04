@@ -86,6 +86,7 @@ public class TabletManager : MonoBehaviour
         }
         FindObjectOfType<AudioManager>().Play("botonTabletIn");
         pantallaHistorial.SetActive(true);
+        alerta[3].SetActive(false);
     }
     public void activatePantallaInicio()
     {
@@ -133,7 +134,7 @@ public class TabletManager : MonoBehaviour
             this.gameObject.SetActive(false);
             tabletButton.gameObject.SetActive(true);
             tabletButtonBar.gameObject.SetActive(true);
-            postit.inactive = false;
+            postit.inactive = true;
             return;
         }
         if (tuto4)
@@ -149,7 +150,7 @@ public class TabletManager : MonoBehaviour
             this.gameObject.SetActive(false);
             tabletButton.gameObject.SetActive(true);
             tabletButtonBar.gameObject.SetActive(true);
-            postit.inactive = false;
+            postit.inactive = true;
             return;
         }
         infoRecetas[aux].SetActive(false);

@@ -8,6 +8,7 @@ public class Ingredient : MonoBehaviour
     public GameObject ingredient;
     private GameObject seleccion;
     private bool isEnabled = true;
+    private bool isPaused = false;
 
     //**
     //Función para arrastrar objetos
@@ -139,7 +140,7 @@ public class Ingredient : MonoBehaviour
             seleccion.transform.position = GetMouseWorldPos() + mOffset;
 
         }*/
-        if (isEnabled)
+        if (isEnabled && !isPaused)
         {
             //this.transform.position = GetMouseWorldPos() + mOffset;
             screenPosition = Input.mousePosition;
@@ -194,5 +195,13 @@ public class Ingredient : MonoBehaviour
     public void disable()
     {
         isEnabled = false;
+    }
+    public void pause()
+    {
+        isPaused = true;
+    }
+    public void resume()
+    {
+        isPaused = false;
     }
 }
