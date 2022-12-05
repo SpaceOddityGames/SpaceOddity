@@ -55,6 +55,9 @@ public class FoodPreparation : MonoBehaviour
     [HideInInspector] public bool lermanEnvenenado = false;
     [HideInInspector] public bool lermanDouble = false;
     [HideInInspector] public bool comprobateChip = false;
+    [HideInInspector] public Recipe recipe1;
+    [HideInInspector] public Recipe recipe2;
+    [HideInInspector] public bool second = false;
 
     void Start()
     {
@@ -142,23 +145,96 @@ public class FoodPreparation : MonoBehaviour
         bool correctUnit = false;
         int i = 0;
         int j = 0;
-        while (i < SIZE && correct)
+        if (twoTask)
         {
-            while (j < SIZE && !correctUnit) {
-                if (preparing[i] == aux[j])
-                {
-                    correctUnit = true;
-                    aux[j] = -1;
-                }
-                j++;
-            }
-            if (correctUnit == false)
+            while (i < SIZE && correct)
             {
-                correct = false;
+                while (j < SIZE && !correctUnit)
+                {
+                    if (preparing[i] == aux[j])
+                    {
+                        correctUnit = true;
+                        aux[j] = -1;
+                    }
+                    j++;
+                }
+                if (correctUnit == false)
+                {
+                    correct = false;
+                }
+                i++;
+                j = 0;
+                correctUnit = false;
             }
-            i++;
-            j = 0;
+            if (correct)
+            {
+                second = false;
+            }
+            else
+            {
+                SetObjectiveBasic(recipe2.ingredientRecipe, recipe2.liquidRecipe);
+                for (int m = 0; m < SIZE; m++)
+                {
+                    aux[m] = objective[m];
+                }
+                correct = true;
+                correctUnit = false;
+                i = 0;
+                j = 0;
+                while (i < SIZE && correct)
+                {
+                    while (j < SIZE && !correctUnit)
+                    {
+                        if (preparing[i] == aux[j])
+                        {
+                            correctUnit = true;
+                            aux[j] = -1;
+                        }
+                        j++;
+                    }
+                    if (correctUnit == false)
+                    {
+                        correct = false;
+                    }
+                    i++;
+                    j = 0;
+                    correctUnit = false;
+                }
+                if (correct)
+                {
+                    second = true;
+                }
+            }
+        }
+        if (!twoTask)
+        {
+            for (int m = 0; m < SIZE; m++)
+            {
+                aux[m] = objective[m];
+            }
+            correct = true;
             correctUnit = false;
+            i = 0;
+            j = 0;
+            while (i < SIZE && correct)
+            {
+                while (j < SIZE && !correctUnit)
+                {
+                    if (preparing[i] == aux[j])
+                    {
+                        correctUnit = true;
+                        aux[j] = -1;
+                    }
+                    j++;
+                }
+                if (correctUnit == false)
+                {
+                    correct = false;
+                }
+                i++;
+                j = 0;
+                correctUnit = false;
+            }
         }
         if (comprobatePimkyu)
         {
@@ -258,42 +334,11 @@ public class FoodPreparation : MonoBehaviour
                 gameManager.h03 = true;
             }
         }
-        if (comprobateIngredients() && comprobateLiquids())
+        if (comprobateIngredients() && comprobateLiquids() && !twoTask)
         {
             if (timer.comprobateTimer())
             {
-                if (twoTask)
-                {
-                    if(foodPreparator2.comprobateIngredients() && foodPreparator2.comprobateLiquids())
-                    {
-                        bool res = reseted;
-                        if(reseted || foodPreparator2.reseted)
-                        {
-                            res = true;
-                        }
-                        dialogController.correctResult(res);
-                    }
-                    else
-                    { 
-                        dialogController.wrongResult();
-                        if (!comprobateOnlyIng() && !comprobateLiquids())
-                        {
-                            FindObjectOfType<Historial>().addHistoryErrorIngAndLiq();
-                        }
-                        else if (!comprobateOnlyIng() && comprobateLiquids())
-                        {
-                            FindObjectOfType<Historial>().addHistoryErrorIng();
-                        }
-                        else if (comprobateOnlyIng() && !comprobateLiquids())
-                        {
-                            FindObjectOfType<Historial>().addHistoryErrorLiq();
-                        }
-                    }
-                }
-                else
-                {
-                    dialogController.correctResult(reseted);
-                }
+                dialogController.correctResult(reseted);
             }
             else
             {
@@ -301,7 +346,7 @@ public class FoodPreparation : MonoBehaviour
                 dialogController.wrongResultTimer();
             }
         }
-        else
+        else if(!twoTask)
         {
             dialogController.wrongResult();
             if (!comprobateOnlyIng() && !comprobateLiquids())
@@ -315,6 +360,90 @@ public class FoodPreparation : MonoBehaviour
             {
                 FindObjectOfType<Historial>().addHistoryErrorLiq();
             }
+        }
+        if (twoTask)
+        {
+            if (second)
+            {
+                foodPreparator2.SetObjectiveBasic(recipe1.ingredientRecipe, recipe1.liquidRecipe);
+            }
+            else
+            {
+                foodPreparator2.SetObjectiveBasic(recipe2.ingredientRecipe, recipe2.liquidRecipe);
+            }
+            
+            if (comprobateIngredients())
+            {
+                if (comprobateLiquids())
+                {
+                    if (timer.comprobateTimer())
+                    {
+                        if (foodPreparator2.comprobateIngredients() && foodPreparator2.comprobateLiquids())
+                        {
+                            bool res = reseted;
+                            if (reseted || foodPreparator2.reseted)
+                            {
+                                res = true;
+                            }
+                            dialogController.correctResult(res);
+                        }
+                        else
+                        {
+                            dialogController.wrongResult();
+                            if (!foodPreparator2.comprobateOnlyIng() && !foodPreparator2.comprobateLiquids())
+                            {
+                                FindObjectOfType<Historial>().addHistoryErrorIngAndLiq();
+                            }
+                            else if (!foodPreparator2.comprobateOnlyIng() && foodPreparator2.comprobateLiquids())
+                            {
+                                FindObjectOfType<Historial>().addHistoryErrorIng();
+                            }
+                            else if (foodPreparator2.comprobateOnlyIng() && !foodPreparator2.comprobateLiquids())
+                            {
+                                FindObjectOfType<Historial>().addHistoryErrorLiq();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        FindObjectOfType<Historial>().addHistoryErrorTime();
+                        dialogController.wrongResultTimer();
+                    }
+                }
+                else
+                {
+                    dialogController.wrongResult();
+                    if (!comprobateOnlyIng() && !comprobateLiquids())
+                    {
+                        FindObjectOfType<Historial>().addHistoryErrorIngAndLiq();
+                    }
+                    else if (!comprobateOnlyIng() && comprobateLiquids())
+                    {
+                        FindObjectOfType<Historial>().addHistoryErrorIng();
+                    }
+                    else if (comprobateOnlyIng() && !comprobateLiquids())
+                    {
+                        FindObjectOfType<Historial>().addHistoryErrorLiq();
+                    }
+                }
+            }
+            else
+            {
+                dialogController.wrongResult();
+                if (!comprobateOnlyIng() && !comprobateLiquids())
+                {
+                    FindObjectOfType<Historial>().addHistoryErrorIngAndLiq();
+                }
+                else if (!comprobateOnlyIng() && comprobateLiquids())
+                {
+                    FindObjectOfType<Historial>().addHistoryErrorIng();
+                }
+                else if (comprobateOnlyIng() && !comprobateLiquids())
+                {
+                    FindObjectOfType<Historial>().addHistoryErrorLiq();
+                }
+            }
+            
         }
         resetFood();
     }
@@ -335,6 +464,8 @@ public class FoodPreparation : MonoBehaviour
             if (twoTask)
             {
                 timer.setMaxTime(60);
+                foodPreparator2.reseted = false;
+                foodPreparator2.reject = false;
             }
             else
             {
@@ -352,6 +483,19 @@ public class FoodPreparation : MonoBehaviour
         }
         timer.resetTimer();
         timer.start();
+    }
+    public void SetObjectiveBasic(int[] ingredientTask, float[] liquidTask)
+    {
+        objective = new int[SIZE];
+        liquidObjective = new float[maxLiquids];
+        for (int i = 0; i < SIZE; i++)
+        {
+            objective[i] = ingredientTask[i];
+        }
+        for (int i = 0; i < maxLiquids; i++)
+        {
+            liquidObjective[i] = liquidTask[i];
+        }
     }
     public void resetFood()
     {

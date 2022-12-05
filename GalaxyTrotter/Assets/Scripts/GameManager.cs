@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        /*
         if (FindObjectOfType<PasarInfo>().continuar)
         {
             loadGame();
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
         else
         {
             newGame();
-        }
+        }*/
         startDay();
         kitchenController.updateKitchenElements(day);
         reputationSlider.maxValue = maxReputation;

@@ -271,7 +271,8 @@ public class DialogController : MonoBehaviour
         {
             post.addNote(text.recipe2.nameRecipe);
             foodPreparation2.gameObject.SetActive(true);
-            foodPreparation2.SetObjective(text.recipe2.ingredientRecipe, text.recipe2.liquidRecipe);
+            foodPreparation.recipe1 = text.recipe;
+            foodPreparation.recipe2 = text.recipe2;
         }
         else
         {
