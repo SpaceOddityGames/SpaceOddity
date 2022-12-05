@@ -157,6 +157,7 @@ MonoBehaviour:
   receta: 0
   ingredientRecipe: 
   liquidRecipe: []
+  nameRecipe: 
 --- !u!1 &7485873441582505974
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,9 +274,11 @@ MonoBehaviour:
   textos:
     initTexts:
     - "Llegas varios minutos tarde empleado n\xFAmero 13, que no vuelva a ocurrir."
-    - "Hay una nueva normativa, a partir de hoy est\xE1 prohibido servir a los lacertilios.
-      No queremos conflictos por temas pol\xEDticos en el bar, as\xED que ning\xFAn
-      ciudadano de Plokan podr\xE1 venir a tomar algo aqu\xED."
+    - "Como ves los nuevos due\xF1os han hecho unos cuantos cambios al bar. As\xED
+      est\xE1 mucho mejor la verdad.\r"
+    - "Tambi\xE9n hay una nueva normativa, a partir de hoy est\xE1 prohibido servir
+      a los lacertilios. No queremos conflictos por temas pol\xEDticos en el bar,
+      as\xED que ning\xFAn ciudadano de Plokan podr\xE1 venir a tomar algo aqu\xED."
     - "Si un lacertilio viene y te pide una bebida tendr\xE1s que rechazarla y pedirle
       que abandone el local. \xBFQueda claro?"
     - "As\xED me gusta, sin tanto lacertilio asqueroso el bar tendr\xE1 mucho mejor
@@ -285,7 +288,7 @@ MonoBehaviour:
       bebidas al mismo tiempo, as\xED que no me decepciones."
     - "Pues nada m\xE1s, ponte a trabajar ya, que ibas tarde, te voy a tener que
       descontar del sueldo estos minutos."
-    initConditions: 000000000000000016000000000000000000000002000000
+    initConditions: 00000000000000000000000016000000000000000000000002000000
     correctResult: []
     correctResultConditions: 
     wrongResult: []
@@ -314,3 +317,4 @@ MonoBehaviour:
   receta: 0
   ingredientRecipe: 
   liquidRecipe: []
+  nameRecipe: 

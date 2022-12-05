@@ -1543,7 +1543,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 219.99995}
+  m_AnchoredPosition: {x: 0, y: 215.7302}
   m_SizeDelta: {x: 1200, y: 80}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &36642057
@@ -4851,9 +4851,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bebida creada por un misterioso visitante que pidi\xF3 un Tonight please 
-    y dej\xF3 en la mesa una receta para una nueva bebida. Ingredientes: sul, dees
-    y pimkiyu."
+  m_text: "Bebida t\xEDpica de Plokan con nombre de una leyenda lacertilia sobre
+    un visitante proveniente de otra galaxia. Ingredientes: sul, dees y pimkiyu."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
   m_sharedMaterial: {fileID: 3462883292486234332, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
@@ -7608,8 +7607,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16, y: -106}
-  m_SizeDelta: {x: 1200, y: 440}
+  m_AnchoredPosition: {x: 16, y: -100.33008}
+  m_SizeDelta: {x: 1200, y: 431.4604}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &247775009
 MonoBehaviour:
@@ -10565,7 +10564,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300, y: -200}
+  m_AnchoredPosition: {x: 340, y: -200}
   m_SizeDelta: {x: 200, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &399002414
@@ -18307,7 +18306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 900, y: -200}
+  m_AnchoredPosition: {x: 1060, y: -200}
   m_SizeDelta: {x: 200, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &715075876
@@ -22163,10 +22162,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "puedan ser usados para la elaboraci\xF3n de comidas y bebidas. Con el
-    paso del tiempo se han creado granjas con las condiciones id\xF3neas para la
-    crianza de estos seres y puedan exportarse con mayor facilidad, sin embargo los
-    shukas son intolerantes a su ingesta."
+  m_text: "que puedan ser usados para la elaboraci\xF3n de comidas y bebidas. Con
+    el paso del tiempo se han creado granjas con las condiciones id\xF3neas para
+    la crianza de estos seres y que puedan exportarse con mayor facilidad, sin embargo
+    los shukas son intolerantes a su ingesta."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
   m_sharedMaterial: {fileID: 3462883292486234332, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
@@ -28418,8 +28417,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -89.333466}
-  m_SizeDelta: {x: 750, y: 638.6655}
+  m_AnchoredPosition: {x: 0, y: -0.00036621}
+  m_SizeDelta: {x: 750, y: 460}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1039810685
 MonoBehaviour:
@@ -30248,8 +30247,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "la realizaci\xF3n de bebidas. No se debe mezclar con l\xEDquidos fr\xEDos
-    pues este se pondr\xE1 duro como una piedra y no se podr\xE1 beber."
+  m_text: "utiliza para la realizaci\xF3n de bebidas. No se debe mezclar con l\xEDquidos
+    fr\xEDos pues este se pondr\xE1 duro como una piedra y no se podr\xE1 beber."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
   m_sharedMaterial: {fileID: 3462883292486234332, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
@@ -38597,7 +38596,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4291085736
   m_fontColor: {r: 0.65882355, g: 0.77254903, b: 0.76862746, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -49694,7 +49693,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4291085736
   m_fontColor: {r: 0.65882355, g: 0.77254903, b: 0.76862746, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -49888,7 +49887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 700, y: -200}
+  m_AnchoredPosition: {x: 820, y: -200}
   m_SizeDelta: {x: 200, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1839001768
@@ -50998,7 +50997,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "L\xEDquido extra\xEDdo de una peculiar planta que crece en los mares c\xE1lidos
     donde est\xE1s simulan el estallido de un volc\xE1n. El l\xEDquido que sueltan
-    es muy caliente pero no comparado con la lava por ello se utiliza para "
+    es muy caliente pero no tanto comparado con la lava por ello se"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
   m_sharedMaterial: {fileID: 3462883292486234332, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
@@ -52711,7 +52710,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4291085736
   m_fontColor: {r: 0.65882355, g: 0.77254903, b: 0.76862746, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -53173,7 +53172,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bebida ic\xF3nica creada por el fundador del bar.  Mezcla de sul y hongustar
+  m_text: "Bebida t\xEDpica de Azius y especialidad del bar.  Mezcla de sul y hongustar
     para darle un sabor afrutado. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbd307da627d62c46bc71d872e3991a4, type: 2}
@@ -54705,7 +54704,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 500, y: -200}
+  m_AnchoredPosition: {x: 580, y: -200}
   m_SizeDelta: {x: 200, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2037349413
@@ -55572,7 +55571,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4291085736
   m_fontColor: {r: 0.65882355, g: 0.77254903, b: 0.76862746, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3

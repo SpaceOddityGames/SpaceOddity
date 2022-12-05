@@ -75,7 +75,7 @@ public class TutorialManager : MonoBehaviour
                 textI = 2;
                 textBoxes[textI].SetActive(true);
                 flechas[textI].SetActive(true);
-                textToPrint = "Aquí podrás comprobar qué ingredientes componen al Tonight Please. Te recomiendo ir aprendiendo las recetas disponibles te será útil para ser más rápido.";
+                textToPrint = "Aquí podrás comprobar qué ingredientes componen al Tonight Please. Te recomiendo ir aprendiendo las recetas disponibles, te será útil para ser más rápido.";
                 condit = -1;
                 break;
             case 5:
@@ -182,7 +182,7 @@ public class TutorialManager : MonoBehaviour
                 break;
             case 25:
                 flechas[8].SetActive(true);
-                textToPrint = "El siguiente ingrediente del Tonight Please son dos hongustars, para echarlo a la bebida cógelos y arrástralos hasta el recipiente.";
+                textToPrint = "El siguiente ingrediente del Tonight Please son dos hongustars, para echarlos a la bebida cógelos y arrástralos hasta el recipiente.";
                 ingredients[0].enable();
                 condit = 3;
                 break;

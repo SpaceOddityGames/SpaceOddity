@@ -123,7 +123,7 @@ MonoBehaviour:
       tablet."
     - "Adem\xE1s a partir de hoy, habi\xE9ndo superado tu primer d\xEDa, podr\xE1s
       rechazar pedidos a los clientes, tendr\xE1s que hacerlo en caso de que te pidan
-      algo que no puedes servir o incumpla alguna regla. Recuerda que hay algunas
+      algo que no puedas servir o incumpla alguna regla. Recuerda que hay algunas
       especies que son al\xE9rgicas o tienen prohibido tomar ciertos ingredientes."
     - "Por cierto, una \xFAltima cosilla."
     - "Hoy tengo un asunto importante que atender, tengo que\u2026"
@@ -164,3 +164,4 @@ MonoBehaviour:
   receta: 0
   ingredientRecipe: 
   liquidRecipe: []
+  nameRecipe: 
