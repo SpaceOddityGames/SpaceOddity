@@ -156,12 +156,12 @@ MonoBehaviour:
     initConditions: 0000000000000000000000000000000000000000000000000000000000000000000000000000000009000000030000000000000000000000000000000300000000000000000000000a00000001000000
     correctResult:
     - "Gracias por la bebida, me la tomar\xE9 en un rato."
-    - "Me voy de aqu\xED, que no quiero estar ni un minuto m\xE1s. Ya no me fio de
+    - "Me voy, que no quiero estar aqu\xED ni un minuto m\xE1s. Ya no me f\xEDo de
       nadie, gracias por todo de verdad."
     correctResultConditions: 0000000002000000
     wrongResult:
     - "Gracias por la bebida, me la tomar\xE9 en un rato."
-    - "Me voy de aqu\xED, que no quiero estar ni un minuto m\xE1s. Ya no me fio de
+    - "Me voy, que no quiero estar aqu\xED ni un minuto m\xE1s. Ya no me f\xEDo de
       nadie, gracias por todo de verdad."
     wrongResultConditions: 0000000002000000
     wrongResultTimer:
@@ -171,11 +171,12 @@ MonoBehaviour:
     wrongResultTimerConditions: 0000000002000000
     cancelResult:
     - "Realmente tampoco me apetec\xEDa beber nada."
-    - "Me voy de aqu\xED, que no quiero estar ni un minuto m\xE1s. Ya no me fio de
+    - "Me voy, que no quiero estar aqu\xED ni un minuto m\xE1s. Ya no me f\xEDo de
       nadie, gracias por todo de verdad."
     cancelResultConditions: 0000000002000000
     recipe: {fileID: 7485873441582505971}
     aceptTask: 1
+    AorN: 0
     twoTasks: 0
     recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971
@@ -193,3 +194,4 @@ MonoBehaviour:
   receta: 5
   ingredientRecipe: 
   liquidRecipe: []
+  nameRecipe: 
