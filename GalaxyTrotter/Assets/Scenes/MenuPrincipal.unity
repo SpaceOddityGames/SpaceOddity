@@ -517,6 +517,13 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: liquido2
+    clip: {fileID: 8300000, guid: fecd727f4b0f85d42ad1241a99ce2cba, type: 3}
+    music: 0
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &257815657
 Transform:
   m_ObjectHideFlags: 0

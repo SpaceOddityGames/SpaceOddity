@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TabletButton : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class TabletButton : MonoBehaviour
     [SerializeField] LiquidIngredient[] liquids;
     [SerializeField] TutorialManager tutorial;
     [SerializeField] PostitButton postit;
+    [SerializeField] GameObject botonApagado;
     [HideInInspector] public bool paused = false;
     [HideInInspector] public bool inactive = false;
     [HideInInspector] public bool tutorialActive = false;
@@ -23,6 +25,7 @@ public class TabletButton : MonoBehaviour
             postit.inactive = true;
             FindObjectOfType<AudioManager>().Play("abrirTablet");
             tablet.SetActive(true);
+            botonApagado.GetComponent<Button>().interactable = true;
             for (int i = 0; i < ingredients.Length; i++)
             {
                 ingredients[i].disable();

@@ -14,6 +14,8 @@ public class ResetButton : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData pointerEventData)
     {
         FindObjectOfType<AudioManager>().Play("botonMenu");
+        FindObjectOfType<AudioManager>().Stop("liquido");
+        FindObjectOfType<AudioManager>().Stop("liquido2");
         bowl.GetComponent<FoodPreparation>().resetFoodGame();
     }
 

@@ -90,13 +90,19 @@ public class LiquidIngredient : MonoBehaviour
 
     ////////////////////////////
     public bool drop = false;
+    public bool drop2 = false;
     public GameObject caldero;
+    public GameObject caldero2;
     private void OnMouseUp()
     {
         transform.localScale = new Vector3(1f, 1f, 1f);
         if (drop)
         {
             drop = false;
+        }
+        if (drop2)
+        {
+            drop2 = false;
         }
         this.transform.position = initPos;
         this.transform.rotation = initRot;
@@ -105,10 +111,26 @@ public class LiquidIngredient : MonoBehaviour
             caldero.GetComponent<FoodPreparation>().alfaDown = true;
         }
         caldero = null;
+        if (caldero2 != null)
+        {
+            caldero2.GetComponent<FoodPreparation>().alfaDown = true;
+        }
+        caldero2 = null;
     }
     private void dropLiquid()
     {
-        caldero.GetComponent<FoodPreparation>().dropLiquid(LiquidType);
+        if (caldero != null)
+        {
+            caldero.GetComponent<FoodPreparation>().dropLiquid(LiquidType);
+        }
+    }
+
+    private void dropLiquid2()
+    {
+        if (caldero2 != null)
+        {
+            caldero2.GetComponent<FoodPreparation>().dropLiquid(LiquidType);
+        }
     }
     private void Update()
     {
@@ -119,6 +141,16 @@ public class LiquidIngredient : MonoBehaviour
         } else if(caldero != null)
         {
             caldero.GetComponent<FoodPreparation>().alfaDown = true;
+        }
+
+        if (drop2)
+        {
+            caldero2.GetComponent<FoodPreparation>().alfaUp = true;
+            dropLiquid2();
+        }
+        else if (caldero2 != null)
+        {
+            caldero2.GetComponent<FoodPreparation>().alfaDown = true;
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -132,6 +164,15 @@ public class LiquidIngredient : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("liquido");
             }
         }
+        if (other.gameObject.tag == "Caldero2")
+        {
+            caldero2 = other.gameObject;
+            drop2 = true;
+            if (caldero2.GetComponent<FoodPreparation>().quantityP < 100)
+            {
+                FindObjectOfType<AudioManager>().Play("liquido2");
+            }
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -140,6 +181,11 @@ public class LiquidIngredient : MonoBehaviour
         {
             drop = false;
             FindObjectOfType<AudioManager>().Pause("liquido");
+        }
+        if (other.gameObject.tag == "Caldero2")
+        {
+            drop2 = false;
+            FindObjectOfType<AudioManager>().Pause("liquido2");
         }
     }
 

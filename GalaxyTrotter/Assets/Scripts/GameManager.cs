@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
     public void nextClient()
     {
         FindObjectOfType<AudioManager>().Stop("liquido");
+        FindObjectOfType<AudioManager>().Stop("liquido2");
         if (day == 6 && clientNum == 0)
         {
             if (!h01 && h10)
@@ -175,6 +176,11 @@ public class GameManager : MonoBehaviour
             }
             else
             {
+                if (foodPreparator.tutorial)
+                {
+                    foodPreparator.tutorial = false;
+                    return;
+                }
                 FindObjectOfType<Historial>().addHistoryCorrectReseted();
             }
         }

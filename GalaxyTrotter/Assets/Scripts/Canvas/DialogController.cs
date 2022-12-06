@@ -319,6 +319,7 @@ public class DialogController : MonoBehaviour
         dialogText.SetActive(true);
         if (analizeLerman)
         {
+            analizeLerman = false;
             if (foodPreparation.lermanEnvenenado)
             {
                 foodPreparation.lermanEnvenenado = false;
@@ -360,6 +361,7 @@ public class DialogController : MonoBehaviour
         dialogText.SetActive(true);
         if (analizeLerman)
         {
+            analizeLerman = false;
             if (foodPreparation.lermanEnvenenado)
             {
                 foodPreparation.lermanEnvenenado = false;
@@ -389,6 +391,7 @@ public class DialogController : MonoBehaviour
         dialogText.SetActive(true);
         if (analizeLerman)
         {
+            analizeLerman = false;
             if (foodPreparation.lermanEnvenenado)
             {
                 foodPreparation.lermanEnvenenado = false;
@@ -410,6 +413,7 @@ public class DialogController : MonoBehaviour
         if (analizeLerman)
         {
             gameManager.h08 = true;
+            analizeLerman = false;
         }
         client.SetActive(true);
         gameManager.evaluateRejectReputation(text.aceptTask, text.AorN);

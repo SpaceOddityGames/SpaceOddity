@@ -2531,7 +2531,7 @@ GameObject:
   - component: {fileID: 63764272}
   m_Layer: 0
   m_Name: FoodPreparatorX2
-  m_TagString: Caldero
+  m_TagString: Caldero2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2562,7 +2562,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.49, y: 3.28, z: 5}
+  m_Size: {x: 2.15, y: 3.28, z: 5}
   m_Center: {x: 0.00000005960467, y: -0.00000037865007, z: 2.44}
 --- !u!23 &63764270
 MeshRenderer:
@@ -3477,8 +3477,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: -202}
-  m_SizeDelta: {x: 424, y: 76}
+  m_AnchoredPosition: {x: 7, y: -202}
+  m_SizeDelta: {x: 426, y: 88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &93834537
 MonoBehaviour:
@@ -3568,7 +3568,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1960968686, guid: 05a0ed6ae0a53104fa8ae5e63c4082c5, type: 3}
+  m_Sprite: {fileID: 695682874, guid: 05a0ed6ae0a53104fa8ae5e63c4082c5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8262,7 +8262,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 50}
+  m_SizeDelta: {x: 1250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &298892375
 MonoBehaviour:
@@ -8533,7 +8533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1671831425638733172, guid: c6beddcc11895634389dc3584762c301, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.3
+      value: 18.287624
       objectReference: {fileID: 0}
     - target: {fileID: 1671831425638733172, guid: c6beddcc11895634389dc3584762c301, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8541,23 +8541,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1671831425638733172, guid: c6beddcc11895634389dc3584762c301, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 33
+      value: 32.976685
       objectReference: {fileID: 0}
     - target: {fileID: 1671831425638733172, guid: c6beddcc11895634389dc3584762c301, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.9780376
+      value: 0.9947332
       objectReference: {fileID: 0}
     - target: {fileID: 1671831425638733172, guid: c6beddcc11895634389dc3584762c301, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.009237819
+      value: 0.004173809
       objectReference: {fileID: 0}
     - target: {fileID: 1671831425638733172, guid: c6beddcc11895634389dc3584762c301, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.20343223
+      value: -0.09191322
       objectReference: {fileID: 0}
     - target: {fileID: 1671831425638733172, guid: c6beddcc11895634389dc3584762c301, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.044412505
+      value: -0.045170758
       objectReference: {fileID: 0}
     - target: {fileID: 1671831425638733172, guid: c6beddcc11895634389dc3584762c301, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8565,7 +8565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1671831425638733172, guid: c6beddcc11895634389dc3584762c301, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 336.5
+      value: 349.442
       objectReference: {fileID: 0}
     - target: {fileID: 1671831425638733172, guid: c6beddcc11895634389dc3584762c301, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -17957,7 +17957,9 @@ MonoBehaviour:
   initPos: {x: 0, y: 0, z: 0}
   initRot: {x: 0, y: 0, z: 0, w: 0}
   drop: 0
+  drop2: 0
   caldero: {fileID: 0}
+  caldero2: {fileID: 0}
 --- !u!54 &698055909
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18034,7 +18036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reputation: 10
   maxReputation: 20
-  day: 5
+  day: 0
   clients:
     Day:
     - Client:
@@ -18088,23 +18090,24 @@ MonoBehaviour:
       - {fileID: 7485873441582505974, guid: c4d98fdde98d0524ca8f263a8958dcb4, type: 3}
       - {fileID: 7485873441582505974, guid: de78ca54cf2c93041ba40402764f8f4e, type: 3}
     - Client:
-      - {fileID: 7485873441582505974, guid: ed9192d15dd3b214e92c4020976fa7e9, type: 3}
-      - {fileID: 7485873441582505974, guid: 0c962b54916acd04abdcde59b5a6c862, type: 3}
-      - {fileID: 7485873441582505974, guid: 2d53e8b0156c5fb49b8db151d84b8f9d, type: 3}
-      - {fileID: 7485873441582505974, guid: 2db161531b2029b408c7229666c9fe3e, type: 3}
-      - {fileID: 7485873441582505974, guid: b679d51876d97554b840cc64caceb7ff, type: 3}
-      - {fileID: 7485873441582505974, guid: 4c94555341692e8458d1c184bea2d033, type: 3}
-      - {fileID: 7485873441582505974, guid: c4d98fdde98d0524ca8f263a8958dcb4, type: 3}
-      - {fileID: 7485873441582505974, guid: de78ca54cf2c93041ba40402764f8f4e, type: 3}
+      - {fileID: 7485873441582505974, guid: a029670b4d7845b43936817562da9a9f, type: 3}
+      - {fileID: 7485873441582505974, guid: e2f0c0218ad8f8149a466d51e61a06d6, type: 3}
+      - {fileID: 7485873441582505974, guid: a3499720a24a34d4bbae36ff054bc00e, type: 3}
+      - {fileID: 7485873441582505974, guid: 6d9af7c451494ef49b72812a0a96041e, type: 3}
+      - {fileID: 7485873441582505974, guid: ff9fa65876aaebd428a2cd3e39e1f197, type: 3}
+      - {fileID: 7485873441582505974, guid: 2b50845bd4144ac4caeb2d34d6aba5e2, type: 3}
+      - {fileID: 7485873441582505974, guid: edb952fd501e9494a9630d10fd51a106, type: 3}
+      - {fileID: 7485873441582505974, guid: 772c4dc603d299e468e6f4e027e90ed2, type: 3}
+      - {fileID: 7485873441582505974, guid: 39c49c06335c6b34f9b0189522c02cb6, type: 3}
+      - {fileID: 7485873441582505974, guid: cf8c4a6a972fa9642a7642dcc4c8284b, type: 3}
     - Client:
-      - {fileID: 7485873441582505974, guid: ed9192d15dd3b214e92c4020976fa7e9, type: 3}
-      - {fileID: 7485873441582505974, guid: 0c962b54916acd04abdcde59b5a6c862, type: 3}
-      - {fileID: 7485873441582505974, guid: 2d53e8b0156c5fb49b8db151d84b8f9d, type: 3}
-      - {fileID: 7485873441582505974, guid: 2db161531b2029b408c7229666c9fe3e, type: 3}
-      - {fileID: 7485873441582505974, guid: b679d51876d97554b840cc64caceb7ff, type: 3}
-      - {fileID: 7485873441582505974, guid: 4c94555341692e8458d1c184bea2d033, type: 3}
-      - {fileID: 7485873441582505974, guid: c4d98fdde98d0524ca8f263a8958dcb4, type: 3}
-      - {fileID: 7485873441582505974, guid: de78ca54cf2c93041ba40402764f8f4e, type: 3}
+      - {fileID: 7485873441582505974, guid: fdd1b840bfba41f4e8182292af500cb0, type: 3}
+      - {fileID: 7485873441582505974, guid: 307ad985a1cde3043bfa5a420334a7f3, type: 3}
+      - {fileID: 7485873441582505974, guid: acb312831698a5647bcb646b8ff468a2, type: 3}
+      - {fileID: 7485873441582505974, guid: a63cac53c59a56442b67086df0723df0, type: 3}
+      - {fileID: 7485873441582505974, guid: d5ce9482faf883b4f90280d37ad1d319, type: 3}
+      - {fileID: 7485873441582505974, guid: 67abe360e061f4f499d3028cfc6d671a, type: 3}
+      - {fileID: 7485873441582505974, guid: c2ebd8cb2497757418ef146085ab9998, type: 3}
   clientNum: 0
   endManager: {fileID: 1928913184}
   kitchenController: {fileID: 574617179}
@@ -27988,6 +27991,7 @@ MonoBehaviour:
   pantallaIngredientes: {fileID: 1518065994}
   pantallaRecetas: {fileID: 775978479}
   pantallaHistorial: {fileID: 2025637201}
+  botonApagado: {fileID: 1760187606}
   postit: {fileID: 206307550}
   infoRecetas:
   - {fileID: 727193550}
@@ -31497,7 +31501,9 @@ MonoBehaviour:
   initPos: {x: 0, y: 0, z: 0}
   initRot: {x: 0, y: 0, z: 0, w: 0}
   drop: 0
+  drop2: 0
   caldero: {fileID: 0}
+  caldero2: {fileID: 0}
 --- !u!54 &1212390783
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -41072,7 +41078,9 @@ MonoBehaviour:
   initPos: {x: 0, y: 0, z: 0}
   initRot: {x: 0, y: 0, z: 0, w: 0}
   drop: 0
+  drop2: 0
   caldero: {fileID: 0}
+  caldero2: {fileID: 0}
 --- !u!65 &1557942989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44394,8 +44402,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 153, y: 0}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchoredPosition: {x: 142, y: 0}
+  m_SizeDelta: {x: 115, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1644033352
 MonoBehaviour:
@@ -47491,7 +47499,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 1, g: 0.8528302, b: 0.8528302, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.85882354, g: 0.85882354, b: 0.85882354, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -56273,7 +56281,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2107962160}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -56283,7 +56291,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: -3}
+  m_AnchoredPosition: {x: 3.1, y: -3}
   m_SizeDelta: {x: 510, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2107962162
@@ -61652,8 +61660,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148062250173}
   m_LocalRotation: {x: -0.69351995, y: 0.13794968, z: 0.13794968, w: 0.69351995}
-  m_LocalPosition: {x: -19.7, y: -12.3, z: 33}
-  m_LocalScale: {x: 1.3858793, y: 1.3858792, z: 1.7218885}
+  m_LocalPosition: {x: -19.7, y: -12.23, z: 33}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 574617178}
@@ -83747,6 +83755,7 @@ MonoBehaviour:
   - {fileID: 698055908}
   tutorial: {fileID: 186867540}
   postit: {fileID: 206307550}
+  botonApagado: {fileID: 1760187606}
   paused: 0
   inactive: 0
   tutorialActive: 0
@@ -113512,6 +113521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tablet: {fileID: 1031128642}
+  botonApagado: {fileID: 1760187606}
   paused: 0
   inactive: 0
 --- !u!65 &7631082561335922340
@@ -116565,7 +116575,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.49, y: 3.28, z: 5}
+  m_Size: {x: 2.15, y: 3.28, z: 5}
   m_Center: {x: 0.00000005960467, y: -0.00000037865007, z: 2.44}
 --- !u!114 &8010185843853170684
 MonoBehaviour:

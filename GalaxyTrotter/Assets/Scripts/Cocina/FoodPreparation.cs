@@ -131,7 +131,7 @@ public class FoodPreparation : MonoBehaviour
             {
                 lermanDouble = true;
             }
-            if(odziaQuantity != 3 && !hasMoonso)
+            if(odziaQuantity != 2 && !hasMoonso)
             {
                 gameManager.h08 = true;
             }
@@ -300,7 +300,6 @@ public class FoodPreparation : MonoBehaviour
         dialogController.goMain();
         if (tutorial)
         {
-            tutorial = false;
             tutorialManager.endTutorial();
             dialogController.correctResult(true);
             resetFood();

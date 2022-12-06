@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TabletManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class TabletManager : MonoBehaviour
     [SerializeField] GameObject pantallaIngredientes;
     [SerializeField] GameObject pantallaRecetas;
     [SerializeField] GameObject pantallaHistorial;
+    [SerializeField] GameObject botonApagado;
     [SerializeField] PostitButton postit;
     [SerializeField] GameObject[] infoRecetas;
     [SerializeField] GameObject[] infoRazas;
@@ -182,6 +184,7 @@ public class TabletManager : MonoBehaviour
         }
         FindObjectOfType<AudioManager>().Play("cerrarTablet");
         anim.Play("tabletOut");
+        botonApagado.GetComponent<Button>().interactable = false;
     }
 
     /// Seccion Libro de recetas
