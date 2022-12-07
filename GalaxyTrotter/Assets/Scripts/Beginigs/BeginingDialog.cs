@@ -36,11 +36,22 @@ public class BeginingDialog : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         deactivateBeginText();
         FindObjectOfType<AudioManager>().Play("texto");
+        int index = 0;
+        float t = 0;
+        while (index < actualString.Length)
+        {
+            t += Time.deltaTime / 0.05f;
+            index = Mathf.FloorToInt(t);
+            index = Mathf.Clamp(index, 0, actualString.Length);
+            beginText.text = actualString.Substring(0, index);
+            yield return null;
+        }
+        /*
         foreach (char character in actualString.ToCharArray())
         {
             yield return new WaitForSeconds(0.05f);
             beginText.text += character;
-        }
+        }*/
         clickScreenBegin.SetActive(true);
         FindObjectOfType<AudioManager>().Stop("texto");
     }

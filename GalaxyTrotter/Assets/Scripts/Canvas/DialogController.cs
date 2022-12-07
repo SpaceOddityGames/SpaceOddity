@@ -113,6 +113,44 @@ public class DialogController : MonoBehaviour
         DialogText.text += "";
         DialogTextForMain.text += "";
         clickScreenSkipText.SetActive(true);
+
+        int index = 0;
+        float t = 0;
+        if (!soundPlaying)
+        {
+            FindObjectOfType<AudioManager>().Play("texto");
+            soundPlaying = true;
+        }
+        while (index < actualString.Length)
+        {
+            
+            t += Time.deltaTime / 0.02f;
+            index = Mathf.FloorToInt(t);
+            index = Mathf.Clamp(index, 0, actualString.Length);
+            if (!textForMain)
+            {
+                DialogText.text = actualString.Substring(0, index); ;
+            }
+            else
+            {
+                DialogTextForMain.text = actualString.Substring(0, index);
+            }
+            if (skipText)
+            {
+                index = actualString.Length;
+                if (!textForMain)
+                {
+                    DialogText.text = actualString;
+                }
+                else
+                {
+                    DialogTextForMain.text = actualString;
+                }
+            }
+            yield return null;
+        }
+        soundPlaying = false;
+        /*
         foreach (char character in actualString.ToCharArray())
         {
             if (!soundPlaying)
@@ -143,7 +181,7 @@ public class DialogController : MonoBehaviour
             {
                 DialogTextForMain.text = actualString;
             }
-        }
+        }*/
         clickScreenSkipText.SetActive(false);
         switch (condition)
         {

@@ -211,6 +211,28 @@ public class TutorialManager : MonoBehaviour
         skipText = false;
         texts[i].text = "";
         clickScreenSkipText.SetActive(true);
+        int index = 0;
+        float t = 0;
+        if (!soundPlaying)
+        {
+            FindObjectOfType<AudioManager>().Play("texto");
+            soundPlaying = true;
+        }
+        while (index<actualString.Length)
+        {
+            t += Time.deltaTime / 0.02f;
+            index = Mathf.FloorToInt(t);
+            index = Mathf.Clamp(index, 0, actualString.Length);
+            texts[i].text = actualString.Substring(0, index);
+            if (skipText)
+            {
+                texts[i].text = actualString;
+                index = actualString.Length;
+            }
+            yield return null;
+        }
+        soundPlaying = false;
+        /*
         foreach (char character in actualString.ToCharArray())
         {
             if (!soundPlaying)
@@ -231,7 +253,7 @@ public class TutorialManager : MonoBehaviour
         if (skipText)
         {
             texts[i].text = actualString;
-        }
+        }*/
         clickScreenSkipText.SetActive(false);
         switch (cond)
         {
