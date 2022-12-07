@@ -59,23 +59,46 @@ public class EndingDialog : MonoBehaviour
     IEnumerator printCharactersBlack(string actualString)
     {
         deactivateBlackText();
+        int index = 0;
+        float t = 0;
+        while (index < actualString.Length)
+        {
+            FindObjectOfType<AudioManager>().Play("unidadTextoGrave");
+            t += Time.deltaTime / 0.1f;
+            index = Mathf.FloorToInt(t);
+            index = Mathf.Clamp(index, 0, actualString.Length);
+            blackText.text = actualString.Substring(0, index);
+            yield return null;
+        }
+        /*
         foreach (char character in actualString.ToCharArray())
         {
             FindObjectOfType<AudioManager>().Play("unidadTextoGrave");
             yield return new WaitForSeconds(0.1f);
             blackText.text += character;
-        }
+        }*/
         clickScreenBlack.SetActive(true);
     }
     IEnumerator printCharactersEnd(string actualString)
     {
         deactivateEndText();
         FindObjectOfType<AudioManager>().Play("texto");
+        int index = 0;
+        float t = 0;
+        while (index < actualString.Length)
+        {
+            t += Time.deltaTime / 0.05f;
+            index = Mathf.FloorToInt(t);
+            index = Mathf.Clamp(index, 0, actualString.Length);
+            endText.text = actualString.Substring(0, index);
+            yield return null;
+        }
+        /*
         foreach (char character in actualString.ToCharArray())
         {
             yield return new WaitForSeconds(0.05f);
             endText.text += character;
-        }
+        }*/
         clickScreenEnd.SetActive(true);
         FindObjectOfType<AudioManager>().Stop("texto");
     }

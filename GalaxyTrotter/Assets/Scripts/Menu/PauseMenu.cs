@@ -33,11 +33,6 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         iconoAjustes.SetActive(false);
-        FindObjectOfType<DialogController>().soundPlaying = false;
-        if (FindObjectOfType<TutorialManager>() != null)
-        {
-            FindObjectOfType<TutorialManager>().soundPlaying = false;
-        }
         FindObjectOfType<AudioManager>().Stop("texto");
         FindObjectOfType<AudioManager>().DecreaseMusic();
         FindObjectOfType<KitchenController>().pauseGame();
@@ -50,6 +45,18 @@ public class PauseMenu : MonoBehaviour
         iconoAjustes.SetActive(true);
         FindObjectOfType<AudioManager>().IncreaseMusic();
         FindObjectOfType<KitchenController>().resumeGame();
+        if (FindObjectOfType<DialogController>().soundPlaying)
+        {
+            FindObjectOfType<AudioManager>().Play("texto");
+        }
+        TutorialManager tuto = FindObjectOfType<TutorialManager>();
+        if(tuto != null)
+        {
+            if (tuto.soundPlaying)
+            {
+                FindObjectOfType<AudioManager>().Play("texto");
+            }
+        }
         Time.timeScale = 1f;
         isPaused = false;
     }

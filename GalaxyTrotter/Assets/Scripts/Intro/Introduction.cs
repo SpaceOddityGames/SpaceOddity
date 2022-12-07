@@ -54,7 +54,7 @@ public class Introduction : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         StartCoroutine(printCharactersBlack("¡Enhorabuena! Ha sido seleccionado para el puesto de \ncamarero del bar The Booze Way. Acuda mañana a la \nestación espacial de Naber para incorporarse, le recibirá \nel jefe encargado del bar y le dará más indicaciones.\n\n\n-Atte: Gestión de empleados de la estación espacial de Naber."));
     }
-
+    /*
     IEnumerator printCharactersBlack(string actualString)
     {
         FindObjectOfType<AudioManager>().Play("texto");
@@ -69,6 +69,27 @@ public class Introduction : MonoBehaviour
         if (skipText)
         {
             introText.text = actualString;
+        }
+        FindObjectOfType<AudioManager>().Stop("texto");
+        clickScreenBlack.SetActive(true);
+    }*/
+    IEnumerator printCharactersBlack(string actualString)
+    {
+        FindObjectOfType<AudioManager>().Play("texto");
+        int index = 0;
+        float t = 0;
+        while (index < actualString.Length)
+        {
+            t += Time.deltaTime / 0.04f;
+            index = Mathf.FloorToInt(t);
+            index = Mathf.Clamp(index, 0, actualString.Length);
+            introText.text = actualString.Substring(0, index);
+            if (skipText)
+            {
+                introText.text = actualString;
+                index = actualString.Length;
+            }
+            yield return null;
         }
         FindObjectOfType<AudioManager>().Stop("texto");
         clickScreenBlack.SetActive(true);
