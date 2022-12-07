@@ -59,12 +59,15 @@ public class EndingDialog : MonoBehaviour
     IEnumerator printCharactersBlack(string actualString)
     {
         deactivateBlackText();
-        int index = 0;
+        int index = -1;
         float t = 0;
         while (index < actualString.Length)
         {
-            FindObjectOfType<AudioManager>().Play("unidadTextoGrave");
             t += Time.deltaTime / 0.1f;
+            if(Mathf.FloorToInt(t) != index)
+            {
+                FindObjectOfType<AudioManager>().Play("unidadTextoGrave");
+            }
             index = Mathf.FloorToInt(t);
             index = Mathf.Clamp(index, 0, actualString.Length);
             blackText.text = actualString.Substring(0, index);

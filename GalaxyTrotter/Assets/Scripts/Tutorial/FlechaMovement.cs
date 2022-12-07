@@ -18,11 +18,6 @@ public class FlechaMovement : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime / timeToSwap;
-        if (time>1) 
-        {
-            b = !b;
-            time = 0;
-        }
         switch (type)
         {
             case 0:
@@ -66,6 +61,10 @@ public class FlechaMovement : MonoBehaviour
                 }
                 break;
         }
-        
+        if (time > 1)
+        {
+            b = !b;
+            time = 0;
+        }
     }
 }
