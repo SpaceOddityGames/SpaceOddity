@@ -88,7 +88,7 @@ public class FoodPreparation : MonoBehaviour
             tutorialManager.nextText();
         }
     }
-    //Comprueba la correcta preparación de la comida
+    //Comprueba la correcta preparación de la bebida
     public bool comprobateIngredients()
     {
         if (analizeLerman)
@@ -241,7 +241,7 @@ public class FoodPreparation : MonoBehaviour
             bool hasPimkyu = false;
             for(int k = 0; k < SIZE; k++)
             {
-                if(preparing[k] == 3)
+                if(preparing[k] == 2)
                 {
                     hasPimkyu = true;
                 }
@@ -253,10 +253,6 @@ public class FoodPreparation : MonoBehaviour
                 {
                     foodPreparator2.servedPimkyu++;
                 }
-            }
-            if (servedPimkyu >= 2)
-            {
-                reject = true;
             }
         }
         return correct;
@@ -310,7 +306,7 @@ public class FoodPreparation : MonoBehaviour
             bool hasChip = false;
             for (int k = 0; k < SIZE; k++)
             {
-                if (preparing[k] == 3)
+                if (preparing[k] == 10)
                 {
                     hasChip = true;
                 }
@@ -479,6 +475,21 @@ public class FoodPreparation : MonoBehaviour
         for (int i = 0; i < maxLiquids; i++)
         {
             liquidObjective[i] = liquidTask[i];
+        }
+        if (servedPimkyu >= 2)
+        {
+            bool hasPimkyu = false;
+            for (int k = 0; k < SIZE; k++)
+            {
+                if (objective[k] == 2)
+                {
+                    hasPimkyu = true;
+                }
+            }
+            if (hasPimkyu)
+            {
+                reject = true;
+            }
         }
         timer.resetTimer();
         timer.start();

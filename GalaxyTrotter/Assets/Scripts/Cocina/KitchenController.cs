@@ -109,6 +109,7 @@ public class KitchenController : MonoBehaviour
                 normas[1].SetActive(false);
                 normas[2].SetActive(false);
                 normas[3].SetActive(false);
+                foodpreparator.comprobatePimkyu = false;
                 //IngredientesTablet
                 ingredientesTablet[0].SetActive(true);
                 ingredientesTablet[1].SetActive(true);
@@ -167,6 +168,7 @@ public class KitchenController : MonoBehaviour
                 normas[1].SetActive(false);
                 normas[2].SetActive(false);
                 normas[3].SetActive(false);
+                foodpreparator.comprobatePimkyu = false;
                 //IngredientesTablet
                 ingredientesTablet[0].SetActive(true);
                 ingredientesTablet[1].SetActive(true);
@@ -225,6 +227,7 @@ public class KitchenController : MonoBehaviour
                 normas[1].SetActive(true);
                 normas[2].SetActive(false);
                 normas[3].SetActive(false);
+                foodpreparator.comprobatePimkyu = true;
                 //IngredientesTablet
                 ingredientesTablet[0].SetActive(true);
                 ingredientesTablet[1].SetActive(true);
@@ -283,6 +286,7 @@ public class KitchenController : MonoBehaviour
                 normas[1].SetActive(true);
                 normas[2].SetActive(true);
                 normas[3].SetActive(false);
+                foodpreparator.comprobatePimkyu = true;
                 //IngredientesTablet
                 ingredientesTablet[0].SetActive(true);
                 ingredientesTablet[1].SetActive(true);
@@ -341,6 +345,7 @@ public class KitchenController : MonoBehaviour
                 normas[1].SetActive(true);
                 normas[2].SetActive(false);
                 normas[3].SetActive(false);
+                foodpreparator.comprobatePimkyu = true;
                 //IngredientesTablet
                 ingredientesTablet[0].SetActive(true);
                 ingredientesTablet[1].SetActive(true);
@@ -399,6 +404,7 @@ public class KitchenController : MonoBehaviour
                 normas[1].SetActive(true);
                 normas[2].SetActive(false);
                 normas[3].SetActive(true);
+                foodpreparator.comprobatePimkyu = true;
                 //IngredientesTablet
                 ingredientesTablet[0].SetActive(true);
                 ingredientesTablet[1].SetActive(true);
@@ -457,6 +463,7 @@ public class KitchenController : MonoBehaviour
                 normas[1].SetActive(true);
                 normas[2].SetActive(false);
                 normas[3].SetActive(true);
+                foodpreparator.comprobatePimkyu = true;
                 //IngredientesTablet
                 ingredientesTablet[0].SetActive(true);
                 ingredientesTablet[1].SetActive(true);
@@ -515,6 +522,7 @@ public class KitchenController : MonoBehaviour
                 normas[1].SetActive(true);
                 normas[2].SetActive(false);
                 normas[3].SetActive(true);
+                foodpreparator.comprobatePimkyu = true;
                 //IngredientesTablet
                 ingredientesTablet[0].SetActive(true);
                 ingredientesTablet[1].SetActive(true);
