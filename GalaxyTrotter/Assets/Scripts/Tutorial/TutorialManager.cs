@@ -193,6 +193,7 @@ public class TutorialManager : MonoBehaviour
                 condit = 3;
                 break;
             case 27:
+                ingredients[0].enable();
                 tabletButton.GetComponent<TabletButton>().inactive = true;
                 flechas[9].SetActive(true);
                 ingredients[0].disable();

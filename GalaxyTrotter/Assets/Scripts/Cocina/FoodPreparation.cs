@@ -21,7 +21,8 @@ public class FoodPreparation : MonoBehaviour
     [SerializeField] GameObject bordeRelleno;
     [SerializeField] GameObject relleno;
     [SerializeField] GameObject[] sliderFills;
-    
+    [SerializeField] GameObject hongustarTuto;
+
     private float max; //liquid drop max tamaño
     private const int updateLiquid = 5; // mas grande = mas lento
     public float quantityP; // porcentaje
@@ -84,6 +85,7 @@ public class FoodPreparation : MonoBehaviour
         }
         if (tutorialIngredient)
         {
+            hongustarTuto.GetComponent<Ingredient>().enabled = false;
             tutorialIngredient = false;
             tutorialManager.nextText();
         }

@@ -2641,6 +2641,7 @@ MonoBehaviour:
   - {fileID: 1509453142}
   - {fileID: 1386497534}
   - {fileID: 770732903}
+  hongustarTuto: {fileID: 0}
   quantityP: 0
   liquids: []
   liquidObjective: []
@@ -101667,6 +101668,7 @@ MonoBehaviour:
   - {fileID: 1269256079}
   - {fileID: 1294233327}
   - {fileID: 659335588}
+  hongustarTuto: {fileID: 1571133268}
   quantityP: 0
   liquids: []
   liquidObjective: []
