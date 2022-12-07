@@ -13,6 +13,9 @@ public class BeginingDialog : MonoBehaviour
     [SerializeField] GameObject pausa;
     [SerializeField] TabletButtonBar tabletButtonBar;
     [SerializeField] TabletManager tablet;
+    [SerializeField] GameObject imageJornada1;
+    [SerializeField] GameObject imageJornada2;
+    [SerializeField] GameObject imageJornada3;
     private void Start()
     {
         tabletButtonBar.inactive = true;
@@ -20,11 +23,29 @@ public class BeginingDialog : MonoBehaviour
     }
     public void ActivateBegin()
     {
+        if(gameManager.day+1 == 1 || gameManager.day+1 == 2)
+        {
+            imageJornada1.SetActive(true);
+            imageJornada2.SetActive(false);
+            imageJornada3.SetActive(false);
+        }
+        else if (gameManager.day+1 == 3)
+        {
+            imageJornada2.SetActive(true);
+            imageJornada1.SetActive(false);
+            imageJornada3.SetActive(false);
+        }
+        else
+        {
+            imageJornada3.SetActive(true);
+            imageJornada1.SetActive(false);
+            imageJornada2.SetActive(false);
+        }
         activateBeginText();
     }
     public void activateBeginText()
     {
-        StartCoroutine(printCharactersBegin("Jornada " + (gameManager.day + 1) + "\n\nReputación actual: " + gameManager.reputation + " / " + gameManager.maxReputation));
+        StartCoroutine(printCharactersBegin("COMIENZO DE LA JORNADA " + (gameManager.day + 1)));
     }
 
     public void deactivateBeginText()

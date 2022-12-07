@@ -85,7 +85,7 @@ public class FoodPreparation : MonoBehaviour
         }
         if (tutorialIngredient)
         {
-            hongustarTuto.GetComponent<Ingredient>().enabled = false;
+            hongustarTuto.GetComponent<Ingredient>().disable();
             tutorialIngredient = false;
             tutorialManager.nextText();
         }

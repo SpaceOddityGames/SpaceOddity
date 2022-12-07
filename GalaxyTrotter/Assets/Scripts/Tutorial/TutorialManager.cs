@@ -183,7 +183,6 @@ public class TutorialManager : MonoBehaviour
             case 25:
                 flechas[8].SetActive(true);
                 textToPrint = "El siguiente ingrediente del Tonight Please son dos hongustars, para echarlos a la bebida cógelos y arrástralos hasta el recipiente.";
-                ingredients[0].enable();
                 condit = 3;
                 break;
             case 26:
@@ -193,7 +192,6 @@ public class TutorialManager : MonoBehaviour
                 condit = 3;
                 break;
             case 27:
-                ingredients[0].enable();
                 tabletButton.GetComponent<TabletButton>().inactive = true;
                 flechas[9].SetActive(true);
                 ingredients[0].disable();
@@ -271,9 +269,9 @@ public class TutorialManager : MonoBehaviour
                 break;
             case 3:
                 foodPreparator.tutorialIngredient = true;
+                ingredients[0].enable();
                 break;
             case 4:
-                tabletButton.GetComponent<TabletButton>().inactive = false;
                 break;
             default:
                 break;
@@ -338,6 +336,7 @@ public class TutorialManager : MonoBehaviour
     public void endTutorial()
     {
         tablet.gameObject.GetComponent<TabletManager>().tuto4 = false;
+        tabletButton.GetComponent<TabletButton>().inactive = false;
         flechas[9].SetActive(false);
         textBoxes[0].SetActive(false);
         enableKitchen();

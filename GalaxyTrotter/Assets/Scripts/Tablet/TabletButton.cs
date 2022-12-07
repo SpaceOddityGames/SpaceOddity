@@ -34,17 +34,16 @@ public class TabletButton : MonoBehaviour
             {
                 liquids[i].disable();
             }
+            if (tutorialActive && !paused)
+            {
+                if (FindObjectOfType<TutorialManager>() != null)
+                {
+                    tutorial.nextText();
+                }
+                tutorialActive = false;
+            }
             this.gameObject.SetActive(false);
         }
-        if (tutorialActive && !paused)
-        {
-            if(FindObjectOfType<TutorialManager>() != null) 
-            {
-                tutorial.nextText();
-            }
-            tutorialActive = false;
-        }
-
     }
     public void enableIngredients()
     {
