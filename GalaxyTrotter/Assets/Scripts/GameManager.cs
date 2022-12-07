@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Introduction introManager;
     [SerializeField] BeginingDialog begining;
     [SerializeField] GameObject pause;
+    public bool comprobateReject = false;
 
     // Evolución de la partida
     public bool h01 = false;
@@ -110,12 +111,14 @@ public class GameManager : MonoBehaviour
             begining.gameObject.SetActive(false);
             introManager.gameObject.SetActive(true);
             kitchenController.updateKitchenElements(day);
+            comprobateReject = false;
             return;
         }
         begining.gameObject.SetActive(true);
         begining.ActivateBegin();
         pause.SetActive(false);
         kitchenController.updateKitchenElements(day);
+        comprobateReject = false;
     }
     public void endDay()
     {
@@ -165,9 +168,13 @@ public class GameManager : MonoBehaviour
         {
             if (foodPreparator.reject || foodPreparator.foodPreparator2.reject)
             {
-                FindObjectOfType<Historial>().addHistoryErrorNorma();
-                reduceReputation();
-                return;
+                if (comprobateReject)
+                {
+                    FindObjectOfType<Historial>().addHistoryErrorNorma();
+                    reduceReputation();
+                    return;
+                }
+                comprobateReject = true;
             }
             if (!reseted)
             {
@@ -199,7 +206,7 @@ public class GameManager : MonoBehaviour
     }
     public void evaluateRejectReputation(bool value, bool tipo)
     {
-        if (!value)
+        if (!value || foodPreparator.reject || foodPreparator.foodPreparator2.reject)
         {
             FindObjectOfType<Historial>().addHistoryCorrectReject();
             aumentReputation();
