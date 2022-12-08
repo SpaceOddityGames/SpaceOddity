@@ -10,14 +10,7 @@ public class Fade : MonoBehaviour
     {
         anim = this.GetComponent<Animator>();
     }
-    public void fadeIn()
-    {
-        anim.Play("FadeIn");
-    }
-    public void fadeOut()
-    {
-        anim.Play("FadeOut");
-    }
+
     public void deactivate()
     {
         this.gameObject.SetActive(false);
@@ -25,5 +18,12 @@ public class Fade : MonoBehaviour
     public void activate()
     {
         this.gameObject.SetActive(true);
+        StartCoroutine(wait());
+    }
+
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(2f);
+        deactivate();
     }
 }

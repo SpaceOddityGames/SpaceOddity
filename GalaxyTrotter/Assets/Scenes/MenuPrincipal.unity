@@ -482,26 +482,12 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: unidadTexto
-    clip: {fileID: 8300000, guid: fcab2b3542dd3f547b63226995a91142, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
   - name: unidadTextoGrave
     clip: {fileID: 8300000, guid: 535e74546e0b5c24191485d097612cfb, type: 3}
     music: 0
     volume: 0.5
     pitch: 1
     loop: 0
-    source: {fileID: 0}
-  - name: textoGrave
-    clip: {fileID: 8300000, guid: e46b582aadc4c524c8d40316a6663e16, type: 3}
-    music: 0
-    volume: 0.5
-    pitch: 1
-    loop: 1
     source: {fileID: 0}
   - name: timer
     clip: {fileID: 8300000, guid: c0cdf1df50647934e9f1fe1289cdff4d, type: 3}

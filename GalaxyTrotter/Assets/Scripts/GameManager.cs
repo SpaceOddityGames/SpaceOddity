@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] KitchenController kitchenController;
     [SerializeField] FoodPreparation foodPreparator;
     [SerializeField] Slider reputationSlider;
+    [SerializeField] Slider reputationSliderBegining;
     [SerializeField] GameObject flechaVerde;
     [SerializeField] GameObject flechaRoja;
     [SerializeField] Introduction introManager;
@@ -99,6 +100,7 @@ public class GameManager : MonoBehaviour
     }
     public void startDay()
     {
+        updateSliderBar();
         if (Convert.ToBoolean(PlayerPrefs.GetInt("existGame")))
         {
             reputation = PlayerPrefs.GetInt("reputation");
@@ -253,6 +255,7 @@ public class GameManager : MonoBehaviour
     public void updateSliderBar()
     {
         reputationSlider.value = reputation;
+        reputationSliderBegining.value = reputation;
     }
     IEnumerator waitForClient()
     {

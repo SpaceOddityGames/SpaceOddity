@@ -8,8 +8,6 @@ public class ScreenClickBlack : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData pointerEventData)
     {
         this.gameObject.SetActive(false);
-        this.gameObject.GetComponentInParent<EndingDialog>().deactivateBlackText();
         this.gameObject.GetComponentInParent<Endings>().deactivateBlack();
-
     }
 }

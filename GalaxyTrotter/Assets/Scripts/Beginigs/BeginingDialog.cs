@@ -7,7 +7,7 @@ using TMPro;
 public class BeginingDialog : MonoBehaviour
 {
     [SerializeField] public GameManager gameManager;
-    [SerializeField] Fade beginImage;
+    [SerializeField] Fade fadeNegro;
     [SerializeField] TextMeshProUGUI beginText;
     [SerializeField] GameObject clickScreenBegin;
     [SerializeField] GameObject pausa;
@@ -54,7 +54,7 @@ public class BeginingDialog : MonoBehaviour
     }
     IEnumerator printCharactersBegin(string actualString)
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(1f);
         deactivateBeginText();
         FindObjectOfType<AudioManager>().Play("texto");
         int index = 0;
@@ -79,11 +79,16 @@ public class BeginingDialog : MonoBehaviour
 
     public void deactivateBegin()
     {
+        fadeNegro.activate();
+        StartCoroutine(waitFade());
         tabletButtonBar.inactive = false;
-        beginText.text = "";
+    }
+
+    IEnumerator waitFade()
+    {
+        yield return new WaitForSeconds(1f);
         pausa.SetActive(true);
-        beginImage.fadeOut();
-        gameManager.nextClient();
         this.gameObject.SetActive(false);
+        gameManager.nextClient();
     }
 }

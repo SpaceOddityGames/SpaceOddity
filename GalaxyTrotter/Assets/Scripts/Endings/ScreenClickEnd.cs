@@ -10,6 +10,5 @@ public class ScreenClickEnd : MonoBehaviour, IPointerClickHandler
     {
         GetComponentInParent<Endings>().deactivateEnd();
         this.gameObject.SetActive(false);
-        SceneManager.LoadScene(0);
     }
 }
