@@ -16,7 +16,6 @@ public class ScreenClickIntro : MonoBehaviour, IPointerClickHandler
         {
             comprobate = true;
             this.gameObject.GetComponentInParent<Introduction>().deactivateBlack();
-            this.gameObject.GetComponentInParent<Introduction>().introText.text = "";
             StartCoroutine(Wait());
         }
     }
@@ -25,6 +24,7 @@ public class ScreenClickIntro : MonoBehaviour, IPointerClickHandler
     {
         FindObjectOfType<AudioManager>().Play("gameTheme");
         yield return new WaitForSeconds(1.0f);
+        this.gameObject.GetComponentInParent<Introduction>().introText.text = "";
         FindObjectOfType<GameManager>().nextClient();
         comprobate = false;
         this.gameObject.GetComponentInParent<Introduction>().gameObject.SetActive(false);

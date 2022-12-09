@@ -15,6 +15,7 @@ public class CancelButton : MonoBehaviour, IPointerClickHandler
     {
         FindObjectOfType<AudioManager>().Play("botonMenu");
         FindObjectOfType<AudioManager>().Stop("timer");
+        bowl.GetComponent<FoodPreparation>().resetFoodGame();
         bowl.GetComponent<FoodPreparation>().cancelTask();
     }
 }

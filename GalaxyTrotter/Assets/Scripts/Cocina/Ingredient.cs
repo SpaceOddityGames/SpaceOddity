@@ -153,8 +153,10 @@ public class Ingredient : MonoBehaviour
             {
                 worldPosition.y = floor;
             }
-            seleccion.transform.position = worldPosition;
-            
+            if(seleccion != null)
+            {
+                seleccion.transform.position = worldPosition;
+            }
         }
     }
     //**

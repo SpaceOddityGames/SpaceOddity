@@ -210,8 +210,15 @@ public class GameManager : MonoBehaviour
     {
         if (!value || foodPreparator.reject || foodPreparator.foodPreparator2.reject)
         {
-            FindObjectOfType<Historial>().addHistoryCorrectReject();
-            aumentReputation();
+            if (foodPreparator.reseted)
+            {
+                FindObjectOfType<Historial>().addHistoryCorrectRejectReseted();
+            }
+            else
+            {
+                FindObjectOfType<Historial>().addHistoryCorrectReject();
+                aumentReputation();
+            }
         }
         else
         {

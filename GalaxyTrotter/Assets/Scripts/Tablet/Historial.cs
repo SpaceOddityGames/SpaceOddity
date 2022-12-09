@@ -19,7 +19,7 @@ public class Historial : MonoBehaviour
     {
         GameObject p = Instantiate(newObj, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
         p.transform.SetParent(textArea.transform);
-        p.GetComponent<TextMeshProUGUI>().text = "   -     Bebida entregada con ingredientes incorrectos";
+        p.GetComponent<TextMeshProUGUI>().text = "   -\tBebida entregada con ingredientes incorrectos";
         p.transform.localScale = new Vector3(1, 1, 1);
         alerta.SetActive(true);
     }
@@ -27,7 +27,7 @@ public class Historial : MonoBehaviour
     {
         GameObject p = Instantiate(newObj, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
         p.transform.SetParent(textArea.transform);
-        p.GetComponent<TextMeshProUGUI>().text = "   -     Bebida entregada con liquidos incorrectos";
+        p.GetComponent<TextMeshProUGUI>().text = "   -\tBebida entregada con liquidos incorrectos";
         p.transform.localScale = new Vector3(1, 1, 1);
         alerta.SetActive(true);
     }
@@ -35,7 +35,7 @@ public class Historial : MonoBehaviour
     {
         GameObject p = Instantiate(newObj, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
         p.transform.SetParent(textArea.transform);
-        p.GetComponent<TextMeshProUGUI>().text = "   -     Bebida entregada incumpliendo las normas";
+        p.GetComponent<TextMeshProUGUI>().text = "   -\tBebida entregada incumpliendo las normas";
         p.transform.localScale = new Vector3(1, 1, 1);
         alerta.SetActive(true);
     }
@@ -43,28 +43,35 @@ public class Historial : MonoBehaviour
     {
         GameObject p = Instantiate(newObj, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
         p.transform.SetParent(textArea.transform);
-        p.GetComponent<TextMeshProUGUI>().text = "   -     Bebida entregada correctamente";
+        p.GetComponent<TextMeshProUGUI>().text = "   -\tBebida entregada correctamente";
         p.transform.localScale = new Vector3(1, 1, 1);
     }
     public void addHistoryCorrectReseted() //
     {
         GameObject p = Instantiate(newObj, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
         p.transform.SetParent(textArea.transform);
-        p.GetComponent<TextMeshProUGUI>().text = "   -     Bebida correcta pero se han desperdiciado ingredientes";
+        p.GetComponent<TextMeshProUGUI>().text = "   -\tBebida correcta pero se han desperdiciado ingredientes";
         p.transform.localScale = new Vector3(1, 1, 1);
     }
     public void addHistoryCorrectReject() //
     {
         GameObject p = Instantiate(newObj, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
         p.transform.SetParent(textArea.transform);
-        p.GetComponent<TextMeshProUGUI>().text = "   -     Cliente rechazado correctamente";
+        p.GetComponent<TextMeshProUGUI>().text = "   -\tCliente rechazado correctamente";
+        p.transform.localScale = new Vector3(1, 1, 1);
+    }
+    public void addHistoryCorrectRejectReseted() //
+    {
+        GameObject p = Instantiate(newObj, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
+        p.transform.SetParent(textArea.transform);
+        p.GetComponent<TextMeshProUGUI>().text = "   -\tCliente rechazado correctamente pero se han\n\tdesperdiciado ingredientes";
         p.transform.localScale = new Vector3(1, 1, 1);
     }
     public void addHistoryErrorAlergia() //
     {
         GameObject p = Instantiate(newObj, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
         p.transform.SetParent(textArea.transform);
-        p.GetComponent<TextMeshProUGUI>().text = "   -     Bebida entregada a cliente con alergias";
+        p.GetComponent<TextMeshProUGUI>().text = "   -\tBebida entregada a cliente con alergias";
         p.transform.localScale = new Vector3(1, 1, 1);
         alerta.SetActive(true);
     }
@@ -72,7 +79,7 @@ public class Historial : MonoBehaviour
     {
         GameObject p = Instantiate(newObj, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
         p.transform.SetParent(textArea.transform);
-        p.GetComponent<TextMeshProUGUI>().text = "   -     Tiempo de espera demasiado largo";
+        p.GetComponent<TextMeshProUGUI>().text = "   -\tTiempo de espera demasiado largo";
         p.transform.localScale = new Vector3(1, 1, 1);
         alerta.SetActive(true);
     }
@@ -80,7 +87,7 @@ public class Historial : MonoBehaviour
     {
         GameObject p = Instantiate(newObj, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
         p.transform.SetParent(textArea.transform);
-        p.GetComponent<TextMeshProUGUI>().text = "   -     Bebida entregada con ingredientes y liquidos incorrectos";
+        p.GetComponent<TextMeshProUGUI>().text = "   -\tBebida entregada con ingredientes y liquidos incorrectos";
         p.transform.localScale = new Vector3(1, 1, 1);
         alerta.SetActive(true);
     }
@@ -88,7 +95,7 @@ public class Historial : MonoBehaviour
     {
         GameObject p = Instantiate(newObj, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
         p.transform.SetParent(textArea.transform);
-        p.GetComponent<TextMeshProUGUI>().text = "   -     El cliente no ha recibido la bebida";
+        p.GetComponent<TextMeshProUGUI>().text = "   -\tEl cliente no ha recibido la bebida";
         p.transform.localScale = new Vector3(1, 1, 1);
         alerta.SetActive(true);
     }

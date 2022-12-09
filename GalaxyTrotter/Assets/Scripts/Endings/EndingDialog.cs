@@ -28,7 +28,7 @@ public class EndingDialog : MonoBehaviour
             }
             else
             {
-                StartCoroutine(printCharactersBlack("JORNADA " + (gameManager.day + 1) + " FALLIDA\nREPUTACIÓN FINAL: " + gameManager.reputation + "/20"));
+                StartCoroutine(printCharactersBlack("JORNADA " + (gameManager.day + 1) + " FALLIDA\nREPUTACIÓN FINAL INSUFICIENTE"));
             }
         }
     }

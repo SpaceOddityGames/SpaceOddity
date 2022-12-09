@@ -40,6 +40,7 @@ public class TabletManager : MonoBehaviour
         }
         FindObjectOfType<AudioManager>().Play("botonTabletIn");
         pantallaRazas.SetActive(true);
+        alerta[4].SetActive(false);
     }
     public void activatePantallaMapa()
     {
