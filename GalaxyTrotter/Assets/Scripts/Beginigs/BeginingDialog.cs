@@ -87,6 +87,7 @@ public class BeginingDialog : MonoBehaviour
     IEnumerator waitFade()
     {
         yield return new WaitForSeconds(1f);
+        deactivateBeginText();
         pausa.SetActive(true);
         this.gameObject.SetActive(false);
         gameManager.nextClient();

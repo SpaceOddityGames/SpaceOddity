@@ -110,7 +110,7 @@ public class TutorialManager : MonoBehaviour
                 textToPrint = "En las reglas podrás mirar las normas del local y las regulaciones del gobierno de Azius. Y en el botón de especies podrás comprobar los ingredientes que no puede consumir cada especie.";
                 break;
             case 11:
-                textToPrint = "Recuerda revisarlo de vez en cuando, la tablet se actualiza cuando haya nuevas reglas o un nuevo cliente de otra especie venga al bar.";
+                textToPrint = "Recuerda revisarlo de vez en cuando, la tablet se actualiza cuando haya nuevas reglas o si se añaden nuevas bebidas al bar.";
                 break;
             case 12:
                 textToPrint = "Bueno, eso es todo en cuanto a la tablet, pulsa el botón rojo para apagarla.";
@@ -144,7 +144,7 @@ public class TutorialManager : MonoBehaviour
             case 18:
                 flechas[10].SetActive(false);
                 flechas[5].SetActive(true);
-                textToPrint = "Vale, una vez dicho esto, pasemos a lo importante. Como has visto, un Tonight Please lleva un 70% de Sul, el Sul es este ingrediente líquido, cógelo.";
+                textToPrint = "Vale, una vez dicho esto, pasemos a lo importante. Como has visto, un Tonight Please lleva un 70% de sul, el sul es este ingrediente líquido, cógelo.";
                 break;
             case 19:
                 flechas[5].SetActive(false);
@@ -155,7 +155,7 @@ public class TutorialManager : MonoBehaviour
                 textToPrint = "Para echarlo en la bebida tan solo tienes que arrastrarlo hasta el recipiente principal del medio.";
                 break;
             case 20:
-                textToPrint = "Al mantener el líquido encima del recipiente este se irá llenando. Puedes comprobar la cantidad que has echado en el nivel que aparece al lado, recuerda que en este caso debe tener un 70% de Sul.";
+                textToPrint = "Al mantener el líquido encima del recipiente este se irá llenando. Puedes comprobar la cantidad que has echado en el nivel que aparece al lado, recuerda que en este caso debe tener un 70% de sul.";
                 break;
             case 21:
                 flechas[6].SetActive(false);
@@ -182,7 +182,7 @@ public class TutorialManager : MonoBehaviour
                 break;
             case 25:
                 flechas[8].SetActive(true);
-                textToPrint = "El siguiente ingrediente del Tonight Please son dos hongustars, para echarlos a la bebida cógelos y arrástralos hasta el recipiente.";
+                textToPrint = "El siguiente ingrediente del Tonight Please son 2 hongustars, para echarlos a la bebida cógelos y arrástralos hasta el recipiente.";
                 condit = 3;
                 break;
             case 26:

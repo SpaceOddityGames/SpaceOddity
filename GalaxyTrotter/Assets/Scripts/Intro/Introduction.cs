@@ -32,6 +32,7 @@ public class Introduction : MonoBehaviour
     public void skipIntro()
     {
         skipText = true;
+        FindObjectOfType<AudioManager>().Play("botonTabletIn");
     }
     IEnumerator activateTableta()
     {

@@ -17,7 +17,7 @@ public class IngredientUnit : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Caldero")
+        if (other.gameObject.tag == "Caldero" || other.gameObject.tag == "Caldero2")
         {
             mainIngredient.GetComponent<Ingredient>().drop = true;
             mainIngredient.GetComponent<Ingredient>().caldero = other.gameObject;
@@ -26,7 +26,7 @@ public class IngredientUnit : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Caldero")
+        if (other.gameObject.tag == "Caldero" || other.gameObject.tag == "Caldero2")
         {
             mainIngredient.GetComponent<Ingredient>().drop = false;
         }

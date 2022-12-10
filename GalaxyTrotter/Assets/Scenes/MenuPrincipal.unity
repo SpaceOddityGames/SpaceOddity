@@ -510,6 +510,13 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: hover
+    clip: {fileID: 8300000, guid: 79116aa843c7e754e862d51cde6e4b07, type: 3}
+    music: 0
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &257815657
 Transform:
   m_ObjectHideFlags: 0

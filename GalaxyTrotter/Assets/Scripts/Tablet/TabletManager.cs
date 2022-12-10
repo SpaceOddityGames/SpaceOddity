@@ -15,6 +15,12 @@ public class TabletManager : MonoBehaviour
     [SerializeField] GameObject pantallaRecetas;
     [SerializeField] GameObject pantallaHistorial;
     [SerializeField] GameObject botonApagado;
+    [SerializeField] GameObject botonHistorial;
+    [SerializeField] GameObject botonRazas;
+    [SerializeField] GameObject botonMapa;
+    [SerializeField] GameObject botonNotas;
+    [SerializeField] GameObject botonIngredientes;
+    [SerializeField] GameObject botonRecetas;
     [SerializeField] PostitButton postit;
     [SerializeField] GameObject[] infoRecetas;
     [SerializeField] GameObject[] infoRazas;
@@ -32,6 +38,16 @@ public class TabletManager : MonoBehaviour
     private int aux3 = 0;
     private int aux4 = 0;
     [SerializeField] Animator anim;
+
+    private void Start()
+    {
+        botonHistorial.GetComponent<HoverButtons>().enabled = false;
+        botonRazas.GetComponent<HoverButtons>().enabled = false;
+        botonMapa.GetComponent<HoverButtons>().enabled = false;
+        botonNotas.GetComponent<HoverButtons>().enabled = false;
+        botonIngredientes.GetComponent<HoverButtons>().enabled = false;
+        botonRecetas.GetComponent<HoverButtons>().enabled = false;
+    }
     public void activatePantallaRazas()
     {
         if (tuto1)
@@ -186,6 +202,18 @@ public class TabletManager : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("cerrarTablet");
         anim.Play("tabletOut");
         botonApagado.GetComponent<Button>().interactable = false;
+        botonHistorial.GetComponent<Button>().interactable = false;
+        botonRazas.GetComponent<Button>().interactable = false;
+        botonMapa.GetComponent<Button>().interactable = false;
+        botonNotas.GetComponent<Button>().interactable = false;
+        botonIngredientes.GetComponent<Button>().interactable = false;
+        botonRecetas.GetComponent<Button>().interactable = false;
+        botonHistorial.GetComponent<HoverButtons>().enabled = false;
+        botonRazas.GetComponent<HoverButtons>().enabled = false;
+        botonMapa.GetComponent<HoverButtons>().enabled = false;
+        botonNotas.GetComponent<HoverButtons>().enabled = false;
+        botonIngredientes.GetComponent<HoverButtons>().enabled = false;
+        botonRecetas.GetComponent<HoverButtons>().enabled = false;
     }
 
     /// Seccion Libro de recetas

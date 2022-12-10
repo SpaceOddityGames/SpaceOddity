@@ -9,7 +9,7 @@ public class SliderColor : MonoBehaviour
     [SerializeField] GameManager gameManager;
     public void updateColor()
     {
-        if(gameManager.reputation < 6)
+        if(gameManager.reputation < 5)
         {
             relleno.color = new Color32(240, 144, 126, 255);
         }
