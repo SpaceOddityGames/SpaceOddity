@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - Sirvenos un Unlucky y un H2O.
+    - "S\xEDrvenos un Unlucky y un H2O."
     initConditions: 01000000
     correctResult:
     - Te lo agradecemos.
@@ -134,6 +134,7 @@ MonoBehaviour:
     cancelResultConditions: 0000000002000000
     recipe: {fileID: 7485873441582505971}
     aceptTask: 1
+    AorN: 0
     twoTasks: 1
     recipe2: {fileID: 7526617455641159176}
 --- !u!114 &7485873441582505971
@@ -151,6 +152,7 @@ MonoBehaviour:
   receta: 4
   ingredientRecipe: 
   liquidRecipe: []
+  nameRecipe: 
 --- !u!114 &7526617455641159176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,3 +168,4 @@ MonoBehaviour:
   receta: 6
   ingredientRecipe: 
   liquidRecipe: []
+  nameRecipe: 

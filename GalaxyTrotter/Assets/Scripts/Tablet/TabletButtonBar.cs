@@ -21,6 +21,7 @@ public class TabletButtonBar : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("abrirTablet");
             tablet.SetActive(true);
+            this.GetComponent<BoxCollider>().enabled = false;
             StartCoroutine(waitButtons());
         }
 

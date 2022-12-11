@@ -16,6 +16,8 @@ public class MenuPrincipal : MonoBehaviour
         if (Convert.ToBoolean(PlayerPrefs.GetInt("existGame")))
         {
             botonContinuar.GetComponent<Button>().interactable = true;
+            FindObjectOfType<AudioManager>().UpdateVolume(PlayerPrefs.GetFloat("volume"));
+            FindObjectOfType<AudioManager>().UpdateMusic(PlayerPrefs.GetFloat("music"));
         }
         else
         {

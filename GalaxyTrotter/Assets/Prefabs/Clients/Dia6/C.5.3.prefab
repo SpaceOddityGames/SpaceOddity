@@ -114,18 +114,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - Hola buenas, me gustan los cambios que se han hecho al bar eh.
+    - Hola buenas, me gustan los cambios que se han hecho al bar.
     - 
     - "En fin, \xBFme pones un Kaua?\r"
-    - Ah y ponle un extra de odzia anda.
+    - Y ponle un extra de odzia anda.
     - "Lo siento, no puedo hacer eso. El odzia est\xE1 regulado en Azius y no est\xE1
-      permitido a\xF1adir m\xE1s que una unidad por bebida."
+      permitido a\xF1adir m\xE1s de una unidad por bebida."
     - "\xBFDe verdad? \xBF\xA1Pero qu\xE9 estupidez es esa!?\r"
     - "Vamos a ver, este bar pertenece ya pr\xE1cticamente a la Uni\xF3n de Sistemas
       Interplanetarios. S\xEDrveme lo que te digo y punto."
     - "Puedo conseguir que te despidan te lo garantizo, \xBFcrees que no tengo contacto
       con los nuevos due\xF1os de la estaci\xF3n?"
-    - Hazlo, echame dos odzias.
+    - "Hazlo, \xE9chame dos odzias."
     initConditions: 000000000b0000000000000003000000000000000000000000000000000000000c000000
     correctResult:
     - "\xA1No se lo has echado! \xBFPero t\xFA qui\xE9n te crees que eres como para

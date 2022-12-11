@@ -116,7 +116,7 @@ MonoBehaviour:
     initTexts:
     - "\xBFMe sirves un Tonight Please?"
     - "A ver si as\xED se me pasa el disgusto, los de la Uni\xF3n han destruido la
-      ciudad en la que viv\xED unos a\xF1os de joven \xBFsabes?"
+      ciudad en la que viv\xED unos a\xF1os de joven, \xBFsabes?"
     - "Todo por culpa de los poderosos jugando a la guerra\u2026"
     - "En fin, mejor me callo\u2026 no vengo a contar mis penas."
     initConditions: 00000000000000000000000001000000
@@ -136,6 +136,7 @@ MonoBehaviour:
     cancelResultConditions: 0000000002000000
     recipe: {fileID: 7485873441582505971}
     aceptTask: 1
+    AorN: 0
     twoTasks: 0
     recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971
@@ -153,3 +154,4 @@ MonoBehaviour:
   receta: 0
   ingredientRecipe: 
   liquidRecipe: []
+  nameRecipe: 

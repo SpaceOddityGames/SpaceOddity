@@ -133,6 +133,7 @@ MonoBehaviour:
     cancelResultConditions: 0000000002000000
     recipe: {fileID: 4699217329265171239}
     aceptTask: 1
+    AorN: 0
     twoTasks: 0
     recipe2: {fileID: 0}
 --- !u!114 &4699217329265171239
@@ -150,6 +151,7 @@ MonoBehaviour:
   receta: 7
   ingredientRecipe: 
   liquidRecipe: []
+  nameRecipe: 
 --- !u!1 &7485873441582505974
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - "Buenas, \xBFme sirves un Strawberry Moon?"
+    - "Buenas, \xBFme sirves un The Visitor?"
     initConditions: 01000000
     correctResult:
     - "Est\xE1 buen\xEDsimo."
@@ -284,6 +286,7 @@ MonoBehaviour:
     cancelResultConditions: 0000000002000000
     recipe: {fileID: 7485873441582505971}
     aceptTask: 1
+    AorN: 0
     twoTasks: 0
     recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971
@@ -298,6 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d4660ee3859e84c8dbac914903260a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receta: 7
+  receta: 5
   ingredientRecipe: 
   liquidRecipe: []
+  nameRecipe: 

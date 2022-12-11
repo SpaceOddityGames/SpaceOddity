@@ -64,7 +64,7 @@ public class Historial : MonoBehaviour
     {
         GameObject p = Instantiate(newObj, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 0));
         p.transform.SetParent(textArea.transform);
-        p.GetComponent<TextMeshProUGUI>().text = "   -\tCliente rechazado correctamente pero se han\n\tdesperdiciado ingredientes";
+        p.GetComponent<TextMeshProUGUI>().text = "   -\tRechazo correcto pero se han gastado ingredientes";
         p.transform.localScale = new Vector3(1, 1, 1);
     }
     public void addHistoryErrorAlergia() //

@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - "Hola de nuevo, \xBFte acuerdas de m\xED? Estuve aqu\xED hace un par d\xEDas."
+    - "Hola de nuevo, \xBFte acuerdas de m\xED? Estuve aqu\xED hace un par de d\xEDas."
     - "Me he enterado de lo que le ha ocurrido a tu anterior jefe. Y estoy convencida
       de que no ha sido un accidente. Lo han matado agentes de la Uni\xF3n."
     - "De alguna forma han averiguado que colaboraba con gente de Plokan, y habr\xE1n
@@ -128,8 +128,8 @@ MonoBehaviour:
       est\xE1 muerto\u2026"
     - "No estoy dispuesta a que esto quede as\xED, voy a descubrir qu\xE9 ha pasado
       realmente en ese \u201Caccidente\u201D y necesito venganza."
-    - "Mira\u2026 S\xE9 que es mucho pedirte y que apenas me conoces de nada. Pero
-      t\xFA m\xE1s que nadie puedes ayudarme ahora mismo."
+    - "Mira\u2026 S\xE9 que es mucho pedirte y que apenas me conoces. Pero t\xFA
+      m\xE1s que nadie puedes ayudarme ahora mismo."
     - "S\xE9 que hace poco estuvo aqu\xED un oficial de la Uni\xF3n preguntando por
       un contrabandista que ten\xEDa un trato con tu anterior jefe. He averiguado
       que no s\xF3lo estaba detr\xE1s de ese tipo, tambi\xE9n investigaba una posible
@@ -146,7 +146,7 @@ MonoBehaviour:
     - "La reacci\xF3n qu\xEDmica que produce en su cuerpo al digerirlo no deja ning\xFAn
       tipo de rastro. No podr\xE1n saber que ha sido envenenado."
     - "Adem\xE1s, la digesti\xF3n de los ichthys ocurre varias horas despu\xE9s de
-      haber consumido algo. No hay ninguna forma que se descubra que has sido t\xFA."
+      haber consumido algo. No es posible que se descubra que has sido t\xFA."
     - "\u2026"
     - "Lo s\xE9, lo s\xE9\u2026 Es demasiado todo esto. Pero por favor, no dejes
       que esos sucios imperialistas asesinos se salgan con la suya, necesitamos gente

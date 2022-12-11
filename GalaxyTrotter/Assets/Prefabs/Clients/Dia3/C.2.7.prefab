@@ -265,7 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - Hola, ponme un Special USI
+    - Hola, ponme un Special USI.
     initConditions: 01000000
     correctResult:
     - Muchas gracias, no me esperaba que estuviese tan bueno.

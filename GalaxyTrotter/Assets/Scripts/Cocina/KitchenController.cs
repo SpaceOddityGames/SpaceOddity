@@ -127,6 +127,7 @@ public class KitchenController : MonoBehaviour
                 alertas[0].SetActive(false);
                 alertas[1].SetActive(false);
                 alertas[2].SetActive(false);
+                alertas[3].SetActive(false);
                 //ModeladoBarKitchen
                 barNormal.SetActive(true);
                 barUSI.SetActive(false);
@@ -183,7 +184,7 @@ public class KitchenController : MonoBehaviour
                 ingredientesTablet[10].SetActive(true);
                 ingredientesTablet[11].SetActive(false);
                 //Alertas
-                alertas[0].SetActive(false);
+                alertas[0].SetActive(true);
                 alertas[1].SetActive(false);
                 alertas[2].SetActive(true);
                 alertas[3].SetActive(true);

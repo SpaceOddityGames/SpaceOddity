@@ -272,7 +272,7 @@ MonoBehaviour:
     initConditions: 0000000001000000
     correctResult:
     - "Uff, qu\xE9 bueno est\xE1."
-    - "Espero que se te as\xED de bien hacer otras cosas..."
+    - "Espero que se te d\xE9 as\xED de bien hacer otras cosas..."
     correctResultConditions: 0000000002000000
     wrongResult:
     - "\xA1Est\xE1 horrible!"

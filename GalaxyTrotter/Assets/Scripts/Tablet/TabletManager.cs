@@ -214,6 +214,8 @@ public class TabletManager : MonoBehaviour
         botonNotas.GetComponent<HoverButtons>().enabled = false;
         botonIngredientes.GetComponent<HoverButtons>().enabled = false;
         botonRecetas.GetComponent<HoverButtons>().enabled = false;
+        tabletButton.GetComponent<BoxCollider>().enabled = true;
+        tabletButtonBar.GetComponent<BoxCollider>().enabled = true;
     }
 
     /// Seccion Libro de recetas

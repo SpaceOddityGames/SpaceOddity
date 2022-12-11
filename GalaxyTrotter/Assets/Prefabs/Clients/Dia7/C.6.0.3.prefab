@@ -220,8 +220,8 @@ MonoBehaviour:
       la Uni\xF3n de Sistemas Interplanetarios."
     - "Despu\xE9s de las formalidades, la celebraci\xF3n acabar\xE1 en este bar,
       por lo que todo tiene que salir perfecto \xBFqueda claro?"
-    - "No quiero ning\xFAn tipo de error ni malentendido, y s\xE9 muy puntual. Hay
-      que causar buena impresi\xF3n espero que no me decepciones."
+    - "No quiero ning\xFAn tipo de error ni malentendido, y se muy puntual. Hay que
+      causar buena impresi\xF3n, espero que no me decepciones."
     - "Nada m\xE1s por ahora, \xA1a trabajar!"
     initConditions: 0000000000000000000000000000000002000000
     correctResult: []
@@ -234,6 +234,7 @@ MonoBehaviour:
     cancelResultConditions: 
     recipe: {fileID: 7485873441582505971}
     aceptTask: 0
+    AorN: 0
     twoTasks: 0
     recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971
@@ -251,3 +252,4 @@ MonoBehaviour:
   receta: 0
   ingredientRecipe: 
   liquidRecipe: []
+  nameRecipe: 

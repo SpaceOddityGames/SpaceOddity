@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - "Buenas, \xBFservis AXXhole verdad?"
+    - "Buenas, \xBFserv\xEDs AXXhole verdad?"
     - "S\xED, claro."
     - "\xA1Perfecto! Pues ponme uno, es mi bebida favorita."
     - Acabo de llegar desde Plokan, ha sido un viaje largo.
@@ -136,6 +136,7 @@ MonoBehaviour:
     cancelResultConditions: 02000000
     recipe: {fileID: 7485873441582505971}
     aceptTask: 1
+    AorN: 0
     twoTasks: 0
     recipe2: {fileID: 0}
 --- !u!114 &7485873441582505971
@@ -153,3 +154,4 @@ MonoBehaviour:
   receta: 2
   ingredientRecipe: 
   liquidRecipe: []
+  nameRecipe: 

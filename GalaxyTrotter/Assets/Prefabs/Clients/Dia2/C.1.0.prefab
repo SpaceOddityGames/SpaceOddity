@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     initTexts:
-    - "Buenos d\xEDas, he escuchado que ayer conseguiste apa\xF1\xE1rtelas \xBFverdad?"
+    - "Buenos d\xEDas, he escuchado que ayer conseguiste apa\xF1\xE1rtelas, \xBFverdad?"
     - "\xA1Buen trabajo!"
     - "Hoy justo hemos decidido a\xF1adir una nueva bebida a nuestra carta, veremos
       si a la clientela le gusta."

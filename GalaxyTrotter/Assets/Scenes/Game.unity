@@ -5996,7 +5996,7 @@ GameObject:
   - component: {fileID: 169468999}
   - component: {fileID: 169468998}
   m_Layer: 5
-  m_Name: Alerta
+  m_Name: Alerta4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14994,7 +14994,7 @@ GameObject:
   - component: {fileID: 539428345}
   - component: {fileID: 539428344}
   m_Layer: 5
-  m_Name: Alerta
+  m_Name: Alerta3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15070,7 +15070,7 @@ GameObject:
   - component: {fileID: 539465408}
   - component: {fileID: 539465407}
   m_Layer: 5
-  m_Name: Alerta
+  m_Name: Alerta1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15874,6 +15874,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1097238075}
     m_Modifications:
+    - target: {fileID: 1486217186974725400, guid: eb077add3ac8d254aa2d923478ab5551, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8a4eff9eee3a6324b9c6e453abf1d92c, type: 2}
+    - target: {fileID: 1507452356639330608, guid: eb077add3ac8d254aa2d923478ab5551, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8a4eff9eee3a6324b9c6e453abf1d92c, type: 2}
     - target: {fileID: 1671831425638733168, guid: eb077add3ac8d254aa2d923478ab5551, type: 3}
       propertyPath: m_Name
       value: Ingrediente3
@@ -15942,6 +15950,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2642730424828260202, guid: eb077add3ac8d254aa2d923478ab5551, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8a4eff9eee3a6324b9c6e453abf1d92c, type: 2}
+    - target: {fileID: 4518301518809727449, guid: eb077add3ac8d254aa2d923478ab5551, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8a4eff9eee3a6324b9c6e453abf1d92c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb077add3ac8d254aa2d923478ab5551, type: 3}
 --- !u!4 &581023579 stripped
@@ -42175,7 +42191,7 @@ GameObject:
   - component: {fileID: 1516696419}
   - component: {fileID: 1516696418}
   m_Layer: 5
-  m_Name: Alerta
+  m_Name: Alerta0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55716,7 +55732,7 @@ GameObject:
   - component: {fileID: 1962551902}
   - component: {fileID: 1962551901}
   m_Layer: 5
-  m_Name: Alerta
+  m_Name: Alerta2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
